@@ -1,16 +1,37 @@
 {
   "name": "workflow",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Workflow",
+  "author": "Tortuvshin Byambaa",
+  "homepage": "https://www.intelligo.systems",
+  "copyright": "Copyright 2019 Intelligo Systems.",
+  "license": "MIT",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/intelligo-systems/workflow.git"
+  },
   "scripts": {
-    "start": "node ./bin/www"
+    "front": "cd frontend && npm run-script dev",
+    "build": "cd frontend && npm run-script build",
+    "start": "node bin/www"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "express": "~4.16.0",
-    "http-errors": "~1.6.2",
-    "jade": "~1.11.0",
-    "morgan": "~1.9.0"
-  }
+    "bcrypt": "^3.0.3",
+    "body-parser": "^1.15.2",
+    "config": "^1.24.0",
+    "connect-history-api-fallback": "^1.6.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "express": "^4.15.5",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.13.0",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
+    "request": "^2.79.0"
+  },
+  "cacheDirectories": [
+    "node_modules"
+  ]
 }
