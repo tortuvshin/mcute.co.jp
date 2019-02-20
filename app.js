@@ -80,6 +80,6 @@ var strategy = new JwtStrategy(jwtOptions, function(jwt_payload, next) {
 
 passport.use(strategy);
 
-http.listen(process.env.PORT || '5000', process.env.IP || 'localhost', function(){
+http.listen(process.env.PORT, process.env.IP || 'localhost', function(){
 	console.log("Matching System is RUNNING");
 });
