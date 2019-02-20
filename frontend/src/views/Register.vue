@@ -133,7 +133,7 @@
       }
 		},
 		created(){
-			window.document.title = "Register - EcJob.com";
+			window.document.title = "Register - WorkFlow";
 		}
 	}
 </script>

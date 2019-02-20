@@ -198,7 +198,7 @@
 	      }
 	    },
 	    created(){
-	    	document.title = "Post a Project - EcJob.com";
+	    	document.title = "Post a Project - WorkFlow";
 	    }
 	}
 </script>

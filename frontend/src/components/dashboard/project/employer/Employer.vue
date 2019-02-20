@@ -120,7 +120,7 @@
 			bus.$on('updateProjectLoading', (payload) => {
 				this[payload.status].loading = payload.loading;
 			});
-			document.title = "My Jobs - EcJob.com"
+			document.title = "My Jobs - WorkFlow"
 		},
 		components: {
 			openTable,

@@ -29,7 +29,7 @@
 
 	export default {
 		created(){
-			document.title = "Home - EcJob.com";
+			document.title = "Home - WorkFlow";
 			 particlesJS.load('particles-js', '/assets/js/particles.json');
 		}
 	}

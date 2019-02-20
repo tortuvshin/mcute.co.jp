@@ -1,6 +1,6 @@
 <template>
 	<div class="footer">
-		<p class="footer-copyright">@2016 - 2017 ECJOB Inc.</p>
+		<p class="footer-copyright">@2019 Intelligo Systems.</p>
 	</div>
 </template>
 

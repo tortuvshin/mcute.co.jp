@@ -110,7 +110,7 @@
 				this.updateBid.bid = payload.bid;
 				this.updateBid.isShow = true;
 			});
-			document.title = "My Jobs - EcJob.com"
+			document.title = "My Jobs - WorkFlow"
 		},
 		components: {
 			biddingTable,

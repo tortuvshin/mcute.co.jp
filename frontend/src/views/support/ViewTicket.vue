@@ -135,7 +135,7 @@
     					this.ticket = response.body.ticket;
     					this.ticket.messages.reverse();
            
-              document.title = this.ticket.issueType + ' - EcJob.com';
+              document.title = this.ticket.issueType + ' - WorkFlow';
   				}, response => {
               this.$router.replace({name: 'error', params: {message: response.body.message}});
           });
@@ -155,7 +155,7 @@
   		created() {
   			this.fetchData();
         this.updateToolbar('View Ticket');
-        document.title = 'Loading Ticket... - EcJob.com';
+        document.title = 'Loading Ticket... - WorkFlow';
   		}
   	}
 </script>

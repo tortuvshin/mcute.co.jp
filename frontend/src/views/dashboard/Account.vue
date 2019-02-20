@@ -91,7 +91,7 @@
 			alert
 		},
 		created(){
-			document.title = "Account - EcJob.com";
+			document.title = "Account - WorkFlow";
 		}
 	}
 </script>

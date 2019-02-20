@@ -56,7 +56,7 @@
 		},
 		created() {
 			this.fetchData();
-            document.title = 'Support Center - EcJob.com'
+            document.title = 'Support Center - WorkFlow'
 		},
 		methods: {
 			fetchData(){

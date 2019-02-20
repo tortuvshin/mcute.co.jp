@@ -25,7 +25,7 @@
 
 <style scoped>
 	.cover-img{
-		background: url("/assets/images/profile/default_cover_img.jpg");
+		background: url("/src/assets/images/profile/default_cover_img.jpg");
         height: 400px;
         position: absolute;
 		z-index: -1;

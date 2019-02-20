@@ -87,7 +87,7 @@
                     this.loadingData = false;
                     this.project = response.body.project;
                     this.bid = response.body.bid;
-                    document.title = this.project.title + " - EcJob.com";
+                    document.title = this.project.title + " - WorkFlow";
                 });
             },
             share(platform){
@@ -104,7 +104,7 @@
             }
         },
 		created(){
-            document.title = "Loading Project... - EcJob.com";
+            document.title = "Loading Project... - WorkFlow";
 			this.fetchData();
             bus.$emit('updateToolbar', 'View Project');
             bus.$on('updateProjectData', () => {

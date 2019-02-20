@@ -264,7 +264,7 @@
       panel 
 		},
 		created(){
-      document.title = 'Create a ticket - EcJob.com';
+      document.title = 'Create a ticket - WorkFlow';
       bus.$emit('updateToolbar', 'Report Service Issue');
 			this.$http.get(API_SERVER + '/support/create').then(response=>{
 				this.services.projects = response.body.projects;

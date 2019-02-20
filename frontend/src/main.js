@@ -40,7 +40,7 @@ Vue.mixin({
       if (typeof user.avatar === undefined){
         return API_SERVER + '/uploads/' + user.username + '/avatar/' + user.avatar.filename;
       }
-      return '/assets/images/profile/default_avatar.jpg';
+      return '/src/assets/images/profile/default_avatar.jpg';
     },
     updateToolbar(title){
       bus.$emit('updateToolbar', title)

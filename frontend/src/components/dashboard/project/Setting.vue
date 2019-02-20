@@ -31,7 +31,7 @@
 			}
 		},
 		created() {
-			document.title = 'Setting - EcJob.com'
+			document.title = 'Setting - WorkFlow'
 		}
 	}
 </script>

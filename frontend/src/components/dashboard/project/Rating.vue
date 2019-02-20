@@ -133,7 +133,7 @@
 			}
 		},
 		created(){
-			document.title = "Rating - EcJob.com"
+			document.title = "Rating - WorkFlow"
 		},
 		components: {
 			profileCard,

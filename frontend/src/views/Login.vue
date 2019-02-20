@@ -106,7 +106,7 @@
 			if (errorMessage){
 				this.errorMessage = errorMessage;
 			}
-			window.document.title = "Login - EcJob.com";
+			window.document.title = "Login - WorkFlow";
 			console.log(this.errorMessage);
 		}
 	}

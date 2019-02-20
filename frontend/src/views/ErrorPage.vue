@@ -10,7 +10,7 @@
 <script>
 	export default {
 		created(){
-			document.title = "404 NOT FOUND - EcJob.com";
+			document.title = "404 NOT FOUND - WorkFlow";
 		}
 	}
 </script>

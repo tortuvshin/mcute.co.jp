@@ -116,7 +116,7 @@
   		},
   		created(){
        		this.fetchData();
-          document.title = 'Freelance Jobs - EcJob.com'
+          document.title = 'Freelance Jobs - WorkFlow'
   		},
   		components: {
           appProjectRow,

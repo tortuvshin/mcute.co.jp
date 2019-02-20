@@ -1,7 +1,7 @@
 <template>
   <div class="m-containter" :class="{fullWidth: !showSidebar}">
     <!-- <app-navbar :isHomePage="isHomePage"></app-navbar> -->
-    <audio src="/assets/sounds/notification.mp3" preload="auto" ref="notification_sound"></audio>      
+    <audio src="/src/assets/sounds/notification.mp3" preload="auto" ref="notification_sound"></audio>      
     <slide-nav :show="showSidebar"></slide-nav>
     <div class="page-content">
        <md-toolbar class="md-whiteframe main-header md-whiteframe-1dp" v-if="!checkNoToolBarPage" style="padding:0;">

@@ -237,7 +237,7 @@
           this.project.currentFiles = response.body.project.files;
           this.project.status = response.body.project.status;
         });
-	    	document.title = "Modify a Project - EcJob.com";
+	    	document.title = "Modify a Project - WorkFlow";
 	    }
 	}
 </script>

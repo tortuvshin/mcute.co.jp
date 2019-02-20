@@ -91,7 +91,7 @@
             }
 		},
 		created(){
-			document.title = "My Profile - EcJob.com"
+			document.title = "My Profile - WorkFlow"
 			this.$http.get(API_SERVER + '/profile/' + this.username).then(response=> {
 				this.loadingData = false;
 				this.user = response.body.user;

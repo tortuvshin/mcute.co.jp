@@ -169,7 +169,7 @@
 		},
 		created(){
 			this.submissions = this.project.submissions;
-			document.title = "Job Infomation - EcJob.com";
+			document.title = "Job Infomation - WorkFlow";
 		},
 		components: {
 			fileUploader

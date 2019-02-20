@@ -113,7 +113,7 @@
 		},
 		created() {
 			this.fetchData();
-			document.title = "Rating - EcJob.com"
+			document.title = "Rating - WorkFlow"
 		}	
 	}
 </script>
