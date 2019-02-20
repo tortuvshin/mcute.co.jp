@@ -18,7 +18,7 @@ import App from './App.vue'
 import { API_SERVER } from './api.js'
 
 import { store } from './store/index'
-import { routes } from './router/routes'
+import router from './router/routes'
 
 export const bus = new Vue();
 
@@ -121,19 +121,6 @@ Vue.directive('focus', {
         el.focus()
     }
 })
-
-const router = new VueRouter({
-	routes,
-	mode: 'history',
-	linkActiveClass: 'route-active',
-  scrollBehavior (to, from, savedPosition) {
-  if (savedPosition) {
-      return savedPosition
-    } else {
-      return { x: 0, y: 0 }
-    }
-  }
-});
 
 // Check auth before access to the destination
 router.beforeEach((to, from, next) => {

@@ -1,63 +1,81 @@
-const Home = resolve => require(['../views/Home.vue'], resolve);
-// import Login = resolve => require(['../views/Login.vue'
-const Login = resolve => require(['../views/Login.vue'], resolve);
-const Register = resolve => require(['../views/Register.vue'], resolve);
+import Vue from "vue";
+import Router from "vue-router";
+import Home from "../views/Home.vue";
+import Login from "../views/Login.vue";
+import Register from "../views/Register.vue";
 
-const Error = resolve => require(['../views/ErrorPage.vue'], resolve);
+import Error from "../views/ErrorPage.vue";
 
-const Index = resolve => require(['../views/dashboard/Index.vue'], resolve);
-const Account = resolve => require(['../views/dashboard/Account.vue'], resolve);
-const Deposit = resolve => require(['../views/dashboard/billing/Deposit.vue'], resolve);
-const Withdraw = resolve => require(['../views/dashboard/billing/Withdraw.vue'], resolve);
-const Transaction = resolve => require(['../views/dashboard/billing/Transactions.vue'], resolve);
-const MyProject = resolve => require(['../views/dashboard/Project.vue'], resolve);
-const Security = resolve => require(['../views/dashboard/Password.vue'], resolve);
-const Notification = resolve => require(['../views/dashboard/Notification.vue'], resolve);
+import Index from "../views/dashboard/Index.vue";
+import Account from "../views/dashboard/Account.vue";
+import Deposit from "../views/dashboard/billing/Deposit.vue";
+import Withdraw from "../views/dashboard/billing/Withdraw.vue";
+import Transaction from "../views/dashboard/billing/Transactions.vue";
+import MyProject from "../views/dashboard/Project.vue";
+import Security from "../views/dashboard/Password.vue";
+import Notification from "../views/dashboard/Notification.vue";
 
-const Rating = resolve => require(['../views/dashboard/project/Rating.vue'], resolve);
-const ProjectDetails = resolve => require(['../views/dashboard/project/ProjectDetails.vue'], resolve);
+import Rating from "../views/dashboard/project/Rating.vue";
+import ProjectDetails from "../views/dashboard/project/ProjectDetails.vue";
 
-const PostProject = resolve => require(['../views/project/Post.vue'], resolve);
-const ViewProject = resolve => require(['../views/project/View.vue'], resolve);
-const SearchProject = resolve => require(['../views/project/Search.vue'], resolve);
-const EditProject = resolve => require(['../views/project/Edit.vue'], resolve);
+import PostProject from "../views/project/Post.vue";
+import ViewProject from "../views/project/View.vue";
+import SearchProject from "../views/project/Search.vue";
+import EditProject from "../views/project/Edit.vue";
 
-const ViewTickets = resolve => require(['../views/support/ViewTickets.vue'], resolve);
-const ViewTicket = resolve => require(['../views/support/ViewTicket.vue'], resolve);
-const CreateTicket = resolve => require(['../views/support/CreateTicket.vue'], resolve);
+import ViewTickets from "../views/support/ViewTickets.vue";
+import ViewTicket from "../views/support/ViewTicket.vue";
+import CreateTicket from "../views/support/CreateTicket.vue";
 
-const ViewProfile = resolve => require(['../views/profile/ViewProfile.vue'], resolve);
+import ViewProfile from "../views/profile/ViewProfile.vue";
 
-const Profile = resolve => require(['../components/profile/Profile.vue'], resolve);
+import Profile from "../components/profile/Profile.vue";
 
-const PaypalReturn = resolve => require(['../views/dashboard/billing/PaypalReturn.vue'], resolve);
+import PaypalReturn from "../views/dashboard/billing/PaypalReturn.vue";
 
+Vue.use(Router);
 
-export const routes = [
-	{ path: '', component: Home, name:'Home'},
-	{ path: '/login', component: Login, name:'Login' },
-	{ path: '/register', component: Register, name:'Register'},
-	{ path: '/dashboard', component: Index, children: [
-		{ path: '', component: Profile, name: 'MyProfile', meta: { auth: true }},
-		{ path: 'account', component: Account, name:'Account', meta: { auth: true }},
-		{ path: 'billing/deposit', component: Deposit, name:'Deposit', meta: { auth: true }},
-		{ path: 'billing/withdraw', component: Withdraw, name:'Withdraw', meta: { auth: true }},
-		{ path: 'billing/transaction', component: Transaction, name:'Transaction', meta: { auth: true }},
-		{ path: 'security', component: Security, meta: {auth: true}},
-		{ path: 'notification', component: Notification, meta: {auth: true}}
-	]}, 
-	{ path: '/dashboard/billing/return', component: PaypalReturn, meta: {auth: true}},
-	{ path: '/dashboard/project', component: MyProject, meta: {auth: true}},
-	{ path: '/dashboard/project/:id/rating', component: Rating, meta: {auth: true}},
-	{ path: '/dashboard/project/:id/details', component: ProjectDetails, meta: {auth: true}},
-	{ path: '/project/search', component: SearchProject, name: 'SearchProject', meta: { title: 'Browse Job'}},
-	{ path: '/project/post', component: PostProject, name: 'PostProject', meta: { auth: true, title: 'Post Job'}},
-	{ path: '/project/:id/edit', component: EditProject, name: 'EditProject',props: true, meta: { auth: true, title: 'Edit Job' }},
-	{ path: '/project/:id', component: ViewProject, name: 'ViewProject'},
-	{ path: '/error', component: Error, name: 'error', name: 'Error'},
-	{ path: '/support', component: ViewTickets, name: 'ViewTickets', meta: { auth: true, title: 'Support Center' }},
-	{ path: '/support/create', component: CreateTicket, name: 'CreateTicket',  meta: { auth: true } },
-	{ path: '/support/:id', component: ViewTicket, name: 'ViewTicket', meta: { auth: true }},
-	{ path: '/profile/:username', component: ViewProfile, props: true, name: 'ViewProfile', meta: {title: 'View Profile'}},
-	{ path: '*', component: Error}
-];
+export default new Router ({
+	mode: 'history',
+	linkExactActiveClass: "active",
+	linkActiveClass: 'active',
+	routes: [
+		{ 
+			path: '', 
+			component: Home, 
+			name:'Home'
+		},
+		{ path: '/login', component: Login, name:'Login' },
+		{ path: '/register', component: Register, name:'Register'},
+		{ path: '/dashboard', component: Index, children: [
+			{ path: '', component: Profile, name: 'MyProfile', meta: { auth: true }},
+			{ path: 'account', component: Account, name:'Account', meta: { auth: true }},
+			{ path: 'billing/deposit', component: Deposit, name:'Deposit', meta: { auth: true }},
+			{ path: 'billing/withdraw', component: Withdraw, name:'Withdraw', meta: { auth: true }},
+			{ path: 'billing/transaction', component: Transaction, name:'Transaction', meta: { auth: true }},
+			{ path: 'security', component: Security, meta: {auth: true}},
+			{ path: 'notification', component: Notification, meta: {auth: true}}
+		]}, 
+		{ path: '/dashboard/billing/return', component: PaypalReturn, meta: {auth: true}},
+		{ path: '/dashboard/project', component: MyProject, meta: {auth: true}},
+		{ path: '/dashboard/project/:id/rating', component: Rating, meta: {auth: true}},
+		{ path: '/dashboard/project/:id/details', component: ProjectDetails, meta: {auth: true}},
+		{ path: '/project/search', component: SearchProject, name: 'SearchProject', meta: { title: 'Browse Job'}},
+		{ path: '/project/post', component: PostProject, name: 'PostProject', meta: { auth: true, title: 'Post Job'}},
+		{ path: '/project/:id/edit', component: EditProject, name: 'EditProject',props: true, meta: { auth: true, title: 'Edit Job' }},
+		{ path: '/project/:id', component: ViewProject, name: 'ViewProject'},
+		{ path: '/error', component: Error, name: 'error', name: 'Error'},
+		{ path: '/support', component: ViewTickets, name: 'ViewTickets', meta: { auth: true, title: 'Support Center' }},
+		{ path: '/support/create', component: CreateTicket, name: 'CreateTicket',  meta: { auth: true } },
+		{ path: '/support/:id', component: ViewTicket, name: 'ViewTicket', meta: { auth: true }},
+		{ path: '/profile/:username', component: ViewProfile, props: true, name: 'ViewProfile', meta: {title: 'View Profile'}},
+		{ path: '*', component: Error}
+	],
+	scrollBehavior: to => {
+		if (to.hash) {
+		  return { selector: to.hash };
+		} else {
+		  return { x: 0, y: 0 };
+		}
+	  }
+});

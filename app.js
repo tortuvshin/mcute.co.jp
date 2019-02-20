@@ -6,7 +6,10 @@ var express = require('express'),
   	passport = require('passport'),
   	io = require('./sockets/').initialize(http),
   	methodOverride = require('method-override'),
-  	seedDB = require("./seeds"),
+    seedDB = require("./seeds"),
+    morgan         = require('morgan'),
+    cors   = require('cors'),
+    history = require('connect-history-api-fallback'),
   	cron = require("./cron");
 	
 var indexRoutes = require("./routes/index"),
@@ -25,10 +28,17 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 
-app.set("view engine", "ejs");
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static(__dirname + "/public"));
+
+app.use(morgan('combined'));
+app.use(cors())
+app.use(history());
+app.use(express.static(path.join(__dirname, "frontend/dist")));
+
+app.set('view engine', 'html');
+
+
 app.use(methodOverride("_method"));
 app.use(passport.initialize());
 app.use(passport.session());
