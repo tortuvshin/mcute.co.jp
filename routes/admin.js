@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
-var Skills = require('../models/skills');
-var Question = require('../models/question');
+// var Skills = require('../models/skills');
+// var Question = require('../models/question');
 var bodyParser = require('body-parser');
 var Ticket = require('../models/ticket');
 var TicketContent = require('../models/ticketContent');
@@ -55,8 +55,6 @@ router.post('/admin/createUser',function(req,res) {
     });
 });
 
-
-
 router.put('/admin/updateUser',function(req,res) {
   var user = req.body.user;
   console.log(user);
@@ -91,61 +89,61 @@ router.get('/admin/deleteUser',function(req,res) {
 //skill module
 
 //read all skills
-router.get('/admin/readSkill',function(req,res) {
-    Skills.find({},function(err,foundSkill) {
-    if(err) {
-      console.log(err);
-    } else {
+// router.get('/admin/readSkill',function(req,res) {
+//     Skills.find({},function(err,foundSkill) {
+//     if(err) {
+//       console.log(err);
+//     } else {
       
-      res.render('./admin/readSkill',{foundSkill:foundSkill});
+//       res.render('./admin/readSkill',{foundSkill:foundSkill});
       
-    }
-  });
+//     }
+//   });
   
-});
+// });
 
 
-router.delete('/admin/readSkill',function(req,res) {
-  // res.send(req.body.skill_id);
-  Skills.findOneAndRemove(req.body.skill_id,function(err,skill) {
-    if(err) {
-      console.log(err);
-    } else {
-      req.flash("success", "delete successful!");
-      res.redirect("/admin/readSkill");
-    }
-  });
-});
+// router.delete('/admin/readSkill',function(req,res) {
+//   // res.send(req.body.skill_id);
+//   Skills.findOneAndRemove(req.body.skill_id,function(err,skill) {
+//     if(err) {
+//       console.log(err);
+//     } else {
+//       req.flash("success", "delete successful!");
+//       res.redirect("/admin/readSkill");
+//     }
+//   });
+// });
 
-//http get request which to create a skill
-router.get('/admin/createSkill',function(req,res) {
-  res.render("./admin/createSkill");
-});
+// //http get request which to create a skill
+// router.get('/admin/createSkill',function(req,res) {
+//   res.render("./admin/createSkill");
+// });
 
-router.post('/admin/createSkill',function(req,res) {
+// router.post('/admin/createSkill',function(req,res) {
 
-  Question.create(req.body.question,function(err,question) {
-    if(err) {
-      console.log(err);
-    } else {
-      Skills.create(req.body.skills,function(err,skill) {
-        if(err) {
-          console.log(err);
-        } else {
-          skill.question = question;
-          skill.save(function(err,data) {
-            if(err) {
-              console.log(err);
-            } else {
-              req.flash("success", "create successful!");
-              res.redirect("/admin/createSkill");
-            }
-          });
-        }
-      });
-    }
-  });
-});
+//   Question.create(req.body.question,function(err,question) {
+//     if(err) {
+//       console.log(err);
+//     } else {
+//       Skills.create(req.body.skills,function(err,skill) {
+//         if(err) {
+//           console.log(err);
+//         } else {
+//           skill.question = question;
+//           skill.save(function(err,data) {
+//             if(err) {
+//               console.log(err);
+//             } else {
+//               req.flash("success", "create successful!");
+//               res.redirect("/admin/createSkill");
+//             }
+//           });
+//         }
+//       });
+//     }
+//   });
+// });
 
 function splitAnswer(answer) {
   var result = [];
@@ -155,37 +153,37 @@ function splitAnswer(answer) {
   return result;
 }
 
-router.put('/admin/editSkill',function(req,res) {
-  Skills.findById(req.body.skills._id,function(err,skill) {
-    if(err) {
-      console.log(err);
-    } else {
-      skill.type = req.body.skills.type;
-      skill.name = req.body.skills.name;
-      skill.save();
-      Question.findOneAndUpdate(skill.question,req.body.question,function(err,question) {
-        if(err) {
-          console.log(err);
-        } else {
-          req.flash("success", "update successful!");
-          res.redirect('/admin/readSkill');
-        }
-      });
+// router.put('/admin/editSkill',function(req,res) {
+//   Skills.findById(req.body.skills._id,function(err,skill) {
+//     if(err) {
+//       console.log(err);
+//     } else {
+//       skill.type = req.body.skills.type;
+//       skill.name = req.body.skills.name;
+//       skill.save();
+//       Question.findOneAndUpdate(skill.question,req.body.question,function(err,question) {
+//         if(err) {
+//           console.log(err);
+//         } else {
+//           req.flash("success", "update successful!");
+//           res.redirect('/admin/readSkill');
+//         }
+//       });
       
-    }
-  });
-});
+//     }
+//   });
+// });
 
-router.get('/admin/editSkill/:id',function(req,res) {
-    Skills.findById(req.params.id).populate("question").exec(function(err,skill) {
-      if(err) {
-        console.log(err);
-      } else {
-        var answer = splitAnswer(skill.question.answer);
-        res.render('./admin/updateSkill', {skill:skill,question:skill.question.question,answer:answer});
-      }
-    });
-});
+// router.get('/admin/editSkill/:id',function(req,res) {
+//     Skills.findById(req.params.id).populate("question").exec(function(err,skill) {
+//       if(err) {
+//         console.log(err);
+//       } else {
+//         var answer = splitAnswer(skill.question.answer);
+//         res.render('./admin/updateSkill', {skill:skill,question:skill.question.question,answer:answer});
+//       }
+//     });
+// });
 
 
 //================

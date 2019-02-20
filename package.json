@@ -14,7 +14,7 @@
   "scripts": {
     "front": "cd frontend && npm run-script dev",
     "build": "cd frontend && npm run-script build",
-    "start": "node bin/www"
+    "start": "node app.js"
   },
   "dependencies": {
     "async": "^2.6.2",
