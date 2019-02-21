@@ -28,11 +28,11 @@
 						 </div>
 					 </md-whiteframe>
 			  		</div>	
-			  		<div class="col-md-9">
+			  		<!-- <div class="col-md-9">
 			  		 	<detail :project="project" v-if="component === 'detail'"></detail>
 			  		 	<setting :project="project" v-if="component === 'setting'"></setting>
 			  		 	<rating :project="project" v-if="component === 'rating'"></rating>
-			  		</div>
+			  		</div> -->
 		  		</div>
 			</div> 
 		</div>
