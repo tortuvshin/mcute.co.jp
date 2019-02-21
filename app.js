@@ -24,7 +24,8 @@ var indexRoutes = require("./routes/index"),
 var User = require('./models/user');
 
 mongoose.Promise = global.Promise;  
-mongoose.connect("mongodb://turtuvshin:turtuvshin9@ds217125.mlab.com:17125/work-flow");
+// mongoose.connect("mongodb://turtuvshin:turtuvshin9@ds217125.mlab.com:17125/work-flow");
+mongoose.connect("mongodb://localhost:27017/workflow");
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
@@ -80,6 +81,6 @@ var strategy = new JwtStrategy(jwtOptions, function(jwt_payload, next) {
 
 passport.use(strategy);
 
-http.listen(process.env.PORT, process.env.IP || 'localhost', function(){
+http.listen(process.env.PORT || '5000', process.env.IP || 'localhost', function(){
 	console.log("Matching System is RUNNING");
 });

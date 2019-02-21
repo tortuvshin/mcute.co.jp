@@ -3,7 +3,7 @@
     <transition leave-active-class="animated slideOutLeft" enter-active-class="animated slideInLeft"> 
      <div class="md-sidenav-content" v-if="show">
           <div class="md-toolbar vue-material-logo md-theme-white">
-            <router-link to="/"><span class="logo"><i class="fa fa-gg fa-fw" aria-hidden="true"></i><span class="title"> ECJOB</span></span></router-link>
+            <router-link to="/"><span class="logo"><i class="fab fa-node" aria-hidden="true"></i><span class="title"> Matching</span></span></router-link>
           </div>
 
           <div class="main-sidebar-links">

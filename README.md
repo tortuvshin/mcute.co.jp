@@ -1,5 +1,19 @@
 # Workflow
 
+
+| [Requirements][] | [Development][] | [Deploy][] | [Built with][] |
+|---|---|---|---|
+
+
+## Requirements
+
+- [MongoDB](https://www.mongodb.com/download-center)
+- [Node.js 8.0+](http://nodejs.org)
+- [Vue](http://vuejs.org)
+- [Git](https://git-scm.com/download/win)
+
+## Development
+
 ## Install MongoDB OSX
 
 Download mongo https://www.mongodb.com/download-center/community
@@ -124,7 +138,6 @@ local	(empty)
 admin	(empty)
 ```
 
-
 ## Running
 
 Clone the repository, then
@@ -133,8 +146,59 @@ Clone the repository, then
 * `npm start` from the root folder
   * alternatively: run `node server/bin/www`
 
+## Deploy
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+### Deploy to Heroku
+
+<img src="https://upload.wikimedia.org/wikipedia/en/a/a9/Heroku_logo.png" width="200">
+
+- Download and install [Heroku Toolbelt](https://toolbelt.heroku.com/)
+- In terminal, run `heroku login` and enter your Heroku credentials
+- From *your app* directory run `heroku create`
+- Run `heroku addons:create mongolab`.  This will set up the mLab add-on and configure the `DB_URI` environment variable in your Heroku app for you.
+- Lastly, do `git push heroku master`.  Done!
+
+**Note:** To install Heroku add-ons your account must be verified.
+
+---
+
+<img src="https://mlab.com/company/img/branding/mLab-logo-onlight.svg" width="200">
+
+- Open [mlab.com](https://mlab.com) website
+- Click the yellow **Sign up** button
+- Fill in your user information then hit **Create account**
+- From the dashboard, click on **:zap:Create new** button
+- Select **any** cloud provider (I usually go with AWS)
+- Under *Plan* click on **Single-node (development)** tab and select **Sandbox** (it's free)
+ - *Leave MongoDB version as is - `2.4.x`*
+- Enter *Database name** for your web app
+- Then click on **:zap:Create new MongoDB deployment** button
+- Now, to access your database you need to create a DB user
+- Click to the recently created database
+- You should see the following message:
+ - *A database user is required to connect to this database.* **Click here** *to create a new one.*
+- Click the link and fill in **DB Username** and **DB Password** fields
+- Finally, in `.env` instead of `mongodb://localhost:27017/test`, use the following URI with your credentials:
+ - `db: 'mongodb://USERNAME:PASSWORD@ds027479.mongolab.com:27479/DATABASE_NAME'`
+
+**Note:** As an alternative to mLab, there is also [Compose](https://www.compose.io/).
+
+## Built with
+
+* [Node.js](https://nodejs.org/en/download/)
+* [Express.js](https://expressjs.com/)
+* [MongoDB](https://www.mongodb.com/download-center)
+* [Vue.js](https://vuejs.org/)
+
+**[⬆ back to top](#workflow)**
+
+[Requirements]:#requirements
+[Development]:#development
+[Deploy]:#deploy
+[Built with]:#built-with
+
 ## Copyright
 
 Copyright &copy;2019 Intelligo Systems. All Rights Reserved.
-
-Distributed under [MIT License](http://mutedsolutions.mit-license.org).

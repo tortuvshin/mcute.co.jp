@@ -8,7 +8,7 @@
 	         <span class="icon-bar"></span>
 	         <span class="icon-bar"></span>
 	         </button>
-	         <router-link class="navbar-brand" :class="{'home-navbar-brand': isHomePage}" to="/"><i class="fa fa-gg fa-fw" aria-hidden="true"></i><span class="title"> WorkFlow Matching</span></router-link>
+	         <router-link class="navbar-brand" :class="{'home-navbar-brand': isHomePage}" to="/"><i class="fa fa-algolia" aria-hidden="true"></i><span class="title"> WorkFlow Matching</span></router-link>
 	      </div>
 	      <!-- Collect the nav links, forms, and other content for toggling -->
 	      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
