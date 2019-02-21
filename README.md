@@ -14,28 +14,9 @@
 
 ## Development
 
-## Install MongoDB OSX
+### Install MongoDB OSX
 
-Download mongo https://www.mongodb.com/download-center/community
-
-tar -zxvf mongodb-osx-ssl-x86_64-4.0.6.tgz
-
-sudo mv mongodb-osx-ssl-x86_64-4.0.6 /usr/local/mongodb
-
-sudo mkdir -p /data/db
-
-cd /data/db
-
-sudo shown yourname /data/db
-
-Goint to home : ls 
-
-open .bash_profile
-
- 
-source .bash_profile
-
-### Downloading MongoDB .tgz file
+#### Downloading MongoDB .tgz file
 Visit MongoDB official website https://www.mongodb.com/download-center/community and download the .tgz file from the community section of the website.
 Now extract the downloded .tgz and mv the mongo directory to /usr/local/mongodb directory using following command in terminal.
 
@@ -45,7 +26,7 @@ $ tar -zxvf mongodb-osx-ssl-x86_64-4.0.6.tgz
 $ sudo mv mongodb-osx-ssl-x86_64-4.0.6.tgz /usr/local/mongodb
 ```
 
-### Create MongoDB Data directory (/data/db)
+#### Create MongoDB Data directory (/data/db)
 MongoDB stores the data into the /data/db directory by default, so we need to create this directory and also assign proper permission using chown command.
 Open the terminal run the following command
 ```
@@ -55,7 +36,7 @@ turtuvshin
 $ sudo chown turtuvshin /data/db
 ```
 
-### Set mongodb/bin PATH to ~/.bash_profile
+#### Set mongodb/bin PATH to ~/.bash_profile
 Now we need to set the envirent variable for MongoDb, So the mongo and mongod command can be recognized from the terminal.
 For that we need to add the mongodb/bin path to the ~/.bash_profile file.
 ```
@@ -75,17 +56,15 @@ Now restart your terminal and verify the mongodb version by following commands
 
 ```
 $ mongo -version
-MongoDB shell version: 3.6.1
-$ mongo -version
-MongoDB shell version: 3.6.1
+MongoDB shell version: 4.0.6
 ```
 
-### Start MongoDB
+#### Start MongoDB
 In order to work with mongodb we need to first run the mongod command which starts the mongo daemon .
 So open two different terminals.
 Now in
 
-terminal 1
+##### terminal 1
 run the following command
 
 ```
@@ -95,27 +74,12 @@ MongoDB starting : pid=38042 port=27017 dbpath=/data/db/ 64-bit host=codebind.lo
 waiting for connections on port 27017
 ```
 
-```
-$ mongod
-MongoDB starting : pid=38042 port=27017 dbpath=/data/db/ 64-bit host=turtuvshin.local3
-//...
-waiting for connections on port 27017
-```
-
 Now in
 
-terminal 2
+##### terminal 2
 run the following command
 
 ```
-$ mongo
-MongoDB shell version: 3.6.1
-connecting to: test
-> show dbs
-local	(empty)
-admin	(empty)
-
-
 $ mongo
 MongoDB shell version: 3.6.1
 connecting to: test
@@ -128,9 +92,27 @@ admin	(empty)
 
 Clone the repository, then
 
+Install dependencies:
 * `npm install` from the root folder
+* `cd frontend && npm install` from the root folder
+
+Build and Start:
+* `npm run dev`: first-in-class development experience.
+  - Webpack + `vue-loader` for single file Vue components.
+  - State preserving hot-reload
+  - State preserving compilation error overlay
+  - Lint-on-save with ESLint
+  - Source maps
+
+* `npm run build`: Production ready build.
+  - JavaScript minified with [UglifyJS v3](https://github.com/mishoo/UglifyJS2/tree/harmony).
+  - HTML minified with [html-minifier](https://github.com/kangax/html-minifier).
+  - CSS across all components extracted into a single file and minified with [cssnano](https://github.com/ben-eb/cssnano).
+  - Static assets compiled with version hashes for efficient long-term caching, and an auto-generated production `index.html` with proper URLs to these generated assets.
+  - Use `npm run build --report`to build with bundle size analytics.
+
 * `npm start` from the root folder
-  * alternatively: run `node server/bin/www`
+  * alternatively: run `node app.js`
 
 ## Deploy
 
