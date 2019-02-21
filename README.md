@@ -36,16 +36,13 @@ open .bash_profile
 source .bash_profile
 
 ### Downloading MongoDB .tgz file
-Visit MongoDB official website and download the .tgz file from the community section of the website.
+Visit MongoDB official website https://www.mongodb.com/download-center/community and download the .tgz file from the community section of the website.
 Now extract the downloded .tgz and mv the mongo directory to /usr/local/mongodb directory using following command in terminal.
 
 ```
 $ cd ~/Download
-$ tar -zxvf mongodb-osx-ssl-x86_64-3.6.1.tgz
-$ sudo mv mongodb-osx-ssl-x86_64-3.6.1 /usr/local/mongodb
-$ cd ~/Download
-$ tar -zxvf mongodb-osx-ssl-x86_64-3.6.1.tgz
-$ sudo mv mongodb-osx-ssl-x86_64-3.6.1 /usr/local/mongodb
+$ tar -zxvf mongodb-osx-ssl-x86_64-4.0.6.tgz
+$ sudo mv mongodb-osx-ssl-x86_64-4.0.6.tgz /usr/local/mongodb
 ```
 
 ### Create MongoDB Data directory (/data/db)
@@ -56,23 +53,12 @@ $ sudo mkdir -p /data/db
 $ whoami
 turtuvshin
 $ sudo chown turtuvshin /data/db
-$ sudo mkdir -p /data/db
-$ whoami
-turtuvshin
-$ sudo chown turtuvshin /data/db
 ```
 
 ### Set mongodb/bin PATH to ~/.bash_profile
 Now we need to set the envirent variable for MongoDb, So the mongo and mongod command can be recognized from the terminal.
 For that we need to add the mongodb/bin path to the ~/.bash_profile file.
 ```
-$ cd
-$ pwd
-/Users/turtuvshin
-# if .bash_profile is not present follow the step 
-# to create it otherwise skip the step below.
-$ touch .bash_profile
-$ open .bash_profile
 $ cd
 $ pwd
 /Users/turtuvshin
