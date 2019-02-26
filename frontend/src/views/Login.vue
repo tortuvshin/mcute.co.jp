@@ -1,43 +1,87 @@
 <template>
-  <div class="container">
-	<md-card class="login-wrapper">
-	<md-progress class="md-warn" :md-progress="loginProgress" v-show="loginProgress !== 0"></md-progress>
-	  <md-card-header>
-	    <div class="md-title">Login</div>
-	  </md-card-header>
-	  <md-card-content>
-	    <form class="form-horizontal" v-on:submit.prevent="onLogin">
-	       	<transition name="fade">
-		       	<div class="alert alert-danger" role="alert" v-if="errorMessage">
-				  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-				  <span class="sr-only">Error:</span>
-				  {{errorMessage}}
-				</div>
-			</transition>
-          <!-- Username -->
-	          <md-input-container :class="{'md-input-invalid': isInvalidExist('username')}">
-			    <label>Enter Username</label>
-			    <md-input placeholder="Enter Username" v-model="username" required @change="invalidInput = []"></md-input>
-			    <span class="md-error" v-if="isInvalidExist('username')">Invalid Username</span>
-			  </md-input-container>
-	          <!-- Password -->
-	          <md-input-container md-has-password :class="{'md-input-invalid': isInvalidExist('password')}">
-			    <label>Enter Password</label>
-			    <md-input type="password" placeholder="Enter Password" v-model="password" required @change="invalidInput = []"></md-input>
-			    <span class="md-error" v-if="isInvalidExist('password')">Invalid Password</span>
-			  </md-input-container>
-			  <router-link to="/register" exact>Don't Have an Account?</router-link>
-       </form>
-	  </md-card-content>
-	  <md-card-actions>
-	    <md-button @click.native="onLogin">Sign In</md-button>
-	  </md-card-actions>
-	</md-card>
-  </div>
-</template>
+    <section class="section section-shaped section-lg my-0" id="particles-js">
+        <div class="shape shape-style-1 bg-gradient-default">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="container pt-lg-md">
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    <card type="secondary" shadow
+                          header-classes="bg-white pb-5"
+                          body-classes="px-lg-5 py-lg-5"
+                          class="border-0">
+                        <template>
+                            <div class="text-muted text-center mb-3">
+                                <small>Sign in with</small>
+                            </div>
+                            <div class="btn-wrapper text-center">
+                                <base-button type="neutral">
+                                    <img slot="icon" src="../assets/images/icons/common/github.svg">
+                                    Github
+                                </base-button>
 
+                                <base-button type="neutral">
+                                    <img slot="icon" src="../assets/images/icons/common/google.svg">
+                                    Google
+                                </base-button>
+                            </div>
+                        </template>
+                        <template>
+                            <div class="text-center text-muted mb-4">
+                                <small>Or sign in with credentials</small>
+                            </div>
+                            <form role="form" v-on:submit.prevent="onLogin">
+                                <base-input alternative
+                                            class="mb-3"
+                                            placeholder="Username"
+                                            v-model="username"
+                                            required @change="invalidInput = []"
+                                            addon-left-icon="ni ni-email-83">
+                                </base-input>
+                                <base-input alternative
+                                            type="password"
+                                            placeholder="Password"
+                                            v-model="password"
+                                            required @change="invalidInput = []"
+                                            addon-left-icon="ni ni-lock-circle-open">
+                                </base-input>
+                                <base-checkbox>
+                                    Remember me
+                                </base-checkbox>
+                                <div class="text-center">
+                                    <base-button type="primary" class="my-4" v-on:click="onLogin">Sign In</base-button>
+                                </div>
+                                {{ loading }}
+                                {{errorMessage}}
+                            </form>
+                        </template>
+                    </card>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <a href="#" class="text-light">
+                                <small>Forgot password?</small>
+                            </a>
+                        </div>
+                        <div class="col-6 text-right">
+                            <a href="/register" class="text-light">
+                                <small>Create new account</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
 <script>
-	import Vue from 'vuex'
+import Vue from 'vuex'
 	import { bus } from '../main.js'
 	import { API_SERVER } from '../api.js'
 	import { mapActions } from 'vuex'
@@ -111,19 +155,5 @@
 		}
 	}
 </script>
-
-<style scoped>
-	.container{
-	    width: 100%;
-	    height: 100%;
-	 }
-	.login-wrapper{
-		max-width: 400px;
-		top: 50%;
-    	left: 50%;
-   		transform: translateX(-50%) translateY(-50%);
-	}	
-	label{
-	    font-weight: 400!important;
-	  }
+<style>
 </style>
