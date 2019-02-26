@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import App from './App'
+
 import VueResouce from 'vue-resource'
 import VueRouter from 'vue-router'
 import VeeValidate from 'vee-validate'
@@ -13,12 +15,29 @@ import 'vue-material/dist/vue-material.css'
 import MainContent from './components/MainContent.vue'
 import SvgBackground from './components/common/svgBackground.vue'
 import Spinner from './components/common/Spinner.vue'
-import App from './App.vue'
 
 import { API_SERVER } from './api.js'
 
 import { store } from './store/index'
 import router from './router/routes'
+
+// New template
+import BootstrapVue from 'bootstrap-vue'
+import Badge from "./components/Badge";
+import BaseAlert from "./components/BaseAlert";
+import BaseButton from "./components/BaseButton";
+import BaseCheckbox from "./components/BaseCheckbox";
+import BaseInput from "./components/BaseInput";
+import BasePagination from "./components/BasePagination";
+import BaseProgress from "./components/BaseProgress";
+import BaseRadio from "./components/BaseRadio";
+import BaseSlider from "./components/BaseSlider";
+import BaseSwitch from "./components/BaseSwitch";
+import Card from "./components/Card";
+import Icon from "./components/Icon";
+import clickOutside from "./directives/click-ouside.js";
+import VueLazyload from "vue-lazyload";
+
 
 export const bus = new Vue();
 
@@ -33,6 +52,25 @@ Vue.http.options.credentials = true;
 Vue.component('main-content', MainContent);
 Vue.component('svg-background', SvgBackground);
 Vue.component('spinner', Spinner);
+
+
+Vue.use(BootstrapVue)
+Vue.use(VueLazyload)
+
+// New Components
+Vue.component(Badge.name, Badge);
+Vue.component(BaseAlert.name, BaseAlert);
+Vue.component(BaseButton.name, BaseButton);
+Vue.component(BaseInput.name, BaseInput);
+Vue.component(BaseCheckbox.name, BaseCheckbox);
+Vue.component(BasePagination.name, BasePagination);
+Vue.component(BaseProgress.name, BaseProgress);
+Vue.component(BaseRadio.name, BaseRadio);
+Vue.component(BaseSlider.name, BaseSlider);
+Vue.component(BaseSwitch.name, BaseSwitch);
+Vue.component(Card.name, Card);
+Vue.component(Icon.name, Icon);
+Vue.directive("click-outside", clickOutside);
 
 Vue.mixin({
   methods: {
@@ -55,7 +93,7 @@ Vue.mixin({
             } 
             if(mm<10){
                 mm='0'+mm
-            } 
+            }
 
         today = yyyy+'-'+mm+'-'+dd;
         return today;
@@ -139,5 +177,9 @@ new Vue({
   el: '#app',
   store,
   router,
-  render: h => h(App)
+  components: {
+    App
+  },
+  template: '<App/>'
 })
+

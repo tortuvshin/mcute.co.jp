@@ -33,6 +33,18 @@ import Profile from "../components/profile/Profile.vue";
 
 import PaypalReturn from "../views/dashboard/billing/PaypalReturn.vue";
 
+import AppHeader from "../layout/AppHeader";
+import AppFooter from "../layout/AppFooter";
+import AdminHeader from "../layout/AdminHeader";
+import AdminFooter from "../layout/AdminFooter";
+import Components from "../views/Component.vue";
+import Admin from "../views/Admin.vue";
+import Landing from "../views/Landing.vue";
+import Login1 from "../views/Login.1.vue";
+import Home1 from "../views/Home.1.vue";
+import Register1 from "../views/Register.1.vue";
+import Profile1 from "../views/Profile.vue";
+
 Vue.use(Router);
 
 export default new Router ({
@@ -40,6 +52,59 @@ export default new Router ({
 	linkExactActiveClass: "active",
 	linkActiveClass: 'active',
 	routes: [
+		{
+			path: "/home",
+			name: "home",
+			components: {
+			  header: AppHeader,
+			  default: Home1,
+			  footer: AppFooter
+			}
+		  },
+		  {
+			path: "/components",
+			name: "components",
+			components: {
+			  header: AppHeader,
+			  default: Components,
+			  footer: AppFooter
+			}
+		  },{
+			path: "/admin",
+			name: "admin",
+			components: {
+			  header: AdminHeader,
+			  default: Admin,
+			  footer: AdminFooter
+			}
+		  },
+		  {
+			path: "/landing",
+			name: "landing",
+			components: {
+			  header: AppHeader,
+			  default: Landing,
+			  footer: AppFooter
+			}
+		  },
+		  {
+			path: "/signin",
+			name: "login",
+			components: {
+			  header: AppHeader,
+			  default: Login1,
+			  footer: AppFooter
+			}
+		  },
+		  {
+			path: "/signup",
+			name: "register",
+			components: {
+			  header: AppHeader,
+			  default: Register1,
+			  footer: AppFooter
+			}
+		  },
 		{ 
 			path: '', 
 			component: Home, 
