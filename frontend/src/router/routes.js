@@ -51,25 +51,25 @@ export default new Router ({
 	routes: [
 		
 		  {
-			path: "/components",
-			name: "components",
-			components: {
-			  header: AppHeader,
-			  default: Components,
-			  footer: AppFooter
-			}
+				path: "/components",
+				name: "components",
+				components: {
+					header: AppHeader,
+					default: Components,
+					footer: AppFooter
+				}
 		  },{
-			path: "/admin",
-			name: "admin",
-			components: {
-			  header: AdminHeader,
-			  default: Admin,
-			  footer: AdminFooter
-			}
+				path: "/admin",
+				name: "admin",
+				components: {
+					header: AdminHeader,
+					default: Admin,
+					footer: AdminFooter
+				}
 		  },
 		  {
 			path: "/login",
-			name: "login",
+			name: "Login",
 			components: {
 			  header: AppHeader,
 			  default: Login,

@@ -59,7 +59,7 @@
                             {{ currentUser.firstName }} {{ currentUser.lastName }}
                         </base-button>
                         <a class="dropdown-item" href="#" v-on:click="$router.push('/dashboard');">Profile</a>
-                        <a class="dropdown-item" href="#" v-on:click="$router.push('/dashboard');">{{ currentUser.type }}</a>
+                        <a class="dropdown-item" href="#" v-on:click="$router.push('/dashboard');">Type: {{ currentUser.type }}</a>
                         <a class="dropdown-item" href="#" v-on:click="logout">Logout</a>
                     </base-dropdown>
                 </li>
