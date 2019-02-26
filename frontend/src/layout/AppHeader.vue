@@ -51,7 +51,18 @@
                         <span class="nav-link-inner--text d-lg-none">Github</span>
                     </a>
                 </li>
-
+                <li class="nav-item" v-if="currentUser">
+                
+                    <base-dropdown>
+                        <base-button slot="title" type="secondary" class="dropdown-toggle">
+                            <!-- <img :src="avatarUrl(currentUser)" />  -->
+                            {{ currentUser.firstName }} {{ currentUser.lastName }}
+                        </base-button>
+                        <a class="dropdown-item" href="#" v-on:click="$router.push('/dashboard');">Profile</a>
+                        <a class="dropdown-item" href="#" v-on:click="$router.push('/dashboard');">{{ currentUser.type }}</a>
+                        <a class="dropdown-item" href="#" v-on:click="logout">Logout</a>
+                    </base-dropdown>
+                </li>
             </ul>
         </base-nav>
     </header>
@@ -60,14 +71,29 @@
 import BaseNav from "@/components/BaseNav";
 import BaseDropdown from "@/components/BaseDropdown";
 import CloseButton from "@/components/CloseButton";
+import { mapActions } from 'vuex'
+import { bus } from '../main.js'
 
 export default {
-  components: {
-    BaseNav,
-    CloseButton,
-    BaseDropdown
-  }
+    props: ['show'],
+    computed: {
+        currentUser(){
+            return this.$store.state.user.currentUser;
+        }
+    },
+    methods: {
+        ...mapActions([
+        'logout'
+        ])
+    },
+    
+    components: {
+        BaseNav,
+        CloseButton,
+        BaseDropdown
+    }
 };
+
 </script>
 <style>
 </style>
