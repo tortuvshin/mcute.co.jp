@@ -40,7 +40,6 @@ app.use(express.static(path.join(__dirname, "frontend/dist")));
 
 app.set('view engine', 'html');
 
-
 app.use(methodOverride("_method"));
 app.use(passport.initialize());
 app.use(passport.session());

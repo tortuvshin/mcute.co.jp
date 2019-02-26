@@ -18,9 +18,9 @@
               <li class="md-list-item">
                 <router-link to="/dashboard/project" class="md-list-item-container md-button">My Job</router-link>
               </li>
-              <!-- <li class="md-list-item">
+              <li class="md-list-item">
                 <router-link to="/support" class="md-list-item-container md-button">Support Center</router-link>
-              </li> -->
+              </li>
             </md-list>
           </div>
 

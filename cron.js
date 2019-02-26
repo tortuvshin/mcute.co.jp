@@ -14,7 +14,7 @@ var projectStatusJob = new cron.CronJob({
             }else{
                 project.status = "pending";
                 project.save();
-            }
+            }dw
         });
     });
   },
