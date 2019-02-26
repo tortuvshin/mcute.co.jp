@@ -66,7 +66,7 @@ router.get("/authenticate", middleware.jwt, function(req, res){
 // ===================================
 var options = {
   auth: {
-    api_key: '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'
+    api_key: ''
   }
 }
 var client = nodemailer.createTransport(sgTransport(options));

@@ -91,14 +91,14 @@
 					}
 				}, 100);
 			},
-	        loginSuccess(message){
-	           bus.$emit('showAlert', message);
-	      	   this.$router.go(-1);
-	        },
-	        loginFail(message){
-	           this.loginProgress = 0;
-	           bus.$emit('showAlert', message);
-	        }
+			loginSuccess(message){
+					bus.$emit('showAlert', message);
+					this.$router.go(-1);
+			},
+			loginFail(message){
+					this.loginProgress = 0;
+					bus.$emit('showAlert', message);
+			}
 		},
 		created(){
 			// From main.js auth

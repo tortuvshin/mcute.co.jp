@@ -107,7 +107,11 @@ export default new Router ({
 		  },
 		{ 
 			path: '', 
-			component: Home, 
+			components: {
+			  header: AppHeader,
+			  default: Home,
+			  footer: AppFooter
+			},
 			name:'Home'
 		},
 		{ path: '/login', component: Login, name:'Login' },
