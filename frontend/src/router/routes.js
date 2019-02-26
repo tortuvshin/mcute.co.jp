@@ -39,7 +39,6 @@ import AdminHeader from "../layout/AdminHeader";
 import AdminFooter from "../layout/AdminFooter";
 import Components from "../views/Component.vue";
 import Admin from "../views/Admin.vue";
-import Landing from "../views/Landing.vue";
 import Login1 from "../views/Login.1.vue";
 import Home1 from "../views/Home.1.vue";
 import Register1 from "../views/Register.1.vue";
@@ -76,15 +75,6 @@ export default new Router ({
 			  header: AdminHeader,
 			  default: Admin,
 			  footer: AdminFooter
-			}
-		  },
-		  {
-			path: "/landing",
-			name: "landing",
-			components: {
-			  header: AppHeader,
-			  default: Landing,
-			  footer: AppFooter
 			}
 		  },
 		  {
