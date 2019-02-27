@@ -3,20 +3,18 @@
 
         <div class="position-relative">
             <!-- shape Hero -->
-            <section class="section-shaped my-0">
-                <div class="shape shape-style-1 shape-default shape-skew">
-                  
+            <section class="section-hero section-shaped my-0 mt--100" id="particles-js">
+                <div class="shape shape-style-1 shape-primary">
+                    <img src="../assets/images/theme/city-wallpaper-6.jpg" class="img-fluid floating">
                 </div>
-                <div class="container shape-container d-flex" id="particles-js">
+
+                <div class="container shape-container d-flex align-items-center">
                     <div class="col px-0">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <h1 class="display-3  text-white">A beautiful Design System
-                                    <span>completed with examples</span>
-                                </h1>
-                                <p class="lead  text-white">The design system comes with four pre-built pages to help
-                                    you get started faster. You can change the text and images and you're good to
-                                    go.</p>
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-lg-12 text-center pt-lg">
+                                <h1 class="display-1 text-white">Matching system</h1>
+                                <p class="lead text-white mt-4 mb-5">Intelligo is a conversational AI platform powering virtual assistants and
+        smart bots across mobile apps, web and messaging platforms.</p>
                                 <div class="btn-wrapper">
                                     <base-button tag="a"
                                                  href="/project/post"
@@ -35,18 +33,19 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </section>
             <!-- 1st Hero Variation -->
         </div>
-        <section class="section section-lg pt-lg-0 mt--200">
+        <section class="section section-lg pt-lg-0">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-12">
                         <div class="row row-grid">
                             <div class="col-lg-4">
-                                <card class="border-0" hover shadow body-classes="py-5">
+                                <card class="border-0" hover shadow body-classes="py-3">
                                     <img src="../assets/images/theme/landing.jpg" class="img-fluid floating">
 																		<h6 class="text-primary text-uppercase">Download Argon</h6>
                                     <p class="description mt-3">Argon is a great free UI package based on Bootstrap 4

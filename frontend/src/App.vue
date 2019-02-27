@@ -11,7 +11,6 @@
     </div>
 </template>
 <script>
-import { FadeTransition } from "vue2-transitions";
 
 import { bus } from './main.js'
 import { mapMutations } from 'vuex'
@@ -91,7 +90,7 @@ export default {
     }
   },
   components: {
-    FadeTransition
+    
   }
 };
 </script>

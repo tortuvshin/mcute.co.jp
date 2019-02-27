@@ -75,6 +75,8 @@ import { mapActions } from 'vuex'
 import { bus } from '../main.js'
 
 export default {
+
+    name: "app-header",
     props: ['show'],
     computed: {
         currentUser(){

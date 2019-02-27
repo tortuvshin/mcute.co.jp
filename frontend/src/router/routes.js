@@ -29,7 +29,7 @@ import CreateTicket from "../views/support/CreateTicket.vue";
 
 import ViewProfile from "../views/profile/ViewProfile.vue";
 
-import Profile from "../components/profile/Profile.vue";
+import Profile from "../views/Profile.vue";
 
 import PaypalReturn from "../views/dashboard/billing/PaypalReturn.vue";
 
@@ -40,7 +40,6 @@ import AdminFooter from "../layout/AdminFooter";
 import Components from "../views/Component.vue";
 import Admin from "../views/Admin.vue";
 import Register1 from "../views/Register.1.vue";
-import Profile1 from "../views/Profile.vue";
 
 Vue.use(Router);
 
@@ -95,15 +94,19 @@ export default new Router ({
 			name:'Home'
 		},
 		{ path: '/register', component: Register, name:'Register'},
-		{ path: '/dashboard', component: Index, children: [
-			{ path: '', component: Profile, name: 'MyProfile', meta: { auth: true }},
-			{ path: 'account', component: Account, name:'Account', meta: { auth: true }},
-			{ path: 'billing/deposit', component: Deposit, name:'Deposit', meta: { auth: true }},
-			{ path: 'billing/withdraw', component: Withdraw, name:'Withdraw', meta: { auth: true }},
-			{ path: 'billing/transaction', component: Transaction, name:'Transaction', meta: { auth: true }},
-			{ path: 'security', component: Security, meta: {auth: true}},
-			{ path: 'notification', component: Notification, meta: {auth: true}}
-		]}, 
+		{ path: '/dashboard', 
+			component: 	Profile
+			, 
+			children: [
+				{ path: '', component: Profile, name: 'MyProfile', meta: { auth: true }},
+				{ path: 'account', component: Account, name:'Account', meta: { auth: true }},
+				{ path: 'billing/deposit', component: Deposit, name:'Deposit', meta: { auth: true }},
+				{ path: 'billing/withdraw', component: Withdraw, name:'Withdraw', meta: { auth: true }},
+				{ path: 'billing/transaction', component: Transaction, name:'Transaction', meta: { auth: true }},
+				{ path: 'security', component: Security, meta: {auth: true}},
+				{ path: 'notification', component: Notification, meta: {auth: true}}
+			]
+		}, 
 		{ path: '/dashboard/billing/return', component: PaypalReturn, meta: {auth: true}},
 		{ path: '/dashboard/project', component: MyProject, meta: {auth: true}},
 		{ path: '/dashboard/project/:id/rating', component: Rating, meta: {auth: true}},
