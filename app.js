@@ -45,7 +45,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(function (req, res, next) {
-    var allowedOrigins = ['http://localhost:8000','http://localhost:8081', 'http://localhost:8001','http://127.0.0.1:8020', 'http://ec-job.com', 'http://localhost:8080', 'http://ec-job.com.s3-website-ap-northeast-1.amazonaws.com'];
+    var allowedOrigins = ['http://localhost:5000', 'http://localhost:8000','http://localhost:8081', 'http://localhost:8001','http://127.0.0.1:8020', 'http://localhost:8080'];
     var origin = req.headers.origin;
     if(allowedOrigins.indexOf(origin) > -1){
          res.setHeader('Access-Control-Allow-Origin', origin);

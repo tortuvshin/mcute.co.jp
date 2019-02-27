@@ -107,6 +107,7 @@ export default new Router ({
 				{ path: 'notification', component: Notification, meta: {auth: true}}
 			]
 		}, 
+		{ path: '/account', component: Account, name:'Account', meta: { auth: true }},
 		{ path: '/dashboard/billing/return', component: PaypalReturn, meta: {auth: true}},
 		{ path: '/dashboard/project', component: MyProject, meta: {auth: true}},
 		{ path: '/dashboard/project/:id/rating', component: Rating, meta: {auth: true}},
