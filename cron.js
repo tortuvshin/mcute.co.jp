@@ -1,7 +1,7 @@
-var cron = require('cron');
-var Project = require('./models/project');
+const cron = require('cron');
+const Project = require('./models/project');
 
-var projectStatusJob = new cron.CronJob({
+let projectStatusJob = new cron.CronJob({
   cronTime: '0 * * * * *',
   onTick: function() {
     Project.find({'endDate': {$lt: new Date()}, 'status': 'open'}).populate({path: 'employer', model: 'User'}).exec(function(err, projects){
@@ -11,10 +11,10 @@ var projectStatusJob = new cron.CronJob({
                 project.employer.balance += project.budgetMax;
                 project.employer.save()
                 project.save();
-            }else{
+            } else {
                 project.status = "pending";
                 project.save();
-            }dw
+            }
         });
     });
   },

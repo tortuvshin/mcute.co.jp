@@ -1,5 +1,5 @@
-var express = require('express'),
-  	app = express(),
+const express = require('express'),
+    app = express(),
   	http = require('http').Server(app),
   	bodyParser = require('body-parser'),
   	mongoose = require('mongoose'),
@@ -13,7 +13,7 @@ var express = require('express'),
     history = require('connect-history-api-fallback'),
   	cron = require("./cron");
 	
-var indexRoutes = require("./routes/index"),
+const indexRoutes = require("./routes/index"),
 		dashboardRoutes = require("./routes/dashboard"),
    	projectRoutes = require("./routes/project"),
    	adminRoutes = require("./routes/admin"),
@@ -21,7 +21,8 @@ var indexRoutes = require("./routes/index"),
    	profileRoutes = require("./routes/profile"),
    	chatRoutes = require("./routes/chat");
 
-var User = require('./models/user');
+     
+let User = require('./models/user');
 
 mongoose.Promise = global.Promise;  
 // mongoose.connect("mongodb://turtuvshin:turtuvshin9@ds217125.mlab.com:17125/work-flow");
@@ -45,8 +46,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(function (req, res, next) {
-    var allowedOrigins = ['http://localhost:5000', 'http://localhost:8000','http://localhost:8081', 'http://localhost:8001','http://127.0.0.1:8020', 'http://localhost:8080'];
-    var origin = req.headers.origin;
+    const allowedOrigins = ['http://localhost:5000', 'http://localhost:8000','http://localhost:8081', 'http://localhost:8001','http://127.0.0.1:8020', 'http://localhost:8080'];
+    let origin = req.headers.origin;
     if(allowedOrigins.indexOf(origin) > -1){
          res.setHeader('Access-Control-Allow-Origin', origin);
     }
@@ -63,12 +64,12 @@ app.use("/support", supportRoutes);
 app.use("/profile", profileRoutes);
 app.use("/chat", chatRoutes);
 
-var passportJWT = require("passport-jwt");
-var ExtractJwt = passportJWT.ExtractJwt;
-var JwtStrategy = passportJWT.Strategy;
-var jwtOptions = require('./jwtOptions');
+let passportJWT = require("passport-jwt");
+let ExtractJwt = passportJWT.ExtractJwt;
+let JwtStrategy = passportJWT.Strategy;
+let jwtOptions = require('./jwtOptions');
 
-var strategy = new JwtStrategy(jwtOptions, function(jwt_payload, next) {
+let strategy = new JwtStrategy(jwtOptions, function(jwt_payload, next) {
   User.findById(jwt_payload.id, function(err, user){
      if (user) {
         next(null, user);

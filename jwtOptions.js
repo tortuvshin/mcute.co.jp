@@ -1,9 +1,9 @@
-var passport = require('passport');
-var passportJWT = require("passport-jwt");
+const passport = require('passport');
+const passportJWT = require("passport-jwt");
   
-var ExtractJwt = passportJWT.ExtractJwt;
-var JwtStrategy = passportJWT.Strategy;
-var jwtOptions = {}
+const ExtractJwt = passportJWT.ExtractJwt;
+const JwtStrategy = passportJWT.Strategy;
+const jwtOptions = {}
 
 jwtOptions.jwtFromRequest = ExtractJwt.fromAuthHeaderWithScheme("jwt");
 jwtOptions.secretOrKey = 'tasmanianDevil';
