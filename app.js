@@ -1,28 +1,27 @@
-const express = require('express'),
-    app = express(),
-  	http = require('http').Server(app),
-  	bodyParser = require('body-parser'),
-  	mongoose = require('mongoose'),
-  	passport = require('passport'),
-  	io = require('./sockets/').initialize(http),
-  	methodOverride = require('method-override'),
-    seedDB = require("./seeds"),
-    path = require("path"),
-    morgan         = require('morgan'),
-    cors   = require('cors'),
-    history = require('connect-history-api-fallback'),
-  	cron = require("./cron");
+const express = require('express')
+const app = express()
+const http = require('http').Server(app)
+const	bodyParser = require('body-parser')
+const	mongoose = require('mongoose')
+const	passport = require('passport')
+const	io = require('./sockets/').initialize(http)
+const	methodOverride = require('method-override')
+const seedDB = require("./seeds")
+const path = require("path")
+const morgan = require('morgan')
+const cors = require('cors')
+const history = require('connect-history-api-fallback')
+const cron = require("./cron")
 	
-const indexRoutes = require("./routes/index"),
-		dashboardRoutes = require("./routes/dashboard"),
-   	projectRoutes = require("./routes/project"),
-   	adminRoutes = require("./routes/admin"),
-   	supportRoutes = require("./routes/support"),
-   	profileRoutes = require("./routes/profile"),
-   	chatRoutes = require("./routes/chat");
+const indexRoutes = require("./routes/index")
+const dashboardRoutes = require("./routes/dashboard")
+const projectRoutes = require("./routes/project")
+const adminRoutes = require("./routes/admin")
+const supportRoutes = require("./routes/support")
+const profileRoutes = require("./routes/profile")
+const chatRoutes = require("./routes/chat")
 
-     
-let User = require('./models/user');
+let User = require('./models/user')
 
 mongoose.Promise = global.Promise;  
 // mongoose.connect("mongodb://turtuvshin:turtuvshin9@ds217125.mlab.com:17125/work-flow");

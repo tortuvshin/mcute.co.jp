@@ -1,17 +1,15 @@
-var User = require('./models/user');
-var Transaction = require('./models/transaction');
-var Project = require('./models/project');
-var Bid = require('./models/bid');
-var PaypalDeposit = require("./models/paypalDeposit");
-var Message = require("./models/message");
-var CommentReply = require("./models/commentReply");
-var Comment = require("./models/comment");
-var BankDeposit = require("./models/bankDeposit");
-var Rating = require("./models/rating");
-var Ticket = require("./models/ticket");
-var TicketContent = require("./models/ticketContent");
-
-
+const User = require('./models/user');
+const Transaction = require('./models/transaction');
+const Project = require('./models/project');
+const Bid = require('./models/bid');
+const PaypalDeposit = require("./models/paypalDeposit");
+const Message = require("./models/message");
+const CommentReply = require("./models/commentReply");
+const Comment = require("./models/comment");
+const BankDeposit = require("./models/bankDeposit");
+const Rating = require("./models/rating");
+const Ticket = require("./models/ticket");
+const TicketContent = require("./models/ticketContent");
 
 function seedDB(){
     Rating.remove({}, function(err){

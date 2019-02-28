@@ -1,10 +1,10 @@
-var express = require('express'),
+const express = require('express'),
   	app = express(),
     http = require('http').Server(app),
   	sio = require('socket.io'),
   	io = null;
 	
-var CurrentUsers = [];
+let CurrentUsers = [];
 
 exports.io = function () {
   return io;
@@ -32,7 +32,7 @@ exports.initialize = function(server) {
     	});
 
     	socket.on('disconnect', function() {
-          var i = CurrentUsers.indexOf(socket);
+          const i = CurrentUsers.indexOf(socket);
           CurrentUsers.splice(i, 1);
         });
     });

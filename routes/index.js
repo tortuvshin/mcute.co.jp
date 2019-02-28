@@ -1,4 +1,4 @@
-var express = require('express'),
+const express = require('express'),
   	app = express(),
   	router = express.Router(),
   	User = require("../models/user"),
@@ -19,13 +19,13 @@ router.get("/", function(req, res){
 
 router.post("/register", middleware.chkUserExist, function(req, res){
     req.body.signUpDate = new Date();
-	  var user = new User(req.body);
+	  let user = new User(req.body);
 	
   	user.save(function(err, user) {
   			Transaction.create({}, function(err, transaction){
   			      user.transaction = transaction;
   			      user.save(function(err, user){
-    			       var token = jwt.sign({exp: Math.floor(Date.now() / 1000) + 21600, id: user._id}, jwtOptions.secretOrKey);
+    			       let token = jwt.sign({exp: Math.floor(Date.now() / 1000) + 21600, id: user._id}, jwtOptions.secretOrKey);
               	 return res.status(200).json({success: true, token: token, currentUser: user, message: 'Welcome back, ' + user.firstName + ' ' + user.lastName});
   			      });
   			});
@@ -36,8 +36,8 @@ router.post("/register", middleware.chkUserExist, function(req, res){
 // LOGIN ROUTE
 // ===================================
 router.post('/login', function(req, res, next) {
-    var username = req.body.username;
-    var password = req.body.password;
+    let username = req.body.username;
+    let password = req.body.password;
    
     User.findOne({username: username}, function(err, user){
         if(!user){
@@ -47,9 +47,9 @@ router.post('/login', function(req, res, next) {
         }
         user.comparePassword(password, function(err, isMatch){
           if(isMatch === true) {
-              var payload = {id: user.id};
+              let payload = {id: user.id};
               // The token will be expried after 1 hour
-              var token = jwt.sign({exp: Math.floor(Date.now() / 1000) + 21600, id: payload.id}, jwtOptions.secretOrKey);
+              let token = jwt.sign({exp: Math.floor(Date.now() / 1000) + 21600, id: payload.id}, jwtOptions.secretOrKey);
               return res.status(200).json({success: true, token: token, currentUser: user, message: 'Welcome back, ' + user.firstName + ' ' + user.lastName});
           } 
           res.status(400).json({success: false, message:"Password does not match."});
@@ -64,18 +64,18 @@ router.get("/authenticate", middleware.jwt, function(req, res){
 // ===================================
 // FORGOT PASSWORD ROUTE
 // ===================================
-var options = {
+let options = {
   auth: {
     api_key: ''
   }
 }
-var client = nodemailer.createTransport(sgTransport(options));
+let client = nodemailer.createTransport(sgTransport(options));
 
 router.post('/forgot', function(req, res, next) {
   async.waterfall([
     function(done) {
       crypto.randomBytes(20, function(err, buf) {
-        var token = buf.toString('hex');
+        let token = buf.toString('hex');
         done(err, token);
       });
     },
@@ -94,7 +94,7 @@ router.post('/forgot', function(req, res, next) {
       });
     },
     function(token, user, done) {
-      var mailOptions = {
+      let mailOptions = {
         to: user.email,
         from: 'no-reply@ec-job.com',
         subject: 'EC-Job Password Reset',
@@ -152,7 +152,7 @@ router.post('/reset/:token', function(req, res) {
       });
     },
     function(user, done) {
-      var mailOptions = {
+      let mailOptions = {
         to: user.email,
         from: 'no-reply@ec-job.com',
         subject: 'Your password has been changed',
