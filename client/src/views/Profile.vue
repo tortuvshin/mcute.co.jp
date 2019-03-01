@@ -1,0 +1,88 @@
+<template>
+    <div class="profile-page">
+
+        <app-header></app-header>
+        <section class="section-profile-cover section-shaped my-0">
+            <div class="shape shape-style-1 shape-primary shape-skew alpha-4">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+        <section class="section section-skew">
+            <div class="container">
+                <card shadow class="card-profile mt--300" no-body>
+                    <div class="px-4">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 order-lg-2">
+                                <div class="card-profile-image">
+                                    <a href="#">
+                                        <img src="../assets/images/theme/team-4-800x800.jpg" class="rounded-circle">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
+                                <div class="card-profile-actions py-4 mt-lg-0">
+                                    <base-button type="info" size="sm" class="mr-4">Connect</base-button>
+                                    <base-button type="default" size="sm" class="float-right">Message</base-button>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 order-lg-1">
+                                <div class="card-profile-stats d-flex justify-content-center">
+                                    <div>
+                                        <span class="heading">22</span>
+                                        <span class="description">Projects</span>
+                                    </div>
+                                    <div>
+                                        <span class="heading">89</span>
+                                        <span class="description">Comments</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-5">
+                            <h3> {{ currentUser.firstName }} {{ currentUser.lastName }}
+                                <span class="font-weight-light">Member Since&nbsp;{{ currentUser.signUpDate | moment("DD-MMMM-YYYY") }}</span>
+                            </h3>
+                            <div class="h6 font-weight-300"><i class="ni location_pin mr-2"></i>{{currentUser.country}}</div>
+                            <div class="h6 mt-4"><i class="ni business_briefcase-24 mr-2"></i>Solution Manager</div>
+                            <div><i class="ni education_hat mr-2"></i>University of Computer Science</div>
+                        </div>
+                        <div class="mt-5 py-5 border-top text-center">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-9">
+                                    <p v-html="currentUser.profile"></p>
+                                    <a href="#">Show more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </card>
+            </div>
+        </section>
+
+        <app-footer></app-footer>
+    </div>
+</template>
+<script>
+
+import AppHeader from "../layout/AppHeader";
+import AppFooter from "../layout/AppFooter";
+export default {
+    computed: {
+        currentUser(){
+            return this.$store.state.user.currentUser;
+        }
+    },
+    components: {
+        AppHeader,
+        AppFooter
+    }
+};
+</script>
+<style>
+</style>
