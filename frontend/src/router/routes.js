@@ -1,11 +1,5 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "../views/Home.vue";
-import ItemList from "../views/ItemList.vue";
-import Login from "../views/Login.vue";
-import Register from "../views/Register.vue";
-
-import Error from "../views/ErrorPage.vue";
 
 import Index from "../views/dashboard/Index.vue";
 import Account from "../views/dashboard/Account.vue";
@@ -30,17 +24,21 @@ import CreateTicket from "../views/support/CreateTicket.vue";
 
 import ViewProfile from "../views/profile/ViewProfile.vue";
 
-import Profile from "../views/Profile.vue";
+import Profile from "../views/Presentation.vue";
 
 import PaypalReturn from "../views/dashboard/billing/PaypalReturn.vue";
 
-import AppHeader from "../layout/AppHeader";
-import AppFooter from "../layout/AppFooter";
-import AdminHeader from "../layout/AdminHeader";
-import AdminFooter from "../layout/AdminFooter";
-import Components from "../views/Component.vue";
-import Admin from "../views/Admin.vue";
-import Register1 from "../views/Register.1.vue";
+import AppHeader from "../layout/MainNavBar";
+import AppFooter from "../layout/MainFooter";
+import Components from "../views/Components.vue";
+import Admin from "../views/Presentation.vue";
+import Register1 from "../views/Presentation.vue";
+import Home from "../views/Presentation.vue";
+import ItemList from "../views/Presentation.vue";
+import Login from "../views/Presentation.vue";
+import Register from "../views/Presentation.vue";
+
+import Error from "../views/Presentation.vue";
 
 Vue.use(Router);
 
@@ -57,14 +55,6 @@ export default new Router ({
 					header: AppHeader,
 					default: Components,
 					footer: AppFooter
-				}
-		  },{
-				path: "/admin",
-				name: "admin",
-				components: {
-					header: AdminHeader,
-					default: Admin,
-					footer: AdminFooter
 				}
 		  },
 		  {

@@ -84,6 +84,6 @@
   }
 </script>
 <style lang="scss">
-  @import "~@/assets/sass/now-ui-kit/variables";
-  @import "~@/assets/sass/now-ui-kit/plugins/plugin-nouislider";
+  @import "~@/assets/scss/core/variables";
+  @import "~@/assets/scss/core/plugins/plugin-nouislider";
 </style>

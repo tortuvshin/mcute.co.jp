@@ -21,7 +21,7 @@
 				<nav-link to="/components">
 					<i class="now-ui-icons business_chart-pie-36"></i> Components
 				</nav-link>
-				<a href="https://demos.creative-tim.com/vue-now-ui-kit-pro/documentation" target="_blank"
+				<a href="https://demos.creative-tim.com/vue-core-pro/documentation" target="_blank"
 				   class="dropdown-item">
 					<i class="now-ui-icons design_bullet-list-67"></i> Documentation
 				</a>
@@ -90,7 +90,7 @@
 			</drop-down>
 			<li class="nav-item">
 				<a class="nav-link btn btn-primary"
-				   href="https://www.creative-tim.com/product/vue-now-ui-kit-pro" target="_blank">
+				   href="https://www.creative-tim.com/product/vue-core-pro" target="_blank">
 					<p>Buy Now</p>
 				</a>
 			</li>

@@ -3,7 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import "./registerServiceWorker";
 //plugins
-import NowUIKit from './plugins/now-ui-kit';
+import NowUIKit from './plugins/core';
 
 Vue.config.productionTip = false;
 Vue.use(NowUIKit);

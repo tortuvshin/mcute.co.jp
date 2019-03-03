@@ -45,7 +45,7 @@
   }
 </script>
 <style lang="scss">
-    @import "~@/assets/sass/now-ui-kit/variables";
-    @import "~@/assets/sass/now-ui-kit/mixins";
-    @import '~@/assets/sass/now-ui-kit/info-areas';
+    @import "~@/assets/scss/core/variables";
+    @import "~@/assets/scss/core/mixins";
+    @import '~@/assets/scss/core/info-areas';
 </style>

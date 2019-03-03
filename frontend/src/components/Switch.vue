@@ -47,7 +47,7 @@
   }
 </script>
 <style lang="scss" scoped>
-  @import "~@/assets/sass/now-ui-kit/variables";
-  @import "~@/assets/sass/now-ui-kit/plugins/plugin-bootstrap-switch";
+  @import "~@/assets/scss/core/variables";
+  @import "~@/assets/scss/core/plugins/plugin-bootstrap-switch";
 </style>
 

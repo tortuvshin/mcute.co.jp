@@ -163,6 +163,6 @@
   }
 </script>
 <style lang="scss" scoped>
-  @import "~@/assets/sass/now-ui-kit/variables";
-  @import "~@/assets/sass/now-ui-kit/tabs";
+  @import "~@/assets/scss/core/variables";
+  @import "~@/assets/scss/core/tabs";
 </style>

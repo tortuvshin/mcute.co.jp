@@ -6,32 +6,31 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="https://www.creative-tim.com">
-                            Creative Tim
+                        <a href="#">
+                            MCute
                         </a>
                     </li>
                     <li>
-                        <a href="https:///presentation.creative-tim.com">
+                        <a href="#">
                             About Us
                         </a>
                     </li>
                     <li>
-                        <a href="https:///blog.creative-tim.com">
+                        <a href="#">
                             Blog
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.creative-tim.com/license">
+                        <a href="#">
                             License
                         </a>
                     </li>
                 </ul>
             </nav>
             <div class="copyright">
-                &copy; {{year}}, Designed by
-                <a href="https:///www.invisionapp.com" target="_blank">Invision</a>. Coded by
-                <a href="https://github.com/cristijora" target="_blank">Cristi Jora</a> and
-                <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+                &copy; {{year}}, Developed by
+                
+                <a href="#" target="_blank">Dicult Co., Ltd</a>.
             </div>
         </div>
     </footer>
