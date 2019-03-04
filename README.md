@@ -41,10 +41,10 @@ https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
 
 Next, type ``git clone https://github.com/intelligo-systems/mcute.git`` and press enter to clone repo. 
 
-### Step 6: Install the Project's Dependencies
-Next, type ``npm i`` and press enter to install all of the node modules registered in the package.json. 
+### Step 6: Install the Project's dependencies
+Next, type ``npm install`` and press enter to install all of the node modules registered in the package.json. 
 
-For your convenience, we have added a post-install step that will automatically download and install the bower packages as well. To acheive the same result manually, you would have to use the ``bower install`` command after the ``npm i`` process finished running.
+After that installing frontend dependencies `cd frontend && npm install` from the root folder
 
 ### Install MongoDB OSX
 
