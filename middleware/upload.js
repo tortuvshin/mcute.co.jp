@@ -16,7 +16,7 @@ exports.default = function(folder){
       filename: function (req, file, cb) {
         const filename = file.originalname.substring(0, file.originalname.lastIndexOf('.'));
         const extension = file.originalname.substring(file.originalname.lastIndexOf('.'));
-      	const file = filename + "-" + Date.now()  + extension;
+      	file = filename + "-" + Date.now()  + extension;
         cb(null, file);
       }
     });
@@ -36,7 +36,7 @@ exports.temp = function(){
       filename: function (req, file, cb) {
         const filename = file.originalname.substring(0, file.originalname.lastIndexOf('.'));
         const extension = file.originalname.substring(file.originalname.lastIndexOf('.'));
-      	const file = filename + "-" + Date.now()  + extension;
+      	file = filename + "-" + Date.now()  + extension;
         cb(null, file);
       }
     });
@@ -57,7 +57,7 @@ exports.project = function(){
       filename: function (req, file, cb) {
         const filename = file.originalname.substring(0, file.originalname.lastIndexOf('.'));
         const extension = file.originalname.substring(file.originalname.lastIndexOf('.'));
-      	const file = filename + "-" + Date.now() + extension;
+      	file = filename + "-" + Date.now() + extension;
         cb(null, file);
       }
     });

@@ -1,5 +1,5 @@
 <template>
-    <img :src="fileUrl" class="img-fluid floating">
+    <img v-bind:src="fileUrl" class="img-fluid floating">
 </template>
 
 <script>
