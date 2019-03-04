@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "../views/Home.vue";
+import ItemList from "../views/ItemList.vue";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 
@@ -92,6 +93,14 @@ export default new Router ({
 			  footer: AppFooter
 			},
 			name:'Home'
+		},{ 
+			path: '/list', 
+			components: {
+			  header: AppHeader,
+			  default: ItemList,
+			  footer: AppFooter
+			},
+			name:'ItemList'
 		},
 		{ path: '/register', component: Register, name:'Register'},
 		{ path: '/dashboard', 
