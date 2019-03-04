@@ -1,4 +1,4 @@
-# Workflow
+# MCute
 
 
 | [Requirements][] | [Development][] | [Deploy][] | [Built with][] |
@@ -13,6 +13,38 @@
 - [Git](https://git-scm.com/download/win)
 
 ## Development
+
+### Install for Windows
+
+Node.js is a portable javsacript runtime that uses the Chrome's V8 engine to execute scripts outside of the browser. [Click here to learn more about node.js](http://nodejs.org/about/)
+
+### Step 1: Install Node.js
+If you like clicking the next button on installers, you can go to [http://nodejs.org/](http://nodejs.org/) and download the latest version of node for Windows. Once it is installed, proceed to step 2.
+
+Great news! Now you have a package manager for Windows! The next step is to install the node.js package. 
+
+### Step 2: Install Git
+In order for our build system to access them, we need git installed. 
+
+Once again, you have two choices- install the old fashioned way or use chocolatey. To install from a browser download, go to [http://git-scm.com/download/win](http://git-scm.com/download/win) and grab the latest version. **Note: when you install with the gui installer, make sure you select the option to 'Use Git from the Windows Command Prompt'**
+
+### Step 3: Confirm %PATH% has all of the prerequisites
+Open up a fresh command prompt instance and verify that node and npm are available on the system path. The easiest way to do this is to type in ``where node`` and ``where git`` in the command prompt. Both of these commands should return valid local paths to their respective excecutable files. 
+
+It is worth noting that your path variable in Windows can only be 260 characters. If you run out of space in your path, you will have to remove a couple of the useless entries to make room for node and npm. The result of ``set path`` should include both ``%APPDATA%\npm`` and ``C:\Program Files\nodejs`` as well as the directory containing your git installation.
+
+### Step 4: Install MongoDB
+
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+
+### Step 5: Clone repository
+
+Next, type ``git clone https://github.com/intelligo-systems/mcute.git`` and press enter to clone repo. 
+
+### Step 6: Install the Project's Dependencies
+Next, type ``npm i`` and press enter to install all of the node modules registered in the package.json. 
+
+For your convenience, we have added a post-install step that will automatically download and install the bower packages as well. To acheive the same result manually, you would have to use the ``bower install`` command after the ``npm i`` process finished running.
 
 ### Install MongoDB OSX
 
