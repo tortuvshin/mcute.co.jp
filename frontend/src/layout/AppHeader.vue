@@ -4,51 +4,46 @@
 
             <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-toggle="tooltip" title="Star us on Github">
+                    <a class="nav-link" href="" v-on:click="$router.push('/');" data-toggle="tooltip" title="Star us on Github">
 
                         <span class="nav-link-inner--text">Home</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-toggle="tooltip" title="Star us on Github">
+                    <a class="nav-link" href="" v-on:click="$router.push('/project/post');" data-toggle="tooltip" title="Star us on Github">
 
-                        <span class="nav-link-inner--text">Feature</span>
+                        <span class="nav-link-inner--text">Space</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-toggle="tooltip" title="Star us on Github">
+                    <a class="nav-link" href="" v-on:click="$router.push('/project/search');" data-toggle="tooltip" title="Star us on Github">
 
-                        <span class="nav-link-inner--text">Documentation</span>
+                        <span class="nav-link-inner--text">Artists</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="" v-on:click="$router.push('/project/post');" data-toggle="tooltip" title="Star us on Github">
+
+                        <span class="nav-link-inner--text">Galleries</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="" v-on:click="$router.push('/project/search');" data-toggle="tooltip" title="Star us on Github">
+
+                        <span class="nav-link-inner--text">Art Works</span>
                     </a>
                 </li>
             </ul>
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">
-                <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="https://www.facebook.com/" target="_blank"
-                       data-toggle="tooltip" title="Like us on Facebook">
-                        <i class="fa fa-facebook-square"></i>
-                        <span class="nav-link-inner--text d-lg-none">Facebook</span>
+                <li class="nav-item" v-if="!currentUser">
+                    <a class="nav-link" href="" v-on:click="$router.push('/login');" data-toggle="tooltip" title="Star us on Github">
+                        <span class="nav-link-inner--text">Login</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="https://www.instagram.com/"
-                       target="_blank" data-toggle="tooltip" title="Follow us on Instagram">
-                        <i class="fa fa-instagram"></i>
-                        <span class="nav-link-inner--text d-lg-none">Instagram</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="https://twitter.com/" target="_blank"
-                       data-toggle="tooltip" title="Follow us on Twitter">
-                        <i class="fa fa-twitter-square"></i>
-                        <span class="nav-link-inner--text d-lg-none">Twitter</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="https://github.com/intelligo-systems"
-                       target="_blank" data-toggle="tooltip" title="Star us on Github">
-                        <i class="fa fa-github"></i>
-                        <span class="nav-link-inner--text d-lg-none">Github</span>
+                <li class="nav-item" v-if="!currentUser">
+                    <a class="nav-link" href="" v-on:click="$router.push('/register');" data-toggle="tooltip" title="Star us on Github">
+
+                        <span class="nav-link-inner--text">Register</span>
                     </a>
                 </li>
                 <li class="nav-item" v-if="currentUser">

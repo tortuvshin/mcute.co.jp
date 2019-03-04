@@ -5,7 +5,7 @@
             <!-- shape Hero -->
             <section class="section-hero section-shaped my-0 mt--100" id="particles-js">
                 <div class="shape shape-style-1 shape-primary">
-                    <img src="../assets/images/theme/city-wallpaper-6.jpg" class="img-fluid floating">
+                    <!-- <img src="../assets/images/theme/city-wallpaper-6.jpg" class="img-fluid floating"> -->
                 </div>
 
                 <div class="container shape-container d-flex align-items-center">
@@ -406,7 +406,7 @@ export default {
   components: {},
   mounted() {
 		this.initParticles()
-		document.title = "Home - WorkFlow";
+		document.title = "Home - MCute";
   },
   methods: {
     initParticles() {

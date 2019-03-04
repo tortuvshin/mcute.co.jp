@@ -45,7 +45,7 @@ app.use(passport.session());
 
 app.use(function (req, res, next) {
     const allowedOrigins = ['http://localhost:5000', 'http://localhost:8000','http://localhost:8081', 'http://localhost:8001','http://127.0.0.1:8020', 'http://localhost:8080'];
-    let origin = req.headers.origin;
+    const origin = req.headers.origin;
     if(allowedOrigins.indexOf(origin) > -1){
          res.setHeader('Access-Control-Allow-Origin', origin);
     }
@@ -62,12 +62,12 @@ app.use("/support", supportRoutes);
 app.use("/profile", profileRoutes);
 app.use("/chat", chatRoutes);
 
-let passportJWT = require("passport-jwt");
-let ExtractJwt = passportJWT.ExtractJwt;
-let JwtStrategy = passportJWT.Strategy;
-let jwtOptions = require('./config/jwtOptions');
+const passportJWT = require("passport-jwt");
+const ExtractJwt = passportJWT.ExtractJwt;
+const JwtStrategy = passportJWT.Strategy;
+const jwtOptions = require('./config/jwtOptions');
 
-let strategy = new JwtStrategy(jwtOptions, function(jwt_payload, next) {
+const strategy = new JwtStrategy(jwtOptions, function(jwt_payload, next) {
   User.findById(jwt_payload.id, function(err, user){
      if (user) {
         next(null, user);
