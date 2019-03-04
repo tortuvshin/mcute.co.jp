@@ -1,8 +1,8 @@
-const express = require('express'),
-  	app = express(),
-    http = require('http').Server(app),
-  	sio = require('socket.io'),
-  	io = null;
+const express = require('express')
+const app = express()
+const http = require('http').Server(app)
+const sio = require('socket.io')
+let	io = null
 	
 let CurrentUsers = [];
 
