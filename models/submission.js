@@ -1,6 +1,6 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var SubmissionSchema = new mongoose.Schema({
+const SubmissionSchema = new mongoose.Schema({
     file:{
     	status: String,
     	submitDate: Date,

@@ -1,4 +1,4 @@
-var express = require('express'),
+const express = require('express'),
 	app = express(),
 	router = express.Router(),
 	middleware = require("../middleware/"),
@@ -25,8 +25,8 @@ router.post("/", middleware.jwt, function(req, res){
 });
 
 router.get("/conversation/messages", middleware.jwt, function(req, res){
-    var sender_id = req.query.sender_id;
-    var recevier_id = req.query.recevier_id;
+    const sender_id = req.query.sender_id;
+    const recevier_id = req.query.recevier_id;
     
     Conversation.findOne({ users: { "$in": [ sender_id, recevier_id ]}}, 'messages').populate({path: 'messages', model: 'Message', populate: {path: 'sender', model: 'User'}}).exec(function(err, foundConversationMessages){
         res.status(200).json({messages: foundConversationMessages});
@@ -55,7 +55,7 @@ function addMessage(message, sender, recevier, conversation, res){
          conversation.messages.push(createdMessage);
          conversation.updated_at = new Date();
          conversation.save(function(err, savedConversation){
-            var conversationUsers = currentUsers.filter(function(socket){
+            const conversationUsers = currentUsers.filter(function(socket){
                                          return String(socket.user) === String(sender._id) || String(socket.user) === String(recevier._id);
                                     });
             

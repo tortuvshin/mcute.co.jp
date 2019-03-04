@@ -1,6 +1,6 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var TicketSchema = new mongoose.Schema({
+const TicketSchema = new mongoose.Schema({
     sender:{
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
@@ -36,7 +36,7 @@ TicketSchema.index({
     "related.kind":'text',
 });
 
-var autoPopulateUser = function(next) {
+const autoPopulateUser = function(next) {
   this.populate({path:'sender',model:'User'});
   next();
 };

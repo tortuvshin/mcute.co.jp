@@ -1,8 +1,8 @@
-var mongoose = require('mongoose'),
+const mongoose = require('mongoose'),
 	passwordLocalMongoose = require("passport-local-mongoose"),
 	bcrypt = require("bcrypt");
 
-var UserSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema({
 	type: String,
 	firstName: String,
 	lastName: String,
@@ -56,8 +56,8 @@ var UserSchema = new mongoose.Schema({
 UserSchema.plugin(passwordLocalMongoose);
 
 UserSchema.pre('save', function(next) {
-  var user = this;
-  var SALT_FACTOR = 5;
+  const user = this;
+  const SALT_FACTOR = 5;
 
   if (!user.isModified('password')) {
   	return next();

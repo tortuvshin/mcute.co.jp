@@ -6,12 +6,11 @@ const	mongoose = require('mongoose')
 const	passport = require('passport')
 const	io = require('./sockets/').initialize(http)
 const	methodOverride = require('method-override')
-const seedDB = require("./seeds")
 const path = require("path")
 const morgan = require('morgan')
 const cors = require('cors')
 const history = require('connect-history-api-fallback')
-const cron = require("./cron")
+const cron = require("./config/cron")
 	
 const indexRoutes = require("./routes/index")
 const dashboardRoutes = require("./routes/dashboard")
@@ -66,7 +65,7 @@ app.use("/chat", chatRoutes);
 let passportJWT = require("passport-jwt");
 let ExtractJwt = passportJWT.ExtractJwt;
 let JwtStrategy = passportJWT.Strategy;
-let jwtOptions = require('./jwtOptions');
+let jwtOptions = require('./config/jwtOptions');
 
 let strategy = new JwtStrategy(jwtOptions, function(jwt_payload, next) {
   User.findById(jwt_payload.id, function(err, user){
@@ -81,5 +80,5 @@ let strategy = new JwtStrategy(jwtOptions, function(jwt_payload, next) {
 passport.use(strategy);
 
 http.listen(process.env.PORT || '5000', process.env.IP || 'localhost', function(){
-	console.log("Matching System is RUNNING");
+	console.log("MCUTE MATCHING SYSTEM IS RUNNING localhost:5000");
 });

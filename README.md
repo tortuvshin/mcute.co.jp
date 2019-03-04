@@ -193,8 +193,6 @@ Build and Start:
 * [MongoDB](https://www.mongodb.com/download-center)
 * [Vue.js](https://vuejs.org/)
 
-**[⬆ back to top](#workflow)**
-
 [Requirements]:#requirements
 [Development]:#development
 [Deploy]:#deploy
@@ -202,4 +200,7 @@ Build and Start:
 
 ## Copyright
 
-Copyright &copy;2019 Intelligo Systems. All Rights Reserved.
+Copyright &copy;2019 Dicult Co., Ltd. All Rights Reserved.
+
+**[⬆ back to top](#mcute)**
+

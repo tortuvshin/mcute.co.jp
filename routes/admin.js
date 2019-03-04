@@ -1,17 +1,17 @@
-var express = require('express');
-var router = express.Router();
-var User = require('../models/user');
-// var Skills = require('../models/skills');
-// var Question = require('../models/question');
-var bodyParser = require('body-parser');
-var Ticket = require('../models/ticket');
-var TicketContent = require('../models/ticketContent');
-var BankDeposit = require('../models/bankDeposit');
-var PaypalDeposit = require("../models/paypalDeposit");
-var	multer  = require('multer');
-var	mkdirp = require('mkdirp');
-var	mime = require('mime');
-var	upload = require("../middleware/upload");
+const express = require('express');
+const router = express.Router();
+const User = require('../models/user');
+// const Skills = require('../models/skills');
+// const Question = require('../models/question');
+const bodyParser = require('body-parser');
+const Ticket = require('../models/ticket');
+const TicketContent = require('../models/ticketContent');
+const BankDeposit = require('../models/bankDeposit');
+const PaypalDeposit = require("../models/paypalDeposit");
+const	multer  = require('multer');
+const	mkdirp = require('mkdirp');
+const	mime = require('mime');
+const	upload = require("../middleware/upload");
 
 router.get('/admin',function (req,res) {
   res.render("./admin");
@@ -36,7 +36,7 @@ router.get('/admin/readUser',function(req,res) {
 });
 
 router.delete('/admin/readUser',function(req,res) {
-  var userid = req.body.user_id;
+  const userid = req.body.user_id;
   User.findOneAndRemove({_id:userid},function(err,user) {
     console.log(user + "has been removed");
     res.redirect("/admin/readUser");
@@ -56,7 +56,7 @@ router.post('/admin/createUser',function(req,res) {
 });
 
 router.put('/admin/updateUser',function(req,res) {
-  var user = req.body.user;
+  const user = req.body.user;
   console.log(user);
   User.findOneAndUpdate({_id:req.body.user._id},req.body.user,function(err,user) {
     if(err) {
@@ -147,7 +147,7 @@ router.get('/admin/deleteUser',function(req,res) {
 
 function splitAnswer(answer) {
   var result = [];
-  for(var i=0,len=answer.length;i<len;i+=4){
+  for(let i=0,len=answer.length;i<len;i+=4){
      result.push(answer.slice(i,i+4));
   }
   return result;
@@ -179,7 +179,7 @@ function splitAnswer(answer) {
 //       if(err) {
 //         console.log(err);
 //       } else {
-//         var answer = splitAnswer(skill.question.answer);
+//         const answer = splitAnswer(skill.question.answer);
 //         res.render('./admin/updateSkill', {skill:skill,question:skill.question.question,answer:answer});
 //       }
 //     });
@@ -275,14 +275,14 @@ router.get('/admin/searchSupport',function(req,res){
 
 router.post('/admin/searchSupport',function(req,res) {
   //result will be putted in this array
-  var result = [];
+  let result = [];
   //condition
-  var sender = req.body.sender;
-  var department = req.body.department;
-  var status = req.body.status;
-  var priority = req.body.priority;
-  var title = req.body.title;
-  var related = req.body.related;
+  const sender = req.body.sender;
+  const department = req.body.department;
+  const status = req.body.status;
+  const priority = req.body.priority;
+  const title = req.body.title;
+  const related = req.body.related;
 
   
   //if all the conditions are null
@@ -511,14 +511,14 @@ router.get('/admin/handleSupport/:id',function(req,res) {
 
 router.post("/admin/handleSupport/:id/reply", upload.default("ticket").any(), function(req, res){
   console.log("HI");
-    var message = req.body.replymessage;
+    const message = req.body.replymessage;
     Ticket.findById(req.params.id, function(err, ticket){
         if (err){
             console.log(err);
         } else {
           ticket.status = 'Answered';
           ticket.save(function(err, ticket){
-            var data = {
+            const data = {
                  sender: req.user,
                  sendDate: new Date(),
                  message: message,

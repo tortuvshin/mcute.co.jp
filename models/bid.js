@@ -1,6 +1,6 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var BidSchema = new mongoose.Schema({
+const BidSchema = new mongoose.Schema({
 	bidder: {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: "User"

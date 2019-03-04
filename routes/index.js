@@ -11,7 +11,7 @@ const express = require('express'),
   	sgTransport = require('nodemailer-sendgrid-transport'),
   	jwt = require('jsonwebtoken'),
   	bcrypt = require("bcrypt"),
-  	jwtOptions = require("../jwtOptions");
+  	jwtOptions = require("../config/jwtOptions");
 
 router.get("/", function(req, res){
     res.send("The backend of freelance matching system is running :)");

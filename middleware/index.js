@@ -1,14 +1,14 @@
-var User = require("../models/user");
-var Transaction = require("../models/transaction");
-var Project = require("../models/project");
-var passport = require("passport");
-var jwt = require("jsonwebtoken");
-var jwt2 = require("jsonwebtoken-refresh");
-var jwtOptions = require("../jwtOptions")
+const User = require("../models/user");
+const Transaction = require("../models/transaction");
+const Project = require("../models/project");
+const passport = require("passport");
+const jwt = require("jsonwebtoken");
+const jwt2 = require("jsonwebtoken-refresh");
+const jwtOptions = require("../config/jwtOptions")
 
-var middlewareObj = {};
+let middlewareObj = {};
 
-var getToken = function (headers) {
+let getToken = function (headers) {
 	if (headers.authorization) {
 		return headers.authorization;
 	} else {
@@ -32,9 +32,9 @@ middlewareObj.jwt = function(req, res, next){
         if (!user) { return res.status(401).json({success: false, message: "Custom Unauthorised"}).end(); } 
         
         // Reset the expire time of the token of user
-        var token = getToken(req.headers).substr(getToken(req.headers).indexOf(' ') + 1);
-		var originalDecoded = jwt.decode(token, {complete: true});
-		var refreshed = jwt2.refresh(originalDecoded, Math.floor(Date.now() / 1000) + 21600, jwtOptions.secretOrKey);
+        let token = getToken(req.headers).substr(getToken(req.headers).indexOf(' ') + 1);
+		let originalDecoded = jwt.decode(token, {complete: true});
+		let refreshed = jwt2.refresh(originalDecoded, Math.floor(Date.now() / 1000) + 21600, jwtOptions.secretOrKey);
         req.user = user;   // Forward user information to the next middleware
         next();
     })(req, res, next);
@@ -66,8 +66,8 @@ middlewareObj.chkUserAccessingPage = function (req, res, next){
 }
 
 middlewareObj.chkUserExist = function(req, res, next){
-	var username = req.body['username'];
-	var email = req.body['email'];
+	const username = req.body['username'];
+	const email = req.body['email'];
 	
 	User.findOne({username: username}, function(err, user){
 		if (err){

@@ -1,4 +1,4 @@
-var express = require('express'),
+const express = require('express'),
 	app = express(),
 	User = require('../models/user'),
 	router = express.Router(),
@@ -15,11 +15,11 @@ var express = require('express'),
 	currentUsers = require("../sockets/").getCurrentUsers(),
 	striptags = require('striptags'),
 	upload = require("../middleware/upload"),
-	paypal_url = require("../paypal");
+	paypal_url = require("../config/paypal");
 	
 
-var paypal = Paypal.init('s20081428-facilitator_api1.gmail.com', 'R72DVPDQUL2GJC8Z', 'AFcWxV21C7fd0v3bYYYRCpSSRl31A5iBT42og6dVd8WcEbfHabBWj98g', paypal_url.paypalSuccess, paypal_url.paypalCancel, true);
-var files = [];
+const paypal = Paypal.init('s20081428-facilitator_api1.gmail.com', 'R72DVPDQUL2GJC8Z', 'AFcWxV21C7fd0v3bYYYRCpSSRl31A5iBT42og6dVd8WcEbfHabBWj98g', paypal_url.paypalSuccess, paypal_url.paypalCancel, true);
+let files = [];
 
 // ===================================
 // DASHBOARD ROUTE
@@ -30,7 +30,7 @@ router.get("/", middleware.jwt, function(req, res){
             console.log(err);
         } else {
         	if (req.user.type === "freelancer"){
-				var outputProject = {
+				let outputProject = {
 			    	bids: [],
 			    	working: [],
 			    	past: []
@@ -77,7 +77,7 @@ router.put("/profile", [middleware.jwt, upload.default("avatar").any()], functio
 		if (err){
 			return res.status(400).json({success: false, message: 'An error occured.'});
 		}
-		var updatedUser = {
+		let updatedUser = {
 	        type: user.type,
 	        firstName: user.firstName,
 	        lastName: user.lastName,
@@ -97,9 +97,9 @@ router.put("/profile", [middleware.jwt, upload.default("avatar").any()], functio
 
 
 router.put("/security", middleware.jwt, function(req, res){
-	var currentPassword = req.body.currentPassword;
-	var newPassword = req.body.newPassword;
-	var repeatPassword = req.body.repeatPassword
+	const currentPassword = req.body.currentPassword;
+	const newPassword = req.body.newPassword;
+	const repeatPassword = req.body.repeatPassword
 	
 	if (newPassword !== repeatPassword){
 		return res.status(400).json({success: false, message: "The new password is not match."});
@@ -119,20 +119,20 @@ router.put("/security", middleware.jwt, function(req, res){
 
 router.post("/billing/deposit/", [middleware.jwt, upload.default("bankdeposit").any()], function(req, res){
 	if (req.body.method === "paypal"){
-		var invoiceNo = randtoken.generate(20);
-		var amount = Number(req.body.amount);
+		const invoiceNo = randtoken.generate(20);
+		const amount = Number(req.body.amount);
 		console.log(amount);
-		var description = "Deposit to ECJob.com";
-		var currency = "HKD";
-		var requireAddress = false;
-		var socketid = req.body.socketID;
+		const description = "Deposit to MCute";
+		const currency = "HKD";
+		let requireAddress = false;
+		const socketid = req.body.socketID;
 
 		paypal.pay(invoiceNo, amount, description, currency, requireAddress, function(err, url) {
 		    if (err) {
 		        console.log(err);
 		        return;
 		    }
-		    var data = {
+		    let data = {
 		    	id: invoiceNo,
 				status: "Waiting for paid",
 				amount: amount,
@@ -163,14 +163,14 @@ router.post("/billing/deposit/", [middleware.jwt, upload.default("bankdeposit").
 		    });
 		});
 	} else if (req.body.method === "bank"){
-		var bankType = req.body.bankType;
-		var amount = req.body.amount;
-		var depositDate = req.body.date;
-		var depositTime = req.body.time;
+		const bankType = req.body.bankType;
+		const amount = req.body.amount;
+		const depositDate = req.body.date;
+		const depositTime = req.body.time;
 		
 		console.log(req.files.length);
 		
-		var data = {
+		let data = {
 			status: "Waiting for approval",
 			bankType: bankType,
 			amount: amount,
@@ -208,7 +208,7 @@ router.post("/billing/deposit/", [middleware.jwt, upload.default("bankdeposit").
 });
 
 router.post("/billing/withdraw", middleware.jwt, function(req, res){
-	var data = {
+	let data = {
 		type:  req.body.type,
 		amount: req.body.amount,
 	    paymentAccount: req.body.paymentAccount,
@@ -232,8 +232,8 @@ router.post("/billing/withdraw", middleware.jwt, function(req, res){
 });
 
 router.get("/billing/return", middleware.jwt, function(req, res){
-	var token = req.query.token;
-	var PayerID = req.query.PayerID;
+	const token = req.query.token;
+	const PayerID = req.query.PayerID;
 
 	paypal.detail(token, PayerID, function(err, data, invoiceNumber, price) {
 
@@ -259,7 +259,7 @@ router.get("/billing/return", middleware.jwt, function(req, res){
 				        		if (err){
 				        			console.log(err);
 				        		}
-				        		var socketid = getSocketId(invoiceNumber);
+				        		const socketid = getSocketId(invoiceNumber);
 								console.log(saveUser);
 				        		io.sockets.connected[socketid].emit("paymentRecieved", {status: "Payment Received", updatedUser: saveUser});
 				        		
@@ -280,17 +280,17 @@ router.get("/billing/return", middleware.jwt, function(req, res){
 
 
 router.get("/billing/transaction", middleware.jwt, function(req, res){
-	var getBankDeposit = new Promise((resolve, reject)=> {
+	const getBankDeposit = new Promise((resolve, reject)=> {
 		BankDeposit.find({user: req.user}).sort({'submissionTime': 1}).exec(function(err, bankDeposits){
 			resolve(bankDeposits);
 		});
 	});
-	var getPaypalDeposit = new Promise((resolve, reject) => {
+	const getPaypalDeposit = new Promise((resolve, reject) => {
 		PaypalDeposit.find({user: req.user}).sort({'orderTime': 1}).exec(function(err, paypalDeposits){
 			resolve(paypalDeposits);
 		});
 	});
-	var getWithdraw = new Promise((resolve, reject)=>  {
+	const getWithdraw = new Promise((resolve, reject)=>  {
 		Withdraw.find({user: req.user}).sort({'createTime': 1}).exec(function(err, withdraws){
 			resolve(withdraws);
 		})	
@@ -303,13 +303,13 @@ router.get("/billing/transaction", middleware.jwt, function(req, res){
 });
 
 router.get("/project", middleware.jwt, function(req, res){
-	var status = req.query.status;
-	var keyword = req.query.keyword;
-	var limitRows = parseInt(req.query.rowNumber);
-	var skipRows = (parseInt(req.query.pageNumber) - 1) * limitRows;
+	const status = req.query.status;
+	const keyword = req.query.keyword;
+	const limitRows = parseInt(req.query.rowNumber);
+	const skipRows = (parseInt(req.query.pageNumber) - 1) * limitRows;
 	
 	if (req.user.type === "employer"){
-		var condition = {
+		let condition = {
 		    $and:[
 		    	{employer: req.user._id},
 		        {title: new RegExp(keyword, 'i')},
@@ -317,7 +317,7 @@ router.get("/project", middleware.jwt, function(req, res){
 		    ]
 		}
 		
-		var sort = {}
+		let sort = {}
 		
 		if (status === 'working'){
 			sort.chosenDate = 1;
@@ -327,17 +327,17 @@ router.get("/project", middleware.jwt, function(req, res){
 		
 		Project.find(condition).sort(sort).skip(skipRows).limit(limitRows).populate({path: 'bids', model: 'Bid', populate: { path: 'bidder', model: 'User'}}).populate({path: "winBid", model: 'Bid', populate: {path: "bidder", model: "User"}}).exec(function(err, projects){
 			Project.count(condition, function(err, count){
-				var output = [];
-					projects.forEach(function(project){
-				        project.description = striptags(project.description);
-				        output.push(project);
-				    });
-				    res.status(200).json({projects: output, totalProjectCount: count});
+				let output = [];
+				projects.forEach(function(project){
+					project.description = striptags(project.description);
+					output.push(project);
+				});
+				res.status(200).json({projects: output, totalProjectCount: count});
 			});
 	    });
 
 	}else if (req.user.type === "freelancer"){
-		var output = [];
+		let output = [];
 		if (status === 'bidding'){
 			Bid.find({bidder: req.user}).populate({
 				path:"bidProject", 
@@ -348,7 +348,7 @@ router.get("/project", middleware.jwt, function(req, res){
 				bids = bids.filter(function(bid) {
 					return bid.bidProject !== null && bid.bidProject.title !== null;	
 				});
-				var totalProjectCount = bids.length;
+				const totalProjectCount = bids.length;
 				console.log(totalProjectCount);
 				bids = bids.slice(skipRows, req.query.pageNumber * limitRows );
 				bids.forEach(function(bid){
@@ -357,17 +357,17 @@ router.get("/project", middleware.jwt, function(req, res){
 				res.status(200).json({bids: bids, totalProjectCount: totalProjectCount});
 			});
 		} else {
-			var sort = {}
+			let sort = {}
 			if (status === 'working'){
 				sort['project.chosenDate'] = 1;
 			}else if (status === 'finished'){
 				sort['project.finishDate'] = 1;
 			}
 			User.findById(req.user._id).populate({path:"projects", match: { title: new RegExp(keyword, 'i'), status: status }, populate: {path: 'employer', model: 'User'}}).sort(sort).exec(function(err, user){
-				var projects = user.projects.filter((project) => {
+				const projects = user.projects.filter((project) => {
 					return project.status === status && project.title !== null;
 				})
-				var totalProjectCount = projects.length;
+				const totalProjectCount = projects.length;
 				projects = projects.slice(skipRows, req.query.pageNumber * limitRows );
 				projects.forEach(function(project){
 					project.description = striptags(project.description);	
@@ -379,9 +379,9 @@ router.get("/project", middleware.jwt, function(req, res){
 });
 
 router.get("/project/search", middleware.jwt, function(req, res){
-	var type = req.query.type;
-	var keyword = req.query.keyword;
-	var condition;
+	const type = req.query.type;
+	const keyword = req.query.keyword;
+	let condition;
 	
 	User.findById(req.user._id, function(err, user){
     	if (err){
@@ -404,7 +404,7 @@ router.get("/balance", middleware.jwt, function(req, res){
 });
 
 function getSocketId(invoiceNo){
-	var socketId;
+	let socketId;
 	currentUsers.forEach(function(currentUser){
 		if (currentUser.invoiceNo === invoiceNo){
 		    socketId = currentUser.id;

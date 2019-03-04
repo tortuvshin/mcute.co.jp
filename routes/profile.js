@@ -1,4 +1,4 @@
-var express = require('express'),
+const express = require('express'),
 	app= express(),
 	router = express.Router(),
 	User = require("../models/user"),
@@ -6,7 +6,7 @@ var express = require('express'),
 	Rating = require('../models/rating');
 	
 router.get("/review", (req, res) => {
-    var username = req.query.username;
+    const username = req.query.username;
     
     User.findOne({username: username}, function(err, user){
          Rating.find({ratee: user._id}).populate({path: 'relatedProject', model: "Project"}).populate({path: 'rater', model: 'User'}).exec(function(err, ratings){

@@ -1,4 +1,4 @@
-var express = require('express'),
+const express = require('express'),
 	app = express(),
 	router = express.Router(),
 	Project = require("../models/project"),
@@ -16,11 +16,11 @@ var express = require('express'),
 
 // Searching for projects
 router.get("/search", function(req, res){
-	var pageNumber = parseInt(req.query.pageNumber) - 1;
-	var rowNumber = parseInt(req.query.rowNumber);
-	var keyword = req.query.keyword;
-	var category = req.query.category;
-	var condition;
+	const pageNumber = parseInt(req.query.pageNumber) - 1;
+	const rowNumber = parseInt(req.query.rowNumber);
+	const keyword = req.query.keyword;
+	const category = req.query.category;
+	let condition;
 	
 	if (!category){
 		condition = {
@@ -72,10 +72,10 @@ router.get("/search", function(req, res){
 
 // //Switch pages and return the first ten projects
 // router.get("/search/page/:number", function(req, res){
-// 	var skipNum = (Number(req.params.number) - 1) * 10;
-// 	var keyword = req.query.keyword;
-// 	var category = getCategory(Number(req.query.category));
-// 	var condition;
+// 	const skipNum = (Number(req.params.number) - 1) * 10;
+// 	const keyword = req.query.keyword;
+// 	const category = getCategory(Number(req.query.category));
+// 	const condition;
 	
 // 	if (category==""){
 // 		condition = {
@@ -108,7 +108,7 @@ router.get("/search", function(req, res){
 
 //Add a new project
 router.post("/", [middleware.jwt, middleware.isEmployer, upload.temp().any()], function(req, res){
-	var projectData = req.body;
+	const projectData = req.body;
 	projectData.status = "open";
 	projectData.postDate = new Date();
 	projectData.skills = JSON.parse(projectData.skills);
@@ -126,15 +126,15 @@ router.post("/", [middleware.jwt, middleware.isEmployer, upload.temp().any()], f
 		if (err){
 			return res.status(400).json({success: false, message: 'An error occured when getting data from database. Please contact us.'})
 		} else {
-			var dir = './public/uploads/' + req.user.username + '/project/' + project.id;
+			const dir = './public/uploads/' + req.user.username + '/project/' + project.id;
 			mkdirp(dir, function (err) {
 	            if (err) {
 	            	console.log(err)
 	            }else {
-	            	var changeFilesPath = new Promise((resolve, reject) => {
+	            	const changeFilesPath = new Promise((resolve, reject) => {
 	            		project.files.forEach(function(file){
-		            		var oldPath = file.path;
-		            		var newPath = dir + '/' + file.filename;
+		            		const oldPath = file.path;
+		            		const newPath = dir + '/' + file.filename;
 		            		file.path = newPath;
 		            		fs.rename(oldPath, newPath);
 		            	});
@@ -168,7 +168,7 @@ router.post("/", [middleware.jwt, middleware.isEmployer, upload.temp().any()], f
 });
 
 router.get("/:id", middleware.getUser, function(req, res){
-	var id = req.params.id;
+	const id = req.params.id;
 	Project.findById(id).populate("employer").populate("comments").populate({path: 'comments',populate: { path: 'sender' }}).populate({path: 'comments',populate: { path: 'replies', populate: {path: 'sender'}}}).populate({path: 'bids', populate: {path: 'bidder'}}).populate({path: 'winBid', model: 'Bid', populate: {path: 'bidder', model: "User"}}).populate({path: 'submissions', model: 'Submission'}).populate({path: 'freelancerRate', model: 'Rating', populate: {path: 'rater', model: 'User'}}).populate({path: 'employerRate', model: 'Rating', populate: {path: 'rater', model: 'User'}}).exec(function(err, project){
 		if (err) {
 			return res.status(400).json({message: 'The project is not exist'});
@@ -191,7 +191,7 @@ router.get("/:id", middleware.getUser, function(req, res){
 
 // Update the project
 router.put("/:id",[middleware.jwt, middleware.chkProjectOwner, upload.default("project-post").any()], function(req,res){
-	var projectData = req.body;
+	const projectData = req.body;
 	projectData.currentFiles = JSON.parse(projectData.currentFiles);
 	
 	if (projectData.skills !== ""){
@@ -202,7 +202,7 @@ router.put("/:id",[middleware.jwt, middleware.chkProjectOwner, upload.default("p
 		projectData.currentFiles.push(file);	
 	});
 	
-	var updatedData = {
+	const updatedData = {
 		description: projectData.description,
 		budgetMin: projectData.budgetMin,
 		budgetMax: projectData.budgetMax,
@@ -228,7 +228,7 @@ router.put("/:id",[middleware.jwt, middleware.chkProjectOwner, upload.default("p
 
 // Delete the project
 router.put("/:id/publish", [middleware.jwt, middleware.chkProjectOwner], function(req, res){
-	var status = '', message = 'The project is ';
+	const status = '', message = 'The project is ';
 	console.log(req.body.publish);
 
 	Project.findById(req.params.id, function(err, project){
@@ -265,7 +265,7 @@ router.put("/:id/publish", [middleware.jwt, middleware.chkProjectOwner], functio
 
 //Add a comment of a project
 router.post("/:id/comment/", middleware.jwt, function(req, res){
-	var comment = {
+	const comment = {
 		content: req.body.content,
 		sender: req.user,
 		submitDate: new Date()
@@ -297,7 +297,7 @@ router.post("/:id/comment/", middleware.jwt, function(req, res){
 
 // Get project edit page
 router.get("/:id/edit", [middleware.isLoggedIn, middleware.chkProjectOwner], function(req ,res){
-	var isOwner = false;
+	const isOwner = false;
 
 	User.findById(req.user._id).populate("projects").exec(function(err, user){
 		user.projects.forEach(function(project){
@@ -315,7 +315,7 @@ router.get("/:id/edit", [middleware.isLoggedIn, middleware.chkProjectOwner], fun
 
 // Add reply of a comment
 router.post("/:id/comment/reply", middleware.jwt, function(req, res){
-	var reply = {
+	const reply = {
 		content: req.body.content,
 		sender: req.user,
 		submitDate: new Date()
@@ -342,8 +342,8 @@ router.post("/:id/comment/reply", middleware.jwt, function(req, res){
 });
 
 router.put("/:id/bid/", middleware.jwt, function(req ,res){
-	var amount = req.body.amount;
-	var bidId = req.body.bidId;
+	const amount = req.body.amount;
+	const bidId = req.body.bidId;
 	
 	Bid.findByIdAndUpdate(bidId, {bidPrice: amount, bidDate: new Date()}, function(err, foundBid){
 		res.status(200).json({success: true, message: 'The bid updated successfully.'});
@@ -352,9 +352,9 @@ router.put("/:id/bid/", middleware.jwt, function(req ,res){
 
 // Add bid
 router.post("/:id/bid/", middleware.jwt, function(req, res){
-	var amount = req.body.amount;
-	var result;
-	var message;
+	const amount = req.body.amount;
+	let result;
+	let message;
 	
 	Project.findById(req.params.id, function(err, project){
 		if (err){
@@ -362,7 +362,7 @@ router.post("/:id/bid/", middleware.jwt, function(req, res){
 		}
 		
 		if (amount < project.budgetMin || amount > project.budgetMax){
-			var returnData = {
+			const returnData = {
 				result: "error",
 				title: "Bid Amount Invalid",
 				message: "The bid amount must between the price range!"
@@ -370,7 +370,7 @@ router.post("/:id/bid/", middleware.jwt, function(req, res){
 			return res.status(400).json(returnData);
 		}
 		
-		var data = {
+		const data = {
 			bidder: req.user,
 			bidPrice: amount,
 			bidDate: new Date(),
@@ -421,7 +421,7 @@ router.put("/:id/deadline", [middleware.jwt, middleware.chkProjectOwner], functi
 
 // Update Project freelancer 
 router.post("/:id/freelancer", [middleware.jwt, middleware.chkProjectOwner], function(req, res){
-	var bidId = req.body.bidId;
+	const bidId = req.body.bidId;
 	
 	Bid.findById(bidId).populate({path: "bidder", model: 'User'}).exec(function(err, bid){
 		Project.findById(req.params.id).populate({path: "employer", model: "User"}).exec(function(err, project){
@@ -434,7 +434,7 @@ router.post("/:id/freelancer", [middleware.jwt, middleware.chkProjectOwner], fun
 				User.findById(bid.bidder._id, function(err, user){
 					user.projects.push(project);
 					user.save(function(err, user){
-						var price = project.budgetMax - bid.bidPrice;
+						const price = project.budgetMax - bid.bidPrice;
 						req.user.balance += price;
 						req.user.save(function(err, savedUser){
 							res.status(200).json({ updatedUser: savedUser, success: true, message: "This project freelancer has selected to " + user.username + ". Also, the $" + price + ' has returned to your wallet.'});
@@ -447,7 +447,7 @@ router.post("/:id/freelancer", [middleware.jwt, middleware.chkProjectOwner], fun
 });
 
 router.put("/:id/freelancer", [middleware.jwt, middleware.chkProjectOwner], function(req, res){
-	var bidId = req.body.bidId;
+	const bidId = req.body.bidId;
 	
 	Bid.findById(bidId).populate({path: "bidder", model: 'User'}).exec(function(err, bid){
 		Project.findById(req.params.id).populate({path: "employer", model: "User"}).populate({path: "winBid", model: "Bid", populate: {path: "bidder", model: "User"}}).exec(function(err, project){
@@ -461,7 +461,7 @@ router.put("/:id/freelancer", [middleware.jwt, middleware.chkProjectOwner], func
 				User.findById(bid.bidder._id, function(err, user){
 					user.projects.push(project);
 					user.save(function(err, user){
-						var price = project.budgetMax - bid.bidPrice;
+						const price = project.budgetMax - bid.bidPrice;
 						req.user.balance += price;
 						req.user.save(function(err, savedUser){
 							res.status(200).json({ updatedUser: savedUser, success: true, message: "This project freelancer has updated to " + user.username + ".<br>Also, the $" + price + ' has returned to your wallet.'});
@@ -478,16 +478,16 @@ router.post("/:id/submission",[middleware.jwt, middleware.chkProjectFreelancer, 
 		if (err){
 			return res.status(400).json({success: false, message: 'An error occured when getting data from database. Please contact us.'})
 		}else{
-			var submission_data = {
+			const submission_data = {
 				submitDate: new Date(),
 				status: 'waiting for approval'
 			}
 			
 			Submission.create(submission_data, function(err, submission){
-				var dir = './public/uploads/' + project.employer.username + '/project/' + project._id + '/submissions/' + submission._id;
+				const dir = './public/uploads/' + project.employer.username + '/project/' + project._id + '/submissions/' + submission._id;
 				mkdirp(dir, function (err) {
-	        		var oldPath = req.files[0].path;
-	        		var newPath = dir + '/' + req.files[0].filename;
+	        		const oldPath = req.files[0].path;
+	        		const newPath = dir + '/' + req.files[0].filename;
 	        		req.files[0].path = newPath;
 	        		fs.rename(oldPath, newPath);
 				});
@@ -507,7 +507,7 @@ router.post("/:id/submission",[middleware.jwt, middleware.chkProjectFreelancer, 
 });
 
 router.put("/:id/submission/:sid", [middleware.jwt, middleware.chkProjectOwner], function(req, res){
-	var result = req.body.result;
+	const result = req.body.result;
 	Submission.findById(req.params.sid, function(err, submission){
 		submission.status = result;
 		submission.save(function(err, savedSubmission){
@@ -530,7 +530,7 @@ router.put("/:id/submission/:sid", [middleware.jwt, middleware.chkProjectOwner],
 });
 
 router.post("/:id/rating",middleware.jwt, function(req, res){
-	var data = {
+	const data = {
 		rater: req.user,
 	    ratee: {},
 	    rateStar: req.body.rateStar,

@@ -1,6 +1,6 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var ProjectSchema = new mongoose.Schema({
+const ProjectSchema = new mongoose.Schema({
 	status: String,
 	isBan: {
   		type: Boolean,

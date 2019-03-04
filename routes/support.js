@@ -1,4 +1,4 @@
-var express = require('express'),
+const express = require('express'),
 	app = express(),
 	router = express.Router(),
 	User = require('../models/user'),
@@ -29,7 +29,7 @@ router.get("/", middleware.jwt, function(req, res){
 
 router.get("/create", middleware.jwt, function(req, res){
     User.findById(req.user._id).populate("projects").populate({path: "transaction", model: "Transaction", populate: {path: "bankDeposit", model: "BankDeposit"}}).populate({path: "transaction", model: "Transaction", populate: {path: "paypalDeposit", model: "PaypalDeposit"}}).populate({path: "transaction", model: "Transaction", populate: {path: "withdraws", model: "Withdraw"}}).exec(function(err, user){
-        var projects = [];
+        const projects = [];
         user.projects.forEach(function(project){
             if (project.status ===  'working' || project.status ===  'finished' ){
                 projects.push(project);
@@ -40,7 +40,7 @@ router.get("/create", middleware.jwt, function(req, res){
 });
 
 router.post("/create", [middleware.jwt, upload.temp().any()], function(req, res){
-    var data = JSON.parse(req.body.ticket);
+    const data = JSON.parse(req.body.ticket);
     data.files = req.files;
     data.status = 'under for review';
     data.sender = req.user;
@@ -84,7 +84,7 @@ router.post("/create", [middleware.jwt, upload.temp().any()], function(req, res)
 });
 
 router.post("/:id/reply", [middleware.jwt,upload.temp().any()], function(req, res){
-    var message = req.body.message;
+    const message = req.body.message;
     Ticket.findById(req.params.id).populate('sender').exec(function(err, ticket){
         if (err){
             console.log(err);
@@ -99,11 +99,11 @@ router.post("/:id/reply", [middleware.jwt,upload.temp().any()], function(req, re
                 ticket.status = "Replied"
             }
             
-            var currentDate = new Date();
+            const currentDate = new Date();
             ticket.lastUpdate = currentDate;
     
             ticket.save(function(err, ticket){
-                var data = {
+                const data = {
                      sender: req.user,
                      sendDate: currentDate,
                      message: message,
@@ -116,14 +116,14 @@ router.post("/:id/reply", [middleware.jwt,upload.temp().any()], function(req, re
                     } else {
                         ticket.messages.push(ticketContent);
                         ticket.save(function(err, ticket){
-                            var dir = './public/uploads/' + ticket.sender.username + '/tickets/' + ticket._id + "/" + ticketContent._id;
+                            const dir = './public/uploads/' + ticket.sender.username + '/tickets/' + ticket._id + "/" + ticketContent._id;
                             mkdirp(dir, function (err) {
         			            if (err) {
         			            	console.error(err)
         			            }else {
                                     data.attachments.forEach(function(file){
-        			            		var oldPath = file.path;
-        			            		var newPath = dir + '/' + file.filename;
+        			            		const oldPath = file.path;
+        			            		const newPath = dir + '/' + file.filename;
         			            		fs.rename(oldPath, newPath);
         			            	});
         			            }
@@ -159,7 +159,7 @@ function createTicket(data, res){
        if (err){
            console.log(err);
        } else {
-            var TicketContentdata = {
+            const TicketContentdata = {
                 sender: ticket.sender,
                 sendDate: ticket.lastUpdate,
                 message: data.message,
@@ -172,11 +172,11 @@ function createTicket(data, res){
                     User.findById(ticket.sender._id, function(err, user){
                         user.tickets.push(ticket);
                         user.save(function(err, user){
-                            var dir = './public/uploads/' + user.username + '/tickets/' + ticket._id + '/' + ticketContent._id;
+                            const dir = './public/uploads/' + user.username + '/tickets/' + ticket._id + '/' + ticketContent._id;
                             mkdirp(dir, function (err) {
                                 TicketContentdata.attachments.forEach(function(file){
-    			            		var oldPath = file.path;
-    			            		var newPath = dir + '/' + file.filename;
+    			            		const oldPath = file.path;
+    			            		const newPath = dir + '/' + file.filename;
     			            		fs.rename(oldPath, newPath);
     			            	});
                             });

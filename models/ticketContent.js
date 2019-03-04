@@ -1,6 +1,6 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var TicketContentSchema = new mongoose.Schema({
+const TicketContentSchema = new mongoose.Schema({
     sender:{
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",

@@ -1,6 +1,6 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var PaypalDepositSchema = new mongoose.Schema({
+const PaypalDepositSchema = new mongoose.Schema({
     id: String,
 	status: String,
 	amount: Number,

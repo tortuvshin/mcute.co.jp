@@ -1,6 +1,6 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var TransactionSchema = new mongoose.Schema({
+const TransactionSchema = new mongoose.Schema({
   bankDeposit: [
     {
       type: mongoose.Schema.Types.ObjectId,

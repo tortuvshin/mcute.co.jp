@@ -1,6 +1,6 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var WithdrawSchema = new mongoose.Schema({
+const WithdrawSchema = new mongoose.Schema({
     receiptID: String,
 	status: String,
 	type: String,

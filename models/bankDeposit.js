@@ -1,6 +1,6 @@
-let mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var BankDepositSchema = new mongoose.Schema({
+const BankDepositSchema = new mongoose.Schema({
 	status: String,
 	bankType: String,
 	amount: Number,

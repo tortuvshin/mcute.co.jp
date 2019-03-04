@@ -1,6 +1,6 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var RatingSchema = new mongoose.Schema({
+const RatingSchema = new mongoose.Schema({
     rater: {
         type: mongoose.Schema.Types.ObjectId,
 		ref: "User"

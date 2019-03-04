@@ -1,5 +1,5 @@
 const cron = require('cron');
-const Project = require('./models/project');
+const Project = require('../models/project');
 
 let projectStatusJob = new cron.CronJob({
   cronTime: '0 * * * * *',
