@@ -1,14 +1,14 @@
 <template>
     <div class="page-header header-filter" filter-color="orange">
         <div class="page-header-image"
-             style="background-image: url('img/login.jpg')">
+             style="background-image: url('static/img/login.jpg')">
         </div>
         <div class="content">
             <div class="container">
                 <div class="col-md-5 ml-auto mr-auto">
                     <card type="login" plain>
                         <div slot="header" class="logo-container">
-                            <img v-lazy="'img/now-logo.png'" alt="">
+                            <img v-lazy="'static/img/now-logo.png'" alt="">
                         </div>
 
 

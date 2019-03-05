@@ -2,7 +2,7 @@
     <div class="wrapper contact-page">
         <div class="page-header page-header-small">
             <parallax class="page-header-image"
-                 style="background-image: url('img/bg45.jpg')">
+                 style="background-image: url('static/img/bg45.jpg')">
             </parallax>
         </div>
 

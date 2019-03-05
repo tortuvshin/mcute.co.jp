@@ -42,7 +42,7 @@
         </div>
         <!--     *********    END FEATURES 1      *********      -->
         <!--     *********     FEATURES 2      *********      -->
-        <div class="features-2 section-image" style="background-image: url('img/bg22.jpg')">
+        <div class="features-2 section-image" style="background-image: url('static/img/bg22.jpg')">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-8 mr-auto ml-auto">
@@ -134,7 +134,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <card type="background" raised color="transparent" style="background-image: url('img/bg24.jpg')">
+                        <card type="background" raised color="transparent" style="background-image: url('static/img/bg24.jpg')">
                             <template slot="info">
                                 <div class="icon icon-white">
                                     <i class="now-ui-icons business_bulb-63"></i>
@@ -148,7 +148,7 @@
                         </card>
                     </div>
                     <div class="col-md-4">
-                        <card type="background" raised color="transparent" style="background-image: url('img/bg23.jpg')">
+                        <card type="background" raised color="transparent" style="background-image: url('static/img/bg23.jpg')">
                             <template slot="info">
                                 <div class="icon icon-white">
                                     <i class="now-ui-icons business_badge"></i>
@@ -162,7 +162,7 @@
                         </card>
                     </div>
                     <div class="col-md-4">
-                        <card type="background" raised color="transparenr" style="background-image: url('img/bg25.jpg')">
+                        <card type="background" raised color="transparenr" style="background-image: url('static/img/bg25.jpg')">
                             <template slot="info">
                                 <div class="icon icon-white">
                                     <i class="now-ui-icons location_map-big"></i>
@@ -215,7 +215,7 @@
                     </div>
                     <div class="col-md-7">
                         <div class="tablet-container">
-                            <img v-lazy="'img/ipad2-inverted.png'" />
+                            <img v-lazy="'static/img/ipad2-inverted.png'" />
                         </div>
                     </div>
                 </div>
@@ -254,7 +254,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="phone-container">
-                            <img v-lazy="'img/iphone2.png'" />
+                            <img v-lazy="'static/img/iphone2.png'" />
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -282,7 +282,7 @@
         </div>
         <!--     *********    END FEATURES 6      *********      -->
         <!--     *********     FEATURES 7      *********      -->
-        <div class="features-7 section-image" style="background-image: url('img/bg11.jpg')">
+        <div class="features-7 section-image" style="background-image: url('static/img/bg11.jpg')">
             <div class="col-md-8 mr-auto ml-auto text-center">
                 <h2 class="title">Working is a pleasure</h2>
                 <h4 class="description">This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information.</h4>
@@ -322,7 +322,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="image-container">
-                            <img v-lazy="'img/ipad3.png'" alt="">
+                            <img v-lazy="'static/img/ipad3.png'" alt="">
                         </div>
                     </div>
                 </div>
@@ -330,7 +330,7 @@
         </div>
         <!--     *********    END FEATURES 7      *********      -->
         <!--     *********     FEATURES 8      *********      -->
-        <div class="features-8 section-image" style="background-image: url('img/bg30.jpg')">
+        <div class="features-8 section-image" style="background-image: url('static/img/bg30.jpg')">
             <div class="col-md-8 ml-auto mr-auto text-center">
                 <h2 class="title">Working is a pleasure</h2>
                 <h4 class="description">Woodpecker.co is a follow-up automation SaaS founded in 2015. We’re an international team of 17, speaking 4 languages. Our mission is to enable all B2B companies to connect with their Ideal Customers.</h4>
@@ -339,7 +339,7 @@
                 <div class="row">
                     <div class="col-md-3">
                         <card>
-                            <img slot="image" src="img/bg28.jpg" class="rounded" alt="">
+                            <img slot="image" src="static/img/bg28.jpg" class="rounded" alt="">
                             <div class="info text-center">
                                 <div class="icon">
                                     <i class="now-ui-icons ui-1_email-85"></i>
@@ -351,7 +351,7 @@
                     </div>
                     <div class="col-md-3">
                         <card>
-                            <img slot="image" src="img/bg26.jpg" class="rounded" alt="">
+                            <img slot="image" src="static/img/bg26.jpg" class="rounded" alt="">
                             <div class="info text-center">
                                 <div class="icon">
                                     <i class="now-ui-icons ui-1_calendar-60"></i>
@@ -363,7 +363,7 @@
                     </div>
                     <div class="col-md-3">
                         <card>
-                            <img slot="image" src="img/bg27.jpg" class="rounded" alt="">
+                            <img slot="image" src="static/img/bg27.jpg" class="rounded" alt="">
                             <div class="info text-center">
                                 <div class="icon">
                                     <i class="now-ui-icons ui-1_send"></i>
@@ -375,7 +375,7 @@
                     </div>
                     <div class="col-md-3">
                         <card>
-                            <img slot="image" src="img/bg29.jpg" class="rounded" alt="">
+                            <img slot="image" src="static/img/bg29.jpg" class="rounded" alt="">
                             <div class="info text-center">
                                 <div class="icon">
                                     <i class="now-ui-icons ui-2_like"></i>

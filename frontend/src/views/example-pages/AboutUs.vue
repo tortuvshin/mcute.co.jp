@@ -2,7 +2,7 @@
     <div class="wrapper">
         <div class="page-header page-header-small">
             <parallax class="page-header-image"
-                 style="background-image: url('img/bg32.jpg')">
+                 style="background-image: url('static/img/bg32.jpg')">
             </parallax>
             <div class="content-center">
                 <div class="row">
@@ -74,7 +74,7 @@
                     <div class="row">
                         <div class="col-md-5 ml-auto">
                             <card type="background" raised class="card-background-product"
-                                  style="background-image: url('img/project8.jpg')">
+                                  style="background-image: url('static/img/project8.jpg')">
                                 <h2 class="card-title">Social Analytics</h2>
                                 <p class="card-description">
                                     Insight to help you create, connect, and convert. Understand Your Audience's
@@ -128,7 +128,7 @@
                         </div>
                         <div class="col-md-5 mr-auto">
                             <card type="background" raised class="card-background-product"
-                                  style="background-image: url('img/project9.jpg')">
+                                  style="background-image: url('static/img/project9.jpg')">
                                 <h2 class="card-title">Trello lets you work.</h2>
                                 <p class="card-description text-white">
                                     Trello’s boards, lists, and cards enable you to organize and prioritize your
@@ -156,7 +156,7 @@
                                     <div class="col-md-5">
                                         <div class="card-image">
                                             <a href="#pablo">
-                                                <img class="img img-raised rounded" src="img/olivia.jpg"/>
+                                                <img class="img img-raised rounded" src="static/img/olivia.jpg"/>
                                             </a>
                                         </div>
                                     </div>
@@ -187,7 +187,7 @@
                                     <div class="col-md-5">
                                         <div class="card-image">
                                             <a href="#pablo">
-                                                <img class="img img-raised rounded" src="img/emily.jpg"/>
+                                                <img class="img img-raised rounded" src="static/img/emily.jpg"/>
                                             </a>
                                         </div>
                                     </div>
@@ -220,7 +220,7 @@
                                     <div class="col-md-5">
                                         <div class="card-image">
                                             <a href="#pablo">
-                                                <img class="img img-raised rounded" src="img/james.jpg"/>
+                                                <img class="img img-raised rounded" src="static/img/james.jpg"/>
                                             </a>
                                         </div>
                                     </div>
@@ -252,7 +252,7 @@
                                         <div class="card-image">
                                             <a href="#pablo">
                                                 <img class="img img-raised rounded"
-                                                     src="img/michael.jpg"/>
+                                                     src="static/img/michael.jpg"/>
                                             </a>
                                         </div>
                                     </div>
@@ -292,19 +292,19 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <img class="rounded img-raised" alt="Raised Image" src="img/bg27.jpg">
+                            <img class="rounded img-raised" alt="Raised Image" src="static/img/bg27.jpg">
                         </div>
                         <div class="col-md-4">
-                            <img class="rounded img-raised" alt="Raised Image" src="img/bg24.jpg">
+                            <img class="rounded img-raised" alt="Raised Image" src="static/img/bg24.jpg">
                         </div>
                         <div class="col-md-4">
-                            <img class="rounded img-raised" alt="Raised Image" src="img/bg28.jpg">
+                            <img class="rounded img-raised" alt="Raised Image" src="static/img/bg28.jpg">
                         </div>
                         <div class="col-md-6">
-                            <img class="rounded img-raised" alt="Raised Image" src="img/project6.jpg">
+                            <img class="rounded img-raised" alt="Raised Image" src="static/img/project6.jpg">
                         </div>
                         <div class="col-md-6">
-                            <img class="rounded img-raised" alt="Raised Image" src="img/project14.jpg">
+                            <img class="rounded img-raised" alt="Raised Image" src="static/img/project14.jpg">
                         </div>
                     </div>
                 </div>

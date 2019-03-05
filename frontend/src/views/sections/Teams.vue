@@ -13,7 +13,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-4 ml-1">
                         <card type="profile" plain>
-                            <img slot="avatar" class="img img-raised" src="img/james.jpg"/>
+                            <img slot="avatar" class="img img-raised" src="static/img/james.jpg"/>
 
                             <h3 class="card-title">Oliver Atticus</h3>
                             <h6 class="category text-primary">Web Developer</h6>
@@ -31,7 +31,7 @@
                     </div>
                     <div class="col-md-4 mr-1">
                         <card type="profile" plain>
-                            <img slot="avatar" class="img img-raised" src="img/michael.jpg"/>
+                            <img slot="avatar" class="img img-raised" src="static/img/michael.jpg"/>
 
                             <h3 class="card-title">Smith College</h3>
                             <h6 class="category text-primary">CEO / Co-Founder</h6>
@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-md-4 ml-1 mt-4">
                         <card type="profile" plain>
-                            <img slot="avatar" class="img img-raised" src="img/emily.jpg"/>
+                            <img slot="avatar" class="img img-raised" src="static/img/emily.jpg"/>
 
                             <h3 class="card-title">Sophia Madison</h3>
                             <h6 class="category text-primary">Entrepreneur</h6>
@@ -70,7 +70,7 @@
                     </div>
                     <div class="col-md-4 mr-1 mt-4">
                         <card type="profile" plain>
-                            <img slot="avatar" class="img img-raised" src="img/olivia.jpg"/>
+                            <img slot="avatar" class="img img-raised" src="static/img/olivia.jpg"/>
 
                             <h3 class="card-title">Emily Chloe</h3>
                             <h6 class="category text-primary">Entrepreneur</h6>
@@ -103,7 +103,7 @@
                     <div class="col-md-4">
                         <card type="profile" plain>
                             <img slot="image" class="img img-raised rounded"
-                                 src="img/examples/card-profile1.jpg"/>
+                                 src="static/img/examples/card-profile1.jpg"/>
 
                             <h4 class="card-title">Sofia Scarlett</h4>
                             <h6 class="category">Account Manager</h6>
@@ -121,7 +121,7 @@
                     <div class="col-md-4">
                         <card type="profile" plain>
                             <img slot="image" class="img img-raised rounded"
-                                 src="img/examples/card-profile2.jpg"/>
+                                 src="static/img/examples/card-profile2.jpg"/>
 
                             <h4 class="card-title">Lucas Jacob</h4>
                             <h6 class="category">Aerospace Engineer</h6>
@@ -137,7 +137,7 @@
                     <div class="col-md-4">
                         <card type="profile" plain>
                             <img slot="image" class="img img-raised rounded"
-                                 src="img/examples/card-profile3.jpg"/>
+                                 src="static/img/examples/card-profile3.jpg"/>
 
                             <h4 class="card-title">Amelia Charlotte</h4>
                             <h6 class="category">Photographer</h6>
@@ -157,7 +157,7 @@
         </div>
         <!--     *********    END TEAM 2      *********      -->
         <!--     *********    TEAM 3     *********      -->
-        <div class="team-3 section-image" style="background-image: url('img/project21.jpg')">
+        <div class="team-3 section-image" style="background-image: url('static/img/project21.jpg')">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 ml-auto mr-auto text-center">
@@ -173,7 +173,7 @@
                                 <div class="col-md-5">
                                     <div class="card-image">
                                         <a href="#pablo">
-                                            <img class="img" src="img/olivia.jpg"/>
+                                            <img class="img" src="static/img/olivia.jpg"/>
                                         </a>
                                     </div>
                                 </div>
@@ -196,7 +196,7 @@
                                 <div class="col-md-5">
                                     <div class="card-image">
                                         <a href="#pablo">
-                                            <img class="img" src="img/james.jpg"/>
+                                            <img class="img" src="static/img/james.jpg"/>
                                         </a>
                                     </div>
                                 </div>
@@ -219,7 +219,7 @@
                                 <div class="col-md-5">
                                     <div class="card-image">
                                         <a href="#pablo">
-                                            <img class="img" src="img/michael.jpg"/>
+                                            <img class="img" src="static/img/michael.jpg"/>
                                         </a>
                                     </div>
                                 </div>
@@ -242,7 +242,7 @@
                                 <div class="col-md-5">
                                     <div class="card-image">
                                         <a href="#pablo">
-                                            <img class="img" src="img/emily.jpg"/>
+                                            <img class="img" src="static/img/emily.jpg"/>
                                         </a>
                                     </div>
                                 </div>
@@ -280,7 +280,7 @@
                                 <div class="col-md-5">
                                     <div class="card-image">
                                         <a href="#pablo">
-                                            <img class="img img-raised rounded" src="img/olivia.jpg"/>
+                                            <img class="img img-raised rounded" src="static/img/olivia.jpg"/>
                                         </a>
                                     </div>
                                 </div>
@@ -311,7 +311,7 @@
                                 <div class="col-md-5">
                                     <div class="card-image">
                                         <a href="#pablo">
-                                            <img class="img img-raised rounded" src="img/emily.jpg"/>
+                                            <img class="img img-raised rounded" src="static/img/emily.jpg"/>
                                         </a>
                                     </div>
                                 </div>
@@ -343,7 +343,7 @@
                                 <div class="col-md-5">
                                     <div class="card-image">
                                         <a href="#pablo">
-                                            <img class="img img-raised rounded" src="img/james.jpg"/>
+                                            <img class="img img-raised rounded" src="static/img/james.jpg"/>
                                         </a>
                                     </div>
                                 </div>
@@ -374,7 +374,7 @@
                                 <div class="col-md-5">
                                     <div class="card-image">
                                         <a href="#pablo">
-                                            <img class="img img-raised rounded" src="img/michael.jpg"/>
+                                            <img class="img img-raised rounded" src="static/img/michael.jpg"/>
                                         </a>
                                     </div>
                                 </div>
@@ -404,7 +404,7 @@
         </div>
         <!--     *********    END TEAM 4      *********      -->
         <!--     *********    TEAM 5     *********      -->
-        <div class="team-5 section-image" style="background-image: url('img/project9.jpg')">
+        <div class="team-5 section-image" style="background-image: url('static/img/project9.jpg')">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 ml-auto mr-auto text-center">
@@ -416,7 +416,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <card type="profile">
-                            <img slot="avatar" class="img img-raised" src="img/olivia.jpg"/>
+                            <img slot="avatar" class="img img-raised" src="static/img/olivia.jpg"/>
 
                             <h3 class="card-title">Natalie Paisley</h3>
                             <h6 class="category text-primary">Credit Analyst</h6>
@@ -437,7 +437,7 @@
                     </div>
                     <div class="col-md-4">
                         <card type="profile">
-                            <img slot="avatar" class="img img-raised" src="img/james.jpg"/>
+                            <img slot="avatar" class="img img-raised" src="static/img/james.jpg"/>
 
                             <h4 class="card-title">Anthony Jackson</h4>
                             <h6 class="category text-primary">Desktop Publisher</h6>
@@ -456,7 +456,7 @@
                     </div>
                     <div class="col-md-4">
                         <card type="profile">
-                            <img slot="avatar" class="img img-raised" src="img/emily.jpg"/>
+                            <img slot="avatar" class="img img-raised" src="static/img/emily.jpg"/>
 
                             <h4 class="card-title">Bella Audrey</h4>
                             <h6 class="category text-primary">Economist</h6>

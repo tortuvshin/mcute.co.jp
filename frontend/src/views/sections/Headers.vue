@@ -53,7 +53,7 @@
                 </div>
             </nav>
             <div class="page-header header-filter">
-                <div class="page-header-image" style="background-image: url('assets/img/bg16.jpg')"></div>
+                <div class="page-header-image" style="background-image: url('assets/static/img/bg16.jpg')"></div>
                 <div class="content-center">
                     <div class="container">
                         <div class="row">
@@ -143,7 +143,7 @@
                 </div>
             </nav>
             <div class="page-header header-filter">
-                <div class="page-header-image" style="background-image: url('assets/img/bg14.jpg')"></div>
+                <div class="page-header-image" style="background-image: url('assets/static/img/bg14.jpg')"></div>
                 <div class="content-center">
                     <div class="container">
                         <div class="row">
@@ -220,7 +220,7 @@
                 <el-carousel-item>
                     <div class="page-header header-filter">
                         <div class="page-header-image"
-                             style="background-image: url('assets/img/bg20.jpg')">
+                             style="background-image: url('assets/static/img/bg20.jpg')">
                         </div>
                         <div class="content-center">
                             <div class="container text-left">
@@ -249,7 +249,7 @@
                 <el-carousel-item>
                     <div class="page-header header-filter">
                         <div class="page-header-image"
-                             style="background-image: url('assets/img/bg15.jpg')">
+                             style="background-image: url('assets/static/img/bg15.jpg')">
                         </div>
                         <div class="content-center">
                             <div class="container">
@@ -291,7 +291,7 @@
                 <el-carousel-item>
                     <div class="page-header header-filter">
                         <div class="page-header-image"
-                             style="background-image: url('assets/img/bg17.jpg')">
+                             style="background-image: url('assets/static/img/bg17.jpg')">
                         </div>
                         <div class="content-center">
                             <div class="container">

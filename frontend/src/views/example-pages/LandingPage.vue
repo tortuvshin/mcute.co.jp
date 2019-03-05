@@ -2,7 +2,7 @@
     <div class="wrapper landing-page">
         <div class="page-header page-header-small">
             <parallax class="page-header-image"
-                 style="background-image: url('img/bg26.jpg')">
+                 style="background-image: url('static/img/bg26.jpg')">
             </parallax>
             <div class="content-center">
                 <h1 class="title">This is our great company.</h1>
@@ -35,7 +35,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <!-- First image on the left side -->
-                            <div class="image-container image-left" style="background-image: url('img/bg38.jpg')">
+                            <div class="image-container image-left" style="background-image: url('static/img/bg38.jpg')">
                                 <p class="blockquote blockquote-primary">"Over the span of the satellite record, Arctic
                                     sea ice has been declining significantly, while sea ice in the Antarctichas
                                     increased very slightly"
@@ -46,12 +46,12 @@
                             </div>
                             <!-- Second image on the left side of the article -->
                             <div class="image-container image-left-bottom"
-                                 style="background-image: url('img/bg24.jpg')"></div>
+                                 style="background-image: url('static/img/bg24.jpg')"></div>
                         </div>
                         <div class="col-md-5">
                             <!-- First image on the right side, above the article -->
                             <div class="image-container image-right"
-                                 style="background-image: url('img/bg39.jpg')"></div>
+                                 style="background-image: url('static/img/bg39.jpg')"></div>
                             <h3>So what does the new record for the lowest level of winter ice actually mean</h3>
                             <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer,
                                 and that process will continue whatever happens with climate change. Even if the Arctic
@@ -78,7 +78,7 @@
             </div>
         </div>
 
-        <div class="testimonials-1 section-image" style="background-image: url('img/bg19.jpg')">
+        <div class="testimonials-1 section-image" style="background-image: url('static/img/bg19.jpg')">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 ml-auto mr-auto text-center">
@@ -91,7 +91,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <card type="testimonial">
-                            <img slot="avatar" class="img img-raised" src="img/michael.jpg">
+                            <img slot="avatar" class="img img-raised" src="static/img/michael.jpg">
                             <p class="card-description">
                                 The networking at Web Summit is like no other European tech conference.
                             </p>
@@ -108,7 +108,7 @@
                     </div>
                     <div class="col-md-4">
                         <card type="testimonial">
-                            <img slot="avatar" class="img img-raised" src="img/olivia.jpg">
+                            <img slot="avatar" class="img img-raised" src="static/img/olivia.jpg">
                             <p class="card-description">
                                 The connections you make at Web Summit are unparalleled, we met users all over the
                                 world.
@@ -126,7 +126,7 @@
                     </div>
                     <div class="col-md-4">
                         <card type="testimonial">
-                            <img slot="avatar" class="img img-raised" src="img/james.jpg">
+                            <img slot="avatar" class="img img-raised" src="static/img/james.jpg">
                             <p class="card-description">
                                 Web Summit will increase your appetite, your inspiration, and your network.
                             </p>
@@ -187,7 +187,7 @@
                             <card type="pricing"
                                   raised
                                   class="card-background"
-                                  style="background-image: url('img/pricing2.jpg')">
+                                  style="background-image: url('static/img/pricing2.jpg')">
 
                                 <h6 class="category text-info">Professional</h6>
                                 <h1 class="card-title">

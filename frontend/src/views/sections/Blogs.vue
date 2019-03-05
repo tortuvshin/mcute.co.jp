@@ -10,7 +10,7 @@
                         <card type="blog" plain>
                             <div class="row" slot="image">
                                 <div class="col-md-5">
-                                    <img class="img img-raised rounded" src="img/examples/card-blog4.jpg" />
+                                    <img class="img img-raised rounded" src="static/img/examples/card-blog4.jpg" />
                                 </div>
                                 <div class="col-md-7">
                                     <h6 class="category text-info">Enterprise</h6>
@@ -54,7 +54,7 @@
                                 <div class="col-md-5">
                                     <div class="card-image">
                                         <img class="img img-raised rounded
-                                " src="img/examples/card-blog6.jpg" />
+                                " src="static/img/examples/card-blog6.jpg" />
                                     </div>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@
                                 <card type="blog" plain>
                                     <div class="card-image">
                                         <a href="#pablo">
-                                            <img class="img img-raised rounded" src="img/examples/card-blog7.jpg" />
+                                            <img class="img img-raised rounded" src="static/img/examples/card-blog7.jpg" />
                                         </a>
                                     </div>
                                     <div class="card-body">
@@ -95,7 +95,7 @@
                                 <card type="blog" plain>
                                     <div class="card-image">
                                         <a href="#pablo">
-                                            <img class="img img-raised rounded" src="img/examples/card-blog9.jpg" />
+                                            <img class="img img-raised rounded" src="static/img/examples/card-blog9.jpg" />
                                         </a>
                                     </div>
                                     <div class="card-body">
@@ -118,7 +118,7 @@
                                 <card type="blog" plain>
                                     <div class="card-image">
                                         <a href="#pablo">
-                                            <img class="img img-raised rounded" src="img/examples/card-blog16.jpg" />
+                                            <img class="img img-raised rounded" src="static/img/examples/card-blog16.jpg" />
                                         </a>
                                     </div>
                                     <div class="card-body">
@@ -137,7 +137,7 @@
                                 <card type="blog" plain>
                                     <div class="card-image">
                                         <a href="#pablo">
-                                            <img class="img img-raised rounded" src="img/examples/card-blog15.jpg" />
+                                            <img class="img img-raised rounded" src="static/img/examples/card-blog15.jpg" />
                                         </a>
                                     </div>
                                     <div class="card-body">
@@ -171,7 +171,7 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="card-image">
-                                        <img class="img img-raised rounded" src="img/examples/card-blog10.jpg" />
+                                        <img class="img img-raised rounded" src="static/img/examples/card-blog10.jpg" />
                                     </div>
                                 </div>
                                 <div class="col-md-8">
@@ -183,7 +183,7 @@
                                         <a href="#pablo"> Read More </a>
                                     </p>
                                     <div class="author">
-                                        <img v-lazy="'img/olivia.jpg'" alt="..." class="avatar img-raised">
+                                        <img v-lazy="'static/img/olivia.jpg'" alt="..." class="avatar img-raised">
                                         <span>Katie Roof</span>
                                     </div>
                                 </div>
@@ -194,7 +194,7 @@
                                 <div class="col-md-4">
                                     <div class="card-image">
                                         <a href="#pablo">
-                                            <img class="img img-raised rounded" src="img/examples/card-blog11.jpg" />
+                                            <img class="img img-raised rounded" src="static/img/examples/card-blog11.jpg" />
                                         </a>
                                     </div>
                                 </div>
@@ -207,7 +207,7 @@
                                         <a href="#pablo"> Read More </a>
                                     </p>
                                     <div class="author">
-                                        <img v-lazy="'img/james.jpg'" alt="..." class="avatar img-raised">
+                                        <img v-lazy="'static/img/james.jpg'" alt="..." class="avatar img-raised">
                                         <span>John Mannes</span>
                                     </div>
                                 </div>
@@ -218,7 +218,7 @@
                                 <div class="col-md-4">
                                     <div class="card-image">
                                         <a href="#pablo">
-                                            <img class="img img-raised rounded" src="img/examples/card-blog12.jpg" />
+                                            <img class="img img-raised rounded" src="static/img/examples/card-blog12.jpg" />
                                         </a>
                                     </div>
                                 </div>
@@ -231,7 +231,7 @@
                                         <a href="#pablo"> Read More </a>
                                     </p>
                                     <div class="author">
-                                        <img v-lazy="'img/michael.jpg'" alt="..." class="avatar img-raised">
+                                        <img v-lazy="'static/img/michael.jpg'" alt="..." class="avatar img-raised">
                                         <span>Devin Coldewey</span>
                                     </div>
                                 </div>
@@ -251,7 +251,7 @@
                         <card type="blog" plain>
                             <div class="card-image">
                                 <a href="#pablo">
-                                    <img class="img img-raised rounded" src="img/examples/card-blog13.jpg" />
+                                    <img class="img img-raised rounded" src="static/img/examples/card-blog13.jpg" />
                                 </a>
                             </div>
                             <h6 class="category text-info">Fashion</h6>
@@ -266,7 +266,7 @@
                         <card type="blog" plain>
                             <div class="card-image">
                                 <a href="#pablo">
-                                    <img class="img img-raised rounded" src="img/examples/card-blog14.jpg" />
+                                    <img class="img img-raised rounded" src="static/img/examples/card-blog14.jpg" />
                                 </a>
                             </div>
                             <h6 class="category text-success">Entertainment</h6>
@@ -294,7 +294,7 @@
                                 <div class="card card-blog">
                                     <div class="card-image">
                                         <a href="#pablo">
-                                            <img class="img rounded" src="img/card-blog2.jpg">
+                                            <img class="img rounded" src="static/img/card-blog2.jpg">
                                         </a>
                                     </div>
                                     <div class="card-body">
@@ -307,7 +307,7 @@
                                         </p>
                                         <div class="card-footer">
                                             <div class="author">
-                                                <img v-lazy="'img/julie.jpg'" alt="..." class="avatar img-raised">
+                                                <img v-lazy="'static/img/julie.jpg'" alt="..." class="avatar img-raised">
                                                 <span>Mike John</span>
                                             </div>
                                             <div class="stats stats-right">
@@ -321,7 +321,7 @@
                                 <div class="card card-blog">
                                     <div class="card-image">
                                         <a href="#pablo">
-                                            <img class="img rounded" src="img/examples/card-blog18.jpg">
+                                            <img class="img rounded" src="static/img/examples/card-blog18.jpg">
                                         </a>
                                     </div>
                                     <div class="card-body">
@@ -334,7 +334,7 @@
                                         </p>
                                         <div class="card-footer">
                                             <div class="author">
-                                                <img v-lazy="'img/julie.jpg'" alt="..." class="avatar img-raised">
+                                                <img v-lazy="'static/img/julie.jpg'" alt="..." class="avatar img-raised">
                                                 <span>Mike John</span>
                                             </div>
                                             <div class="stats stats-right">
@@ -348,7 +348,7 @@
                                 <div class="card card-blog">
                                     <div class="card-image">
                                         <a href="#pablo">
-                                            <img class="img rounded" src="img/examples/card-blog17.jpg">
+                                            <img class="img rounded" src="static/img/examples/card-blog17.jpg">
                                         </a>
                                     </div>
                                     <div class="card-body">
@@ -361,7 +361,7 @@
                                         </p>
                                         <div class="card-footer">
                                             <div class="author">
-                                                <img v-lazy="'img/olivia.jpg'" alt="..." class="avatar img-raised">
+                                                <img v-lazy="'static/img/olivia.jpg'" alt="..." class="avatar img-raised">
                                                 <span>Johanna Zmud</span>
                                             </div>
                                             <div class="stats stats-right">

@@ -2,7 +2,7 @@
     <div class="cd-section" id="pricing">
         <!--     *********    PRICING 1     *********      -->
         <div class="pricing-1 section-image" id="pricing-1"
-             style="background-image: url('img/pricing1.jpg')">
+             style="background-image: url('static/img/pricing1.jpg')">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 ml-auto mr-auto text-center">
@@ -121,7 +121,7 @@
                         <card type="pricing"
                               raised
                               class="card-background"
-                              style="background-image: url('img/pricing2.jpg')">
+                              style="background-image: url('static/img/pricing2.jpg')">
 
                             <h6 class="category text-info">Professional</h6>
                             <h1 class="card-title">
@@ -181,7 +181,7 @@
         </div>
         <!--     *********    END PRICING 2      *********      -->
         <!--     *********    PRICING 3     *********      -->
-        <div class="pricing-3 section-image" style="background-image: url('img/pricing3.jpg')" id="pricing-3">
+        <div class="pricing-3 section-image" style="background-image: url('static/img/pricing3.jpg')" id="pricing-3">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 ml-auto mr-auto text-center">
@@ -307,7 +307,7 @@
         <!--     *********    END PRICING 4      *********      -->
         <!--     *********    PRICING 5     *********      -->
         <div class="pricing-5 section-pricing-5 section-image" id="pricing-5"
-             style="background-image: url('img/bg31.jpg')">
+             style="background-image: url('static/img/bg31.jpg')">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">

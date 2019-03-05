@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-md-6 px-0">
                         <card type="background" class="card-background-product card-no-shadow"
-                              style="background-image: url('img/project1.jpg')">
+                              style="background-image: url('static/img/project1.jpg')">
 
                             <h6 class="category">History</h6>
                             <h3 class="card-title">
@@ -34,7 +34,7 @@
                     </div>
                     <div class="col-md-6 px-0">
                         <card type="background" raised class="card-background-product card-no-shadow"
-                              style="background-image: url('img/project18.jpg')">
+                              style="background-image: url('static/img/project18.jpg')">
                             <h6 class="category">Satire</h6>
                             <h3 class="card-title">A Confederacy of Dunces</h3>
                             <p class="card-description">
@@ -49,7 +49,7 @@
                     <div class="col-md-6 px-0">
                         <card type="background"
                               class="card-background-product card-no-shadow"
-                              style="background-image: url('img/project20.jpg')">
+                              style="background-image: url('static/img/project20.jpg')">
                             <h6 class="category">Fiction</h6>
                             <h3 class="card-title">The Sun Also Rises</h3>
                             <p class="card-description">
@@ -64,7 +64,7 @@
                     <div class="col-md-6 px-0">
                         <card type="background"
                               class="card-background-product card-no-shadow"
-                              style="background-image: url('img/project19.jpg')">
+                              style="background-image: url('static/img/project19.jpg')">
                             <h6 class="category">Basic Civitas</h6>
                             <h3 class="card-title">The Right Mistake</h3>
                             <p class="card-description">
@@ -173,7 +173,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="image-container image-left"
-                                 style="background-image: url('img/project4.jpg')">
+                                 style="background-image: url('static/img/project4.jpg')">
                                 <!-- First image on the left side -->
                                 <p class="blockquote blockquote-primary">"Amber Interiors is available to assist in all
                                     aspects of a project from start to finish including consulting with Architects and
@@ -184,7 +184,7 @@
                         <div class="col-md-5">
                             <!-- First image on the right side, above the article -->
                             <div class="image-container image-right"
-                                 style="background-image: url('img/project21.jpg')">
+                                 style="background-image: url('static/img/project21.jpg')">
                             </div>
                             <h6 class="category text-primary">Design</h6>
                             <h4 class="card-title">Coco Kelley</h4>
@@ -201,7 +201,7 @@
                         <div class="col-md-6">
                             <!-- First image on the left side -->
                             <div class="image-container image-left"
-                                 style="background-image: url('img/project24.jpg')">
+                                 style="background-image: url('static/img/project24.jpg')">
                                 <p class="blockquote blockquote-primary">"We provide a simple, approachable way to
                                     decorate your desired space with ease. Each e-décor is completely individualized"
                                 </p>
@@ -210,7 +210,7 @@
                         <div class="col-md-5">
                             <!-- First image on the right side, above the article -->
                             <div class="image-container image-right"
-                                 style="background-image: url('img/project23.jpg')">
+                                 style="background-image: url('static/img/project23.jpg')">
                             </div>
                             <h6 class="category text-primary">E-Decor</h6>
                             <h4 class="card-title">Red Trad</h4>
@@ -236,7 +236,7 @@
                 <div class="row">
                     <div class="col-md-6 px-0">
                         <card type="background" class="card-fashion"
-                              style="background-image: url('img/project14.jpg')">
+                              style="background-image: url('static/img/project14.jpg')">
                             <div class="card-body">
                                 <div class="card-title text-left">
                                     <h2>
@@ -279,7 +279,7 @@
                                 </div>
                             </div>
                             <card type="background" class="card-fashion"
-                                  style="background-image: url('img/project15.jpg')">
+                                  style="background-image: url('static/img/project15.jpg')">
                             </card>
                         </div>
                     </div>
@@ -288,7 +288,7 @@
                     <div class="col-md-6 px-0">
                         <div class="card-container">
                             <card type="background" class="card-fashion"
-                                  style="background-image: url('img/project17.jpg')">
+                                  style="background-image: url('static/img/project17.jpg')">
                             </card>
                             <div class="card card-fashion arrow-left">
                                 <div class="card-title">
@@ -312,7 +312,7 @@
                     </div>
                     <div class="col-md-6 px-0">
                         <card type="background" class="card-fashion"
-                              style="background-image: url('img/project16.jpg')">
+                              style="background-image: url('static/img/project16.jpg')">
                             <div class="card-title text-left">
                                 <h2>
                                     <a href="#pablo">Performing a Project Premortem</a>
@@ -345,7 +345,7 @@
                 <div class="row">
                     <div class="col-md-5 ml-auto">
                         <card type="background" raised class="card-background-product"
-                              style="background-image: url('img/project8.jpg')">
+                              style="background-image: url('static/img/project8.jpg')">
                             <h2 class="card-title">Social Analytics</h2>
                             <p class="card-description">
                                 Insight to help you create, connect, and convert. Understand Your Audience's
@@ -399,7 +399,7 @@
                     </div>
                     <div class="col-md-5 mr-auto">
                         <card type="background" raised class="card-background-product"
-                              style="background-image: url('img/project9.jpg')">
+                              style="background-image: url('static/img/project9.jpg')">
                             <h2 class="card-title">Trello lets you work.</h2>
                             <p class="card-description ">
                                 Trello’s boards, lists, and cards enable you to organize and prioritize your

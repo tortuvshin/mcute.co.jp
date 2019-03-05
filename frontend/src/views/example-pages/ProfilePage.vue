@@ -2,11 +2,11 @@
     <div class="wrapper">
         <div class="page-header page-header-small header-filter" filter-color="orange">
             <parallax class="page-header-image"
-                 style="background-image: url('img/bg5.jpg')">
+                 style="background-image: url('static/img/bg5.jpg')">
             </parallax>
             <div class="container">
                 <div class="photo-container">
-                    <img v-lazy="'img/ryan.jpg'" alt="">
+                    <img v-lazy="'static/img/ryan.jpg'" alt="">
                 </div>
                 <h3 class="title">Ryan Scheinder</h3>
                 <p class="category">Photographer</p>
@@ -58,7 +58,7 @@
                                     <div class="col-md-5 ml-auto mr-auto">
                                         <card type="background"
                                               raised
-                                              style="background-image: url('img/bg23.jpg')"
+                                              style="background-image: url('static/img/bg23.jpg')"
                                               class="card-background-product">
                                             <h2 class="card-title">Chair remake.</h2>
                                             <p class="card-description text-white">
@@ -94,7 +94,7 @@
                                     <div class="col-md-5 ml-auto mr-auto">
                                         <card type="background"
                                               raised
-                                              style="background-image: url('img/project8.jpg')"
+                                              style="background-image: url('static/img/project8.jpg')"
                                               class="card-background-product">
                                             <h2 class="card-title">Social Analytics</h2>
                                             <p class="card-description text-white">
@@ -130,7 +130,7 @@
                                     <div class="col-md-5 ml-auto mr-auto">
                                         <card type="background"
                                               raised
-                                              style="background-image: url('img/bg25.jpg')"
+                                              style="background-image: url('static/img/bg25.jpg')"
                                               class="card-background-product">
                                             <h2 class="card-title">Interior Redesign</h2>
                                             <p class="card-description text-white">

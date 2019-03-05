@@ -4,7 +4,7 @@
             <el-carousel-item>
                 <div class="page-header header-filter">
                     <div class="page-header-image"
-                         style="background-image: url('img/bg40.jpg')">
+                         style="background-image: url('static/img/bg40.jpg')">
                     </div>
                     <div class="content-center text-center">
                         <div class="row">
@@ -20,7 +20,7 @@
             <el-carousel-item>
                 <div class="page-header header-filter">
                     <div class="page-header-image"
-                         style="background-image: url('img/bg41.jpg')">
+                         style="background-image: url('static/img/bg41.jpg')">
                     </div>
                     <div class="content-center">
                         <div class="row">
@@ -36,7 +36,7 @@
             <el-carousel-item>
                 <div class="page-header header-filter">
                     <div class="page-header-image"
-                         style="background-image: url('img/bg29.jpg')">
+                         style="background-image: url('static/img/bg29.jpg')">
                     </div>
                     <div class="content-center text-center">
                         <div class="row">
@@ -162,7 +162,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6 px-0">
-                            <card type="background" class="card-fashion" style="background-image: url('img/bg35.jpg')">
+                            <card type="background" class="card-fashion" style="background-image: url('static/img/bg35.jpg')">
                                 <div class="card-title text-left">
                                     <h2>
                                         <a href="#pablo">
@@ -213,7 +213,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <card type="background" class="card-fashion" style="background-image: url('img/bg40.jpg')">
+                                <card type="background" class="card-fashion" style="background-image: url('static/img/bg40.jpg')">
                                 </card>
                             </div>
                         </div>
@@ -226,7 +226,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <card type="product" plain>
-                                <img slot="image" src="img/saint-laurent1.jpg" alt="">
+                                <img slot="image" src="static/img/saint-laurent1.jpg" alt="">
                                 <h4 class="card-title">
                                     <a href="#pablo">Saint Laurent</a>
                                 </h4>
@@ -249,7 +249,7 @@
                         </div>
                         <div class="col-md-4">
                             <card type="product" plain>
-                                <img slot="image" src="img/saint-laurent1.jpg" alt="">
+                                <img slot="image" src="static/img/saint-laurent1.jpg" alt="">
                                 <h4 class="card-title">
                                     <a href="#pablo">Saint Laurent</a>
                                 </h4>
@@ -272,7 +272,7 @@
                         </div>
                         <div class="col-md-4">
                             <card type="product" plain>
-                                <img slot="image" src="img/gucci.jpg" alt="">
+                                <img slot="image" src="static/img/gucci.jpg" alt="">
                                 <h4 class="card-title">
                                     <a href="#pablo">Gucci</a>
                                 </h4>
@@ -298,7 +298,7 @@
                 </div>
             </div>
             <!-- section -->
-            <div class="subscribe-line subscribe-line-image" style="background-image: url('img/bg43.jpg')">
+            <div class="subscribe-line subscribe-line-image" style="background-image: url('static/img/bg43.jpg')">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 ml-auto mr-auto">
@@ -484,37 +484,37 @@
         },
         products: [
           {
-            image: 'img/polo.jpg',
+            image: 'static/img/polo.jpg',
             title: 'Polo Ralph Lauren',
             description: 'Impeccably tailored in Italy from lightweight navy wool.',
             price: 300
           },
           {
-            image: 'img/tom-ford.jpg',
+            image: 'static/img/tom-ford.jpg',
             title: 'Tom Ford',
             description: 'Immaculate tailoring is TOM FORD\'s forte.',
             price: 879
           },
           {
-            image: 'img/wooyoungmi.jpg',
+            image: 'static/img/wooyoungmi.jpg',
             title: 'Wooyoungmi',
             description: 'Dark-grey slub wool, pintucked notch lapels.',
             price: 555
           },
           {
-            image: 'img/sweeney.jpg',
+            image: 'static/img/sweeney.jpg',
             title: 'Thom Sweeney',
             description: 'It\'s made from lightweight grey wool woven.',
             price: 680
           },
           {
-            image: 'img/kingsman.jpg',
+            image: 'static/img/kingsman.jpg',
             title: 'Kingsman',
             description: 'Crafted from khaki cotton and fully canvassed.',
             price: 725
           },
           {
-            image: 'img/boglioli.jpg',
+            image: 'static/img/boglioli.jpg',
             title: 'Boglioli',
             description: 'Masterfully crafted in Northern Italy.',
             price: 699

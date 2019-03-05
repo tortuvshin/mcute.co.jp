@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
         <div class="page-header page-header-mini">
-            <parallax class="page-header-image" style="background-image: url('img/pp-cov.jpg') ;">
+            <parallax class="page-header-image" style="background-image: url('static/img/pp-cov.jpg') ;">
             </parallax>
         </div>
         <div class="section">
@@ -10,13 +10,13 @@
                     <div class="col-md-5">
                         <el-carousel>
                             <el-carousel-item>
-                                <img class="d-block img-raised" src="img/pp-1.jpg" alt="First slide">
+                                <img class="d-block img-raised" src="static/img/pp-1.jpg" alt="First slide">
                             </el-carousel-item>
                             <el-carousel-item>
-                                <img class="d-block img-raised" src="img/pp-2.jpg" alt="Second slide">
+                                <img class="d-block img-raised" src="static/img/pp-2.jpg" alt="Second slide">
                             </el-carousel-item>
                             <el-carousel-item>
-                                <img class="d-block img-raised" src="img/pp-3.jpg" alt="Third slide">
+                                <img class="d-block img-raised" src="static/img/pp-3.jpg" alt="Third slide">
                             </el-carousel-item>
                         </el-carousel>
                         <p class="blockquote blockquote-primary">
@@ -96,7 +96,7 @@
                     <div class="section-story-overview">
                         <div class="row">
                             <div class="col-md-4 ml-auto mr-auto">
-                                <div class="image-container image-left" style="background-image: url('img/pp-5.jpg')">
+                                <div class="image-container image-left" style="background-image: url('static/img/pp-5.jpg')">
                                     <!-- First image on the left side -->
                                     <p class="blockquote blockquote-primary">"Over the span of the satellite record,
                                         Arctic sea ice has been declining significantly, while sea ice in the
@@ -107,12 +107,12 @@
                                     </p>
                                 </div>
                                 <!-- Second image on the left side of the article -->
-                                <div class="image-container" style="background-image: url('img/bg29.jpg')"></div>
+                                <div class="image-container" style="background-image: url('static/img/bg29.jpg')"></div>
                             </div>
                             <div class="col-md-4 ml-auto mr-auto">
                                 <!-- First image on the right side, above the article -->
                                 <div class="image-container image-right"
-                                     style="background-image: url('img/pp-4.jpg')"></div>
+                                     style="background-image: url('static/img/pp-4.jpg')"></div>
                                 <h3>So what does the new record for the lowest level of winter ice actually mean</h3>
                                 <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every
                                     summer, and that process will continue whatever happens with climate change. Even if
@@ -142,7 +142,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="card card-background card-raised" data-background-color
-                                     style="background-image: url('img/bg24.jpg')">
+                                     style="background-image: url('static/img/bg24.jpg')">
                                     <div class="info">
                                         <div class="icon icon-white">
                                             <i class="now-ui-icons shopping_delivery-fast"></i>
@@ -159,7 +159,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="card card-background card-raised" data-background-color
-                                     style="background-image: url('img/bg28.jpg')">
+                                     style="background-image: url('static/img/bg28.jpg')">
                                     <div class="info">
                                         <div class="icon icon-white">
                                             <i class="now-ui-icons business_badge"></i>
@@ -175,7 +175,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="card card-background card-raised" data-background-color
-                                     style="background-image: url('img/bg25.jpg')">
+                                     style="background-image: url('static/img/bg25.jpg')">
                                     <div class="info">
                                         <div class="icon">
                                             <i class="now-ui-icons ui-2_favourite-28"></i>
@@ -201,7 +201,7 @@
                 <div class="row">
                     <div class="col-sm-6 col-md-3">
                         <card type="product">
-                            <img slot="image" class="img rounded" src="img/saint-laurent.jpg"/>
+                            <img slot="image" class="img rounded" src="static/img/saint-laurent.jpg"/>
 
                             <h6 class="category text-danger">Trending</h6>
                             <h4 class="card-title">
@@ -225,7 +225,7 @@
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <card type="product">
-                            <img slot="image" class="img rounded" src="img/gucci.jpg"/>
+                            <img slot="image" class="img rounded" src="static/img/gucci.jpg"/>
 
                             <h6 class="category text-danger">Popular</h6>
                             <h4 class="card-title">
@@ -249,7 +249,7 @@
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <card type="product">
-                            <img slot="image" class="img rounded" src="img/wooyoungmi.jpg"/>
+                            <img slot="image" class="img rounded" src="static/img/wooyoungmi.jpg"/>
 
                             <h6 class="category text-danger">Popular</h6>
                             <h4 class="card-title">
@@ -273,7 +273,7 @@
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <card type="product">
-                            <img slot="image" class="img rounded" src="img/saint-laurent1.jpg"/>
+                            <img slot="image" class="img rounded" src="static/img/saint-laurent1.jpg"/>
 
                             <h6 class="category text-danger">Trending</h6>
                             <h4 class="card-title">

@@ -1,7 +1,7 @@
 <template>
     <div class="cd-section" id="contactus">
         <!--     *********    CONTACT US 1     *********      -->
-        <div class="contactus-1 section-image" style="background-image: url('img/contact1.jpg')">
+        <div class="contactus-1 section-image" style="background-image: url('static/img/contact1.jpg')">
             <div class="container">
                 <div class="row">
                     <div class="col-md-5">
