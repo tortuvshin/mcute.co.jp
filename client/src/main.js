@@ -38,7 +38,6 @@ import Icon from "./components/Icon";
 import clickOutside from "./directives/click-ouside.js";
 import VueLazyload from "vue-lazyload";
 
-
 export const bus = new Vue();
 
 Vue.use(VueRouter);
@@ -47,15 +46,6 @@ Vue.use(VeeValidate);
 Vue.use(VueMoment);
 Vue.use(VueMaterial);
 
-Vue.http.options.credentials = true;
-
-Vue.component('main-content', MainContent);
-Vue.component('svg-background', SvgBackground);
-Vue.component('spinner', Spinner);
-
-
-Vue.use(BootstrapVue)
-Vue.use(VueLazyload)
 
 // New Components
 Vue.component(Badge.name, Badge);

@@ -8,7 +8,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <card type="background" style="background-image: url('img/bg1.jpg')">
+                    <card type="background" style="background-image: url('static/img/bg1.jpg')">
                         <div class="card-title text-left">
                             <h3>How wild Animals live in the National Forest</h3>
                         </div>
@@ -28,7 +28,7 @@
                     </card>
                 </div>
                 <div class="col-md-6">
-                    <card type="background" style="background-image: url('img/bg3.jpg')">
+                    <card type="background" style="background-image: url('static/img/bg3.jpg')">
                         <div class="card-title text-left">
                             <h3>How wild Animals live in the National Forest</h3>
                         </div>

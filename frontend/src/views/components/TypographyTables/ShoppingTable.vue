@@ -81,7 +81,7 @@
       return {
         productsTable: [
           {
-            image: 'img/saint-laurent.jpg',
+            image: 'static/img/saint-laurent.jpg',
             title: 'Suede Biker Jacket ',
             description: 'by Saint Laurent',
             color: 'Black',
@@ -91,7 +91,7 @@
             amount: 3390
           },
           {
-            image: 'img/balmain.jpg',
+            image: 'static/img/balmain.jpg',
             title: 'Jersey T-Shirt',
             description: 'by Balmain',
             color: 'Black',
@@ -101,7 +101,7 @@
             amount: 998
           },
           {
-            image: 'img/prada.jpg',
+            image: 'static/img/prada.jpg',
             title: '\tSlim-Fit Swim Short ',
             description: 'by Prada',
             color: 'Red',

@@ -71,7 +71,7 @@
             <h4>Navigation</h4>
         </div>
         <div id="navbar">
-            <div class="navigation-example" style="background-image:url('img/bg7.jpg')">
+            <div class="navigation-example" style="background-image:url('static/img/bg7.jpg')">
                 <!-- Navbar Primary  -->
                 <navbar type="primary" menu-classes="ml-auto">
                     <div class="navbar-translate">

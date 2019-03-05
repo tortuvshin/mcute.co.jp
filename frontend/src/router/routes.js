@@ -40,6 +40,8 @@ import Register from "../views/Presentation.vue";
 
 import Error from "../views/Presentation.vue";
 
+// New Routes
+
 Vue.use(Router);
 
 export default new Router ({

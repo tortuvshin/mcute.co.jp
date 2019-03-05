@@ -1,4 +1,5 @@
 import '@/assets/scss/mcute.scss';
+import '@/assets/scss/demo.scss';
 import globalDirectives from './globalDirectives';
 import globalMixins from './globalMixins';
 import globalComponents from './globalComponents';

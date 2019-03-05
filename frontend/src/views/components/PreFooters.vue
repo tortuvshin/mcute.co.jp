@@ -152,7 +152,7 @@
             <br>
             <br>
             <!--     *********    IMAGE SUBSCRIBE LINE     *********      -->
-            <div class="subscribe-line subscribe-line-image" style="background-image: url('img/bg7.jpg')">
+            <div class="subscribe-line subscribe-line-image" style="background-image: url('static/img/bg7.jpg')">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 ml-auto mr-auto">

@@ -219,7 +219,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="picture">
-                                <img v-lazy="'img/pricing1.jpg'" alt="Thumbnail Image" class="rounded img-raised">
+                                <img v-lazy="'static/img/pricing1.jpg'" alt="Thumbnail Image" class="rounded img-raised">
                             </div>
                         </div>
                     </div>
@@ -235,7 +235,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="picture">
-                                <img v-lazy="'img/project9.jpg'" alt="Thumbnail Image" class="rounded img-raised">
+                                <img v-lazy="'static/img/project9.jpg'" alt="Thumbnail Image" class="rounded img-raised">
                             </div>
                         </div>
                     </div>
@@ -273,7 +273,7 @@
                     </button>
                     <div class="header header-primary text-center">
                         <div class="logo-container">
-                            <img v-lazy="'img/now-logo.png'" alt="">
+                            <img v-lazy="'static/img/now-logo.png'" alt="">
                         </div>
                     </div>
                 </div>

@@ -35,7 +35,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <card type="pricing" class="card-background"
-                          style="background-image: url('img/project12.jpg')">
+                          style="background-image: url('static/img/project12.jpg')">
                         <h6 class="category">Professional</h6>
                         <div class="icon icon-primary">
                             <i class="now-ui-icons objects_spaceship"></i>

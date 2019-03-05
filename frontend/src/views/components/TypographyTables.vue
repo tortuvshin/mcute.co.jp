@@ -109,19 +109,19 @@
                 <div class="row">
                     <div class="col-sm-2">
                         <p class="category">Image</p>
-                        <img v-lazy="'img/julie.jpg'" alt="Rounded Image" class="rounded">
+                        <img v-lazy="'static/img/julie.jpg'" alt="Rounded Image" class="rounded">
                     </div>
                     <div class="col-sm-2">
                         <p class="category">Circle Image</p>
-                        <img v-lazy="'img/julie.jpg'" alt="Circle Image" class="rounded-circle">
+                        <img v-lazy="'static/img/julie.jpg'" alt="Circle Image" class="rounded-circle">
                     </div>
                     <div class="col-sm-2">
                         <p class="category">Raised</p>
-                        <img v-lazy="'img/julie.jpg'" alt="Raised Image" class="rounded img-raised">
+                        <img v-lazy="'static/img/julie.jpg'" alt="Raised Image" class="rounded img-raised">
                     </div>
                     <div class="col-sm-2">
                         <p class="category">Circle Raised</p>
-                        <img v-lazy="'img/julie.jpg'" alt="Thumbnail Image" class="rounded-circle img-raised">
+                        <img v-lazy="'static/img/julie.jpg'" alt="Thumbnail Image" class="rounded-circle img-raised">
                     </div>
                 </div>
             </div>
@@ -294,7 +294,7 @@
                             <div class="media media-post">
                                 <a class="pull-left author" href="#pablo">
                                     <div class="avatar">
-                                        <img class="media-object img-raised" alt="64x64" src="img/james.jpg">
+                                        <img class="media-object img-raised" alt="64x64" src="static/img/james.jpg">
                                     </div>
                                 </a>
                                 <div class="media-body">
@@ -316,7 +316,7 @@
                                 <a class="pull-left author" href="#pablo">
                                     <div class="avatar">
                                         <img class="media-object img-raised" alt="64x64"
-                                             src="img/placeholder.jpg"/>
+                                             src="static/img/placeholder.jpg"/>
                                     </div>
                                 </a>
                                 <div class="media-body">
@@ -412,7 +412,7 @@
                 commentsPage: 1,
                 comments: [
                     {
-                        avatar: 'img/marie.jpg',
+                        avatar: 'static/img/marie.jpg',
                         author: 'Tina Andrew',
                         date: '7 minutes ago',
                         comment: `<p>Chance too good. God level bars. I\'m so proud of @LifeOfDesiigner #1 song in the country. Panda! Don\'t be scared of the truth because we need to restart the human foundation in truth I stand with the most humility. We are so blessed!</p>
@@ -422,7 +422,7 @@
                         replies: []
                     },
                     {
-                        avatar: 'img/olivia.jpg',
+                        avatar: 'static/img/olivia.jpg',
                         author: 'Olivia',
                         date: 'Yesterday',
                         comment: `<p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>
@@ -431,7 +431,7 @@
                         liked: false,
                         replies: [
                             {
-                                avatar: 'img/emily.jpg',
+                                avatar: 'static/img/emily.jpg',
                                 author: 'Emily',
                                 date: '2 Days Ago',
                                 comment: `<p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>
@@ -443,7 +443,7 @@
                         ]
                     },
                     {
-                        avatar: 'img/james.jpg',
+                        avatar: 'static/img/james.jpg',
                         author: 'Andrew',
                         date: '2 Days Ago',
                         comment: `<p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>

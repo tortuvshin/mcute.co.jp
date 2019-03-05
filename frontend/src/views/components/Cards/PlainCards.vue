@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-md-6 col-lg-4">
                     <card type="blog" plain>
-                        <img slot="image" class="img rounded img-raised" src="img/project13.jpg">
+                        <img slot="image" class="img rounded img-raised" src="static/img/project13.jpg">
                         <div class="card-body">
                             <h6 class="category text-warning">
                                 <i class="now-ui-icons business_bulb-63"></i> Focus
@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <card type="blog" plain>
-                        <img slot="image" class="img rounded img-raised" src="img/card-blog2.jpg">
+                        <img slot="image" class="img rounded img-raised" src="static/img/card-blog2.jpg">
 
                         <h6 class="category text-primary">Features</h6>
                         <h5 class="card-title">
@@ -40,7 +40,7 @@
                         </p>
                         <div class="card-footer">
                             <div class="author">
-                                <img v-lazy="'img/julie.jpg'" alt="..." class="avatar img-raised">
+                                <img v-lazy="'static/img/julie.jpg'" alt="..." class="avatar img-raised">
                                 <span>Mike John</span>
                             </div>
                             <div class="stats stats-right">
@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <card type="blog" plain>
-                        <img slot="image" class="img img-raised rounded" src="img/examples/card-blog6.jpg">
+                        <img slot="image" class="img img-raised rounded" src="static/img/examples/card-blog6.jpg">
                         <div class="text-center">
                             <h6 class="category text-danger">
                                 <i class="now-ui-icons media-2_sound-wave"></i> Business
@@ -82,7 +82,7 @@
             <div class="row">
                 <div class="col-md-6 col-lg-3">
                     <card type="profile" plain>
-                        <img slot="image" class="img rounded" src="img/julie.jpg">
+                        <img slot="image" class="img rounded" src="static/img/julie.jpg">
 
                         <a href="pablo">
                             <h4 class="card-title">Julie Andrew</h4>
@@ -102,7 +102,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <card type="profile" plain>
-                        <img slot="avatar" class="img img-raised" src="img/mike.jpg">
+                        <img slot="avatar" class="img img-raised" src="static/img/mike.jpg">
 
                         <h4 class="card-title">Alec Mike</h4>
                         <h6 class="category text-gray">
@@ -121,7 +121,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <card type="profile" plain>
-                        <img slot="avatar" class="img img-raised" src="img/james.jpg">
+                        <img slot="avatar" class="img img-raised" src="static/img/james.jpg">
                         <div class="card-body">
                             <h6 class="card-category">CEO / Co-Founder</h6>
                             <h4 class="card-title">James Thompson</h4>
@@ -136,7 +136,7 @@
                     <card type="profile" plain>
                         <div class="card-avatar">
                             <a href="#pablo">
-                                <img class="img img-raised" src="img/olivia.jpg">
+                                <img class="img img-raised" src="static/img/olivia.jpg">
                             </a>
                         </div>
                         <h6 class="category text-gray">Growth Hacker</h6>

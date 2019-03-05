@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-md-6 col-lg-3">
                     <card type="profile">
-                        <img slot="image" class="img rounded" src="img/julie.jpg">
+                        <img slot="image" class="img rounded" src="static/img/julie.jpg">
                         <a href="pablo">
                             <h4 class="card-title">Julie Andrew</h4>
                         </a>
@@ -29,7 +29,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <card type="profile">
-                        <img slot="avatar" class="img img-raised" src="img/mike.jpg">
+                        <img slot="avatar" class="img img-raised" src="static/img/mike.jpg">
                         <div class="card-body">
                             <h4 class="card-title">Alec Mike</h4>
                             <h6 class="category text-gray">
@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <card type="profile" color="black">
-                        <img slot="avatar" class="img img-raised" src="img/james.jpg">
+                        <img slot="avatar" class="img img-raised" src="static/img/james.jpg">
                         <div>
                             <h6 class="card-category">CEO / Co-Founder</h6>
                             <h4 class="card-title">James Thompson</h4>
@@ -67,7 +67,7 @@
                         <div>
                             <div class="card-avatar">
                                 <a href="#pablo">
-                                    <img class="img img-raised" src="img/olivia.jpg">
+                                    <img class="img img-raised" src="static/img/olivia.jpg">
                                 </a>
                             </div>
                             <h6 class="category text-gray">Growth Hacker</h6>
