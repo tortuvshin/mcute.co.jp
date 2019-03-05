@@ -12,28 +12,37 @@
                         </div>
 
 
-                        <fg-input class="no-border input-lg"
-                                  addon-left-icon="now-ui-icons users_circle-08"
-                                  placeholder="First Name...">
+                        <fg-input 
+                            class="no-border input-lg"
+                            addon-left-icon="now-ui-icons users_circle-08"
+                            v-model="username"
+                            required @change="invalidInput = []"
+                            placeholder="Username...">
                         </fg-input>
 
-                        <fg-input class="no-border input-lg"
-                                  addon-left-icon="now-ui-icons text_caps-small"
-                                  placeholder="Last Name...">
+                        <fg-input 
+                            class="no-border input-lg"
+                            addon-left-icon="now-ui-icons text_caps-small"
+                            placeholder="Password..."
+                            v-model="password"
+                            required @change="invalidInput = []"
+                            type="password">
                         </fg-input>
 
+                        {{ loading }}
+                        {{errorMessage}}
                         <template slot="raw-content">
                             <div class="card-footer text-center">
-                                <a href="#pablo" class="btn btn-primary btn-round btn-lg btn-block">Get Started</a>
+                                <a href="" v-on:click="onLogin" class="btn btn-primary btn-round btn-lg btn-block">Sign In</a>
                             </div>
                             <div class="pull-left">
                                 <h6>
-                                    <a href="#pablo" class="link footer-link">Create Account</a>
+                                    <a href="/register" class="link footer-link">Create Account</a>
                                 </h6>
                             </div>
                             <div class="pull-right">
                                 <h6>
-                                    <a href="#pablo" class="link footer-link">Need Help?</a>
+                                    <a href="/" class="link footer-link">Need Help?</a>
                                 </h6>
                             </div>
                         </template>
@@ -45,18 +54,88 @@
     </div>
 </template>
 <script>
-  import { Card, Button, FormGroupInput } from '@/components';
-  import MainFooter from '@/layout/MainFooter';
-  export default {
-    name: 'login-page',
+import { Card, Button, FormGroupInput } from '@/components';
+import MainFooter from '@/layout/MainFooter';
+import Vue from 'vuex'
+import { bus } from '../main.js'
+import { API_SERVER } from '../api.js'
+import { mapActions } from 'vuex'
+
+export default {
+    name: 'Login',
     bodyClass: 'login-page',
     components: {
       Card,
       MainFooter,
       [Button.name]: Button,
       [FormGroupInput.name]: FormGroupInput
+    },
+    data() {
+        return {
+            username: '',
+            password: '',
+            invalidInput: [],
+            errorMessage: '',
+            loginProgress: 0
+        }
+    },
+    methods: {
+        ...mapActions([
+            'login'
+        ]),
+        isInvalidExist(fieldName){
+            return this.invalidInput.indexOf(fieldName) !== -1;
+        },
+        checkInvalidInput(fieldNames){
+            var result = false;
+            fieldNames.forEach((fieldName) => {
+                if (this[fieldName] === ''){
+                    this.invalidInput.push(fieldName);
+                    result = true;
+                }
+            });
+            return result;
+        },
+        onLogin(e){
+            this.invalidInput = [];
+            if (this.checkInvalidInput(['username', 'password'])){
+                return;
+            }
+            const payload = {
+                ref: this,
+                user: {
+                    username: this.username, 
+                    password: this.password
+                }
+            }
+            var loginProgress = setInterval(()=> {
+                if (this.loginProgress < 100){
+                    this.loginProgress += 15;
+                }else {
+                    clearInterval(loginProgress);
+                    this.login(payload);
+                }
+            }, 100);
+        },
+        loginSuccess(message){
+                bus.$emit('showAlert', message);
+                this.$router.go(-1);
+        },
+        loginFail(message){
+                this.loginProgress = 0;
+                bus.$emit('showAlert', message);
+        }
+    },
+    created(){
+        // From main.js auth
+        const errorMessage = this.$route.params.errorMessage;
+        if (errorMessage){
+            this.errorMessage = errorMessage;
+        }
+        window.document.title = "Login - MCute";
+        console.log(this.errorMessage);
     }
-  }
+}
 </script>
 <style>
 </style>

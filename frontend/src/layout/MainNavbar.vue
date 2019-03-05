@@ -52,16 +52,16 @@
 				</a>
 			</li>
 
-			<drop-down tag="li" :title="fullName" icon="now-ui-icons design_image" class="nav-item"  v-if="currentUser">
+			<drop-down tag="li" :title="fullName" icon="now-ui-icons users_single-02" class="nav-item"  v-if="currentUser">
 				<nav-link to="/dashboard">
-					<i class="now-ui-icons business_bulb-63"></i> Profile
+					<i class="now-ui-icons users_circle-08"></i> Profile
 				</nav-link>
 				<nav-link to="/dashboard">
 					<i class="now-ui-icons business_bulb-63"></i> User
 				</nav-link>
-				<nav-link  v-on:click="logout"> 
-					<i class="now-ui-icons business_bulb-63"></i> Logout
-				</nav-link>
+				<a href="" v-on:click="logout" class="dropdown-item"> 
+					<i class="now-ui-icons sport_user-run"></i> Logout
+				</a>
 			</drop-down>
 		</template>
 	</navbar>
@@ -91,8 +91,8 @@ export default {
 			return this.$store.state.user.currentUser;
 		},
 		fullName(){
-			return currentUser.firstName + currentUser.lastName;
-		}
+			return this.$store.state.user.currentUser.firstName + ' ' + this.$store.state.user.currentUser.lastName;
+		},
 	},
 	methods: {
 		...mapActions([

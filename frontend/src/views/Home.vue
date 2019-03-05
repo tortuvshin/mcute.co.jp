@@ -1,7 +1,6 @@
 <template>
     <div class="wrapper landing-page">
         <div>
-            
             <el-carousel height="100vh">
                 <el-carousel-item>
                     <div class="page-header header-filter">
