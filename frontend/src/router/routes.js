@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 
 import Index from "../views/dashboard/Index.vue";
+import RegisterOld from "../views/RegisterOld.vue";
 import Account from "../views/dashboard/Account.vue";
 import Deposit from "../views/dashboard/billing/Deposit.vue";
 import Withdraw from "../views/dashboard/billing/Withdraw.vue";
@@ -24,23 +25,19 @@ import CreateTicket from "../views/support/CreateTicket.vue";
 
 import ViewProfile from "../views/profile/ViewProfile.vue";
 
-import Profile from "../views/Presentation.vue";
 
 import PaypalReturn from "../views/dashboard/billing/PaypalReturn.vue";
 
+// New Routes
+
 import AppHeader from "../layout/MainNavBar";
 import AppFooter from "../layout/MainFooter";
-import Components from "../views/Components.vue";
-import Admin from "../views/Presentation.vue";
-import Register1 from "../views/Presentation.vue";
-import Home from "../views/Presentation.vue";
-import ItemList from "../views/Presentation.vue";
-import Login from "../views/Presentation.vue";
-import Register from "../views/Presentation.vue";
-
-import Error from "../views/Presentation.vue";
-
-// New Routes
+import Home from "../views/Home.vue";
+import Login from "../views/Login.vue";
+import Register from "../views/Register.vue";
+import Profile from "../views/Profile.vue";
+import ItemList from "../views/ItemList.vue";
+import Error from "../views/Error.vue";
 
 Vue.use(Router);
 
@@ -50,30 +47,20 @@ export default new Router ({
 	linkActiveClass: 'active',
 	routes: [
 		
-		  {
-				path: "/components",
-				name: "components",
-				components: {
-					header: AppHeader,
-					default: Components,
-					footer: AppFooter
-				}
-		  },
-		  {
-			path: "/login",
-			name: "Login",
-			components: {
-			  header: AppHeader,
-			  default: Login,
-			  footer: AppFooter
-			}
-		  },
+		
+			
+			{
+				path: "/login",
+				name: "Login",
+				components: {default: Login, header: AppHeader},
+				props: {header: {colorOnScroll: 450}}
+			},
 		  {
 			path: "/signup",
 			name: "register",
 			components: {
 			  header: AppHeader,
-			  default: Register1,
+			  default: RegisterOld,
 			  footer: AppFooter
 			}
 		  },
