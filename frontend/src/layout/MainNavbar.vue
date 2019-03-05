@@ -1,62 +1,68 @@
 <template>
+            
 	<navbar position="fixed"
 	        :transparent="transparent"
 	        :color-on-scroll="colorOnScroll"
 	        menu-classes="ml-auto">
 		<template slot-scope="{toggle, isToggled}">
-			<router-link v-popover:popover1 class="navbar-brand" to="/presentation">
-				MCute
-			</router-link>
-			<el-popover
-					ref="popover1"
-					popper-class="popover"
-					placement="bottom"
-					width="200"
-					trigger="hover">
-				<div class="popover-body">Matching System</div>
-			</el-popover>
+			
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="" v-on:click="$router.push('/');">
+						Home
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="" v-on:click="$router.push('/project/search');">
+						Spaces
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="" v-on:click="$router.push('/artists');">
+						Artists
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="" v-on:click="$router.push('/project/post');">
+						Post a Space
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="" v-on:click="$router.push('/project/post');">
+						Post a Art works
+					</a>
+				</li>
+			</ul>
 		</template>
 		<template slot="navbar-menu">
-			
-			<drop-down tag="li" title="Components" icon="now-ui-icons design_app" class="nav-item">
-				<nav-link to="/components">
-					<i class="now-ui-icons business_chart-pie-36"></i> Components
-				</nav-link>
-			</drop-down>
-			<drop-down tag="li" title="sections" icon="now-ui-icons files_paper" class="nav-item">
-				<nav-link class="dropdown-item" to="/sections#headers">
-					<i class="now-ui-icons shopping_box"></i> Headers
-				</nav-link>
-				<nav-link class="dropdown-item" to="/sections#features">
-					<i class="now-ui-icons ui-2_settings-90"></i> Features
-				</nav-link>
-				<nav-link class="dropdown-item" to="/sections#blogs">
-					<i class="now-ui-icons text_align-left"></i> Blogs
-				</nav-link>
-				<nav-link class="dropdown-item" to="/sections#teams">
-					<i class="now-ui-icons sport_user-run"></i> Teams
-				</nav-link>
-				<nav-link class="dropdown-item" to="/sections#projects">
-					<i class="now-ui-icons education_paper"></i> Projects
-				</nav-link>
-				<nav-link class="dropdown-item" to="/sections#pricing">
-					<i class="now-ui-icons business_money-coins"></i> Pricing
-				</nav-link>
-				<nav-link class="dropdown-item" to="/sections#testimonials">
-					<i class="now-ui-icons ui-2_chat-round"></i> Testimonials
-				</nav-link>
-				<nav-link class="dropdown-item" to="/sections#contactus">
-					<i class="now-ui-icons tech_mobile"></i> Contact Us
-				</nav-link>
-			</drop-down>
+			<li class="nav-item active">
+					
+			</li>
+			<li class="nav-item" v-if="!currentUser">
+				<a class="nav-link" href="" v-on:click="$router.push('/login');">
+					Login
+				</a>
+			</li>
+			<li class="nav-item" v-if="!currentUser">
+				<a class="nav-link" href="" v-on:click="$router.push('/register');">
+					Register
+				</a>
+			</li>
 
-			<drop-down tag="li" title="Examples" icon="now-ui-icons design_image" class="nav-item">
-				<nav-link to="/about">
-					<i class="now-ui-icons business_bulb-63"></i> About-us
+			<drop-down tag="li" :title="fullName" icon="now-ui-icons design_image" class="nav-item"  v-if="currentUser">
+				<nav-link to="/dashboard">
+					<i class="now-ui-icons business_bulb-63"></i> Profile
 				</nav-link>
-				
+				<nav-link to="/dashboard">
+					<i class="now-ui-icons business_bulb-63"></i> User
+				</nav-link>
+				<nav-link  v-on:click="logout"> 
+					<i class="now-ui-icons business_bulb-63"></i> Logout
+				</nav-link>
 			</drop-down>
-		
 		</template>
 	</navbar>
 </template>
@@ -64,20 +70,35 @@
 <script>
 import { DropDown, NavbarToggleButton, Navbar, NavLink } from "@/components";
 import { Popover } from "element-ui";
+import { mapActions } from 'vuex'
+import { bus } from '../main.js'
 
 export default {
-  name: "main-navbar",
-  props: {
-    transparent: Boolean,
-    colorOnScroll: Number
-  },
-  components: {
-    DropDown,
-    Navbar,
-    NavbarToggleButton,
-    NavLink,
-    [Popover.name]: Popover
-  }
+	name: "main-navbar",
+	props: {
+		transparent: Boolean,
+		colorOnScroll: Number
+	},
+	components: {
+		DropDown,
+		Navbar,
+		NavbarToggleButton,
+		NavLink,
+		[Popover.name]: Popover
+	},
+	computed: {
+		currentUser(){
+			return this.$store.state.user.currentUser;
+		},
+		fullName(){
+			return currentUser.firstName + currentUser.lastName;
+		}
+	},
+	methods: {
+		...mapActions([
+		'logout'
+		])
+	},
 };
 </script>
 

@@ -46,33 +46,28 @@ export default new Router ({
 	linkExactActiveClass: "active",
 	linkActiveClass: 'active',
 	routes: [
-		
-		
-			
-			{
-				path: "/login",
-				name: "Login",
-				components: {default: Login, header: AppHeader},
-				props: {header: {colorOnScroll: 450}}
-			},
-		  {
-			path: "/signup",
-			name: "register",
-			components: {
-			  header: AppHeader,
-			  default: RegisterOld,
-			  footer: AppFooter
-			}
-		  },
 		{ 
 			path: '', 
-			components: {
-			  header: AppHeader,
-			  default: Home,
-			  footer: AppFooter
-			},
-			name:'Home'
-		},{ 
+			name:'Home',
+			components: { header: AppHeader, default: Home, footer: AppFooter },
+			props: { header: {colorOnScroll: 65}}
+		},
+		{
+			path: "/login",
+			name: "Login",
+			components: {default: Login, header: AppHeader},
+			props: {header: {colorOnScroll: 65}}
+		},
+		{
+		path: "/signup",
+		name: "register",
+		components: {
+			header: AppHeader,
+			default: RegisterOld,
+			footer: AppFooter
+		}
+		},
+		{ 
 			path: '/list', 
 			components: {
 			  header: AppHeader,

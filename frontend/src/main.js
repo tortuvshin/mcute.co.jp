@@ -25,7 +25,6 @@ import { API_SERVER } from './api.js'
 
 import { store } from './store/index'
 
-
 export const bus = new Vue();
 
 Vue.use(VueRouter);
@@ -33,7 +32,6 @@ Vue.use(VueResouce);
 Vue.use(VeeValidate);
 Vue.use(VueMoment);
 Vue.use(VueMaterial);
-
 
 Vue.http.options.credentials = true;
 
