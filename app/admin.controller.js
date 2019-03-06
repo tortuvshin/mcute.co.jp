@@ -3,7 +3,6 @@ const User = require('../models/user')
 const Ticket = require('../models/ticket')
 const TicketContent = require('../models/ticketContent')
 const BankDeposit = require('../models/bankDeposit')
-const utils = require('../utils/utils')
 
 module.exports = {
     readUser(req,res) {

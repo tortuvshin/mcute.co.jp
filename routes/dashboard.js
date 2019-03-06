@@ -18,7 +18,7 @@ const express = require('express'),
 	paypal_url = require("../config/paypal");
 	
 
-const paypal = Paypal.init('s20081428-facilitator_api1.gmail.com', 'R72DVPDQUL2GJC8Z', 'AFcWxV21C7fd0v3bYYYRCpSSRl31A5iBT42og6dVd8WcEbfHabBWj98g', paypal_url.paypalSuccess, paypal_url.paypalCancel, true);
+const paypal = Paypal.init('#', '#', '#', paypal_url.paypalSuccess, paypal_url.paypalCancel, true);
 let files = [];
 
 // ===================================
