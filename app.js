@@ -23,8 +23,8 @@ const chatRoutes = require("./routes/chat")
 let User = require('./models/user')
 
 mongoose.Promise = global.Promise;  
-mongoose.connect("mongodb://turtuvshin:turtuvshin9@ds217125.mlab.com:17125/work-flow");
-// mongoose.connect("mongodb://localhost:27017/workflow");
+// mongoose.connect("mongodb://turtuvshin:turtuvshin9@ds217125.mlab.com:17125/work-flow");
+mongoose.connect("mongodb://localhost:27017/workflow");
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
