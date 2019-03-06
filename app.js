@@ -22,12 +22,21 @@ const chatRoutes = require("./routes/chat")
 
 let User = require('./models/user')
 
-mongoose.Promise = global.Promise;  
-// mongoose.connect("mongodb://turtuvshin:turtuvshin9@ds217125.mlab.com:17125/work-flow");
-mongoose.connect("mongodb://localhost:27017/workflow");
-mongoose.set('useNewUrlParser', true);
-mongoose.set('useFindAndModify', false);
-mongoose.set('useCreateIndex', true);
+// Remove the warning with Promise
+mongoose.Promise = global.Promise;
+
+// Connect the db with the url provide
+try {
+  mongoose.connect("mongodb://localhost:27017/workflow", { useNewUrlParser: true });
+} catch (err) {
+  mongoose.createConnection("mongodb://localhost:27017/workflow", { useNewUrlParser: true });
+}
+
+mongoose.connection
+  .once('open', () => console.log('MongoDB Running'))
+  .on('error', e => {
+    throw e;
+  });
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}));
