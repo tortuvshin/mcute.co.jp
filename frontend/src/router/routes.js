@@ -78,8 +78,7 @@ export default new Router ({
 		},
 		{ path: '/register', component: Register, name:'Register'},
 		{ path: '/dashboard', 
-			component: 	Profile
-			, 
+			component: 	Profile, 
 			children: [
 				{ path: '', component: Profile, name: 'MyProfile', meta: { auth: true }},
 				{ path: 'account', component: Account, name:'Account', meta: { auth: true }},
