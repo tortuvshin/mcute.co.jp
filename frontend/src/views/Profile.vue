@@ -8,20 +8,20 @@
                 <div class="photo-container">
                     <img v-lazy="'static/img/ryan.jpg'" alt="">
                 </div>
-                <h3 class="title">Ryan Scheinder</h3>
-                <p class="category">Photographer</p>
+                <h3 class="title">{{ currentUser.firstName }} {{ currentUser.lastName }}</h3>
+                <p class="category">{{ currentUser.type }} Member Since&nbsp;{{ currentUser.signUpDate | moment("DD-MMMM-YYYY") }}</p>
                 <div class="content">
                     <div class="social-description">
                         <h2>26</h2>
-                        <p>Comments</p>
+                        <p>Art works</p>
                     </div>
                     <div class="social-description">
                         <h2>26</h2>
-                        <p>Comments</p>
+                        <p>Sale</p>
                     </div>
                     <div class="social-description">
                         <h2>48</h2>
-                        <p>Bookmarks</p>
+                        <p>Favorite</p>
                     </div>
                 </div>
             </div>
@@ -41,9 +41,8 @@
                     </a>
                 </div>
                 <h3 class="title">About me</h3>
-                <h5 class="description text-center">An artist of considerable range, Ryan — the name taken by
-                    Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music,
-                    giving it a warm, intimate feel with a solid groove structure. An artist of considerable range.</h5>
+                <h5 class="description text-center" v-html="currentUser.profile"></h5>
+
                 <div class="row">
                     <div class="col-md-12">
                         <h4 class="title text-center">My Portfolio</h4>
@@ -55,36 +54,71 @@
                                 <i slot="label" class="now-ui-icons design_image"></i>
 
                                 <div class="row">
-                                    <div class="col-md-5 ml-auto mr-auto">
-                                        <card type="background"
-                                              raised
-                                              style="background-image: url('static/img/bg23.jpg')"
-                                              class="card-background-product">
-                                            <h2 class="card-title">Chair remake.</h2>
-                                            <p class="card-description text-white">
-                                                Trello’s boards, lists, and cards enable you to organize and prioritize
-                                                your projects in a fun, flexible and rewarding way. It was a great
-                                                project and I would be more than happy to do it again.
-                                            </p>
-                                            <badge type="neutral">Trello</badge>
-                                        </card>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <info-section
-                                                type="warning"
-                                                icon="now-ui-icons users_single-02"
-                                                title="Work With Any Team"
-                                                description="Whether it’s for work or even the next family vacation, Trello helps your team."
-                                        />
+                                  <div class="col-md-4">
+                                      <card type="background" style="background-image: url('https://imgc.artprintimages.com/img/print/daniel-pollera-sunset-beach_u-l-f1ylb30.jpg?src=gp&w=300&h=300')">
+                                          <div class="card-title text-left">
+                                              <h3>Beach Landscapes</h3>
+                                          </div>
+                                          <div class="card-footer text-left">
+                                              <div class="stats">
+                                                  <span>
+                                                      <i class="now-ui-icons media-2_sound-wave"></i>mcute.jp
+                                                  </span>
+                                                  <span>
+                                                      <i class="now-ui-icons tech_watch-time"></i> 20min ago
+                                                  </span>
+                                              </div>
+                                              <div class="stats-link pull-right">
+                                                  <a href="#pablo" class="footer-link">Environment</a>
+                                              </div>
+                                          </div>
+                                      </card>
+                                  </div>
+                                  <div class="col-md-4">
+                                      <card type="background" style="background-image: url('https://cache1.artprintimages.com/images/featuredCollections/sub/mid-century-modern-opt.jpg')">
+                                          <div class="card-title text-left">
+                                              <h3>How wild Animals live in the National Forest</h3>
+                                          </div>
+                                          <div class="card-footer text-left">
+                                              <div class="stats-link">
+                                                  <a href="#pablo" class="footer-link">Environment</a>
+                                              </div>
+                                              <div class="stats stats-right">
+                                                  <span>
+                                                      <i class="now-ui-icons media-2_sound-wave"></i>SPACE.com
+                                                  </span>
+                                                  <span>
+                                                      <i class="now-ui-icons tech_watch-time"></i> 20min ago
+                                                  </span>
+                                              </div>
+                                          </div>
 
-                                        <info-section
-                                                type="warning"
-                                                icon="now-ui-icons business_chart-bar-32"
-                                                title="A Productivity Platform"
-                                                description="Integrate the apps your team already uses directly into your workflow."
-                                        />
-                                    </div>
-                                </div>
+                                      </card>
+                                  </div>
+
+                                  <div class="col-md-4">
+                                      <card type="background" style="background-image: url('https://imgc.artprintimages.com/img/print/marion-griese-into-the-sky-of-this_u-l-q1c0uyl0.jpg?src=gp&w=300&h=300')">
+                                          <div class="card-title text-left">
+                                              <h3>Mid Century Modern Art</h3>
+                                          </div>
+                                          <div class="card-footer text-left">
+                                              <div class="stats-link">
+                                                  <a href="#pablo" class="footer-link">Environment</a>
+                                              </div>
+                                              <div class="stats stats-right">
+                                                  <span>
+                                                      <i class="now-ui-icons media-2_sound-wave"></i>SPACE.com
+                                                  </span>
+                                                  <span>
+                                                      <i class="now-ui-icons tech_watch-time"></i> 20min ago
+                                                  </span>
+                                              </div>
+                                          </div>
+
+                                      </card>
+                                  </div>
+
+                              </div>
                             </tab-pane>
 
                             <tab-pane>
@@ -237,10 +271,13 @@
     </div>
 </template>
 <script>
-  import { Badge, Button, InfoSection, FormGroupInput, Card, Tabs, TabPane, Checkbox } from '@/components';
-  import { API_KEY } from '@/constants'
-  import Vue from 'vue'
-  import * as VueGoogleMaps from 'vue2-google-maps'
+
+import AppHeader from "../layout/MainNavBar";
+import AppFooter from "../layout/MainFooter";
+import { Badge, Button, InfoSection, FormGroupInput, Card, Tabs, TabPane, Checkbox } from '@/components';
+import { API_KEY } from '@/constants'
+import Vue from 'vue'
+import * as VueGoogleMaps from 'vue2-google-maps'
 
   Vue.use(VueGoogleMaps, {
     load: {
@@ -248,9 +285,16 @@
     }
   });
   export default {
-    name: 'profile-page',
+    name: 'Profile',
     bodyClass: 'profile-page',
+    computed: {
+        currentUser(){
+            return this.$store.state.user.currentUser;
+        }
+    },
     components: {
+      AppHeader,
+      AppFooter,
       InfoSection,
       Card,
       Tabs,
