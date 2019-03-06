@@ -28,6 +28,8 @@ import ViewProfile from "../views/profile/ViewProfile.vue";
 
 import PaypalReturn from "../views/dashboard/billing/PaypalReturn.vue";
 
+
+import LoginOld from "../views/LoginOld.vue";
 // New Routes
 
 import AppHeader from "../layout/MainNavBar";
@@ -59,8 +61,14 @@ export default new Router ({
 			props: {header: {colorOnScroll: 65}}
 		},
 		{
+			path: "/signin",
+			name: "Login",
+			components: {default: LoginOld, header: AppHeader},
+			props: {header: {colorOnScroll: 65}}
+		},
+		{
 		path: "/signup",
-		name: "register",
+		name: "Register",
 		components: {
 			header: AppHeader,
 			default: RegisterOld,

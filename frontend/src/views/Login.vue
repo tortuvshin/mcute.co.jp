@@ -6,35 +6,40 @@
         <div class="content">
             <div class="container">
                 <div class="col-md-5 ml-auto mr-auto">
-                    <card type="login" plain>
-                        <div slot="header" class="logo-container">
-                            <img v-lazy="'static/static/img/o.png'" alt="">
-                        </div>
-
-
-                        <fg-input 
-                            class="no-border input-lg"
-                            addon-left-icon="now-ui-icons users_circle-08"
-                            v-model="username"
-                            required @change="invalidInput = []"
-                            placeholder="Username...">
-                        </fg-input>
-
-                        <fg-input 
-                            class="no-border input-lg"
-                            addon-left-icon="now-ui-icons text_caps-small"
-                            placeholder="Password..."
-                            v-model="password"
-                            required @change="invalidInput = []"
-                            type="password">
-                        </fg-input>
-
-                        {{ loading }}
-                        {{errorMessage}}
-                        <template slot="raw-content">
-                            <div class="card-footer text-center">
-                                <a href="" v-on:click="onLogin" class="btn btn-primary btn-round btn-lg btn-block">Sign In</a>
+                    <form v-on:submit.prevent="onLogin">
+	    
+                        <card type="login" plain>
+                            
+                            <div slot="header" class="logo-container">
+                                <img v-lazy="'static/img/o.png'" alt="">
                             </div>
+
+                            <fg-input 
+                                class="no-border input-lg"
+                                addon-left-icon="now-ui-icons users_circle-08"
+                                v-model="username"
+                                required @change="invalidInput = []"
+                                placeholder="Username...">
+                            </fg-input>
+
+                            <fg-input 
+                                class="no-border input-lg"
+                                addon-left-icon="now-ui-icons text_caps-small"
+                                placeholder="Password..."
+                                v-model="password"
+                                required @change="invalidInput = []"
+                                type="password">
+                            </fg-input>
+                            <h6>
+                                {{ loading }}
+                                {{ errorMessage }}
+                                {{ message }}
+                            </h6>
+
+                            <div class="card-footer text-center">
+                                <n-button type="primary" round size="lg" @click.native="onLogin" >Get Started</n-button>
+                            </div>
+
                             <div class="pull-left">
                                 <h6>
                                     <a href="/register" class="link footer-link">Create Account</a>
@@ -45,8 +50,8 @@
                                     <a href="/" class="link footer-link">Need Help?</a>
                                 </h6>
                             </div>
-                        </template>
-                    </card>
+                        </card>
+                    </form>
                 </div>
             </div>
         </div>
@@ -97,6 +102,7 @@ export default {
             return result;
         },
         onLogin(e){
+            console.log("Login clicked");
             this.invalidInput = [];
             if (this.checkInvalidInput(['username', 'password'])){
                 return;
@@ -108,6 +114,7 @@ export default {
                     password: this.password
                 }
             }
+            console.log(this.username +" "+this.password);
             var loginProgress = setInterval(()=> {
                 if (this.loginProgress < 100){
                     this.loginProgress += 15;
