@@ -34,7 +34,7 @@
 			appPaypalDeposit
 		},
 		created() {
-			document.title = "Deposit - Ec-Job.com";
+			document.title = "Deposit - mcute.jp";
 		}
 	}
 </script>

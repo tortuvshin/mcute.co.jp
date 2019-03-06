@@ -96,8 +96,8 @@ router.post('/forgot', function(req, res, next) {
     function(token, user, done) {
       let mailOptions = {
         to: user.email,
-        from: 'no-reply@ec-job.com',
-        subject: 'EC-Job Password Reset',
+        from: 'no-reply@mcute.jp',
+        subject: 'MCute Password Reset',
         text: 'You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n' +
           'Please click on the following link, or paste this into your browser to complete the process:\n\n' +
           'http://' + req.headers.host + '/reset/' + token + '\n\n' +
@@ -154,7 +154,7 @@ router.post('/reset/:token', function(req, res) {
     function(user, done) {
       let mailOptions = {
         to: user.email,
-        from: 'no-reply@ec-job.com',
+        from: 'no-reply@mcute.jp',
         subject: 'Your password has been changed',
         text: 'Hello,\n\n' +
           'This is a confirmation that the password for your account ' + user.email + ' has just been changed.\n'

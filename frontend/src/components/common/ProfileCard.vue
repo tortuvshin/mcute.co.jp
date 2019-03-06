@@ -34,7 +34,7 @@
                       <md-menu-content>
                         <div class="qrcode-card">
                           <img :src="qrcode">
-                          <p>Scan on 'EC-Job' Chat App</p>
+                          <p>Scan on 'MCute' Chat App</p>
                         </div>
                       </md-menu-content>
                     </md-menu>  

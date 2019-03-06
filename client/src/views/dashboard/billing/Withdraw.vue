@@ -55,7 +55,7 @@
 		                <p>Enter the receipt account</p>
 		            </div>
 		            <div class="col-xs-8">
-			            <input type="text" class="form-control input-lg" min="1" placeholder="(Bank) xxx-xxx-xxxxxx / (Paypal) master@ec-job.com" v-model="paymentAccount" required>
+			            <input type="text" class="form-control input-lg" min="1" placeholder="(Bank) xxx-xxx-xxxxxx / (Paypal) master@mcute.jp" v-model="paymentAccount" required>
 		   			</div>
 			    </div>
 		    </div>
@@ -112,7 +112,7 @@
 			}
 		},
 		created(){
-			document.title = "Withdraw - Ec-Job.com"
+			document.title = "Withdraw - mcute.jp"
 		}
 	}
 </script>
