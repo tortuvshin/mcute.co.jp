@@ -70,3 +70,88 @@
 @import 'core/sections-extend';
 
 @import 'core/responsive';
+
+
+
+@import "core/mixins/vendor-prefixes";
+
+.mcute-home-page .section-cards+.section-content {
+    padding-top: 480px;
+    padding-bottom: 30px;
+    margin-top: -277px;
+}
+
+@media screen and (max-width: 576px){
+    .index-page .typography-line span{
+        margin-left: 0;
+    }
+
+    .mcute-home-page{
+        .section-cards + .section-content{
+            padding-top: 70px;
+            margin-top: 0;
+        }
+
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .mcute-home-page{
+    
+        .section-content{
+            .image-container{
+                height: 400px;
+                img{
+                    position: absolute;
+                    width: 100%;
+                    max-width: 380px;
+                }
+                .img-blog{
+                    z-index: 4;
+                    left: 100px;
+                    top: 20px;
+                }
+                .img-comments{
+                    z-index: 3;
+                    left: -100px;
+                    top: -40px;
+                }
+
+            }
+        }
+    }
+}
+
+
+// Ipad Responsive
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+
+    .mcute-home-page{
+       
+        .section-content{
+            .image-container{
+                height: 550px;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+   
+
+    .mcute-home-page{
+        
+        .section-content{
+            .image-container{
+                margin-bottom: 45px;
+            }
+            img{
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

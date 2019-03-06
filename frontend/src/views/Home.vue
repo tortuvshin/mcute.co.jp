@@ -1,29 +1,46 @@
 <template>
-    <div class="wrapper landing-page">
+    <div class="wrapper mcute-home-page">
         <div>
             <el-carousel height="100vh">
                 <el-carousel-item>
                     <div class="page-header header-filter">
-                        <div class="page-header-image"
-                             style="background-image: url('static/img/bg20.jpg')">
+                        <div class="rellax-header rellax-header-sky">
+                            <parallax class="page-header-image"
+                                    style="background-image: url('https://cache1.artprintimages.com/images/jump_pages/rebrand/homepage/2019/0305/desktop-bg-opt.jpg')">
+                            </parallax>
                         </div>
-                        <div class="content-center">
-                            <div class="container text-left">
-                                <div class="content-center">
+                        <div class="rellax-header rellax-header-buildings" data-rellax-speed="0">
+                            <parallax class="page-header-image page-header-city"
+                                style="background-image: url('https://cache1.artprintimages.com/images/jump_pages/rebrand/homepage/2019/0305/desktop-bg-opt.jpg')">
+                            </parallax>
+                        </div>
+                        <div class="content-center section-content">
+                            <div class="container">
+                                <div class="content-left">
                                     <div class="row">
-                                        <div class="col-md-5">
-                                            <div class="iframe-container">
-                                                <iframe height="250"
-                                                        src="https://www.youtube.com/embed/rmfmdKOLzVI?rel=0&amp;controls=0&amp;showinfo=0"
-                                                        frameborder="0" allowfullscreen></iframe>
+                                        <div class="col-md-7 text-left">
+                                            <h1 class="title">MCute Matching System.</h1>
+                                            <h4 class="description ">We have millions of prints, in a wide variety of styles. 
+                                                 more importantly, we’ll help you find just the right one.
+                                                 We have millions of prints, in a wide variety of styles.
+                                                But more importantly, we’ll help you find just the right one.</h4>
+                                            <br/>
+                                            <div class="buttons">
+                                                <a href="" class="btn btn-neutral btn-primary btn-lg mr-1">
+                                                    <i class="now-ui-icons files_single-copy-04"></i> Shop now
+                                                </a>
+                                                <a href="" class="btn btn-primary btn-lg">
+                                                    <i class="now-ui-icons arrows-1_share-66"></i> Post a Art work
+                                                </a>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 ml-auto mr-auto text-right">
-                                            <h1 class="title">On the run tour.</h1>
-                                            <h4 class="description ">On the Run Tour: Beyoncé and Jay Z is a 2014
-                                                concert special which documents the September 12 and 13, 2014, shows
-                                                of American singers' Beyoncé and Jay-Z joint co-headlining venture
-                                                On the Run Tour.</h4>
+                                        <div class="col-md-5 content-right">
+                                            <div class="image-container">
+                                                <img class="img img-raised rounded img-comments rellax" data-rellax-speed="1"
+                                                    src="https://cache1.artprintimages.com/images/featuredCollections/sub/jean-michel-basquiat-opt.jpg" alt="content 1">
+                                                <img class="img img-raised rounded img-blog rellax" data-rellax-speed="4"
+                                                    src="https://cache1.artprintimages.com/images/featuredCollections/sub/i-love-ny-opt.jpg" alt="content 4">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -33,19 +50,75 @@
                 </el-carousel-item>
                 <el-carousel-item>
                     <div class="page-header header-filter">
-                        <div class="page-header-image"
-                             style="background-image: url('static/img/bg15.jpg')">
+                        <div class="rellax-header rellax-header-sky">
+                            <parallax class="page-header-image"
+                                    style="background-image: url('https://cache1.artprintimages.com/images/jump_pages/rebrand/homepage/2019/0220/sub-desktop-bg-opt.jpg')">
+                            </parallax>
+                        </div>
+                        <div class="rellax-header rellax-header-buildings" data-rellax-speed="0">
+                            <parallax class="page-header-image page-header-city"
+                                style="background-image: url('https://cache1.artprintimages.com/images/jump_pages/rebrand/homepage/2019/0220/sub-desktop-bg-opt.jpg')">
+                            </parallax>
+                        </div>
+                        <div class="content-center">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 ml-auto mr-auto text-center">
+                                        <h1 class="title"> You should be here!</h1>
+                                        <h5 class="description">We have millions of prints, in a wide variety of styles. 
+                                                 more importantly, we’ll help you find just the right one.
+                                                 We have millions of prints, in a wide variety of styles.
+                                                But more importantly, we’ll help you find just the right one.</h5>
+                                    </div>
+                                    <div class="col-md-10 ml-auto mr-auto">
+                                        <div class="card card-raised card-form-horizontal card-plain" data-background-color>
+                                            <div class="card-body">
+                                                <form method="" action="">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <fg-input value="" placeholder="Full Name"></fg-input>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <fg-input value="" placeholder="Your Email"></fg-input>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <fg-input value="" placeholder="Password"></fg-input>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <n-button type="primary" round block>Join Us</n-button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </el-carousel-item>
+                <el-carousel-item>
+                    <div class="page-header header-filter">
+                        <div class="rellax-header rellax-header-sky">
+                            <parallax class="page-header-image"
+                                    style="background-image: url('https://cache1.artprintimages.com/images/jump_pages/rebrand/homepage/2019/0220/sub-desktop-bg-opt.jpg')">
+                            </parallax>
+                        </div>
+                        <div class="rellax-header rellax-header-buildings" data-rellax-speed="0">
+                            <parallax class="page-header-image page-header-city"
+                                style="background-image: url('https://cache1.artprintimages.com/images/jump_pages/rebrand/homepage/2019/0220/sub-desktop-bg-opt.jpg')">
+                            </parallax>
                         </div>
                         <div class="content-center">
                             <div class="container">
                                 <div class="content-center">
                                     <div class="row">
                                         <div class="col-md-8 ml-auto mr-auto text-center">
-                                            <h1 class="title">Island of legends.</h1>
-                                            <h4 class="description ">The islands of Malta and Gozo are brilliant for
-                                                a family holiday, packed with fun places to visit whatever your
-                                                children’s ages. The islands’ small size means everywhere is within
-                                                easy reach.</h4>
+                                            <h1 class="title">MCute Matching Systems.</h1>
+                                            <h4 class="description ">We have millions of prints, in a wide variety of styles. 
+                                                 more importantly, we’ll help you find just the right one.
+                                                 We have millions of prints, in a wide variety of styles.
+                                                But more importantly, we’ll help you find just the right one.</h4>
                                             <br/>
                                             <h5>Connect with us on:</h5>
                                             <div class="buttons">
@@ -73,38 +146,7 @@
                         </div>
                     </div>
                 </el-carousel-item>
-                <el-carousel-item>
-                    <div class="page-header header-filter">
-                        <div class="page-header-image"
-                             style="background-image: url('static/img/bg17.jpg')">
-                        </div>
-                        <div class="content-center">
-                            <div class="container">
-                                <div class="content-center">
-                                    <div class="row">
-                                        <div class="col-md-6 text-left">
-                                            <h1 class="title">Arctic Sea ice.</h1>
-                                            <h4 class="description ">According to the National Oceanic and
-                                                Atmospheric Administration, Ted Scambos, NSIDC lead scientist, puts
-                                                the potentially record low maximum sea ice extent this year down to
-                                                low ice extent in the Pacific and a late drop in ice extent in the
-                                                Barents Sea.</h4>
-                                            <br/>
-                                            <div class="buttons">
-                                                <a href="#pablo" class="btn btn-neutral btn-primary btn-lg mr-1">
-                                                    <i class="now-ui-icons files_single-copy-04"></i> Read More..
-                                                </a>
-                                                <a href="#pablo" class="btn btn-primary btn-lg">
-                                                    <i class="now-ui-icons arrows-1_share-66"></i> Subscribe
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </el-carousel-item>
+                
             </el-carousel>
         </div>
         <div class="section section-about-us">
