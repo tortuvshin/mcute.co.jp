@@ -16,7 +16,7 @@
 </template>
 
 <script>
-	import appCountryPicker from '../common/CountryPicker.vue'
+	import appCountryPicker from '../common/CountryPicker'
 	import { API_SERVER } from '../../api.js'
 	import { bus } from '../../main.js'
 

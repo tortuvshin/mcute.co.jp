@@ -54,7 +54,7 @@
 
 <script>
   import { mapActions } from 'vuex'
-  import countryPicker from '../components/common/CountryPicker.vue'
+  import countryPicker from '../components/common/CountryPicker'
   import { API_SERVER } from '../api.js'
   import { bus } from '../main.js'
 

@@ -113,7 +113,7 @@
 import { Card, Button, FormGroupInput, Checkbox } from '@/components';
 import MainFooter from '@/layout/MainFooter';
 import { mapActions } from 'vuex'
-import countryPicker from '../components/common/CountryPicker.vue'
+import countryPicker from '../components/common/CountryPicker'
 import { bus } from '../main.js'
 
 export default {

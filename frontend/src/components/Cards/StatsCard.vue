@@ -25,7 +25,7 @@
   </card>
 </template>
 <script>
-  import Card from './Card.vue'
+  import Card from './Card'
 
   export default {
     name: 'stats-card',

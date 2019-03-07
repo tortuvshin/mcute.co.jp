@@ -15,9 +15,9 @@
 </template>
 
 <script>
-	import appStatus from './rightSide/Status.vue'
-	import appBudget from './rightSide/Budget.vue'
-	import appEmployer from '../common/ProfileCard.vue'
+	import appStatus from './rightSide/Status'
+	import appBudget from './rightSide/Budget'
+	import appEmployer from '../common/ProfileCard'
 
 	export default {
 		props: ['currentUser', 'project', 'bid'],

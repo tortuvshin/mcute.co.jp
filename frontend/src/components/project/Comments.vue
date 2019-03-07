@@ -15,7 +15,7 @@
 	import { mapGetters } from 'vuex'
 	import { API_SERVER } from '../../api.js'
 	import { bus } from '../../main.js'
-	import appComment from './Comment.vue'
+	import appComment from './Comment'
 
 	export default {
 		props: ['project'],

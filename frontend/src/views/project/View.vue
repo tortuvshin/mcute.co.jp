@@ -55,12 +55,12 @@
 </template>
 
 <script>
-	import appAttachment from '../../components/project/Attachment.vue'
-	import appInfo from '../../components/project/Info.vue'
-	import appRightSide from '../../components/project/RightSide.vue'
-    import appTab from '../../components/project/Tab.vue'
-    import appPlaceBidModal from '../../components/project/PlaceBidModal.vue'
-    import appBidTable from '../../components/project/BidTable.vue'
+	import appAttachment from '../../components/project/Attachment'
+	import appInfo from '../../components/project/Info'
+	import appRightSide from '../../components/project/RightSide'
+    import appTab from '../../components/project/Tab'
+    import appPlaceBidModal from '../../components/project/PlaceBidModal'
+    import appBidTable from '../../components/project/BidTable'
     
     import { modal } from 'vue-strap'
 	import { API_SERVER } from '../../api.js'

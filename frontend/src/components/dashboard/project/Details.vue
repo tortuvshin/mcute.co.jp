@@ -106,7 +106,7 @@
 <script>
 	import { API_SERVER } from '../../../api.js'
 	import { bus } from '../../../main.js'
-	import fileUploader from '../../common/FileUploader.vue'
+	import fileUploader from '../../common/FileUploader'
 
 	export default {
 		props: ['project'],

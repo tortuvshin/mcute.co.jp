@@ -9,8 +9,8 @@
 </template>
 
 <script>
-	import appProfile from '../../components/profile/Profile.vue'
-	import reviews from '../../components/dashboard/common/Reviews.vue'
+	import appProfile from '../../components/profile/Profile'
+	import reviews from '../../components/dashboard/common/Reviews'
 	export default {
 		props: ['username'],
 		components: {

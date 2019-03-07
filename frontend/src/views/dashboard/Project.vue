@@ -13,8 +13,8 @@
 </template>
 
 <script>
-	import freelancer from '../../components/dashboard/project/freelancer/Freelancer.vue'
-	import employer from '../../components/dashboard/project/employer/Employer.vue'
+	import freelancer from '../../components/dashboard/project/freelancer/Freelancer'
+	import employer from '../../components/dashboard/project/employer/Employer'
 	import { bus } from '../../main.js'
 
 	export default {

@@ -106,7 +106,7 @@
 
 <script>
 	import StarRating from 'vue-star-rating'
-	import profileCard from '../../common/ProfileCard.vue'
+	import profileCard from '../../common/ProfileCard'
 	import { bus } from '../../../main.js'
 	import { API_SERVER } from '../../../api.js'
 

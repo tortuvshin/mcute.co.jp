@@ -9,7 +9,7 @@
 </template>
 
 <script>
-	import reviews from '../../components/dashboard/common/Reviews.vue'
+	import reviews from '../../components/dashboard/common/Reviews'
 
 	export default {
 		computed: {

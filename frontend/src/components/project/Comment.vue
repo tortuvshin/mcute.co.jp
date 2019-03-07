@@ -37,7 +37,7 @@
 <script>
 	import { API_SERVER } from '../../api.js'
 	import { bus } from '../../main.js'
-	import appReply from './Reply.vue'
+	import appReply from './Reply'
 
 	export default {
 		props: ['comment', 'employer'],

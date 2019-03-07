@@ -72,7 +72,7 @@
 </template>
 
 <script>
-	import appHeader from '../../../components/dashboard/Heading.vue'
+	import appHeader from '../../../components/dashboard/Heading'
 	import { bus } from '../../../main.js'
 	import { API_SERVER } from '../../../api.js'
 

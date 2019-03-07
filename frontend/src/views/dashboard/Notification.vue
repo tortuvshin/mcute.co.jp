@@ -24,7 +24,7 @@
 </template>
 
 <script>
-	import appHeader from '../../components/dashboard/Heading.vue'
+	import appHeader from '../../components/dashboard/Heading'
 	export default {
 		components: {
 			appHeader

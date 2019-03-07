@@ -81,7 +81,7 @@
 
 <script>
 	import openRow from "./OpenRow.vue"
-	import pagePagination from 'vue-material/src/components/mdTable/mdTablePagination.vue'
+	import pagePagination from 'vue-material/src/components/mdTable/mdTablePagination'
 
 	export default {
 		props: ['projects', 'pageNumber', 'rowNumber', 'totalProjectCount', 'loading'],

@@ -24,7 +24,7 @@
 
 <script>
 	import { API_SERVER } from '../../../../api.js'
-	import appCountDown from '../../../project/common/Countdown.vue'
+	import appCountDown from '../../../project/common/Countdown'
 	import { bus } from '../../../../main.js'
 
 	export default {

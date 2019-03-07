@@ -52,8 +52,8 @@
 	import StarRating from 'vue-star-rating'
 	import { API_SERVER } from '../../../api.js'
 	import { bus } from '../../../main.js'
-	import ScaleLoader from 'vue-spinner/src/ScaleLoader.vue'
-	import profileCard from '../../../components/common/ProfileCard.vue'
+	import ScaleLoader from 'vue-spinner/src/ScaleLoader'
+	import profileCard from '../../../components/common/ProfileCard'
 	
 	export default {
 		data() {

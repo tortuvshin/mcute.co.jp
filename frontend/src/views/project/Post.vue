@@ -129,7 +129,7 @@
 	import { API_SERVER } from '../../api.js'
 	import { bus } from '../../main.js'
 	import { VueEditor } from 'vue2-editor'
-	import AppFileUploader from '../../components/common/FileUploader.vue'
+	import AppFileUploader from '../../components/common/FileUploader'
 
 	export default {
 		name: 'PostProject',

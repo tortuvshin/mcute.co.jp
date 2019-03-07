@@ -40,8 +40,8 @@
 </template>
 
 <script>
-  import TicketRow from '../../components/support/TicketRow.vue'
-	import ScaleLoader from 'vue-spinner/src/ScaleLoader.vue'
+  import TicketRow from '../../components/support/TicketRow'
+	import ScaleLoader from 'vue-spinner/src/ScaleLoader'
 	import { API_SERVER } from '../../api.js'
 	export default {
 		data() {

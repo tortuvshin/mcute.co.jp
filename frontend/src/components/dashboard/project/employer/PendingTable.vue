@@ -81,7 +81,7 @@
 
 <script>
 	import pendingRow from "./PendingRow.vue"
-	import pagePagination from 'vue-material/src/components/mdTable/mdTablePagination.vue'
+	import pagePagination from 'vue-material/src/components/mdTable/mdTablePagination'
 
 	export default {
 		props: ['projects', 'pageNumber', 'rowNumber', 'totalProjectCount', 'loading'],

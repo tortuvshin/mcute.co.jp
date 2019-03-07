@@ -20,7 +20,7 @@
 </template>
 
 <script>
-	import appStarBar from '../../../components/user/StarBar.vue'
+	import appStarBar from '../../../components/user/StarBar'
 	import { API_SERVER } from '../../../api.js'
 	export default {
 		props: ['username'],

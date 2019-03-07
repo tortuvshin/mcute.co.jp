@@ -47,7 +47,7 @@
 
 <script>
 
-	import appStarBar from '../user/StarBar.vue'
+	import appStarBar from '../user/StarBar'
 	import { API_SERVER } from '../../api.js'
 	export default {
 		props: {

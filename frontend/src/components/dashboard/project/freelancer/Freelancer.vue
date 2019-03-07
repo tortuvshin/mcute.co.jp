@@ -22,10 +22,10 @@
 <script>
 	import { API_SERVER } from '../../../../api.js'
 	import { bus } from '../../../../main.js'
-	import biddingTable from './BidTable.vue'
-	import workingTable from './WorkingTable.vue'
-	import finishedTable from './FinishedTable.vue'
-	import placeBidModal from '../../../project/PlaceBidModal.vue'
+	import biddingTable from './BidTable'
+	import workingTable from './WorkingTable'
+	import finishedTable from './FinishedTable'
+	import placeBidModal from '../../../project/PlaceBidModal'
 
 	export default {
 		data() {

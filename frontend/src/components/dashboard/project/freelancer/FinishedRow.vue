@@ -38,7 +38,7 @@
 </template>
 
 <script>
-    import appCountDown from '../../../project/common/Countdown.vue'
+    import appCountDown from '../../../project/common/Countdown'
     import { API_SERVER } from '../../../../api.js'
     import { bus } from '../../../../main.js'
 

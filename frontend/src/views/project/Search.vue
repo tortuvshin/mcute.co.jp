@@ -78,11 +78,11 @@
 </template>
 
 <script>
-    import svgBackground from '../../components/common/svgBackground.vue'
-    import appProjectRow from '../../components/project/search/ProjectRow.vue'
+    import svgBackground from '../../components/common/svgBackground'
+    import appProjectRow from '../../components/project/search/ProjectRow'
   	import { API_SERVER } from '../../api.js'
     import { bus } from '../../main.js'
-    import pagePagination from 'vue-material/src/components/mdTable/mdTablePagination.vue'
+    import pagePagination from 'vue-material/src/components/mdTable/mdTablePagination'
   	export default {
   		data() {
   			return {

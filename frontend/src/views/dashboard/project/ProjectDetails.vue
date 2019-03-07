@@ -49,10 +49,10 @@
 <script>
 	import { API_SERVER } from '../../../api.js'
 	import { bus } from '../../../main.js'
-	import detail from '../../../components/dashboard/project/Details.vue'
-	import setting from '../../../components/dashboard/project/Setting.vue'
-	import rating from '../../../components/dashboard/project/Rating.vue'
-	import selectFreelancerModal from '../../../components/dashboard/project/employer/SelectFreelancerModal.vue'
+	import detail from '../../../components/dashboard/project/Details'
+	import setting from '../../../components/dashboard/project/Setting'
+	import rating from '../../../components/dashboard/project/Rating'
+	import selectFreelancerModal from '../../../components/dashboard/project/employer/SelectFreelancerModal'
 
 	export default {
 		data(){

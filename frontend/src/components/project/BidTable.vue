@@ -24,7 +24,7 @@
 </template>
 
 <script>
-	import appBidRow from './BidRow.vue'
+	import appBidRow from './BidRow'
 	import { mapGetters } from 'vuex'
 
 	export default {

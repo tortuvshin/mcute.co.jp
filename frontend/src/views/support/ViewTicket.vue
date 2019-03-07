@@ -77,11 +77,11 @@
 </template>
 
 <script>
-    import appTicketReply from '../../components/support/TicketReply.vue'
-    import appTicketReplyForm from '../../components/support/TicketReplyForm.vue'
-    import ScaleLoader from 'vue-spinner/src/ScaleLoader.vue'
-    import panel from 'vue-strap/src/Panel.vue'
-    import accordion from 'vue-strap/src/Accordion.vue'
+    import appTicketReply from '../../components/support/TicketReply'
+    import appTicketReplyForm from '../../components/support/TicketReplyForm'
+    import ScaleLoader from 'vue-spinner/src/ScaleLoader'
+    import panel from 'vue-strap/src/Panel'
+    import accordion from 'vue-strap/src/Accordion'
 	  import { API_SERVER } from '../../api.js'
 
   	export default {

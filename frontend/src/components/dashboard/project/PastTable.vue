@@ -21,7 +21,7 @@
 </template>
 
 <script>
-	import pastRow from './PastRow.vue'
+	import pastRow from './PastRow'
 	export default {
 		props: ['pastWorks'],
         computed: {

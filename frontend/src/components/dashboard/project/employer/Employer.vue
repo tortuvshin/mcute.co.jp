@@ -28,12 +28,12 @@
 <script>
 	import { API_SERVER } from '../../../../api.js'
 	import { bus } from '../../../../main.js'
-	import draftTable from './DraftTable.vue'
-	import openTable from './OpenTable.vue'
-	import workingTable from './WorkingTable.vue'
-	import finishedTable from './FinishedTable.vue'
-	import pendingTable from './PendingTable.vue'
-	import selectFreelancerModal from './SelectFreelancerModal.vue'
+	import draftTable from './DraftTable'
+	import openTable from './OpenTable'
+	import workingTable from './WorkingTable'
+	import finishedTable from './FinishedTable'
+	import pendingTable from './PendingTable'
+	import selectFreelancerModal from './SelectFreelancerModal'
 
 	export default {
 		data() {

@@ -18,9 +18,9 @@
 </template>
 
 <script>
-	import depositHistory from '../../../components/dashboard/billing/DepositHistory.vue'
-	import withdrawHistory from '../../../components/dashboard/billing/WithdrawHistory.vue'
-	import appHeader from '../../../components/dashboard/Heading.vue'
+	import depositHistory from '../../../components/dashboard/billing/DepositHistory'
+	import withdrawHistory from '../../../components/dashboard/billing/WithdrawHistory'
+	import appHeader from '../../../components/dashboard/Heading'
 	import { API_SERVER } from '../../../api.js'
 
 	export default {

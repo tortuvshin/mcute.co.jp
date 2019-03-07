@@ -18,9 +18,9 @@
 </template>
 
 <script>
-	import appHeader from '../../../components/dashboard/Heading.vue'
-	import appBankDeposit from '../../../components/dashboard/billing/BankDeposit.vue'
-	import appPaypalDeposit from '../../../components/dashboard/billing/PaypalDeposit.vue'
+	import appHeader from '../../../components/dashboard/Heading'
+	import appBankDeposit from '../../../components/dashboard/billing/BankDeposit'
+	import appPaypalDeposit from '../../../components/dashboard/billing/PaypalDeposit'
 
 	export default {
 		data(){

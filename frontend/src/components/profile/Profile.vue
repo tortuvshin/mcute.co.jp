@@ -50,8 +50,8 @@
 </template>
 
 <script>
-	import ScaleLoader from 'vue-spinner/src/ScaleLoader.vue'
-	import appStarBar from '../../components/user/StarBar.vue'
+	import ScaleLoader from 'vue-spinner/src/ScaleLoader'
+	import appStarBar from '../../components/user/StarBar'
 	import { bus } from '../../main.js'
 	import { API_SERVER } from '../../api.js'
 	import { VueEditor } from 'vue2-editor'

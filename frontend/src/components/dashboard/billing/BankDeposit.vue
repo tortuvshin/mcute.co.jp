@@ -97,7 +97,7 @@
 	import { API_SERVER } from '../../../api.js'
     import { bus } from '../../../main.js'
 
-	import appImageUploader from '../../common/ImageUploader.vue'
+	import appImageUploader from '../../common/ImageUploader'
 
 	export default { 
 		data() {

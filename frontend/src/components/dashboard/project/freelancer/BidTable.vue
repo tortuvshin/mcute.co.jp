@@ -88,7 +88,7 @@
 
 <script>
 	import bidRow from "./BidRow.vue"
-	import pagePagination from 'vue-material/src/components/mdTable/mdTablePagination.vue'
+	import pagePagination from 'vue-material/src/components/mdTable/mdTablePagination'
 
 	export default {
 		props: ['bids', 'pageNumber', 'rowNumber', 'totalProjectCount', 'loading'],

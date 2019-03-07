@@ -71,9 +71,9 @@
 </template>
 
 <script>
-	import appCountryPicker from '../../components/common/CountryPicker.vue'
-	import appHeader from '../../components/dashboard/Heading.vue'
-	import appEditTextBox from '../../components/dashboard/EditTextBox.vue'
+	import appCountryPicker from '../../components/common/CountryPicker'
+	import appHeader from '../../components/dashboard/Heading'
+	import appEditTextBox from '../../components/dashboard/EditTextBox'
 	import { bus } from '../../main.js'
 
 	import { API_SERVER } from '../../api.js'

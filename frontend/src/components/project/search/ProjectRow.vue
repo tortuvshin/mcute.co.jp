@@ -36,7 +36,7 @@
 </template>
 
 <script>
-	import appCountDown from '../common/Countdown.vue'
+	import appCountDown from '../common/Countdown'
 	export default {
 		props: ['project'],
 		computed: {

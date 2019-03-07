@@ -16,8 +16,8 @@
 </template>
 
 <script>
-	import appBidTable from '../project/BidTable.vue'
-	import appComments from './Comments.vue'
+	import appBidTable from '../project/BidTable'
+	import appComments from './Comments'
 	export default {
 		props: ['project'],
 		data(){

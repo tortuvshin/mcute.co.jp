@@ -50,8 +50,8 @@
 </template>
 
 <script>
-	import draftRow from './DraftRow.vue'
-	import pagePagination from 'vue-material/src/components/mdTable/mdTablePagination.vue'
+	import draftRow from './DraftRow'
+	import pagePagination from 'vue-material/src/components/mdTable/mdTablePagination'
 
 	export default {
 		props: ['projects', 'pageNumber', 'rowNumber', 'totalProjectCount', 'loading'],

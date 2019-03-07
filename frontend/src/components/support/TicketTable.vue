@@ -27,7 +27,7 @@
 </template>
 
 <script>
-	import appTicketRow from './TicketRow.vue'
+	import appTicketRow from './TicketRow'
 	export default {
 		data(){
 			return {

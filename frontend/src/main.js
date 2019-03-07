@@ -17,9 +17,9 @@ import Bootstrap from 'bootstrap'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.css'
 
-import MainContent from './components/MainContent.vue'
-import SvgBackground from './components/common/svgBackground.vue'
-import Spinner from './components/common/Spinner.vue'
+import MainContent from './components/MainContent'
+import SvgBackground from './components/common/svgBackground'
+import Spinner from './components/common/Spinner'
 
 import { API_SERVER } from './api.js'
 

@@ -10,7 +10,7 @@
 
 <script>
     import { bus } from '../../../main.js'
-    import appPlaceBidModal from '../PlaceBidModal.vue'
+    import appPlaceBidModal from '../PlaceBidModal'
 	export default {
         data(){
             return {

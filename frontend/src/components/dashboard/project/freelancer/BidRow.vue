@@ -36,8 +36,8 @@
 </template>
 
 <script>
-    import placeBidModal from '../../../project/PlaceBidModal.vue'
-    import appCountDown from '../../../project/common/Countdown.vue'
+    import placeBidModal from '../../../project/PlaceBidModal'
+    import appCountDown from '../../../project/common/Countdown'
     import { API_SERVER } from '../../../../api.js'
     import { bus } from '../../../../main.js'
 

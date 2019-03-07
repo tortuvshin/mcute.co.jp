@@ -35,8 +35,8 @@
 </template>
 
 <script>
-	import modal from 'vue-strap/src/Modal.vue'
-	import appBudget from './rightSide/Budget.vue'
+	import modal from 'vue-strap/src/Modal'
+	import appBudget from './rightSide/Budget'
 
 	import { API_SERVER } from '../../api.js'
 	import { bus } from '../../main.js'

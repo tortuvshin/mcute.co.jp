@@ -45,7 +45,7 @@
 </template>
 
 <script>
-	import bidRow from '../../../project/BidRow.vue'
+	import bidRow from '../../../project/BidRow'
 	import { bus } from '../../.../../../../main'
 	import { API_SERVER } from '../../.../../../../api'
 
