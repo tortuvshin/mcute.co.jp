@@ -9,7 +9,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/intelligo-systems/workflow.git"
+    "url": "git+https://github.com/intelligo-systems/mcute.git"
   },
   "scripts": {
     "serve": "cd frontend && npm run-script serve",

@@ -1,4 +1,4 @@
 {
     "SECRET": "my-super-secret",
-    "DB_CONSOLE": "mongodb://intelligo:IntelligoAdmin9@workflow-shard-00-00-yfem4.mongodb.net:27017,workflow-shard-00-01-yfem4.mongodb.net:27017,workflow-shard-00-02-yfem4.mongodb.net:27017/test?ssl=true&replicaSet=workflow-shard-0&authSource=admin&retryWrites=true"
+    "MONGO_URL": "mongodb://intelligo:IntelligoAdmin9@workflow-shard-00-00-yfem4.mongodb.net:27017,workflow-shard-00-01-yfem4.mongodb.net:27017,workflow-shard-00-02-yfem4.mongodb.net:27017/test?ssl=true&replicaSet=workflow-shard-0&authSource=admin&retryWrites=true"
 }

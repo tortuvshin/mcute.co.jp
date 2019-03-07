@@ -1,0 +1,18 @@
+{
+    "name": "MCute",
+    "description": "MCute Matching Platform.",
+    "repository": "https://github.com/intelligo-systems/mcute.git",
+    "image": "heroku/nodejs",
+    "env": {
+      "SECRET": {
+        "description": "A secret key for verifying the integrity of signed cookies.",
+        "generator": "secret"
+      },
+      "MONGO_URL": {
+        "description": "MongoDB url"
+      }
+    },
+    "addons": [
+      "mongolab"
+    ]
+  }

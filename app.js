@@ -11,7 +11,7 @@ const morgan = require('morgan')
 const cors = require('cors')
 const history = require('connect-history-api-fallback')
 const cron = require("./config/cron")
-	
+const config = require("config")
 const indexRoutes = require("./routes/index")
 const dashboardRoutes = require("./routes/dashboard")
 const projectRoutes = require("./routes/project")
@@ -22,14 +22,22 @@ const chatRoutes = require("./routes/chat")
 
 let User = require('./models/user')
 
+const MONGO_URL = (process.env.MONGO_URL) ?
+  (process.env.MONGO_URL) :
+  config.get('MONGO_URL');
+
+const SECRET = (process.env.SECRET) ?
+  (process.env.SECRET) :
+  config.get('SECRET');
+
 // Remove the warning with Promise
 mongoose.Promise = global.Promise;
 
 // Connect the db with the url provide
 try {
-  mongoose.connect("mongodb://localhost:27017/workflow", { useNewUrlParser: true });
+  mongoose.connect(MONGO_URL, { useNewUrlParser: true });
 } catch (err) {
-  mongoose.createConnection("mongodb://localhost:27017/workflow", { useNewUrlParser: true });
+  mongoose.createConnection(MONGO_URL, { useNewUrlParser: true });
 }
 
 mongoose.connection
@@ -65,6 +73,7 @@ app.use(function (req, res, next) {
 });
 
 app.use("/", indexRoutes);
+app.use("/admin", adminRoutes);
 app.use("/dashboard", dashboardRoutes);
 app.use("/project", projectRoutes);
 app.use("/support", supportRoutes);
