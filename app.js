@@ -98,6 +98,6 @@ const strategy = new JwtStrategy(jwtOptions, function(jwt_payload, next) {
 
 passport.use(strategy);
 
-http.listen(process.env.PORT || '5000', process.env.IP || 'localhost', function(){
-	console.log("MCUTE MATCHING SYSTEM IS RUNNING localhost:5000");
+app.listen(app.get('port'), () => {
+  console.log('MCute server is listening on port', app.get('port'));
 });
