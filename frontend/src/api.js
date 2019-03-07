@@ -1,1 +1,1 @@
-export const API_SERVER = 'http://localhost:5000'
+export const API_SERVER = (process.env.BASE_URL) ? (process.env.BASE_URL) : 'http://localhost:5000';
