@@ -1,9 +1,8 @@
-let API_SERVER = process.env.BASE_URL ? (process.env.BASE_URL) : 'http://localhost:5000/';
-
-if (process.env.NODE_ENV === 'production'){
-    API_SERVER = 'https://mcute.herokuapp.com'
+var SERVER_URL;
+if (process.env.NODE_ENV === 'production') {
+    SERVER_URL = 'https://mcute.herokuapp.com';
 } else {
-
+    SERVER_URL = 'http://localhost:5000';
 }
-
-export default API_SERVER
+  
+export const API_SERVER = SERVER_URL
