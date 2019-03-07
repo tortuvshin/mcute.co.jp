@@ -91,30 +91,30 @@
     </div>
 </template>
 <script>
-  import { Card, Button, FormGroupInput, Checkbox } from '@/components';
-  import MainFooter from '@/layout/MainFooter';
+import { Card, Button, FormGroupInput, Checkbox } from '@/components'
+import MainFooter from '@/layout/MainFooter'
 
-  export default {
-    name: 'signup-page',
-    bodyClass: 'signup-page',
-    components: {
-      Card,
-      MainFooter,
-      [Button.name]: Button,
-      [Checkbox.name]: Checkbox,
-      [FormGroupInput.name]: FormGroupInput
-    },
-    data() {
-      return {
-        form: {
-          firstName: '',
-          lastName: '',
-          email: '',
-          agree: false
-        }
+export default {
+  name: 'signup-page',
+  bodyClass: 'signup-page',
+  components: {
+    Card,
+    MainFooter,
+    [Button.name]: Button,
+    [Checkbox.name]: Checkbox,
+    [FormGroupInput.name]: FormGroupInput
+  },
+  data () {
+    return {
+      form: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        agree: false
       }
     }
   }
+}
 </script>
 <style>
 </style>

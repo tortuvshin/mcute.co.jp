@@ -24,20 +24,20 @@
 </template>
 
 <script>
-	import appBidRow from './BidRow'
-	import { mapGetters } from 'vuex'
+import appBidRow from './BidRow'
+import { mapGetters } from 'vuex'
 
-	export default {
-		props: ['project'],
-		computed: {
-			...mapGetters([
-				'currentUser'
-			])
-		},
-		components: {
-			appBidRow
-		}
-	}
+export default {
+  props: ['project'],
+  computed: {
+    ...mapGetters([
+      'currentUser'
+    ])
+  },
+  components: {
+    appBidRow
+  }
+}
 </script>
 
 <style scoped>

@@ -12,28 +12,28 @@
     </div>
 </template>
 <script>
-  import HeadersSection from './sections/Headers'
-  import FeaturesSection from './sections/Features'
-  import BlogSection from './sections/Blogs'
-  import TeamsSection from './sections/Teams'
-  import ProjectsSection from './sections/Projects'
-  import PricingSection from './sections/Pricing'
-  import TestimonialSection from './sections/Testimonials'
-  import ContactSection from './sections/Contact'
-  export default {
-    name: 'sections',
-    bodyClass: 'sections-page',
-    components: {
-      HeadersSection,
-      FeaturesSection,
-      BlogSection,
-      TeamsSection,
-      ProjectsSection,
-      PricingSection,
-      TestimonialSection,
-      ContactSection
-    }
+import HeadersSection from './sections/Headers'
+import FeaturesSection from './sections/Features'
+import BlogSection from './sections/Blogs'
+import TeamsSection from './sections/Teams'
+import ProjectsSection from './sections/Projects'
+import PricingSection from './sections/Pricing'
+import TestimonialSection from './sections/Testimonials'
+import ContactSection from './sections/Contact'
+export default {
+  name: 'sections',
+  bodyClass: 'sections-page',
+  components: {
+    HeadersSection,
+    FeaturesSection,
+    BlogSection,
+    TeamsSection,
+    ProjectsSection,
+    PricingSection,
+    TestimonialSection,
+    ContactSection
   }
+}
 </script>
 <style>
 </style>

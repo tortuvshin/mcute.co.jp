@@ -513,18 +513,18 @@
     </div>
 </template>
 <script>
-    import {FormGroupInput, Button} from '@/components';
-    export default {
-        components: {
-          [FormGroupInput.name]: FormGroupInput,
-          [Button.name]: Button
-        },
-        data(){
-            return {
-                year: new Date().getFullYear()
-            }
-        }
+import { FormGroupInput, Button } from '@/components'
+export default {
+  components: {
+    [FormGroupInput.name]: FormGroupInput,
+    [Button.name]: Button
+  },
+  data () {
+    return {
+      year: new Date().getFullYear()
     }
+  }
+}
 </script>
 <style>
 </style>

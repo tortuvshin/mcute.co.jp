@@ -4,7 +4,7 @@
 	        <h2 slot="Title">Notification Setting</h2>
 	        <small slot="Description">You can update the notification setting here.</small>
 	    </app-header>
-	  
+
 	   		<div class="form-group has-feedback div-content">
 	   			<div class="row">
 		            <div class="col-xs-4">
@@ -19,17 +19,17 @@
 		            </div>
 	            </div>
 	        </div>
-	   	
+
 	</div>
 </template>
 
 <script>
-	import appHeader from '../../components/dashboard/Heading'
-	export default {
-		components: {
-			appHeader
-		}
-	}
+import appHeader from '../../components/dashboard/Heading'
+export default {
+  components: {
+    appHeader
+  }
+}
 </script>
 <style scoped>
 .main-content{

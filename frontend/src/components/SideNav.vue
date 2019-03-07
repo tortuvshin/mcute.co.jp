@@ -1,6 +1,6 @@
 <template>
    <div tabindex="0" class="md-sidenav md-left main-sidebar md-theme-default">
-    <transition leave-active-class="animated slideOutLeft" enter-active-class="animated slideInLeft"> 
+    <transition leave-active-class="animated slideOutLeft" enter-active-class="animated slideInLeft">
      <div class="md-sidenav-content" v-if="show">
           <div class="md-toolbar vue-material-logo md-theme-white">
             <router-link to="/"><span class="logo"><i class="fab fa-node" aria-hidden="true"></i><span class="title"> Matching</span></span></router-link>
@@ -61,27 +61,27 @@
 </template>
 
 <script>
-  import { mapActions } from 'vuex'
-  import { bus } from '../main.js'
+import { mapActions } from 'vuex'
+import { bus } from '../main.js'
 
-  export default {
-    props: ['show'],
-    computed: {
-      currentUser(){
-        return this.$store.state.user.currentUser;
-      }
-    },
-    methods: {
-      ...mapActions([
-        'logout'
-      ])
-    },
-    created(){
-      bus.$on('toggleSidebar', () => {
-        this.toggleSidebar();
-      });
+export default {
+  props: ['show'],
+  computed: {
+    currentUser () {
+      return this.$store.state.user.currentUser
     }
+  },
+  methods: {
+    ...mapActions([
+      'logout'
+    ])
+  },
+  created () {
+    bus.$on('toggleSidebar', () => {
+      this.toggleSidebar()
+    })
   }
+}
 </script>
 
 <style>
@@ -141,9 +141,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
-  
-}
 
+}
 
 .currentUser  > .fullName{
     font-size: 1.2em;

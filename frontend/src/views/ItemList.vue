@@ -332,196 +332,196 @@
     </div>
 </template>
 <script>
-  import { Card, Button, InfoSection, FormGroupInput, Checkbox, Collapse, CollapseItem, Slider } from '@/components';
-  import { Carousel, CarouselItem, Tooltip } from 'element-ui'
+import { Card, Button, InfoSection, FormGroupInput, Checkbox, Collapse, CollapseItem, Slider } from '@/components'
+import { Carousel, CarouselItem, Tooltip } from 'element-ui'
 
-  export default {
-    name: 'ecommerce-page',
-    bodyClass: 'ecommerce-page',
-    components: {
-      Card,
-      InfoSection,
-      Collapse,
-      CollapseItem,
-      Slider,
-      [Button.name]: Button,
-      [Checkbox.name]: Checkbox,
-      [FormGroupInput.name]: FormGroupInput,
-      [Carousel.name]: Carousel,
-      [CarouselItem.name]: CarouselItem,
-      [Tooltip.name]: Tooltip,
-    },
-    data() {
-      return {
-        filters: {
-          priceRange: [42, 900],
-          clothingTypes: [
-            {
-              label: 'Blazers',
-              value: false
-            },
-            {
-              label: 'Casual Shirts',
-              value: false
-            },
-            {
-              label: 'Formal Shirts',
-              value: false
-            },
-            {
-              label: 'Jeans',
-              value: false
-            },
-            {
-              label: 'Polos',
-              value: false
-            }
-          ],
-          designerTypes: [
-            {
-              label: 'All',
-              value: false
-            },
-            {
-              label: 'Polo Ralph Lauren',
-              value: false,
-            },
-            {
-              label: 'Wooyoungmi',
-              value: false,
-            },
-            {
-              label: 'Alexander McQueen',
-              value: false,
-            },
-            {
-              label: 'Tom Ford',
-              value: false,
-            },
-            {
-              label: 'AMI',
-              value: false,
-            },
-            {
-              label: 'Berena',
-              value: false,
-            },
-            {
-              label: 'Thom Sweeney',
-              value: false,
-            },
-            {
-              label: 'Burberry Prorsum',
-              value: false,
-            },
-            {
-              label: 'Calvin Klein',
-              value: false,
-            },
-            {
-              label: 'Kingsman',
-              value: false,
-            },
-            {
-              label: 'Club Monaco',
-              value: false,
-            },
-            {
-              label: 'Dolce & Gabbana',
-              value: false,
-            },
-            {
-              label: 'Gucci',
-              value: false,
-            },
-            {
-              label: 'Biglioli',
-              value: false,
-            },
-            {
-              label: 'Lanvin',
-              value: false,
-            },
-            {
-              label: 'Loro Piana',
-              value: false,
-            },
-            {
-              label: 'Massimo Alba',
-              value: false,
-            },
-          ],
-          colourTypes: [
-            {
-              label: 'All',
-              value: false
-            },
-            {
-              label: 'Black',
-              value: false
-            },
-            {
-              label: 'Blue',
-              value: false
-            },
-            {
-              label: 'Brown',
-              value: false
-            },
-            {
-              label: 'Gray',
-              value: false
-            },
-            {
-              label: 'Neutrals',
-              value: false
-            },
-            {
-              label: 'Purple',
-              value: false
-            }
-          ]
+export default {
+  name: 'ecommerce-page',
+  bodyClass: 'ecommerce-page',
+  components: {
+    Card,
+    InfoSection,
+    Collapse,
+    CollapseItem,
+    Slider,
+    [Button.name]: Button,
+    [Checkbox.name]: Checkbox,
+    [FormGroupInput.name]: FormGroupInput,
+    [Carousel.name]: Carousel,
+    [CarouselItem.name]: CarouselItem,
+    [Tooltip.name]: Tooltip
+  },
+  data () {
+    return {
+      filters: {
+        priceRange: [42, 900],
+        clothingTypes: [
+          {
+            label: 'Blazers',
+            value: false
+          },
+          {
+            label: 'Casual Shirts',
+            value: false
+          },
+          {
+            label: 'Formal Shirts',
+            value: false
+          },
+          {
+            label: 'Jeans',
+            value: false
+          },
+          {
+            label: 'Polos',
+            value: false
+          }
+        ],
+        designerTypes: [
+          {
+            label: 'All',
+            value: false
+          },
+          {
+            label: 'Polo Ralph Lauren',
+            value: false
+          },
+          {
+            label: 'Wooyoungmi',
+            value: false
+          },
+          {
+            label: 'Alexander McQueen',
+            value: false
+          },
+          {
+            label: 'Tom Ford',
+            value: false
+          },
+          {
+            label: 'AMI',
+            value: false
+          },
+          {
+            label: 'Berena',
+            value: false
+          },
+          {
+            label: 'Thom Sweeney',
+            value: false
+          },
+          {
+            label: 'Burberry Prorsum',
+            value: false
+          },
+          {
+            label: 'Calvin Klein',
+            value: false
+          },
+          {
+            label: 'Kingsman',
+            value: false
+          },
+          {
+            label: 'Club Monaco',
+            value: false
+          },
+          {
+            label: 'Dolce & Gabbana',
+            value: false
+          },
+          {
+            label: 'Gucci',
+            value: false
+          },
+          {
+            label: 'Biglioli',
+            value: false
+          },
+          {
+            label: 'Lanvin',
+            value: false
+          },
+          {
+            label: 'Loro Piana',
+            value: false
+          },
+          {
+            label: 'Massimo Alba',
+            value: false
+          }
+        ],
+        colourTypes: [
+          {
+            label: 'All',
+            value: false
+          },
+          {
+            label: 'Black',
+            value: false
+          },
+          {
+            label: 'Blue',
+            value: false
+          },
+          {
+            label: 'Brown',
+            value: false
+          },
+          {
+            label: 'Gray',
+            value: false
+          },
+          {
+            label: 'Neutrals',
+            value: false
+          },
+          {
+            label: 'Purple',
+            value: false
+          }
+        ]
+      },
+      products: [
+        {
+          image: 'static/img/polo.jpg',
+          title: 'Polo Ralph Lauren',
+          description: 'Impeccably tailored in Italy from lightweight navy wool.',
+          price: 300
         },
-        products: [
-          {
-            image: 'static/img/polo.jpg',
-            title: 'Polo Ralph Lauren',
-            description: 'Impeccably tailored in Italy from lightweight navy wool.',
-            price: 300
-          },
-          {
-            image: 'static/img/tom-ford.jpg',
-            title: 'Tom Ford',
-            description: 'Immaculate tailoring is TOM FORD\'s forte.',
-            price: 879
-          },
-          {
-            image: 'static/img/wooyoungmi.jpg',
-            title: 'Wooyoungmi',
-            description: 'Dark-grey slub wool, pintucked notch lapels.',
-            price: 555
-          },
-          {
-            image: 'static/img/sweeney.jpg',
-            title: 'Thom Sweeney',
-            description: 'It\'s made from lightweight grey wool woven.',
-            price: 680
-          },
-          {
-            image: 'static/img/kingsman.jpg',
-            title: 'Kingsman',
-            description: 'Crafted from khaki cotton and fully canvassed.',
-            price: 725
-          },
-          {
-            image: 'static/img/boglioli.jpg',
-            title: 'Boglioli',
-            description: 'Masterfully crafted in Northern Italy.',
-            price: 699
-          }]
-      }
+        {
+          image: 'static/img/tom-ford.jpg',
+          title: 'Tom Ford',
+          description: 'Immaculate tailoring is TOM FORD\'s forte.',
+          price: 879
+        },
+        {
+          image: 'static/img/wooyoungmi.jpg',
+          title: 'Wooyoungmi',
+          description: 'Dark-grey slub wool, pintucked notch lapels.',
+          price: 555
+        },
+        {
+          image: 'static/img/sweeney.jpg',
+          title: 'Thom Sweeney',
+          description: 'It\'s made from lightweight grey wool woven.',
+          price: 680
+        },
+        {
+          image: 'static/img/kingsman.jpg',
+          title: 'Kingsman',
+          description: 'Crafted from khaki cotton and fully canvassed.',
+          price: 725
+        },
+        {
+          image: 'static/img/boglioli.jpg',
+          title: 'Boglioli',
+          description: 'Masterfully crafted in Northern Italy.',
+          price: 699
+        }]
     }
   }
+}
 </script>
 <style>
 </style>

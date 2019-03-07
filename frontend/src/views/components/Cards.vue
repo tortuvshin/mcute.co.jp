@@ -8,20 +8,20 @@
     </div>
 </template>
 <script>
-    import BlogCards from './Cards/BlogCards'
-    import FullBackgroundCards from './Cards/FullbackgroundCards'
-    import PlainCards from './Cards/PlainCards'
-    import PricingCards from './Cards/PricingCards'
-    import ProfileCards from './Cards/ProfileCards'
-    export default {
-        components:{
-            BlogCards,
-            FullBackgroundCards,
-            ProfileCards,
-            PricingCards,
-            PlainCards
-        }
-    }
+import BlogCards from './Cards/BlogCards'
+import FullBackgroundCards from './Cards/FullbackgroundCards'
+import PlainCards from './Cards/PlainCards'
+import PricingCards from './Cards/PricingCards'
+import ProfileCards from './Cards/ProfileCards'
+export default {
+  components: {
+    BlogCards,
+    FullBackgroundCards,
+    ProfileCards,
+    PricingCards,
+    PlainCards
+  }
+}
 </script>
 <style>
 </style>

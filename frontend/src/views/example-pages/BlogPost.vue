@@ -301,50 +301,50 @@
     </div>
 </template>
 <script>
-  import { Card, Button, Comment, Badge, InfoSection, Checkbox } from '@/components';
+import { Card, Button, Comment, Badge, InfoSection, Checkbox } from '@/components'
 
-  export default {
-    name: 'blog-post',
-    bodyClass: 'blog-post',
-    components: {
-      Card,
-      InfoSection,
-      Badge,
-      Comment,
-      [Button.name]: Button,
-      [Checkbox.name]: Checkbox
-    },
-    data() {
-      return {
-        form: {
-          comment: ''
-        },
-        comments: [{
-          avatar: 'static/img/james.jpg',
-          author: 'Tina Andrew',
-          date: '7 minutes ago',
-          comment: `<p>Chance too good. God level bars. I'm so proud of @LifeOfDesiigner #1 song in the country. Panda! Don't be scared of the truth because we need to restart the human foundation in truth I stand with the most humility. We are so blessed!</p>
-                            <p>All praises and blessings to the families of people who never gave up on dreams. Don't forget, You're Awesome!</p>`,
-        }, {
-          avatar: 'static/img/michael.jpg',
-          author: 'John Camber',
-          date: 'Yesterday',
-          comment: `<p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>
+export default {
+  name: 'blog-post',
+  bodyClass: 'blog-post',
+  components: {
+    Card,
+    InfoSection,
+    Badge,
+    Comment,
+    [Button.name]: Button,
+    [Checkbox.name]: Checkbox
+  },
+  data () {
+    return {
+      form: {
+        comment: ''
+      },
+      comments: [{
+        avatar: 'static/img/james.jpg',
+        author: 'Tina Andrew',
+        date: '7 minutes ago',
+        comment: `<p>Chance too good. God level bars. I'm so proud of @LifeOfDesiigner #1 song in the country. Panda! Don't be scared of the truth because we need to restart the human foundation in truth I stand with the most humility. We are so blessed!</p>
+                            <p>All praises and blessings to the families of people who never gave up on dreams. Don't forget, You're Awesome!</p>`
+      }, {
+        avatar: 'static/img/michael.jpg',
+        author: 'John Camber',
+        date: 'Yesterday',
+        comment: `<p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>
                             <p> Don't forget, You're Awesome!</p>`,
-          replies: [{
-            avatar: 'static/img/julie.jpg',
-            author: 'Tina Andrew',
-            date: '2 Days Ago',
-            comment: `<p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>
+        replies: [{
+          avatar: 'static/img/julie.jpg',
+          author: 'Tina Andrew',
+          date: '2 Days Ago',
+          comment: `<p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>
                                 <p> Don't forget, You're Awesome!</p>`,
-            liked: true,
-            likes: 25
-          }]
-        },
-        ]
+          liked: true,
+          likes: 25
+        }]
       }
+      ]
     }
   }
+}
 </script>
 <style>
 </style>

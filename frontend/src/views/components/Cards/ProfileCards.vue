@@ -92,14 +92,14 @@
     <!--     *********    END PROFILE CARDS      *********      -->
 </template>
 <script>
-  import { Card, Button } from '@/components';
+import { Card, Button } from '@/components'
 
-  export default {
-    components: {
-      Card,
-      [Button.name]: Button
-    }
+export default {
+  components: {
+    Card,
+    [Button.name]: Button
   }
+}
 </script>
 <style>
 </style>

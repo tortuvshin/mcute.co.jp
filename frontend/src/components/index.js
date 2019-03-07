@@ -13,9 +13,9 @@ import Table from './Table'
 
 import Card from './Cards/Card'
 import StatsCard from './Cards/StatsCard'
-import Navbar from './Navbar/Navbar';
-import NavLink from './Navbar/NavLink';
-import NavbarToggleButton from './Navbar/NavbarToggleButton';
+import Navbar from './Navbar/Navbar'
+import NavLink from './Navbar/NavLink'
+import NavbarToggleButton from './Navbar/NavbarToggleButton'
 import TabPane from './Tabs/Tab'
 import Tabs from './Tabs/Tabs'
 import Collapse from './Collapse/Collapse'

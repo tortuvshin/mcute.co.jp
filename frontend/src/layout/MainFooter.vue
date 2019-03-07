@@ -29,24 +29,24 @@
             </nav>
             <div class="copyright">
                 &copy; {{year}}, Developed by
-                
+
                 <a href="#" target="_blank">Dicult Co., Ltd</a>.
             </div>
         </div>
     </footer>
 </template>
 <script>
-  export default {
-    props: {
-      backgroundColor: String,
-      type: String
-    },
-    data(){
-      return {
-        year: new Date().getFullYear()
-      }
+export default {
+  props: {
+    backgroundColor: String,
+    type: String
+  },
+  data () {
+    return {
+      year: new Date().getFullYear()
     }
   }
+}
 </script>
 <style>
 </style>

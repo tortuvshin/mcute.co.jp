@@ -733,20 +733,20 @@
 </template>
 
 <script>
-  import { Card, InfoSection } from '@/components';
-  import { Carousel, CarouselItem, Tooltip } from 'element-ui'
+import { Card, InfoSection } from '@/components'
+import { Carousel, CarouselItem, Tooltip } from 'element-ui'
 
-  export default {
-    name: 'presentation',
-    bodyClass: 'presentation-page',
-    components: {
-      Card,
-      InfoSection,
-      [Carousel.name]: Carousel,
-      [CarouselItem.name]: CarouselItem,
-      [Tooltip.name]: Tooltip
-    },
+export default {
+  name: 'presentation',
+  bodyClass: 'presentation-page',
+  components: {
+    Card,
+    InfoSection,
+    [Carousel.name]: Carousel,
+    [CarouselItem.name]: CarouselItem,
+    [Tooltip.name]: Tooltip
   }
+}
 </script>
 
 <style scoped lang="scss">

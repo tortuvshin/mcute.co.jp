@@ -191,14 +191,14 @@
     </div>
 </template>
 <script>
-    import {FormGroupInput, Button} from '@/components';
+import { FormGroupInput, Button } from '@/components'
 
-    export default {
-        components: {
-            [FormGroupInput.name]: FormGroupInput,
-            [Button.name]: Button
-        }
-    }
+export default {
+  components: {
+    [FormGroupInput.name]: FormGroupInput,
+    [Button.name]: Button
+  }
+}
 </script>
 <style>
 </style>

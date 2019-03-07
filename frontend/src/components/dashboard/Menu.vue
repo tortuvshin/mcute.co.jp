@@ -21,7 +21,7 @@
 	        <li>
 	         <router-link to="/dashboard/account" class="selection" exact>
 	            <i class="fa fa-info fa-fw" aria-hidden="true"></i> Account
-	         </router-link> 
+	         </router-link>
 	        </li>
 	        <li class="dropdown" :class="{open: showDropdown}" @mouseover="showDropdown = true" @mouseleave="showDropdown = false">
 	          <a href="#" class="dropdown-toggle selection" role="button"> <i class="fa fa-credit-card fa-fw" aria-hidden="true"></i> Billing <span class="caret"></span></a>
@@ -39,7 +39,7 @@
 			    <li>
 				    <router-link to="/dashboard/billing/transaction" exact>
 				        Transaction History
-				    </router-link> 
+				    </router-link>
 			    </li>
 	          </ul>
 	        </li>
@@ -54,7 +54,7 @@
 				</router-link>
 			</li>
 	      </ul>
-	      
+
 	      <ul class="nav navbar-nav navbar-right" style="float: right;">
 	        <li><p class="navbar-text balance"><i class="fa fa-dollar"></i>{{ currentUser.balance.toLocaleString() }} <i class="fa fa-refresh btn-refresh" aria-hidden="true" @click="refreshBalance"></i></p></li>
 	        <!-- <li class="dropdown">
@@ -73,35 +73,35 @@
 </template>
 
 <script>
-	import { API_SERVER } from '../../api.js'
-	export default {
-		data(){
-			return {
-				billingSlide: false,
-				showDropdown: false
-			};
-		},
-		computed: {
-			currentUser(){
-				return this.$store.state.user.currentUser;
-			}
-		},
-		methods: {
-			toggleSidebar(){
-				this.$emit('toogleSidebar');
-			},
-			refreshBalance(){
-				console.log("sad");
-				this.$http.get(API_SERVER + '/dashboard/balance').then(response => {
-					console.log(response.body);
-					this.$store.commit('setCurrentUser', response.body.currentUser);
-				});
-			}
-		},
-		created(){
-			console.log('HI');
-		}
-	}
+import { API_SERVER } from '../../api.js'
+export default {
+  data () {
+    return {
+      billingSlide: false,
+      showDropdown: false
+    }
+  },
+  computed: {
+    currentUser () {
+      return this.$store.state.user.currentUser
+    }
+  },
+  methods: {
+    toggleSidebar () {
+      this.$emit('toogleSidebar')
+    },
+    refreshBalance () {
+      console.log('sad')
+      this.$http.get(API_SERVER + '/dashboard/balance').then(response => {
+        console.log(response.body)
+        this.$store.commit('setCurrentUser', response.body.currentUser)
+      })
+    }
+  },
+  created () {
+    console.log('HI')
+  }
+}
 </script>
 
 <style scoped>
@@ -115,14 +115,10 @@
 	cursor: pointer;
 }
 
-
 li > a, li > a:hover{
 	padding: 21px 18px;
 	text-decoration: none!important;
 }
-
-
-
 
 ul:not(.md-list)>li+li{
 	margin-top: 0px;
@@ -237,7 +233,7 @@ a:hover, a:active, a:link, a:visited {
 }
 
 hr {
-   width: 80%; 
+   width: 80%;
 }
 
 @media (max-width: 1375px) {

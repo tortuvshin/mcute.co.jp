@@ -54,7 +54,7 @@
 	        <div class="form-group has-feedback div-content">
 	        	<div class="row">
 	        		<div class="col-sm-offset-4 col-sm-8">
-		            	<button type="submit" class="btn btn-primary btn-lg btn-change-password">Change Password</button>  
+		            	<button type="submit" class="btn btn-primary btn-lg btn-change-password">Change Password</button>
 		            </div>
 	        	</div>
 	        </div>
@@ -63,69 +63,69 @@
 </template>
 
 <script>
-	import { API_SERVER } from '../../api.js'
-	import { bus } from '../../main.js'
-	import appHeader from '../../components/dashboard/Heading'
-	export default {
-		data(){
-			return {
-				currentPassword: '',
-				newPassword: '',
-				repeatPassword: '',
-				error: {
-					isSame: true,
-					isSafe: true
-				}
-				
-			}
-		},
-		watch: {
-			newPassword(val){
-				this.validatePasswordLength(val);
-				this.validatePasswordIsSame(val);
-			},
-			repeatPassword(val){
-				this.validatePasswordIsSame(val);
-			}
-		},
-		methods: {
-			onReset(){
-				this.currentPassword = '';
-				this.newPassword = '';
-				this.repeatPassword = '';
-			},
-			changePassword(){
-				if (this.error.isSame && this.error.isSafe){
-					this.$http.put(API_SERVER + '/dashboard/security', 
-						{
-							currentPassword: this.currentPassword, 
-							newPassword: this.newPassword, 
-							repeatPassword: this.repeatPassword
-						}).then(response=> {
-							bus.$emit('showAlert', response.body);
-							this.onReset();
-					}, response=> {
-						bus.$emit('showAlert', response.body);
-					});
-				}
-			},
-			validatePasswordIsSame(val){
-				if (val !== this.repeatPassword || val !== this.newPassword){
-					return this.error.isSame = false;
-				}
-				this.error.isSame = true;
-			},
-			validatePasswordLength(val){
-				if (val.length <= 8){
-					return this.error.isSafe = false;
-				}
-				this.error.isSafe = true	
-			}
-		},
-		components: {
-			appHeader
-		}
-	}
+import { API_SERVER } from '../../api.js'
+import { bus } from '../../main.js'
+import appHeader from '../../components/dashboard/Heading'
+export default {
+  data () {
+    return {
+      currentPassword: '',
+      newPassword: '',
+      repeatPassword: '',
+      error: {
+        isSame: true,
+        isSafe: true
+      }
+
+    }
+  },
+  watch: {
+    newPassword (val) {
+      this.validatePasswordLength(val)
+      this.validatePasswordIsSame(val)
+    },
+    repeatPassword (val) {
+      this.validatePasswordIsSame(val)
+    }
+  },
+  methods: {
+    onReset () {
+      this.currentPassword = ''
+      this.newPassword = ''
+      this.repeatPassword = ''
+    },
+    changePassword () {
+      if (this.error.isSame && this.error.isSafe) {
+        this.$http.put(API_SERVER + '/dashboard/security',
+          {
+            currentPassword: this.currentPassword,
+            newPassword: this.newPassword,
+            repeatPassword: this.repeatPassword
+          }).then(response => {
+          bus.$emit('showAlert', response.body)
+          this.onReset()
+        }, response => {
+          bus.$emit('showAlert', response.body)
+        })
+      }
+    },
+    validatePasswordIsSame (val) {
+      if (val !== this.repeatPassword || val !== this.newPassword) {
+        return this.error.isSame = false
+      }
+      this.error.isSame = true
+    },
+    validatePasswordLength (val) {
+      if (val.length <= 8) {
+        return this.error.isSafe = false
+      }
+      this.error.isSafe = true
+    }
+  },
+  components: {
+    appHeader
+  }
+}
 </script>
 
 <style scoped>

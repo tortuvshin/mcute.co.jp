@@ -27,14 +27,14 @@
 							 </md-list>
 						 </div>
 					 </md-whiteframe>
-			  		</div>	
+			  		</div>
 			  		<div class="col-md-9">
 			  		 	<detail :project="project" v-if="component === 'detail'"></detail>
 			  		 	<setting :project="project" v-if="component === 'setting'"></setting>
 			  		 	<rating :project="project" v-if="component === 'rating'"></rating>
 			  		</div>
 		  		</div>
-			</div> 
+			</div>
 		</div>
 		<select-freelancer-modal :isUpdate="true"></select-freelancer-modal>
 		<md-speed-dial md-mode="scale" class="md-fab-bottom-right">
@@ -43,56 +43,56 @@
 		  </md-button>
 		</md-speed-dial>
 	</div>
-	
+
 </template>
 
 <script>
-	import { API_SERVER } from '../../../api.js'
-	import { bus } from '../../../main.js'
-	import detail from '../../../components/dashboard/project/Details'
-	import setting from '../../../components/dashboard/project/Setting'
-	import rating from '../../../components/dashboard/project/Rating'
-	import selectFreelancerModal from '../../../components/dashboard/project/employer/SelectFreelancerModal'
+import { API_SERVER } from '../../../api.js'
+import { bus } from '../../../main.js'
+import detail from '../../../components/dashboard/project/Details'
+import setting from '../../../components/dashboard/project/Setting'
+import rating from '../../../components/dashboard/project/Rating'
+import selectFreelancerModal from '../../../components/dashboard/project/employer/SelectFreelancerModal'
 
-	export default {
-		data(){
-			return {
-				project: null,
-				loadingData: false,
-				component: 'detail'
-			}
-		},
-		computed: {
-			currentUser() {
-				return this.$store.state.user.currentUser;
-			}
-		},
-		methods: {
-			fetchData(){
-				this.loadingData = true;
-				this.$http.get(API_SERVER + '/project/' + this.$route.params.id).then(response=> {
-					this.project = response.body.project;
-					this.loadingData = false;
-				});
-			}
-		},
-		created(){
-			this.loadingData = true;
-			this.fetchData();
-			bus.$on('updateProjectDetail', ()=> {
-				this.fetchData();
-			});
-			if (location.hash){
-				this.component = location.hash.substring(1);
-			}
-		},
-		components: {
-			detail,
-			setting,
-			rating,
-			selectFreelancerModal
-		}
-	}
+export default {
+  data () {
+    return {
+      project: null,
+      loadingData: false,
+      component: 'detail'
+    }
+  },
+  computed: {
+    currentUser () {
+      return this.$store.state.user.currentUser
+    }
+  },
+  methods: {
+    fetchData () {
+      this.loadingData = true
+      this.$http.get(API_SERVER + '/project/' + this.$route.params.id).then(response => {
+        this.project = response.body.project
+        this.loadingData = false
+      })
+    }
+  },
+  created () {
+    this.loadingData = true
+    this.fetchData()
+    bus.$on('updateProjectDetail', () => {
+      this.fetchData()
+    })
+    if (location.hash) {
+      this.component = location.hash.substring(1)
+    }
+  },
+  components: {
+    detail,
+    setting,
+    rating,
+    selectFreelancerModal
+  }
+}
 </script>
 
 <style scoped>

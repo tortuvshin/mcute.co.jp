@@ -68,74 +68,74 @@
   </div>
 </template>
 <script>
-  import {Table, TableColumn} from 'element-ui'
-  import {Button} from '@/components';
+import { Table, TableColumn } from 'element-ui'
+import { Button } from '@/components'
 
-  export default {
-    components: {
-      [Table.name]: Table,
-      [TableColumn.name]: TableColumn,
-      [Button.name]: Button
-    },
-    data() {
-      return {
-        productsTable: [
-          {
-            image: 'static/img/saint-laurent.jpg',
-            title: 'Suede Biker Jacket ',
-            description: 'by Saint Laurent',
-            color: 'Black',
-            size: 'M',
-            price: 3390,
-            quantity: 1,
-            amount: 3390
-          },
-          {
-            image: 'static/img/balmain.jpg',
-            title: 'Jersey T-Shirt',
-            description: 'by Balmain',
-            color: 'Black',
-            size: 'M',
-            price: 499,
-            quantity: 2,
-            amount: 998
-          },
-          {
-            image: 'static/img/prada.jpg',
-            title: '\tSlim-Fit Swim Short ',
-            description: 'by Prada',
-            color: 'Red',
-            size: 'M',
-            price: 200,
-            quantity: 1,
-            amount: 200
-          }
-        ]
-      }
-    },
-    computed: {
-      shoppingTotal() {
-        return this.productsTable.reduce((accumulator, current) => {
-          return accumulator + current.amount
-        }, 0)
-      }
-    },
-    methods: {
-      increaseQuantity(row) {
-        row.quantity++;
-        this.computeAmount(row);
-      },
-      decreaseQuantity(row) {
-        if (row.quantity > 1) {
-          row.quantity--;
-          this.computeAmount(row);
+export default {
+  components: {
+    [Table.name]: Table,
+    [TableColumn.name]: TableColumn,
+    [Button.name]: Button
+  },
+  data () {
+    return {
+      productsTable: [
+        {
+          image: 'static/img/saint-laurent.jpg',
+          title: 'Suede Biker Jacket ',
+          description: 'by Saint Laurent',
+          color: 'Black',
+          size: 'M',
+          price: 3390,
+          quantity: 1,
+          amount: 3390
+        },
+        {
+          image: 'static/img/balmain.jpg',
+          title: 'Jersey T-Shirt',
+          description: 'by Balmain',
+          color: 'Black',
+          size: 'M',
+          price: 499,
+          quantity: 2,
+          amount: 998
+        },
+        {
+          image: 'static/img/prada.jpg',
+          title: '\tSlim-Fit Swim Short ',
+          description: 'by Prada',
+          color: 'Red',
+          size: 'M',
+          price: 200,
+          quantity: 1,
+          amount: 200
         }
-      },
-      computeAmount(row) {
-        row.amount = row.quantity * row.price;
-      },
+      ]
+    }
+  },
+  computed: {
+    shoppingTotal () {
+      return this.productsTable.reduce((accumulator, current) => {
+        return accumulator + current.amount
+      }, 0)
+    }
+  },
+  methods: {
+    increaseQuantity (row) {
+      row.quantity++
+      this.computeAmount(row)
+    },
+    decreaseQuantity (row) {
+      if (row.quantity > 1) {
+        row.quantity--
+        this.computeAmount(row)
+      }
+    },
+    computeAmount (row) {
+      row.amount = row.quantity * row.price
     }
   }
+}
 </script>
 <style>
   .table-stats {

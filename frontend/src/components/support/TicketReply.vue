@@ -21,35 +21,35 @@
 </template>
 
 <script>
-    import { API_SERVER } from '../../api.js'
-	export default {
-		props: ['message', 'ticketId', 'ticketSender'],
-		computed: {
-			isStaff() {
-				if (this.message.sender.isAdmin){
-					return true;
-				}
-				return false;
-			},
-            displayName(){
-                if (this.message.sender.isAdmin){
-                    return 'Administrator';
-                }
-                return this.message.sender.firstName + ' ' + this.message.sender.lastName;
-            },
-            userType(){
-                if (this.message.sender.isAdmin){
-                    return 'administrator';
-                }
-                return this.message.sender.type;
-            }
-		},
-        methods: {
-            generateAttachmentUrl(filename){
-                return API_SERVER + '/uploads/' + this.ticketSender + '/tickets/' + this.ticketId + '/' + this.message._id+ '/' + filename; 
-            }
-        }
-	}
+import { API_SERVER } from '../../api.js'
+export default {
+  props: ['message', 'ticketId', 'ticketSender'],
+  computed: {
+    isStaff () {
+      if (this.message.sender.isAdmin) {
+        return true
+      }
+      return false
+    },
+    displayName () {
+      if (this.message.sender.isAdmin) {
+        return 'Administrator'
+      }
+      return this.message.sender.firstName + ' ' + this.message.sender.lastName
+    },
+    userType () {
+      if (this.message.sender.isAdmin) {
+        return 'administrator'
+      }
+      return this.message.sender.type
+    }
+  },
+  methods: {
+    generateAttachmentUrl (filename) {
+      return API_SERVER + '/uploads/' + this.ticketSender + '/tickets/' + this.ticketId + '/' + this.message._id + '/' + filename
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -61,7 +61,7 @@ ul{
     margin: 10px 0;
     padding: 0;
     border: 1px solid #efefef;
-    background-color: #fff; 
+    background-color: #fff;
 }
 
 .ticket-reply .date {
@@ -81,7 +81,7 @@ ul{
     display: block;
     font-weight: bold;
     font-size: 0.8em;
-    
+
 }
 
 .ticket-reply .user i {

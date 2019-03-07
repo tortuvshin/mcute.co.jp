@@ -436,22 +436,22 @@
     </div>
 </template>
 <script>
-  import { Card, Button, FormGroupInput } from '@/components';
+import { Card, Button, FormGroupInput } from '@/components'
 
-  export default {
-    name: 'blog-posts',
-    bodyClass: 'blog-posts',
-    components: {
-      Card,
-      [Button.name]: Button,
-      [FormGroupInput.name]: FormGroupInput
-    },
-    data() {
-      return {
-        year: new Date().getFullYear()
-      }
-    },
+export default {
+  name: 'blog-posts',
+  bodyClass: 'blog-posts',
+  components: {
+    Card,
+    [Button.name]: Button,
+    [FormGroupInput.name]: FormGroupInput
+  },
+  data () {
+    return {
+      year: new Date().getFullYear()
+    }
   }
+}
 </script>
 <style>
 </style>

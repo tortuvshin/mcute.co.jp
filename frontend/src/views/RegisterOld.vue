@@ -48,94 +48,94 @@
         </md-card-actions>
         </form>
       </md-card>
-    
+
   </div>
 </template>
 
 <script>
-  import { mapActions } from 'vuex'
-  import countryPicker from '../components/common/CountryPicker'
-  import { API_SERVER } from '../api.js'
-  import { bus } from '../main.js'
+import { mapActions } from 'vuex'
+import countryPicker from '../components/common/CountryPicker'
+import { API_SERVER } from '../api.js'
+import { bus } from '../main.js'
 
-	export default {
-    name: 'Register',
-		data() {
-			return {
-				user: {
-					type: '',
-					firstName: '',
-					lastName: '',
-					username: '',
-					password: '',
-					confirmPassword: '',
-					country: '',
-					email: '',
-				},
-				invalidInput: [],
-        registerProgress: 0,
-        passwordIsSame: true,
-        passwordStrength: true
-			}
-		},
-    watch: {
-      'user.password'(val){
-        val.length < 8 ? this.passwordStrength = false : this.passwordStrength = true;
-        val === this.user.confirmPassword ? this.passwordIsSame = true : this.passwordIsSame = false;
+export default {
+  name: 'Register',
+  data () {
+    return {
+      user: {
+        type: '',
+        firstName: '',
+        lastName: '',
+        username: '',
+        password: '',
+        confirmPassword: '',
+        country: '',
+        email: ''
       },
-      'user.confirmPassword'(val){
-        val === this.user.password ? this.passwordIsSame = true : this.passwordIsSame = false;
-      }
+      invalidInput: [],
+      registerProgress: 0,
+      passwordIsSame: true,
+      passwordStrength: true
+    }
+  },
+  watch: {
+    'user.password' (val) {
+      val.length < 8 ? this.passwordStrength = false : this.passwordStrength = true
+      val === this.user.confirmPassword ? this.passwordIsSame = true : this.passwordIsSame = false
     },
-    components: {
-      countryPicker,
+    'user.confirmPassword' (val) {
+      val === this.user.password ? this.passwordIsSame = true : this.passwordIsSame = false
+    }
+  },
+  components: {
+    countryPicker
+  },
+  methods: {
+    ...mapActions([
+      'register'
+    ]),
+    isInvalidExist (fieldName) {
+      return this.invalidInput.indexOf(fieldName) !== -1
     },
-		methods: {
-      ...mapActions([
-        'register'
-      ]),
-      isInvalidExist(fieldName){
-        return this.invalidInput.indexOf(fieldName) !== -1;
-      },
-      checkInvalidInput(){
-        Object.keys(this.user).forEach((fieldName) => {
-          if (this.user[fieldName] === ''){
-            this.invalidInput.push(fieldName);
-          }
-        });
-      },
-      removeInvalidInput(key){
-        var index = this.invalidInput.indexOf(key);
-        if (index > -1){
-            this.invalidInput.splice(index, 1);
+    checkInvalidInput () {
+      Object.keys(this.user).forEach((fieldName) => {
+        if (this.user[fieldName] === '') {
+          this.invalidInput.push(fieldName)
         }
-      },
-			onRegister(){
-        this.checkInvalidInput();
-        if (this.invalidInput.length === 0 && this.passwordIsSame && this.passwordStrength){
-          var registerProgress = setInterval(()=> {
-            if (this.registerProgress < 100){
-              this.registerProgress += 15;
-            }else {
-              clearInterval(registerProgress);
-              var payload = {
-                ref: this,
-                user: this.user
-              }
-              this.register(payload);
-            }
-          }, 100);
-        }  
-			},
-      registerSuccess(message){
-        bus.$emit('showAlert', message);
-        this.$router.go(-1);
+      })
+    },
+    removeInvalidInput (key) {
+      var index = this.invalidInput.indexOf(key)
+      if (index > -1) {
+        this.invalidInput.splice(index, 1)
       }
-		},
-		created(){
-			window.document.title = "Register - WorkFlow";
-		}
-	}
+    },
+    onRegister () {
+      this.checkInvalidInput()
+      if (this.invalidInput.length === 0 && this.passwordIsSame && this.passwordStrength) {
+        var registerProgress = setInterval(() => {
+          if (this.registerProgress < 100) {
+            this.registerProgress += 15
+          } else {
+            clearInterval(registerProgress)
+            var payload = {
+              ref: this,
+              user: this.user
+            }
+            this.register(payload)
+          }
+        }, 100)
+      }
+    },
+    registerSuccess (message) {
+      bus.$emit('showAlert', message)
+      this.$router.go(-1)
+    }
+  },
+  created () {
+    window.document.title = 'Register - WorkFlow'
+  }
+}
 </script>
 
 <style scoped>

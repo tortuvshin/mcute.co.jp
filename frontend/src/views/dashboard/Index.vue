@@ -9,18 +9,18 @@
 </template>
 
 <script>
-	import reviews from '../../components/dashboard/common/Reviews'
+import reviews from '../../components/dashboard/common/Reviews'
 
-	export default {
-		computed: {
-			currentUser(){
-				return this.$store.state.user.currentUser;
-			}
-		},
-		components: {
-			reviews
-		}
-	}
+export default {
+  computed: {
+    currentUser () {
+      return this.$store.state.user.currentUser
+    }
+  },
+  components: {
+    reviews
+  }
+}
 </script>
 
 <style scoped>

@@ -5,7 +5,7 @@
                 <router-link :to="projectUrl">{{pastWork.title}}</router-link>
             </div>
         </td>
-        <td class="project-bids text-center">{{fullName}} 
+        <td class="project-bids text-center">{{fullName}}
         	<p class="employer-username">#{{username}}</p>
         </td>
         <td class="project-winBid text-center">${{ pastWork.winBid.bidPrice }}</td>
@@ -16,34 +16,34 @@
 	</tr>
 </template>
 
-<script> 
-	export default {
-		props: ['pastWork','currentUserType'],
-		computed: {
-			fullName() {
-				if (this.currentUserType === 'freelancer'){
-					return this.pastWork.employer.firstName + ' ' + this.pastWork.employer.lastName;
-				}
-				return this.pastWork.winBid.bidder.firstName + ' ' + this.pastWork.winBid.bidder.lastName;
-			},
-			username(){
-				if (this.currentUserType === 'freelancer'){
-					return this.pastWork.employer.username;
-				}
-				return this.pastWork.winBid.bidder.username;
-			},
-			viewDetailsUrl() {
-				return '/dashboard/project/' + this.pastWork._id + '/details'
-			},
-			projectUrl(){
-				return '/project/' + this.pastWork._id;
-			},
-			finishDays(){
-				var timeDiff = Math.abs(new Date(this.pastWork.finishDate).getTime() - new Date(this.pastWork.endDate).getTime());
-				return Math.ceil(timeDiff / (1000 * 3600 * 24)); 
-			}
-		}
-	}
+<script>
+export default {
+  props: ['pastWork', 'currentUserType'],
+  computed: {
+    fullName () {
+      if (this.currentUserType === 'freelancer') {
+        return this.pastWork.employer.firstName + ' ' + this.pastWork.employer.lastName
+      }
+      return this.pastWork.winBid.bidder.firstName + ' ' + this.pastWork.winBid.bidder.lastName
+    },
+    username () {
+      if (this.currentUserType === 'freelancer') {
+        return this.pastWork.employer.username
+      }
+      return this.pastWork.winBid.bidder.username
+    },
+    viewDetailsUrl () {
+      return '/dashboard/project/' + this.pastWork._id + '/details'
+    },
+    projectUrl () {
+      return '/project/' + this.pastWork._id
+    },
+    finishDays () {
+      var timeDiff = Math.abs(new Date(this.pastWork.finishDate).getTime() - new Date(this.pastWork.endDate).getTime())
+      return Math.ceil(timeDiff / (1000 * 3600 * 24))
+    }
+  }
+}
 </script>
 
 <style scoped>

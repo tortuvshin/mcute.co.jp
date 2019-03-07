@@ -21,7 +21,7 @@
                <md-progress class="md-accent" md-indeterminate v-show="loadingData"></md-progress>
             </transition>
           </td>
-     
+
           <md-table-row v-if="tickets.length <= 0 && !loadingData">
               <md-table-cell colspan="4" class="text-center no-result-text">No issue found.</md-table-cell>
           </md-table-row>
@@ -40,33 +40,33 @@
 </template>
 
 <script>
-  import TicketRow from '../../components/support/TicketRow'
-	import ScaleLoader from 'vue-spinner/src/ScaleLoader'
-	import { API_SERVER } from '../../api.js'
-	export default {
-		data() {
-			return {
-				tickets: [],
-				loadingData: true
-			}
-		},
-		components: {
-			TicketRow,
-			ScaleLoader
-		},
-		created() {
-			this.fetchData();
-            document.title = 'Support Center - WorkFlow'
-		},
-		methods: {
-			fetchData(){
-				this.$http.get(API_SERVER + '/support').then(response=> {
-					this.tickets = response.body.tickets;
-					this.loadingData = false;
-				});
-			}
-		}
-	}
+import TicketRow from '../../components/support/TicketRow'
+// import ScaleLoader from 'vue-spinner/src/ScaleLoader'
+import { API_SERVER } from '../../api.js'
+export default {
+  data () {
+    return {
+      tickets: [],
+      loadingData: true
+    }
+  },
+  components: {
+    TicketRow
+    
+  },
+  created () {
+    this.fetchData()
+    document.title = 'Support Center - WorkFlow'
+  },
+  methods: {
+    fetchData () {
+      this.$http.get(API_SERVER + '/support').then(response => {
+        this.tickets = response.body.tickets
+        this.loadingData = false
+      })
+    }
+  }
+}
 </script>
 
 <style scoped>

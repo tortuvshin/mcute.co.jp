@@ -1,128 +1,25 @@
-import Vue from "vue";
-import Router from "vue-router";
-import Components from "./views/Components.vue";
-import Presentation from "./views/Presentation.vue";
-import MainNavbar from "./layout/MainNavbar.vue";
-import MainFooter from "./layout/MainFooter.vue";
-import About from "./views/example-pages/AboutUs.vue";
-import BlogPost from "./views/example-pages/BlogPost.vue";
-import BlogPosts from "./views/example-pages/BlogPosts.vue";
-import ContactUs from "./views/example-pages/ContactUs.vue";
-import LandingPage from "./views/example-pages/LandingPage.vue";
-import LoginPage from "./views/example-pages/LoginPage.vue";
-import PricingPage from "./views/example-pages/PricingPage.vue";
-import EcommercePage from "./views/example-pages/EcommercePage.vue";
-import ProductPage from "./views/example-pages/ProductPage.vue";
-import ProfilePage from "./views/example-pages/ProfilePage.vue";
-import SignUpPage from "./views/example-pages/SignUpPage.vue";
-import Sections from "./views/Sections.vue";
+import Vue from 'vue'
+import Router from 'vue-router'
+import Home from './views/Home.vue'
 
-Vue.use(Router);
+Vue.use(Router)
 
-const router = new Router({
-    routes: [
-        {
-            path: "/",
-            redirect: "/presentation"
-        },
-        {
-            path: "/components",
-            name: "components",
-            components: {default: Components, header: MainNavbar, footer: MainFooter},
-            props: {
-                footer: {backgroundColor: 'black'},
-                header: {colorOnScroll: 65}
-            }
-        },
-        {
-            path: "/presentation",
-            name: "presentation",
-            components: {default: Presentation, header: MainNavbar, footer: MainFooter},
-            props: {header: {colorOnScroll: 500}}
-        },
-        {
-            path: "/about",
-            name: "about",
-            components: {default: About, header: MainNavbar, footer: MainFooter},
-            props: {header: {colorOnScroll: 450}}
-        },
-        {
-            path: "/contact",
-            name: "contact",
-            components: {default: ContactUs, header: MainNavbar, footer: MainFooter},
-            props: {footer: {type: 'default'}}
-        },
-        {
-            path: "/login",
-            name: "login",
-            components: {default: LoginPage, header: MainNavbar},
-            props: {header: {colorOnScroll: 450}}
-        },
-        {
-            path: "/landing",
-            name: "landing",
-            components: {default: LandingPage, header: MainNavbar, footer: MainFooter},
-            props: {footer: {type: 'default'}, header: {colorOnScroll: 450}}
-        },
-        {
-            path: "/pricing",
-            name: "pricing",
-            components: {default: PricingPage, header: MainNavbar, footer: MainFooter},
-            props: {header: {colorOnScroll: 450}}
-        },
-        {
-            path: "/blog-post",
-            name: "blog-post",
-            components: {default: BlogPost, header: MainNavbar, footer: MainFooter},
-            props: {header: {colorOnScroll: 450}}
-        },
-        {
-            path: "/blog-posts",
-            name: "blog-posts",
-            components: {default: BlogPosts, header: MainNavbar},
-            props: {header: {colorOnScroll: 450}}
-        },
-        {
-            path: "/ecommerce",
-            name: "ecommerce",
-            components: {default: EcommercePage, header: MainNavbar, footer: MainFooter},
-            props: {header: {colorOnScroll: 450}}
-        },
-        {
-            path: "/product",
-            name: "product",
-            components: {default: ProductPage, header: MainNavbar},
-            props: {header: {colorOnScroll: 450}}
-        },
-        {
-            path: "/profile",
-            name: "profile",
-            components: {default: ProfilePage, header: MainNavbar, footer: MainFooter},
-            props: {header: {colorOnScroll: 450}}
-        },
-        {
-            path: "/signup",
-            name: "signup",
-            components: {default: SignUpPage, header: MainNavbar},
-            props: {header: {colorOnScroll: 450}}
-        },
-        {
-            path: "/sections",
-            name: "sections",
-            components: {default: Sections, header: MainNavbar, footer: MainFooter},
-            props: {
-                footer: {backgroundColor: 'gray'},
-                header: {colorOnScroll: 0}
-            }
-        }
-    ],
-    scrollBehavior: (to, from, savedPosition) => {
-        if (to.hash) {
-            return {selector: to.hash}
-        } else {
-            return {x: 0, y: 0}
-        }
+export default new Router({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: Home
     },
-});
-
-export default router;
+    {
+      path: '/about',
+      name: 'about',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+    }
+  ]
+})

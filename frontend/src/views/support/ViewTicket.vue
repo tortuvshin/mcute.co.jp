@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
          <div class="spinner" v-if="loadingData">
-           <spinner></spinner>
+           <!-- <spinner></spinner> -->
          </div>
          <div class="row" v-if="!loadingData">
              <div class="col-md-12">
@@ -67,7 +67,7 @@
                     </panel>
                 </accordion>
              </div>
-             
+
              <div class="col-md-12">
                 <app-ticket-reply v-for="message in ticket.messages" :message="message" :ticketId="ticket._id"  :ticketSender="ticket.sender.username"></app-ticket-reply>
              </div>
@@ -77,85 +77,85 @@
 </template>
 
 <script>
-    import appTicketReply from '../../components/support/TicketReply'
-    import appTicketReplyForm from '../../components/support/TicketReplyForm'
-    import ScaleLoader from 'vue-spinner/src/ScaleLoader'
-    import panel from 'vue-strap/src/Panel'
-    import accordion from 'vue-strap/src/Accordion'
+import appTicketReply from '../../components/support/TicketReply'
+import appTicketReplyForm from '../../components/support/TicketReplyForm'
+// import ScaleLoader from 'vue-spinner/src/ScaleLoader'
+import panel from 'vue-strap/src/Panel'
+import accordion from 'vue-strap/src/Accordion'
 	  import { API_SERVER } from '../../api.js'
 
   	export default {
-  		data() {
+  		data () {
   			return {
   				ticket: null,
-          loadingData: true,
-          isReply: false
+      loadingData: true,
+      isReply: false
   			}
   		},
-      computed: {
-          currentUser(){
-            return this.$store.state.user.currentUser;
-          },
-          statusClass(){
-              if (this.ticket.status === 'under for review'){
-                return 'ufr';
-              }else if (this.ticket.status === 'Request Freelancer Reply'){
-                return 'rfr'
-              }else if (this.ticket.status === 'Request Employer Reply'){
-                return 'rer'
-              }else if (this.ticket.status === 'Request Reply'){
-                return 'rr'
-              }else if (this.ticket.status === 'Freelancer Replied'){
-                return 'fr'
-              }else if (this.ticket.status === 'Employer Replied'){
-                return 'er'
-              }else if (this.ticket.status === 'Replied'){
-                return 'r'
-              }else if (this.ticket.status === 'Solved'){
-                return 'solved'
-              }
-          },
-          canReply(){
-            if(this.ticket.serviceType === 'project') {
-              if ((this.currentUser._id === this.ticket.sender._id && this.ticket.status === 'Request Employer Reply') || (this.currentUser._id === this.ticket.freelancer && this.ticket.status === 'Request Freelancer Reply')){
-                return true;
-              }
-            } else if (this.ticket.serviceType === 'billing') {
-              if (this.ticket.status === 'Request Reply'){
-                return true;
-              }
-            }
-            return false;
-          }
-      },
-  		methods: {
-  			fetchData() {
-  				this.$http.get(API_SERVER + "/support/" + this.$route.params.id).then(response => {
-              this.loadingData = false;
-    					this.ticket = response.body.ticket;
-    					this.ticket.messages.reverse();
-           
-              document.title = this.ticket.issueType + ' - WorkFlow';
-  				}, response => {
-              this.$router.replace({name: 'error', params: {message: response.body.message}});
-          });
-  			},
-        handleTicketUpdated(){
-          this.fetchData();
-          this.isReply = false;
+  computed: {
+    currentUser () {
+      return this.$store.state.user.currentUser
+    },
+    statusClass () {
+      if (this.ticket.status === 'under for review') {
+        return 'ufr'
+      } else if (this.ticket.status === 'Request Freelancer Reply') {
+        return 'rfr'
+      } else if (this.ticket.status === 'Request Employer Reply') {
+        return 'rer'
+      } else if (this.ticket.status === 'Request Reply') {
+        return 'rr'
+      } else if (this.ticket.status === 'Freelancer Replied') {
+        return 'fr'
+      } else if (this.ticket.status === 'Employer Replied') {
+        return 'er'
+      } else if (this.ticket.status === 'Replied') {
+        return 'r'
+      } else if (this.ticket.status === 'Solved') {
+        return 'solved'
+      }
+    },
+    canReply () {
+      if (this.ticket.serviceType === 'project') {
+        if ((this.currentUser._id === this.ticket.sender._id && this.ticket.status === 'Request Employer Reply') || (this.currentUser._id === this.ticket.freelancer && this.ticket.status === 'Request Freelancer Reply')) {
+          return true
         }
+      } else if (this.ticket.serviceType === 'billing') {
+        if (this.ticket.status === 'Request Reply') {
+          return true
+        }
+      }
+      return false
+    }
+  },
+  		methods: {
+  			fetchData () {
+  				this.$http.get(API_SERVER + '/support/' + this.$route.params.id).then(response => {
+        this.loadingData = false
+    					this.ticket = response.body.ticket
+    					this.ticket.messages.reverse()
+
+        document.title = this.ticket.issueType + ' - WorkFlow'
+  				}, response => {
+        this.$router.replace({ name: 'error', params: { message: response.body.message } })
+      })
+  			},
+    handleTicketUpdated () {
+      this.fetchData()
+      this.isReply = false
+    }
   		},
-      components: {
-          ScaleLoader,
-          appTicketReplyForm,
-          panel,
-          accordion,
-          appTicketReply
-      },
-  		created() {
-  			this.fetchData();
-        this.updateToolbar('View Ticket');
-        document.title = 'Loading Ticket... - WorkFlow';
+  components: {
+    // ScaleLoader,
+    appTicketReplyForm,
+    panel,
+    accordion,
+    appTicketReply
+  },
+  		created () {
+  			this.fetchData()
+    this.updateToolbar('View Ticket')
+    document.title = 'Loading Ticket... - WorkFlow'
   		}
   	}
 </script>
@@ -234,7 +234,6 @@ table{
     font-family: Lato;
      box-shadow: 0px 0px 5px rgba(0,0,0,0.2)
 }
-
 
 .heading{
     font-weight: bold;

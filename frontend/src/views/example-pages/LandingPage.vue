@@ -280,28 +280,28 @@
     </div>
 </template>
 <script>
-  import { Card, Button, FormGroupInput, Tabs, TabPane } from '@/components';
+import { Card, Button, FormGroupInput, Tabs, TabPane } from '@/components'
 
-  export default {
-    name: 'landing-page',
-    bodyClass: 'landing-page',
-    components: {
-      Card,
-      Tabs,
-      TabPane,
-      [Button.name]: Button,
-      [FormGroupInput.name]: FormGroupInput
-    },
-    data() {
-      return {
-        form: {
-          firstName: '',
-          email: '',
-          message: ''
-        }
+export default {
+  name: 'landing-page',
+  bodyClass: 'landing-page',
+  components: {
+    Card,
+    Tabs,
+    TabPane,
+    [Button.name]: Button,
+    [FormGroupInput.name]: FormGroupInput
+  },
+  data () {
+    return {
+      form: {
+        firstName: '',
+        email: '',
+        message: ''
       }
     }
   }
+}
 </script>
 <style>
 </style>

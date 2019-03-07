@@ -57,35 +57,35 @@
     </div>
 </template>
 <script>
-    import {Tooltip} from 'element-ui';
-    export default {
-        name: 'comment',
-        components: {
-          [Tooltip.name]: Tooltip
-        },
-        props: {
-            avatar: {
-                type: [String, Object],
-                default: ''
-            },
-            author: {
-                type: String,
-                default: ''
-            },
-            date: {
-                type: String,
-                default: ''
-            },
-            comment: {
-                type: String,
-                default: ''
-            },
-            replies: {
-                type: Array,
-                default: () => []
-            }
-        }
+import { Tooltip } from 'element-ui'
+export default {
+  name: 'comment',
+  components: {
+    [Tooltip.name]: Tooltip
+  },
+  props: {
+    avatar: {
+      type: [String, Object],
+      default: ''
+    },
+    author: {
+      type: String,
+      default: ''
+    },
+    date: {
+      type: String,
+      default: ''
+    },
+    comment: {
+      type: String,
+      default: ''
+    },
+    replies: {
+      type: Array,
+      default: () => []
     }
+  }
+}
 </script>
 <style>
 </style>

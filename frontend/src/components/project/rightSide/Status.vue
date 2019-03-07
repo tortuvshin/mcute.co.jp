@@ -1,50 +1,50 @@
 <template>
     <div>
-        <app-place-bid-modal style="padding-top: 180px;" :project="project" :isShow="showBidModal" :isUpdate="isUpdate" @handleClose="showBidModal = false" :bid="bid"></app-place-bid-modal> 
+        <app-place-bid-modal style="padding-top: 180px;" :project="project" :isShow="showBidModal" :isUpdate="isUpdate" @handleClose="showBidModal = false" :bid="bid"></app-place-bid-modal>
         <button class="btn-updateBid" v-if="currentUser && currentUser.type === 'freelancer' && project.status === 'open' && bid" @click="handleUpdateClick">Update bid</button>
     	<button class="btn-bid" v-else-if="currentUser && currentUser.type === 'freelancer' && project.status === 'open'" @click="showBidModal = true">Place a bid</button>
-        
+
     	<div class="project-status" :class="[statusClass]" v-else>{{ project.status | capitalizeFirstLetter }}</div>
     </div>
 </template>
 
 <script>
-    import { bus } from '../../../main.js'
-    import appPlaceBidModal from '../PlaceBidModal'
-	export default {
-        data(){
-            return {
-                showBidModal: false,
-                isUpdate: false
-            }
-        },
-		props: ['currentUser', 'project', 'bid'],
-		computed: {
-			statusClass(){
-				var status = this.project.status;
-				if (status == "finished"){
-                 	return "project-status-finish";
-	            }else if (status == "working"){
-	                return "project-status-progress";
-	            }else if (status == "deleted"){
-	                return "project-status-deleted";
-	            }else if (status == "open"){
-	                return "project-status-open";
-	            }else if (status == "drafted"){
-                    return "project-status-unpublish";
-                }
-			}
-		},
-        methods:{
-            handleUpdateClick(){
-                this.showBidModal = true;
-                this.isUpdate = true;
-            }
-        },
-        components: {
-            appPlaceBidModal
-        }
-	}
+import { bus } from '../../../main.js'
+import appPlaceBidModal from '../PlaceBidModal'
+export default {
+  data () {
+    return {
+      showBidModal: false,
+      isUpdate: false
+    }
+  },
+  props: ['currentUser', 'project', 'bid'],
+  computed: {
+    statusClass () {
+      var status = this.project.status
+      if (status == 'finished') {
+                 	return 'project-status-finish'
+	            } else if (status == 'working') {
+	                return 'project-status-progress'
+	            } else if (status == 'deleted') {
+	                return 'project-status-deleted'
+	            } else if (status == 'open') {
+	                return 'project-status-open'
+	            } else if (status == 'drafted') {
+        return 'project-status-unpublish'
+      }
+    }
+  },
+  methods: {
+    handleUpdateClick () {
+      this.showBidModal = true
+      this.isUpdate = true
+    }
+  },
+  components: {
+    appPlaceBidModal
+  }
+}
 </script>
 
 <style scoped>
@@ -88,7 +88,7 @@
     transition: 1s;
     margin-bottom: 30px;
     border-radius: 4px;
-    
+
 }
 
 .project-status-finish{

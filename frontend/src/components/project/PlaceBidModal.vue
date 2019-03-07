@@ -35,75 +35,75 @@
 </template>
 
 <script>
-	import modal from 'vue-strap/src/Modal'
-	import appBudget from './rightSide/Budget'
+import modal from 'vue-strap/src/Modal'
+import appBudget from './rightSide/Budget'
 
-	import { API_SERVER } from '../../api.js'
-	import { bus } from '../../main.js'
+import { API_SERVER } from '../../api.js'
+import { bus } from '../../main.js'
 
-	export default {
-		data(){
-			return {
-				amount: '',
-				isShowModal: this.isShow,
-				isError: false,
-                errorMsg: ''
-			}
-		},
-		props: ['project', 'isShow', 'isUpdate', 'bid'],
-		watch:{
-			isShow(val){
-				this.isShowModal = val;
-			},
-            amount(val){
-                if (val < this.project.budgetMin){
-                    this.isError = true;
-                    this.errorMsg = 'The bid amount can\'t lower than the minimum'
-                }else if (val > this.project.budgetMax){
-                    this.isError = true;
-                    this.errorMsg = 'The bid amount can\'t higher than the minimum'
-                }else {
-                    this.isError = false
-                }
-            }
-		},	
-		methods: {
-			onSubmit(e) {
-                if (!this.isError){
-                    e.target.disabled = true;
-                    var method = 'post';
-                    var data = {
-                        amount: this.amount,
-                    }
-                    if (this.isUpdate){
-                        method = 'put';
-                        data.bidId = this.bid._id;
-                    }
-                    this.$http[method](API_SERVER + '/project/'+ this.project._id +'/bid/', data).then(response => {
-                        e.target.disabled = false;
-                        if (this.isUpdate){
-                            bus.$emit('updateProject');
-                        }
-                        bus.$emit('showAlert', response.body);
-                        bus.$emit('updateProjectData');
-                        this.handleClose();
-                    });
-                }
-			},
-            handleClose(){
-                this.$emit("handleClose");
-            }
-		},
-		created(){
-			if (this.project.budgetType === 'fixed'){
-				this.amount = this.project.budgetMin; 
-			}
-		},
-		components:{
-			appBudget,
-			modal
-		}
-	}
+export default {
+  data () {
+    return {
+      amount: '',
+      isShowModal: this.isShow,
+      isError: false,
+      errorMsg: ''
+    }
+  },
+  props: ['project', 'isShow', 'isUpdate', 'bid'],
+  watch: {
+    isShow (val) {
+      this.isShowModal = val
+    },
+    amount (val) {
+      if (val < this.project.budgetMin) {
+        this.isError = true
+        this.errorMsg = 'The bid amount can\'t lower than the minimum'
+      } else if (val > this.project.budgetMax) {
+        this.isError = true
+        this.errorMsg = 'The bid amount can\'t higher than the minimum'
+      } else {
+        this.isError = false
+      }
+    }
+  },
+  methods: {
+    onSubmit (e) {
+      if (!this.isError) {
+        e.target.disabled = true
+        var method = 'post'
+        var data = {
+          amount: this.amount
+        }
+        if (this.isUpdate) {
+          method = 'put'
+          data.bidId = this.bid._id
+        }
+        this.$http[method](API_SERVER + '/project/' + this.project._id + '/bid/', data).then(response => {
+          e.target.disabled = false
+          if (this.isUpdate) {
+            bus.$emit('updateProject')
+          }
+          bus.$emit('showAlert', response.body)
+          bus.$emit('updateProjectData')
+          this.handleClose()
+        })
+      }
+    },
+    handleClose () {
+      this.$emit('handleClose')
+    }
+  },
+  created () {
+    if (this.project.budgetType === 'fixed') {
+      this.amount = this.project.budgetMin
+    }
+  },
+  components: {
+    appBudget,
+    modal
+  }
+}
 </script>
 
 <style scoped>

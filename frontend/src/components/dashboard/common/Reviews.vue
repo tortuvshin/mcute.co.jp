@@ -20,29 +20,29 @@
 </template>
 
 <script>
-	import appStarBar from '../../../components/user/StarBar'
-	import { API_SERVER } from '../../../api.js'
-	export default {
-		props: ['username'],
-		data(){
-			return {
-				reviews: []
-			}
-		},
-		methods: {
-			projectUrl(id) {
-				return '/project/' + id;
-			}
-		},
-		created(){
-			this.$http.get(API_SERVER + '/profile/review', {params: { username: this.username }}).then(response => {
-				this.reviews = response.body.reviews;
-			});
-		},
-		components: {
-			appStarBar
-		}
-	}
+import appStarBar from '../../../components/user/StarBar'
+import { API_SERVER } from '../../../api.js'
+export default {
+  props: ['username'],
+  data () {
+    return {
+      reviews: []
+    }
+  },
+  methods: {
+    projectUrl (id) {
+      return '/project/' + id
+    }
+  },
+  created () {
+    this.$http.get(API_SERVER + '/profile/review', { params: { username: this.username } }).then(response => {
+      this.reviews = response.body.reviews
+    })
+  },
+  components: {
+    appStarBar
+  }
+}
 </script>
 
 <style scoped>

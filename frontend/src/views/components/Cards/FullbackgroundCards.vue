@@ -53,13 +53,13 @@
     </div>
 </template>
 <script>
-  import { Card } from '@/components';
+import { Card } from '@/components'
 
-  export default {
-    components: {
-      Card
-    }
+export default {
+  components: {
+    Card
   }
+}
 </script>
 <style>
 </style>

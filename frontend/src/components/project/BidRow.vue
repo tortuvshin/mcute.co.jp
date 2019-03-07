@@ -7,10 +7,10 @@
             </div>
             <div class='bidder-top'>
                 <a :href="profileUrl" class="bidder-username" target="_blank">{{ bid.bidder.firstName }} {{ bid.bidder.lastName }}</a>
-                <div class="bidder-conutry flag-icon" :class="bidderCountryIcon"></div> - 
+                <div class="bidder-conutry flag-icon" :class="bidderCountryIcon"></div> -
                 <span class="bid-time">
                   <timeago :since="bid.bidDate" :auto-update="1" locale="zh-HK"></timeago>
-                </span>               
+                </span>
             </div>
         </td>
         <td>
@@ -23,31 +23,30 @@
 </template>
 
 <script>
-	import appStarBar from '../user/StarBar'
-    import { API_SERVER } from '../../api.js'
+import appStarBar from '../user/StarBar'
+import { API_SERVER } from '../../api.js'
 
-	export default {
-		props: ['bid', 'project', 'active'],
-        data(){
-            return {
-                radio: ''
-            }
-        },
-		computed: {
-			bidderCountryIcon(){
-				return 'flag-icon-' +  this.bid.bidder.country.toLowerCase();
-			},
-            profileUrl() {
-                return '/profile/' + this.bid.bidder.username;
-            }
-		},
-		components: {
-			appStarBar
-		}
-	}
+export default {
+  props: ['bid', 'project', 'active'],
+  data () {
+    return {
+      radio: ''
+    }
+  },
+  computed: {
+    bidderCountryIcon () {
+      return 'flag-icon-' + this.bid.bidder.country.toLowerCase()
+    },
+    profileUrl () {
+      return '/profile/' + this.bid.bidder.username
+    }
+  },
+  components: {
+    appStarBar
+  }
+}
 </script>
 
-<style src="flag-icon-css/css/flag-icon.css"></style>
 <style scoped>
 tr{
     font-family: Lato;

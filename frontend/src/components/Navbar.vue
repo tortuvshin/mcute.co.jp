@@ -16,8 +16,8 @@
 	            <li><router-link to="/project/post">Hire Freelancers</router-link></li>
 	            <li><router-link to="/project/search">Work</router-link></li>
 	            <!-- <li><router-link to="/support">Support Center</router-link></li> -->
-	            
-	            </ul> 
+
+	            </ul>
 	         <ul class="nav navbar-right navbar-nav" :class="{'home-navbar-nav': isHomePage}">
 	            <template v-if="!currentUser">
 		            <li><router-link to="/login">Log In</router-link></li>
@@ -44,21 +44,21 @@
 </template>
 
 <script>
-	import { mapActions } from 'vuex'
+import { mapActions } from 'vuex'
 
-	export default {
-		props: ['isHomePage'],
-		computed: {
-			currentUser(){
-				return this.$store.state.user.currentUser;
-			}
-		},
-		methods: {
-			...mapActions([
-				'logout'
-			])
-		}
-	}
+export default {
+  props: ['isHomePage'],
+  computed: {
+    currentUser () {
+      return this.$store.state.user.currentUser
+    }
+  },
+  methods: {
+    ...mapActions([
+      'logout'
+    ])
+  }
+}
 </script>
 
 <style scoped>
@@ -76,7 +76,7 @@
 		padding: 10px 15px;
 	}
 	.dropdown-menu{
-		min-width:201.77px; 
+		min-width:201.77px;
 		font-size: 0.8em;
 		z-index: 9999;
 	}
@@ -178,7 +178,7 @@
 	.home-navbar {
 		box-shadow: 0px 0px 0px !important;
 	}
-	
+
 	.home-navbar-nav li:hover{
 		background-color: rgba(78, 102, 114,0.8);
 		transition: 0.5s;
@@ -197,7 +197,7 @@
 	}
 
 	.home-navbar.scrolled {
-		background: rgb(38, 50, 56)!important; 
+		background: rgb(38, 50, 56)!important;
 	}
 
 	.home-navbar-brand{
@@ -238,7 +238,7 @@
 	    .collapse.in{
 	    	margin-top: 12px;
 	    }
-	    
+
 	    .collapsing, .in {
 	    	background-color: white;
 	    	margin-top: 12px;

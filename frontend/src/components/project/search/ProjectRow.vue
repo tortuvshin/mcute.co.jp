@@ -17,11 +17,11 @@
                 <p>{{ project.description.substring(0,300)}} ...</p>
             </div>
             <div v-if="project.skills.length > 0">
-        
+
                 <md-chip md-static v-for="skill in project.skills" class="skill-tag">
-                  {{skill}} 
+                  {{skill}}
                 </md-chip>
-           
+
             </div>
         </div>
       </td>
@@ -36,21 +36,21 @@
 </template>
 
 <script>
-	import appCountDown from '../common/Countdown'
-	export default {
-		props: ['project'],
-		computed: {
-			projectUrl(){
-				return '/project/' + this.project._id;
-			},
-			projectEndDate(){
-				return new Date(this.project.endDate);
-			}
-		},
-		components: {
-			appCountDown
-		}
-	}
+import appCountDown from '../common/Countdown'
+export default {
+  props: ['project'],
+  computed: {
+    projectUrl () {
+      return '/project/' + this.project._id
+    },
+    projectEndDate () {
+      return new Date(this.project.endDate)
+    }
+  },
+  components: {
+    appCountDown
+  }
+}
 </script>
 
 <style scoped>
@@ -126,4 +126,3 @@ small{
     margin-bottom: 8px;
 }
 </style>
-

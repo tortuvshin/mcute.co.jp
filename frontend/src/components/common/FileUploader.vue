@@ -8,21 +8,21 @@
 </template>
 
 <script>
-    import { bus } from '../../main.js'
-	export default {
+import { bus } from '../../main.js'
+export default {
 	    methods: {
-	        onChoose(event) {
-	            var file = event.target.files[0];
-                var size = file.size/1000000;
-                if (size > 25){
-                    bus.$emit('showAlert', {result: 'danger', message: 'The file size of ' + file.name + ' is exceed the limitation', title: 'Upload Error!'});
-                }else{
-                    document.querySelector(".upload-btn").value = "";
-                    this.$emit('handleFileUploaded', file);
-                }
+	        onChoose (event) {
+	            var file = event.target.files[0]
+      var size = file.size / 1000000
+      if (size > 25) {
+        bus.$emit('showAlert', { result: 'danger', message: 'The file size of ' + file.name + ' is exceed the limitation', title: 'Upload Error!' })
+      } else {
+        document.querySelector('.upload-btn').value = ''
+        this.$emit('handleFileUploaded', file)
+      }
 	        }
 	    }
-	}
+}
 </script>
 
 <style scoped>
@@ -56,7 +56,6 @@
 .File-input__input-wrapper:hover {
     background: #e0e0e0;
 }
-
 
 .File-input__input {
     cursor: inherit;

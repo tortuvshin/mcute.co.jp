@@ -15,17 +15,16 @@
 </template>
 
 <script>
-	import appStatus from './rightSide/Status'
-	import appBudget from './rightSide/Budget'
-	import appEmployer from '../common/ProfileCard'
+import appStatus from './rightSide/Status'
+import appBudget from './rightSide/Budget'
+import appEmployer from '../common/ProfileCard'
 
-	export default {
-		props: ['currentUser', 'project', 'bid'],
-		components: {
-			appStatus,
-			appBudget,
-			appEmployer
-		}
-	}
+export default {
+  props: ['currentUser', 'project', 'bid'],
+  components: {
+    appStatus,
+    appBudget,
+    appEmployer
+  }
+}
 </script>
-

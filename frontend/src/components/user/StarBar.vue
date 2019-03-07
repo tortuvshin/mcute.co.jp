@@ -6,20 +6,20 @@
 </template>
 
 <script>
-	export default {
-		props: ['rate'],
-		computed: {
-			fillStar(){
-				return parseInt(this.rate);
-			},
-			fixedRate(){
-				return this.rate.toFixed(2);
-			},
-			hollowStar() {
-				return 5 - parseInt(this.rate);
-			}
-		}
-	}
+export default {
+  props: ['rate'],
+  computed: {
+    fillStar () {
+      return parseInt(this.rate)
+    },
+    fixedRate () {
+      return this.rate.toFixed(2)
+    },
+    hollowStar () {
+      return 5 - parseInt(this.rate)
+    }
+  }
+}
 </script>
 
 <style scoped>

@@ -18,36 +18,36 @@
 </template>
 
 <script>
-	import depositHistory from '../../../components/dashboard/billing/DepositHistory'
-	import withdrawHistory from '../../../components/dashboard/billing/WithdrawHistory'
-	import appHeader from '../../../components/dashboard/Heading'
-	import { API_SERVER } from '../../../api.js'
+import depositHistory from '../../../components/dashboard/billing/DepositHistory'
+import withdrawHistory from '../../../components/dashboard/billing/WithdrawHistory'
+import appHeader from '../../../components/dashboard/Heading'
+import { API_SERVER } from '../../../api.js'
 
-	export default {
-		data(){
-			return {
-				type: 'deposit',
-				loadingData: false,
-				paypalDeposits: [],
-				bankDeposits: [],
-				withdraws: []
-			}
-		},
-		components: {
-			appHeader,
-			depositHistory,
-			withdrawHistory
-		},
-		created(){
-			this.loadingData = true;
-			this.$http.get(API_SERVER + '/dashboard/billing/transaction').then(response => {
-				this.loadingData = false;
-				this.paypalDeposits = response.body.paypalDeposits;
-				this.bankDeposits = response.body.bankDeposits;
-				this.withdraws = response.body.withdraws;
-			});
-		}
-	}
+export default {
+  data () {
+    return {
+      type: 'deposit',
+      loadingData: false,
+      paypalDeposits: [],
+      bankDeposits: [],
+      withdraws: []
+    }
+  },
+  components: {
+    appHeader,
+    depositHistory,
+    withdrawHistory
+  },
+  created () {
+    this.loadingData = true
+    this.$http.get(API_SERVER + '/dashboard/billing/transaction').then(response => {
+      this.loadingData = false
+      this.paypalDeposits = response.body.paypalDeposits
+      this.bankDeposits = response.body.bankDeposits
+      this.withdraws = response.body.withdraws
+    })
+  }
+}
 </script>
 
 <style scoped>

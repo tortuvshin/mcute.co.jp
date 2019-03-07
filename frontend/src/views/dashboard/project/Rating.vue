@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<div class="loader" v-if="loadingData">
-  		 	<scale-loader :loading="loadingData" color="#77c0cf" height="30px"></scale-loader>
+  		 	<!-- <scale-loader :loading="loadingData" color="#77c0cf" height="30px"></scale-loader> -->
   		</div>
   		<div class="row" v-else>
 			<div class="col-md-12">
@@ -14,7 +14,7 @@
 								<th class="text-center">Last Submission Date</th>
 							</tr>
 						</thead>
-						<tbody>	
+						<tbody>
 							<tr>
 								<td class="title"><router-link :to="projectUrl">{{project.title}}</router-link></td>
 								<td class="submission-date text-center">{{project.submissions[project.submissions.length - 1].submitDate | moment("YYYY-MM-DD")}}</td>
@@ -31,7 +31,7 @@
 					</div>
 					<div class="col-md-8" v-if="!isRate">
 						<div class="form-group">
-							
+
 						</div>
 						<div class="form-group text-right">
 							<button class="btn btn-primary" @click="rate">Rate</button>
@@ -49,73 +49,72 @@
 </template>
 
 <script>
-	import StarRating from 'vue-star-rating'
-	import { API_SERVER } from '../../../api.js'
-	import { bus } from '../../../main.js'
-	import ScaleLoader from 'vue-spinner/src/ScaleLoader'
-	import profileCard from '../../../components/common/ProfileCard'
-	
-	export default {
-		data() {
-			return {
-				project: null,
-				loadingData: true,
-				rateContent: '',
-				rateStar: 0,
-				rates: ['freelancerRate', 'employerRate']
-			}
-		},
-		computed: {
-			currentUser(){
-				return this.$store.state.user.currentUser;
-			},
-			projectUrl(){
-				return '/project/' + this.project._id;
-			},
-			rateTarget() {
-				if (this.currentUser._id === this.project.employer._id){
-					return this.project.winBid.bidder;
-				}
-				return this.project.employer;
-			},
-			isRate(){
-				if (this.currentUser.type === 'freelancer'){
-					console.log("hi");
-					if (this.project.freelancerRate){
-						return true;
-					}
-				}else if (this.currentUser.type === 'employer'){
-					if (this.project.employerRate){
-						return true;
-					}
-				}
-				return false;
-			}
-		},
-		methods: {
-			rate() {
-				this.$http.post(API_SERVER + '/project/' + this.project._id + '/rating', {rateStar: this.rateStar, rateContent: this.rateContent}).then(response=>{
-					bus.$emit('setAlert', response.body);
-					this.$router.replace('/dashboard/project/' + this.project._id + '/details#projectRating');
-				});
-			},
-			fetchData() {
-				this.$http.get(API_SERVER + '/project/' + this.$route.params.id).then(response=> {
-					this.project = response.body.project;
-					this.loadingData = false;
-				});
-			}
-		},
-		components: {
-			profileCard,
-			StarRating,
-			ScaleLoader
-		},
-		created() {
-			this.fetchData();
-			document.title = "Rating - WorkFlow"
-		}	
-	}
+import StarRating from 'vue-star-rating'
+import { API_SERVER } from '../../../api.js'
+import { bus } from '../../../main.js'
+// import ScaleLoader from 'vue-spinner/src/ScaleLoader'
+import profileCard from '../../../components/common/ProfileCard'
+
+export default {
+  data () {
+    return {
+      project: null,
+      loadingData: true,
+      rateContent: '',
+      rateStar: 0,
+      rates: ['freelancerRate', 'employerRate']
+    }
+  },
+  computed: {
+    currentUser () {
+      return this.$store.state.user.currentUser
+    },
+    projectUrl () {
+      return '/project/' + this.project._id
+    },
+    rateTarget () {
+      if (this.currentUser._id === this.project.employer._id) {
+        return this.project.winBid.bidder
+      }
+      return this.project.employer
+    },
+    isRate () {
+      if (this.currentUser.type === 'freelancer') {
+        console.log('hi')
+        if (this.project.freelancerRate) {
+          return true
+        }
+      } else if (this.currentUser.type === 'employer') {
+        if (this.project.employerRate) {
+          return true
+        }
+      }
+      return false
+    }
+  },
+  methods: {
+    rate () {
+      this.$http.post(API_SERVER + '/project/' + this.project._id + '/rating', { rateStar: this.rateStar, rateContent: this.rateContent }).then(response => {
+        bus.$emit('setAlert', response.body)
+        this.$router.replace('/dashboard/project/' + this.project._id + '/details#projectRating')
+      })
+    },
+    fetchData () {
+      this.$http.get(API_SERVER + '/project/' + this.$route.params.id).then(response => {
+        this.project = response.body.project
+        this.loadingData = false
+      })
+    }
+  },
+  components: {
+    profileCard,
+    StarRating
+  },
+  created () {
+    this.fetchData()
+    document.title = 'Rating - WorkFlow'
+  }
+}
 </script>
 
 <style scoped>
@@ -139,7 +138,7 @@
 }
 
 .main-content {
-	background-color: white; 
+	background-color: white;
 	box-shadow: 0 0 5px rgba(0,0,0,0.25);
 }
 
@@ -148,7 +147,7 @@
 }
 
 .rate-wrapper {
-	box-shadow: 0 0 5px rgba(0,0,0,0.2); 
+	box-shadow: 0 0 5px rgba(0,0,0,0.2);
 	background-color: white;
 	padding: 20px;
 	height: 415px;

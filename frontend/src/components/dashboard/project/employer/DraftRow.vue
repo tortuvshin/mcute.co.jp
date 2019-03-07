@@ -18,47 +18,47 @@
 				  </md-menu-content>
 				</md-menu>
 			</div>
-        </td> 
+        </td>
 	</tr>
 </template>
 
 <script>
-	import { API_SERVER } from '../../../../api.js'
-	import appCountDown from '../../../project/common/Countdown'
-	import { bus } from '../../../../main.js'
+import { API_SERVER } from '../../../../api.js'
+import appCountDown from '../../../project/common/Countdown'
+import { bus } from '../../../../main.js'
 
-	export default {
-		props: ['project'],
-		computed: {
-			projectUrl(){
-				return '/project/' + this.project._id;
-			}
-		},
-		methods: {
-			publish(){
-				if (new Date(this.project.endDate) < new Date()){
-					return alert("The project bid endDate cannot smaller then today, please edit first.");
-				}
-				if (confirm('To publish this project, we will debit $' + this.project.budgetMax + ' from your wallet! Are you sure?')) {
-					bus.$emit('updateProjectLoading', {status: 'open', loading: true});
-					this.$http.put(API_SERVER + '/project/' + this.project._id + '/publish', {publish: true}).then(response=> {
-						bus.$emit('showAlert', response.body);
-						bus.$emit('updateProject');
-						bus.$emit('updateProjectLoading', {status: 'open', loading: false});
-						this.$store.commit('setCurrentUser', response.body.updatedUser);
-					}, response=>{
-						bus.$emit('showAlert', response.body);
-					});	
-				}	
-			},
-			edit(){
-				this.$router.push({path: '/project/' + this.project._id + '/edit'});
-			}
-		},
-		components: {
-			appCountDown
-		}
-	}
+export default {
+  props: ['project'],
+  computed: {
+    projectUrl () {
+      return '/project/' + this.project._id
+    }
+  },
+  methods: {
+    publish () {
+      if (new Date(this.project.endDate) < new Date()) {
+        return alert('The project bid endDate cannot smaller then today, please edit first.')
+      }
+      if (confirm('To publish this project, we will debit $' + this.project.budgetMax + ' from your wallet! Are you sure?')) {
+        bus.$emit('updateProjectLoading', { status: 'open', loading: true })
+        this.$http.put(API_SERVER + '/project/' + this.project._id + '/publish', { publish: true }).then(response => {
+          bus.$emit('showAlert', response.body)
+          bus.$emit('updateProject')
+          bus.$emit('updateProjectLoading', { status: 'open', loading: false })
+          this.$store.commit('setCurrentUser', response.body.updatedUser)
+        }, response => {
+          bus.$emit('showAlert', response.body)
+        })
+      }
+    },
+    edit () {
+      this.$router.push({ path: '/project/' + this.project._id + '/edit' })
+    }
+  },
+  components: {
+    appCountDown
+  }
+}
 </script>
 
 <style scoped>

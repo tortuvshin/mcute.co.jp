@@ -30,11 +30,11 @@
 	                    </div>
 	                </div>
 	                <app-info :project="project"></app-info>
-	            </div>    
-                <app-tab :project="project"></app-tab>  
+	            </div>
+                <app-tab :project="project"></app-tab>
 	         </div>
 	         <!-- <app-right-side :currentUser="currentUser" :project="project" :bid="bid"></app-right-side> -->
-    	</div>  
+    	</div>
         <!-- <md-speed-dial md-mode="scale" class="md-fab-bottom-right">
           <md-button class="md-fab" md-fab-trigger>
             <md-icon md-icon-morph>close</md-icon>
@@ -55,71 +55,71 @@
 </template>
 
 <script>
-	import appAttachment from '../../components/project/Attachment'
-	import appInfo from '../../components/project/Info'
-	import appRightSide from '../../components/project/RightSide'
-    import appTab from '../../components/project/Tab'
-    import appPlaceBidModal from '../../components/project/PlaceBidModal'
-    import appBidTable from '../../components/project/BidTable'
-    
-    import { modal } from 'vue-strap'
-	import { API_SERVER } from '../../api.js'
-	import { mapGetters } from 'vuex'
-    import { bus } from '../../main.js'
+import appAttachment from '../../components/project/Attachment'
+import appInfo from '../../components/project/Info'
+import appRightSide from '../../components/project/RightSide'
+import appTab from '../../components/project/Tab'
+import appPlaceBidModal from '../../components/project/PlaceBidModal'
+import appBidTable from '../../components/project/BidTable'
 
-	export default {
-		data() {
-			return {
-				project: {},
-                bid: {},
-				loadingData: true,
-				size: '30px'
-			};
-		},
-		computed: {
-			currentUser(){
-                return this.$store.state.user.currentUser;
-            }
-		},
-        methods:{
-            fetchData(){
-                this.$http.get(API_SERVER + '/project/' + this.$route.params.id).then(response => {
-                    this.loadingData = false;
-                    this.project = response.body.project;
-                    this.bid = response.body.bid;
-                    document.title = this.project.title + " - WorkFlow";
-                });
-            },
-            share(platform){
-                switch (platform){
-                    case 'facebook':
-                        var url = "https://www.facebook.com/sharer/sharer.php?u=" + window.location.href;
-                        window.open(url, 'fbShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
-                        break;
-                    case 'twitter':
-                        var url ="https://twitter.com/share?url=" + window.location.href;
-                        window.open(url, 'twitterShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
-                        break;
-                }
-            }
-        },
-		created(){
-            document.title = "Loading Project... - WorkFlow";
-			this.fetchData();
-            bus.$emit('updateToolbar', 'View Project');
-            bus.$on('updateProjectData', () => {
-                this.fetchData();
-            });
-        },
-		components: {
-			appAttachment,
-			appInfo,
-			appRightSide,
-            appPlaceBidModal,
-            // appTab,
-            modal
-		}
-	}
+import { modal } from 'vue-strap'
+import { API_SERVER } from '../../api.js'
+import { mapGetters } from 'vuex'
+import { bus } from '../../main.js'
+
+export default {
+  data () {
+    return {
+      project: {},
+      bid: {},
+      loadingData: true,
+      size: '30px'
+    }
+  },
+  computed: {
+    currentUser () {
+      return this.$store.state.user.currentUser
+    }
+  },
+  methods: {
+    fetchData () {
+      this.$http.get(API_SERVER + '/project/' + this.$route.params.id).then(response => {
+        this.loadingData = false
+        this.project = response.body.project
+        this.bid = response.body.bid
+        document.title = this.project.title + ' - WorkFlow'
+      })
+    },
+    share (platform) {
+      switch (platform) {
+        case 'facebook':
+          var url = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.href
+          window.open(url, 'fbShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0')
+          break
+        case 'twitter':
+          var url = 'https://twitter.com/share?url=' + window.location.href
+          window.open(url, 'twitterShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0')
+          break
+      }
+    }
+  },
+  created () {
+    document.title = 'Loading Project... - WorkFlow'
+    this.fetchData()
+    bus.$emit('updateToolbar', 'View Project')
+    bus.$on('updateProjectData', () => {
+      this.fetchData()
+    })
+  },
+  components: {
+    appAttachment,
+    appInfo,
+    appRightSide,
+    appPlaceBidModal,
+    // appTab,
+    modal
+  }
+}
 </script>
 
 <style scoped>
@@ -169,7 +169,7 @@ h3{
     padding: 15px 20px;
     border-bottom: 1px solid #eee;
     letter-spacing: 1px;
-    
+
 }
 
 .project-title > h3 {
@@ -196,12 +196,12 @@ h3{
 }
 
 .comment-img{
-    min-width: 40px; 
+    min-width: 40px;
     max-width: 40%;
 }
 
 .comment-reply-img{
-    min-width: 25px; 
+    min-width: 25px;
     max-width: 25%;
 }
 
@@ -254,7 +254,7 @@ h3{
     transition: 1s;
     margin-bottom: 30px;
     border-radius: 4px;
-    
+
 }
 
 .project-status-finish{
@@ -484,8 +484,8 @@ h3{
     display: none;
 }
 
-textarea { 
-    resize:vertical; 
+textarea {
+    resize:vertical;
 }
 
 thead > tr{

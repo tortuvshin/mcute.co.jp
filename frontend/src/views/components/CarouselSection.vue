@@ -30,14 +30,14 @@
 
 </template>
 <script>
-  import { Carousel, CarouselItem } from 'element-ui'
+import { Carousel, CarouselItem } from 'element-ui'
 
-  export default {
-    components: {
-      [Carousel.name]: Carousel,
-      [CarouselItem.name]: CarouselItem
-    }
+export default {
+  components: {
+    [Carousel.name]: Carousel,
+    [CarouselItem.name]: CarouselItem
   }
+}
 </script>
 <style>
 </style>

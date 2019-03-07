@@ -100,7 +100,6 @@
                                      src="https:///s3.amazonaws.com/creativetim_bucket/products/38/original/opt_mk_thumbnail.jpg?1458052306"/>
                             </a>
 
-
                             <a href="https:///www.creative-tim.com/product/now-ui-kit" target="_blank">
                                 <h4 class="card-title">Now UI Kit Free</h4>
                             </a>
@@ -120,7 +119,6 @@
                                 <img class="img-raised rounded"
                                      src="https:///s3.amazonaws.com/creativetim_bucket/products/34/original/opt_lbd_pro_thumbnail.jpg?1449352503"/>
                             </a>
-
 
                             <a href="https:///www.creative-tim.com/product/light-bootstrap-dashboard-pro"
                                target="_blank">
@@ -142,7 +140,6 @@
                                 <img class="img-raised rounded"
                                      src="https:///s3.amazonaws.com/creativetim_bucket/products/26/original/opt_gsdk_new_thumbnail.jpg"/>
                             </a>
-
 
                             <a href="https:///www.creative-tim.com/product/get-shit-done-pro" target="_blank">
                                 <h4 class="card-title">Get Shit Done Kit PRO</h4>
@@ -415,18 +412,18 @@
     </div>
 </template>
 <script>
-  import { Card, InfoSection,  Badge, Button, Tabs, TabPane } from '@/components';
+import { Card, InfoSection, Badge, Button, Tabs, TabPane } from '@/components'
 
-  export default {
-    components: {
-      Card,
-      Tabs,
-      TabPane,
-      Badge,
-      InfoSection,
-      [Button.name]: Button
-    }
+export default {
+  components: {
+    Card,
+    Tabs,
+    TabPane,
+    Badge,
+    InfoSection,
+    [Button.name]: Button
   }
+}
 </script>
 <style>
 </style>

@@ -18,25 +18,25 @@
 </template>
 
 <script>
-	import appHeader from '../../../components/dashboard/Heading'
-	import appBankDeposit from '../../../components/dashboard/billing/BankDeposit'
-	import appPaypalDeposit from '../../../components/dashboard/billing/PaypalDeposit'
+import appHeader from '../../../components/dashboard/Heading'
+import appBankDeposit from '../../../components/dashboard/billing/BankDeposit'
+import appPaypalDeposit from '../../../components/dashboard/billing/PaypalDeposit'
 
-	export default {
-		data(){
-			return {
-				isBank: true
-			}
-		},
-		components: {
-			appHeader,
-			appBankDeposit,
-			appPaypalDeposit
-		},
-		created() {
-			document.title = "Deposit - mcute.jp";
-		}
-	}
+export default {
+  data () {
+    return {
+      isBank: true
+    }
+  },
+  components: {
+    appHeader,
+    appBankDeposit,
+    appPaypalDeposit
+  },
+  created () {
+    document.title = 'Deposit - mcute.jp'
+  }
+}
 </script>
 
 <style scoped>

@@ -179,7 +179,6 @@
                 <card type="contact" raised header-classes="text-center">
                     <h4 slot="header" class="card-title">Contact Us</h4>
 
-
                     <div class="row">
                         <div class="col-md-6">
                             <info-section type="primary"
@@ -237,162 +236,162 @@
     </div>
 </template>
 <script>
-  import { Badge, Button, InfoSection, FormGroupInput, Card, Tabs, TabPane, Checkbox } from '@/components';
-  import { API_KEY } from '@/constants'
-  import Vue from 'vue'
-  import * as VueGoogleMaps from 'vue2-google-maps'
+import { Badge, Button, InfoSection, FormGroupInput, Card, Tabs, TabPane, Checkbox } from '@/components'
+import { API_KEY } from '@/constants'
+import Vue from 'vue'
+import * as VueGoogleMaps from 'vue2-google-maps'
 
-  Vue.use(VueGoogleMaps, {
-    load: {
-      key: API_KEY
-    }
-  });
-  export default {
-    name: 'profile-page',
-    bodyClass: 'profile-page',
-    components: {
-      InfoSection,
-      Card,
-      Tabs,
-      TabPane,
-      Badge,
-      [Button.name]: Button,
-      [Checkbox.name]: Checkbox,
-      [FormGroupInput.name]: FormGroupInput,
-    },
-    data() {
-      return {
-        form: {
-          firstName: '',
-          email: '',
-          notRobot: false
-        },
-        center: {
-          lat: 40.748817,
-          lng: -73.985428
-        },
-        options: {
-          styles: [{
-            "featureType": "water",
-            "elementType": "geometry",
-            "stylers": [{
-              "color": "#e9e9e9"
-            }, {
-              "lightness": 17
-            }]
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: API_KEY
+  }
+})
+export default {
+  name: 'profile-page',
+  bodyClass: 'profile-page',
+  components: {
+    InfoSection,
+    Card,
+    Tabs,
+    TabPane,
+    Badge,
+    [Button.name]: Button,
+    [Checkbox.name]: Checkbox,
+    [FormGroupInput.name]: FormGroupInput
+  },
+  data () {
+    return {
+      form: {
+        firstName: '',
+        email: '',
+        notRobot: false
+      },
+      center: {
+        lat: 40.748817,
+        lng: -73.985428
+      },
+      options: {
+        styles: [{
+          'featureType': 'water',
+          'elementType': 'geometry',
+          'stylers': [{
+            'color': '#e9e9e9'
           }, {
-            "featureType": "landscape",
-            "elementType": "geometry",
-            "stylers": [{
-              "color": "#f5f5f5"
-            }, {
-              "lightness": 20
-            }]
-          }, {
-            "featureType": "road.highway",
-            "elementType": "geometry.fill",
-            "stylers": [{
-              "color": "#ffffff"
-            }, {
-              "lightness": 17
-            }]
-          }, {
-            "featureType": "road.highway",
-            "elementType": "geometry.stroke",
-            "stylers": [{
-              "color": "#ffffff"
-            }, {
-              "lightness": 29
-            }, {
-              "weight": 0.2
-            }]
-          }, {
-            "featureType": "road.arterial",
-            "elementType": "geometry",
-            "stylers": [{
-              "color": "#ffffff"
-            }, {
-              "lightness": 18
-            }]
-          }, {
-            "featureType": "road.local",
-            "elementType": "geometry",
-            "stylers": [{
-              "color": "#ffffff"
-            }, {
-              "lightness": 16
-            }]
-          }, {
-            "featureType": "poi",
-            "elementType": "geometry",
-            "stylers": [{
-              "color": "#f5f5f5"
-            }, {
-              "lightness": 21
-            }]
-          }, {
-            "featureType": "poi.park",
-            "elementType": "geometry",
-            "stylers": [{
-              "color": "#dedede"
-            }, {
-              "lightness": 21
-            }]
-          }, {
-            "elementType": "labels.text.stroke",
-            "stylers": [{
-              "visibility": "on"
-            }, {
-              "color": "#ffffff"
-            }, {
-              "lightness": 16
-            }]
-          }, {
-            "elementType": "labels.text.fill",
-            "stylers": [{
-              "saturation": 36
-            }, {
-              "color": "#333333"
-            }, {
-              "lightness": 40
-            }]
-          }, {
-            "elementType": "labels.icon",
-            "stylers": [{
-              "visibility": "off"
-            }]
-          }, {
-            "featureType": "transit",
-            "elementType": "geometry",
-            "stylers": [{
-              "color": "#f2f2f2"
-            }, {
-              "lightness": 19
-            }]
-          }, {
-            "featureType": "administrative",
-            "elementType": "geometry.fill",
-            "stylers": [{
-              "color": "#fefefe"
-            }, {
-              "lightness": 20
-            }]
-          }, {
-            "featureType": "administrative",
-            "elementType": "geometry.stroke",
-            "stylers": [{
-              "color": "#fefefe"
-            }, {
-              "lightness": 17
-            }, {
-              "weight": 1.2
-            }]
+            'lightness': 17
           }]
+        }, {
+          'featureType': 'landscape',
+          'elementType': 'geometry',
+          'stylers': [{
+            'color': '#f5f5f5'
+          }, {
+            'lightness': 20
+          }]
+        }, {
+          'featureType': 'road.highway',
+          'elementType': 'geometry.fill',
+          'stylers': [{
+            'color': '#ffffff'
+          }, {
+            'lightness': 17
+          }]
+        }, {
+          'featureType': 'road.highway',
+          'elementType': 'geometry.stroke',
+          'stylers': [{
+            'color': '#ffffff'
+          }, {
+            'lightness': 29
+          }, {
+            'weight': 0.2
+          }]
+        }, {
+          'featureType': 'road.arterial',
+          'elementType': 'geometry',
+          'stylers': [{
+            'color': '#ffffff'
+          }, {
+            'lightness': 18
+          }]
+        }, {
+          'featureType': 'road.local',
+          'elementType': 'geometry',
+          'stylers': [{
+            'color': '#ffffff'
+          }, {
+            'lightness': 16
+          }]
+        }, {
+          'featureType': 'poi',
+          'elementType': 'geometry',
+          'stylers': [{
+            'color': '#f5f5f5'
+          }, {
+            'lightness': 21
+          }]
+        }, {
+          'featureType': 'poi.park',
+          'elementType': 'geometry',
+          'stylers': [{
+            'color': '#dedede'
+          }, {
+            'lightness': 21
+          }]
+        }, {
+          'elementType': 'labels.text.stroke',
+          'stylers': [{
+            'visibility': 'on'
+          }, {
+            'color': '#ffffff'
+          }, {
+            'lightness': 16
+          }]
+        }, {
+          'elementType': 'labels.text.fill',
+          'stylers': [{
+            'saturation': 36
+          }, {
+            'color': '#333333'
+          }, {
+            'lightness': 40
+          }]
+        }, {
+          'elementType': 'labels.icon',
+          'stylers': [{
+            'visibility': 'off'
+          }]
+        }, {
+          'featureType': 'transit',
+          'elementType': 'geometry',
+          'stylers': [{
+            'color': '#f2f2f2'
+          }, {
+            'lightness': 19
+          }]
+        }, {
+          'featureType': 'administrative',
+          'elementType': 'geometry.fill',
+          'stylers': [{
+            'color': '#fefefe'
+          }, {
+            'lightness': 20
+          }]
+        }, {
+          'featureType': 'administrative',
+          'elementType': 'geometry.stroke',
+          'stylers': [{
+            'color': '#fefefe'
+          }, {
+            'lightness': 17
+          }, {
+            'weight': 1.2
+          }]
+        }]
 
-        }
       }
     }
   }
+}
 </script>
 <style>
 </style>

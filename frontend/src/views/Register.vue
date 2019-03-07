@@ -46,7 +46,7 @@
                         <div class="card card-signup">
                             <div class="card-body">
                                 <h4 class="card-title text-center">Register</h4>
-                                
+
                                 <fg-input addon-left-icon="now-ui-icons users_circle-08"
                                           v-model="user.firstName"
                                           placeholder="Enter First Name...">
@@ -110,41 +110,41 @@
     </div>
 </template>
 <script>
-import { Card, Button, FormGroupInput, Checkbox } from '@/components';
-import MainFooter from '@/layout/MainFooter';
+import { Card, Button, FormGroupInput, Checkbox } from '@/components'
+import MainFooter from '@/layout/MainFooter'
 import { mapActions } from 'vuex'
 import countryPicker from '../components/common/CountryPicker'
 import { bus } from '../main.js'
 
 export default {
-name: 'Register',
-bodyClass: 'signup-page',
-components: {
+  name: 'Register',
+  bodyClass: 'signup-page',
+  components: {
     Card,
     MainFooter,
     [Button.name]: Button,
     [Checkbox.name]: Checkbox,
     [FormGroupInput.name]: FormGroupInput
-},
-data() {
+  },
+  data () {
     return {
-        user: {
-            type: '',
-            firstName: '',
-            lastName: '',
-            username: '',
-            password: '',
-            confirmPassword: '',
-            country: '',
-            email: '',
-            agree: false
-        },
-        invalidInputs: [],
-        registerProcess: 0,
-        passwordIsSame: true,
-        passwordStrength: true
-        }
+      user: {
+        type: '',
+        firstName: '',
+        lastName: '',
+        username: '',
+        password: '',
+        confirmPassword: '',
+        country: '',
+        email: '',
+        agree: false
+      },
+      invalidInputs: [],
+      registerProcess: 0,
+      passwordIsSame: true,
+      passwordStrength: true
     }
+  }
 }
 </script>
 <style>

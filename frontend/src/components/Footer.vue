@@ -5,9 +5,9 @@
 </template>
 
 <script>
-	export default{
-		
-	}
+export default {
+
+}
 </script>
 
 <style>
@@ -23,6 +23,6 @@
 	.footer-copyright{
 		font-family: Lato;
 		color: #f3f3f3;
-		padding-top: 25px; 
+		padding-top: 25px;
 	}
 </style>

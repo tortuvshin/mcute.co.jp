@@ -18,7 +18,7 @@
             </div>
             <div v-if="bid.bidProject.skills.length > 0">
                 <md-chip md-static v-for="skill in bid.bidProject.skills" class="skill-tag">
-                  {{skill}} 
+                  {{skill}}
                 </md-chip>
             </div>
         </div>
@@ -36,31 +36,31 @@
 </template>
 
 <script>
-    import placeBidModal from '../../../project/PlaceBidModal'
-    import appCountDown from '../../../project/common/Countdown'
-    import { API_SERVER } from '../../../../api.js'
-    import { bus } from '../../../../main.js'
+import placeBidModal from '../../../project/PlaceBidModal'
+import appCountDown from '../../../project/common/Countdown'
+import { API_SERVER } from '../../../../api.js'
+import { bus } from '../../../../main.js'
 
-    export default {
-        props: ['bid'],
-        computed: {
-            projectUrl(){
-                return '/project/' + this.bid.bidProject._id;
-            },
-            projectEndDate(){
-                return new Date(this.bid.bidProject.endDate);
-            }
-        },
-        methods: {
-            updateBid(){
-                bus.$emit('updateBid', {project: this.bid.bidProject, bid: this.bid});
-            }
-        },
-        components: {
-            appCountDown,
-            placeBidModal
-        }
+export default {
+  props: ['bid'],
+  computed: {
+    projectUrl () {
+      return '/project/' + this.bid.bidProject._id
+    },
+    projectEndDate () {
+      return new Date(this.bid.bidProject.endDate)
     }
+  },
+  methods: {
+    updateBid () {
+      bus.$emit('updateBid', { project: this.bid.bidProject, bid: this.bid })
+    }
+  },
+  components: {
+    appCountDown,
+    placeBidModal
+  }
+}
 </script>
 
 <style scoped>

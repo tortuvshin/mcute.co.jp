@@ -15,34 +15,34 @@
     </div>
 </template>
 <script>
-  export default {
-    props: {
-      direction: {
-        type: String,
-        default: 'horizontal'
-      },
-      type: {
-        type: String,
-        default: ''
-      },
-      icon: {
-        type: String,
-        default: ''
-      },
-      iconClasses: {
-        type: String,
-        default: ''
-      },
-      title: {
-        type: String,
-        default: ''
-      },
-      description: {
-        type: String,
-        default: ''
-      }
+export default {
+  props: {
+    direction: {
+      type: String,
+      default: 'horizontal'
+    },
+    type: {
+      type: String,
+      default: ''
+    },
+    icon: {
+      type: String,
+      default: ''
+    },
+    iconClasses: {
+      type: String,
+      default: ''
+    },
+    title: {
+      type: String,
+      default: ''
+    },
+    description: {
+      type: String,
+      default: ''
     }
   }
+}
 </script>
 <style lang="scss">
     @import "~@/assets/scss/core/variables";

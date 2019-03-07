@@ -36,7 +36,7 @@
           </div>
           <div slot="modal-body" class="modal-body">
             <p class="invoiceNo">
-                <strong>Transaction ID: </strong> 
+                <strong>Transaction ID: </strong>
                 {{ payment.invoiceNo }}
             </p>
             <transition enter-active-class="animated tada"  mode="out-in">
@@ -54,69 +54,68 @@
 </template>
 
 <script>
-    import { mapActions, mapGetters } from 'vuex'
-	import { API_SERVER } from '../../../api.js'
-    import { modal } from 'vue-strap'
+import { mapActions, mapGetters } from 'vuex'
+import { API_SERVER } from '../../../api.js'
+import { modal } from 'vue-strap'
 
-	export default {
-		data() {
-			return {
-                payment: {
-                    amount: null,
-                    status: "Generating Payment URL",
-                    url: null,
-                    invoiceNo: 'Generating',
-                    isPaid: false
-                },
-                isShow: false,
-                backdrop: false
-			}
-		},
-        computed: {
-            socketID(){
-                return this.$store.state.socketID;
-            }
-        },
-        methods: {
-            onSubmit(){
-                this.isShow = true;
-                var POST_DATA = {
-                    method: 'paypal',
-                    socketID: this.socketID,
-                    amount: this.payment.amount
-                };  
-                this.$http.post(API_SERVER + "/dashboard/billing/deposit", POST_DATA).then(response => {
-                    this.payment.status = response.body.status;
-                    this.payment.url = response.body.data.paymentUrl;
-                    this.payment.invoiceNo = response.body.data.invoiceNo;
-                }).then(()=>{
-                    window.open(this.payment.url);
-                });
-                
-            },
-            onReset(){
-                this.payment.amount = null;
-                this.payment.status = "Generating Payment URL";
-                this.payment.url = null;
-                this.payment.invoiceNo = 'Generating';
-                this.payment.isPaid = false;
-            }
-        },
-        components: {
-            modal
-        },
-        sockets: {
-            paymentRecieved(data){
-                this.payment.status = data.status;
-                this.payment.isPaid = true;
-                this.$store.commit('setCurrentUser', data.updatedUser);
-                setTimeout(()=>{ this.isShow = false; this.onReset(); }, 6000);
-            },
-            paymentVerification(data){
-                this.payment.status = data.status;
-            }
-        }
-	}
+export default {
+  data () {
+    return {
+      payment: {
+        amount: null,
+        status: 'Generating Payment URL',
+        url: null,
+        invoiceNo: 'Generating',
+        isPaid: false
+      },
+      isShow: false,
+      backdrop: false
+    }
+  },
+  computed: {
+    socketID () {
+      return this.$store.state.socketID
+    }
+  },
+  methods: {
+    onSubmit () {
+      this.isShow = true
+      var POST_DATA = {
+        method: 'paypal',
+        socketID: this.socketID,
+        amount: this.payment.amount
+      }
+      this.$http.post(API_SERVER + '/dashboard/billing/deposit', POST_DATA).then(response => {
+        this.payment.status = response.body.status
+        this.payment.url = response.body.data.paymentUrl
+        this.payment.invoiceNo = response.body.data.invoiceNo
+      }).then(() => {
+        window.open(this.payment.url)
+      })
+    },
+    onReset () {
+      this.payment.amount = null
+      this.payment.status = 'Generating Payment URL'
+      this.payment.url = null
+      this.payment.invoiceNo = 'Generating'
+      this.payment.isPaid = false
+    }
+  },
+  components: {
+    modal
+  },
+  sockets: {
+    paymentRecieved (data) {
+      this.payment.status = data.status
+      this.payment.isPaid = true
+      this.$store.commit('setCurrentUser', data.updatedUser)
+      setTimeout(() => { this.isShow = false; this.onReset() }, 6000)
+    },
+    paymentVerification (data) {
+      this.payment.status = data.status
+    }
+  }
+}
 </script>
 
 <style scoped>

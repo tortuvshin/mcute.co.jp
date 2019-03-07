@@ -360,32 +360,32 @@
     </div>
 </template>
 <script>
-  import { Card, Button, Badge, InfoSection, FormGroupInput, Checkbox } from '@/components';
-  import { Select, Option } from 'element-ui'
+import { Card, Button, Badge, InfoSection, FormGroupInput, Checkbox } from '@/components'
+import { Select, Option } from 'element-ui'
 
-  export default {
-    name: 'about-us',
-    bodyClass: 'about-us',
-    components: {
-      Card,
-      InfoSection,
-      Badge,
-      [Button.name]: Button,
-      [Checkbox.name]: Checkbox,
-      [FormGroupInput.name]: FormGroupInput,
-      [Select.name]: Select,
-      [Option.name]: Option,
-    },
-    data() {
-      return {
-        form: {
-          firstName: '',
-          email: '',
-          speciality: ''
-        }
+export default {
+  name: 'about-us',
+  bodyClass: 'about-us',
+  components: {
+    Card,
+    InfoSection,
+    Badge,
+    [Button.name]: Button,
+    [Checkbox.name]: Checkbox,
+    [FormGroupInput.name]: FormGroupInput,
+    [Select.name]: Select,
+    [Option.name]: Option
+  },
+  data () {
+    return {
+      form: {
+        firstName: '',
+        email: '',
+        speciality: ''
       }
     }
   }
+}
 </script>
 <style>
 </style>

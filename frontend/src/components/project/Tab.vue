@@ -16,20 +16,20 @@
 </template>
 
 <script>
-	import appBidTable from '../project/BidTable'
-	import appComments from './Comments'
-	export default {
-		props: ['project'],
-		data(){
-			return {
-				tab: 'bids'
-			}
-		},
-		components: {
-			appBidTable,
-			appComments
-		}
-	}
+import appBidTable from '../project/BidTable'
+import appComments from './Comments'
+export default {
+  props: ['project'],
+  data () {
+    return {
+      tab: 'bids'
+    }
+  },
+  components: {
+    appBidTable,
+    appComments
+  }
+}
 </script>
 
 <style scoped>

@@ -13,38 +13,38 @@
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				imageSrc1: this.imageSrc
-			}
-		},
-		props: [ 'imageSrc' ],
+export default {
+  data () {
+    return {
+      imageSrc1: this.imageSrc
+    }
+  },
+  props: [ 'imageSrc' ],
 	    methods: {
-	        previewThumbnail(event) {
-                console.log(event);
-	            var input = event.target;
-	            var fileName = input.files[0].name.toLowerCase();
-	            var extension = fileName.substr(fileName.indexOf('.'));
+	        previewThumbnail (event) {
+      console.log(event)
+	            var input = event.target
+	            var fileName = input.files[0].name.toLowerCase()
+	            var extension = fileName.substr(fileName.indexOf('.'))
 
-	            var acceptedExtension = ['.jpg', '.png', '.gif', '.bmp'];
+	            var acceptedExtension = ['.jpg', '.png', '.gif', '.bmp']
 
-	            if (acceptedExtension.indexOf(extension) === -1){	
-	            	alert('Please upload a valid image file!');
-	            }else {
-	            	var reader = new FileReader();
+	            if (acceptedExtension.indexOf(extension) === -1) {
+	            	alert('Please upload a valid image file!')
+	            } else {
+	            	var reader = new FileReader()
 
 	                reader.onload = e => {
-	                    this.imageSrc1 = e.target.result;
+	                    this.imageSrc1 = e.target.result
 	                }
 
-	                reader.readAsDataURL(input.files[0]);
-	               
-	                this.$emit('imageUploaded', input.files[0]);
+	                reader.readAsDataURL(input.files[0])
+
+	                this.$emit('imageUploaded', input.files[0])
 	            }
 	        }
 	    }
-	}
+}
 </script>
 
 <style scoped>
@@ -95,7 +95,6 @@
 .Image-input__input-wrapper:hover {
     background: #e0e0e0;
 }
-
 
 .Image-input__input {
     cursor: inherit;

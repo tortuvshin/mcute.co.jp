@@ -1,4 +1,4 @@
-<template>	
+<template>
 	<div>
 		<div class="container">
 			<component :is="currentUser.type"></component>
@@ -13,36 +13,36 @@
 </template>
 
 <script>
-	import freelancer from '../../components/dashboard/project/freelancer/Freelancer'
-	import employer from '../../components/dashboard/project/employer/Employer'
-	import { bus } from '../../main.js'
+import freelancer from '../../components/dashboard/project/freelancer/Freelancer'
+import employer from '../../components/dashboard/project/employer/Employer'
+import { bus } from '../../main.js'
 
-	export default {
-		data(){
-			return {
-				loadingData: false
-			}
-		},
-		computed: {
-			currentUser(){
-				return this.$store.state.user.currentUser;
-			}
-		},
-		methods: {
-			reloadData(){
-				bus.$emit('updateProject');
-			}
-		},
-		created(){
-			bus.$on('setRefreshButtonStatus', (status) => {
-				this.loadingData = status;
-			});
-		},
-		components: {
-			freelancer,
-			employer
-		}
-	}
+export default {
+  data () {
+    return {
+      loadingData: false
+    }
+  },
+  computed: {
+    currentUser () {
+      return this.$store.state.user.currentUser
+    }
+  },
+  methods: {
+    reloadData () {
+      bus.$emit('updateProject')
+    }
+  },
+  created () {
+    bus.$on('setRefreshButtonStatus', (status) => {
+      this.loadingData = status
+    })
+  },
+  components: {
+    freelancer,
+    employer
+  }
+}
 </script>
 
 <style scoped>

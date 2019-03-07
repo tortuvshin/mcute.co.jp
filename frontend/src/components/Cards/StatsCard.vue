@@ -25,23 +25,23 @@
   </card>
 </template>
 <script>
-  import Card from './Card'
+import Card from './Card'
 
-  export default {
-    name: 'stats-card',
-    components: {
-      Card
+export default {
+  name: 'stats-card',
+  components: {
+    Card
+  },
+  props: {
+    type: {
+      type: String,
+      default: 'primary'
     },
-    props: {
-      type: {
-        type: String,
-        default: 'primary'
-      },
-      icon: String,
-      title: String,
-      subTitle: String
-    }
+    icon: String,
+    title: String,
+    subTitle: String
   }
+}
 
 </script>
 <style>

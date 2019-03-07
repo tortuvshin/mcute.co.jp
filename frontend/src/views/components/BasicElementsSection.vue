@@ -534,165 +534,164 @@
     </div>
 </template>
 <script>
-    import {Button, Checkbox, Radio, FormGroupInput, DropDown, Slider, Switch} from '@/components';
-    import {Select, Option, Tag} from 'element-ui';
+import { Button, Checkbox, Radio, FormGroupInput, DropDown, Slider, Switch } from '@/components'
+import { Select, Option, Tag } from 'element-ui'
 
-    export default {
-        components: {
-            [Button.name]: Button,
-            [Checkbox.name]: Checkbox,
-            [Radio.name]: Radio,
-            [FormGroupInput.name]: FormGroupInput,
-            [Switch.name]: Switch,
-            [Select.name]: Select,
-            [Option.name]: Option,
-            [DropDown.name]: DropDown,
-            [Tag.name]: Tag,
-            Slider
-        },
-        data() {
-            return {
-                singleSelect: {
-                    value: '',
-                    options: [
-                        {
-                            value: "1",
-                            label: "Foobar"
-                        },
-                        {
-                            value: "2",
-                            label: "Is great"
-                        }
+export default {
+  components: {
+    [Button.name]: Button,
+    [Checkbox.name]: Checkbox,
+    [Radio.name]: Radio,
+    [FormGroupInput.name]: FormGroupInput,
+    [Switch.name]: Switch,
+    [Select.name]: Select,
+    [Option.name]: Option,
+    [DropDown.name]: DropDown,
+    [Tag.name]: Tag,
+    Slider
+  },
+  data () {
+    return {
+      singleSelect: {
+        value: '',
+        options: [
+          {
+            value: '1',
+            label: 'Foobar'
+          },
+          {
+            value: '2',
+            label: 'Is great'
+          }
 
-                    ]
-                },
-                multiSelect: {
-                    value: '',
-                    options: [
-                        {
-                            value: "2",
-                            label: "Paris"
-                        },
-                        {
-                            value: "3",
-                            label: "Bucharest"
-                        },
-                        {
-                            value: "4",
-                            label: "Rome"
-                        },
-                        {
-                            value: "5",
-                            label: "New York"
-                        },
-                        {
-                            value: "6",
-                            label: "Miami"
-                        },
-                        {
-                            value: "7",
-                            label: "Piatra Neamt"
-                        },
-                        {
-                            value: "8",
-                            label: "Paris"
-                        },
-                        {
-                            value: "9",
-                            label: "Bucharest"
-                        },
-                        {
-                            value: "10",
-                            label: "Rome"
-                        },
-                        {
-                            value: "11",
-                            label: "New York"
-                        },
-                        {
-                            value: "12",
-                            label: "Miami"
-                        },
-                        {
-                            value: "13",
-                            label: "Piatra Neamt"
-                        },
-                        {
-                            value: "14",
-                            label: "Paris"
-                        },
-                        {
-                            value: "15",
-                            label: "Bucharest"
-                        },
-                        {
-                            value: "16",
-                            label: "Rome"
-                        },
-                        {
-                            value: "17",
-                            label: "New York"
-                        },
-                        {
-                            value: "18",
-                            label: "Miami"
-                        },
-                        {
-                            value: "19",
-                            label: "Piatra Neamt"
-                        },
+        ]
+      },
+      multiSelect: {
+        value: '',
+        options: [
+          {
+            value: '2',
+            label: 'Paris'
+          },
+          {
+            value: '3',
+            label: 'Bucharest'
+          },
+          {
+            value: '4',
+            label: 'Rome'
+          },
+          {
+            value: '5',
+            label: 'New York'
+          },
+          {
+            value: '6',
+            label: 'Miami'
+          },
+          {
+            value: '7',
+            label: 'Piatra Neamt'
+          },
+          {
+            value: '8',
+            label: 'Paris'
+          },
+          {
+            value: '9',
+            label: 'Bucharest'
+          },
+          {
+            value: '10',
+            label: 'Rome'
+          },
+          {
+            value: '11',
+            label: 'New York'
+          },
+          {
+            value: '12',
+            label: 'Miami'
+          },
+          {
+            value: '13',
+            label: 'Piatra Neamt'
+          },
+          {
+            value: '14',
+            label: 'Paris'
+          },
+          {
+            value: '15',
+            label: 'Bucharest'
+          },
+          {
+            value: '16',
+            label: 'Rome'
+          },
+          {
+            value: '17',
+            label: 'New York'
+          },
+          {
+            value: '18',
+            label: 'Miami'
+          },
+          {
+            value: '19',
+            label: 'Piatra Neamt'
+          }
 
-
-                    ]
-                },
-                tags: {
-                    dynamicTags: ['Tag 1', 'Tag 2', 'Tag 3'],
-                    inputVisible: false,
-                    inputValue: ''
-                },
-                radios: {
-                    radioOn: '2',
-                    radioOff: '2'
-                },
-                checkboxes: {
-                    unchecked: false,
-                    checked: true,
-                    disabledUnchecked: false,
-                    disabledChecked: true
-                },
-                switches: {
-                    defaultOn: true,
-                    defaultOff: false
-                },
-                sliders: {
-                    simple: 30,
-                    rangeSlider: [20, 60]
-                }
-            }
-        },
-        methods: {
-            handleClose(tag) {
-                this.tags.dynamicTags.splice(this.tags.dynamicTags.indexOf(tag), 1)
-            },
-
-            showInput() {
-                this.tags.inputVisible = true
-                this.$nextTick(() => {
-                    this.$refs.saveTagInput.$refs.input.focus()
-                })
-            },
-
-            handleInputConfirm() {
-                let inputValue = this.tags.inputValue
-                if (inputValue) {
-                    this.tags.dynamicTags.push(inputValue)
-                }
-                this.tags.inputVisible = false
-                this.tags.inputValue = ''
-            }
-        }
-
+        ]
+      },
+      tags: {
+        dynamicTags: ['Tag 1', 'Tag 2', 'Tag 3'],
+        inputVisible: false,
+        inputValue: ''
+      },
+      radios: {
+        radioOn: '2',
+        radioOff: '2'
+      },
+      checkboxes: {
+        unchecked: false,
+        checked: true,
+        disabledUnchecked: false,
+        disabledChecked: true
+      },
+      switches: {
+        defaultOn: true,
+        defaultOff: false
+      },
+      sliders: {
+        simple: 30,
+        rangeSlider: [20, 60]
+      }
     }
+  },
+  methods: {
+    handleClose (tag) {
+      this.tags.dynamicTags.splice(this.tags.dynamicTags.indexOf(tag), 1)
+    },
+
+    showInput () {
+      this.tags.inputVisible = true
+      this.$nextTick(() => {
+        this.$refs.saveTagInput.$refs.input.focus()
+      })
+    },
+
+    handleInputConfirm () {
+      let inputValue = this.tags.inputValue
+      if (inputValue) {
+        this.tags.dynamicTags.push(inputValue)
+      }
+      this.tags.inputVisible = false
+      this.tags.inputValue = ''
+    }
+  }
+
+}
 </script>
 <style>
 </style>

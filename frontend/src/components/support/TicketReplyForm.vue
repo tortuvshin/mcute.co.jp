@@ -38,51 +38,51 @@
 </template>
 
 <script>
-    import { bus } from '../../main.js'
-    import { API_SERVER } from '../../api.js'
+import { bus } from '../../main.js'
+import { API_SERVER } from '../../api.js'
 
-	export default {
-        props: ['ticketId'],
-		data(){
-			return {
-				ticket: {
-					message: '',
-					attachments: []
-				},
-				fileQuantity: 1
-			}
-		},
-		computed: {
-			currentUser(){
-                return this.$store.state.user.currentUser;
-            },
-			fullName(){
-				return this.currentUser.firstName + ' ' + this.currentUser.lastName;
-			}
-		},
-		methods: {
-			addFile(e){ 
-				this.ticket.attachments[e.target.attributes.index.value] = null;
-				this.ticket.attachments[e.target.attributes.index.value] = e.target.files[0];
-			},
-            replyTicket () {
-                this.$validator.validateAll().then(() => {
-                    var formData = new FormData();
-                    formData.append('message', this.ticket.message);
-                    this.ticket.attachments.forEach((attachments, index)=> {
-                        formData.append('attachments' + index, attachments);
-                    });
+export default {
+  props: ['ticketId'],
+  data () {
+    return {
+      ticket: {
+        message: '',
+        attachments: []
+      },
+      fileQuantity: 1
+    }
+  },
+  computed: {
+    currentUser () {
+      return this.$store.state.user.currentUser
+    },
+    fullName () {
+      return this.currentUser.firstName + ' ' + this.currentUser.lastName
+    }
+  },
+  methods: {
+    addFile (e) {
+      this.ticket.attachments[e.target.attributes.index.value] = null
+      this.ticket.attachments[e.target.attributes.index.value] = e.target.files[0]
+    },
+    replyTicket () {
+      this.$validator.validateAll().then(() => {
+        var formData = new FormData()
+        formData.append('message', this.ticket.message)
+        this.ticket.attachments.forEach((attachments, index) => {
+          formData.append('attachments' + index, attachments)
+        })
 
-                    this.$http.post( API_SERVER + "/support/" + this.ticketId + "/reply", formData).then(response => {
-                        this.$emit('handleTicketUpdated');
-                        bus.$emit('showAlert', response.body);
-                    });
-                }).catch(() => {
-                
-                });
-            }
-		}
-	}
+        this.$http.post(API_SERVER + '/support/' + this.ticketId + '/reply', formData).then(response => {
+          this.$emit('handleTicketUpdated')
+          bus.$emit('showAlert', response.body)
+        })
+      }).catch(() => {
+
+      })
+    }
+  }
+}
 </script>
 
 <style scoped>

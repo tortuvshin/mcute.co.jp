@@ -22,38 +22,38 @@
   </component>
 </template>
 <script>
-  export default {
-    name: 'drop-down',
-    props: {
-      direction: {
-        type: String,
-        default: 'down'
-      },
-      title: String,
-      icon: String,
-      position: String,
-      hideArrow: Boolean,
-      tag: {
-        type: String,
-        default: 'li'
-      }
+export default {
+  name: 'drop-down',
+  props: {
+    direction: {
+      type: String,
+      default: 'down'
     },
-    data() {
-      return {
-        isOpen: false
-      }
+    title: String,
+    icon: String,
+    position: String,
+    hideArrow: Boolean,
+    tag: {
+      type: String,
+      default: 'li'
+    }
+  },
+  data () {
+    return {
+      isOpen: false
+    }
+  },
+  methods: {
+    toggleDropDown () {
+      this.isOpen = !this.isOpen
+      this.$emit('change', this.isOpen)
     },
-    methods: {
-      toggleDropDown() {
-        this.isOpen = !this.isOpen
-        this.$emit('change', this.isOpen)
-      },
-      closeDropDown() {
-        this.isOpen = false
-        this.$emit('change', this.isOpen)
-      }
+    closeDropDown () {
+      this.isOpen = false
+      this.$emit('change', this.isOpen)
     }
   }
+}
 </script>
 <style>
   .dropdown {

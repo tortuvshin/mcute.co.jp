@@ -18,7 +18,7 @@
             </div>
             <div v-if="project.skills.length > 0">
                 <md-chip md-static v-for="skill in project.skills" class="skill-tag">
-                  {{skill}} 
+                  {{skill}}
                 </md-chip>
             </div>
         </div>
@@ -38,35 +38,35 @@
 </template>
 
 <script>
-    import appCountDown from '../../../project/common/Countdown'
-    import { API_SERVER } from '../../../../api.js'
-    import { bus } from '../../../../main.js'
+import appCountDown from '../../../project/common/Countdown'
+import { API_SERVER } from '../../../../api.js'
+import { bus } from '../../../../main.js'
 
-    export default {
-        props: ['project'],
-        computed: {
-            projectUrl(){
-                return '/project/' + this.project._id;
-            },
-            winBidPrice(){
-                if (this.project.winBid === undefined){
-                    return '---'
-                }
-                return '$' + this.project.winBid.bidPrice;
-            },
-            workedTime() {
-                return (Math.abs(new Date(this.project.finishDate) - new Date(this.project.postDate)) / 36e5).toFixed(2) + ' hr(s)';
-            }
-        },
-        methods:{
-            moveToDetailsPage(){
-                this.$router.push('/dashboard/project/'+ this.project._id +'/details')
-            }
-        },
-        components: {
-            appCountDown
-        }
+export default {
+  props: ['project'],
+  computed: {
+    projectUrl () {
+      return '/project/' + this.project._id
+    },
+    winBidPrice () {
+      if (this.project.winBid === undefined) {
+        return '---'
+      }
+      return '$' + this.project.winBid.bidPrice
+    },
+    workedTime () {
+      return (Math.abs(new Date(this.project.finishDate) - new Date(this.project.postDate)) / 36e5).toFixed(2) + ' hr(s)'
     }
+  },
+  methods: {
+    moveToDetailsPage () {
+      this.$router.push('/dashboard/project/' + this.project._id + '/details')
+    }
+  },
+  components: {
+    appCountDown
+  }
+}
 </script>
 
 <style scoped>

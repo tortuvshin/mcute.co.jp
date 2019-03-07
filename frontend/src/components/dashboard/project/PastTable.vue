@@ -12,7 +12,7 @@
         </thead>
         <tbody>
             <past-row v-for="pastWork in pastWorks" :pastWork="pastWork" :currentUserType="currentUser.type"></past-row>
-    
+
             <tr v-if="pastWorks.length === 0">
                 <td colspan="5" style="text-align:center;padding:8;"><i class="fa fa-frown-o" aria-hidden="true"></i> Not past project found.</td>
             </tr>
@@ -21,18 +21,18 @@
 </template>
 
 <script>
-	import pastRow from './PastRow'
-	export default {
-		props: ['pastWorks'],
-        computed: {
-            currentUser(){
-                return this.$store.state.user.currentUser;
-            }
-        },
-		components: {
-			pastRow
-		}
-	}
+import pastRow from './PastRow'
+export default {
+  props: ['pastWorks'],
+  computed: {
+    currentUser () {
+      return this.$store.state.user.currentUser
+    }
+  },
+  components: {
+    pastRow
+  }
+}
 </script>
 
 <style scoped>

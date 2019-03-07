@@ -9,7 +9,7 @@
 				  <md-table-body>
 				    <md-table-row>
 				      <md-table-cell class="tdClass">
-				      	<span class="sub-title">Job Title</span> 
+				      	<span class="sub-title">Job Title</span>
 				      </md-table-cell>
 				      <md-table-cell class="tdClass" colspan="2">
 				      	{{project.title}}
@@ -17,13 +17,13 @@
 				    </md-table-row>
 				    <md-table-row>
 				      <md-table-cell v-if="currentUser.type === 'employer'" class="tdClass">
-				      	<span class="sub-title">Freelancer</span> 
+				      	<span class="sub-title">Freelancer</span>
 				      </md-table-cell>
 				      <md-table-cell v-if="currentUser.type === 'employer'" class="tdClass">
 				      	<a :href="profileUrl" target="_blank">{{fullName}} ({{project.winBid.bidder.username}})</a>
 				      </md-table-cell>
 			  		  <md-table-cell class="tdClass" v-if="currentUser.type === 'freelancer'">
-			  		  	<span class="sub-title">Employer</span> 
+			  		  	<span class="sub-title">Employer</span>
 			  		  </md-table-cell>
 			  		  <md-table-cell class="tdClass" v-if="currentUser.type === 'freelancer'">
 			  		  	{{fullNameOfEmployer}} #{{project.employer.username}}
@@ -31,7 +31,7 @@
 				    </md-table-row>
 				    <md-table-row>
 				      <md-table-cell class="tdClass">
-			  		  	<span class="sub-title">Award Bid</span> 
+			  		  	<span class="sub-title">Award Bid</span>
 			  		  </md-table-cell>
 			  		  <md-table-cell class="tdClass">
 			  			  <span class="bid-price">${{project.winBid.bidPrice}}</span>
@@ -39,7 +39,7 @@
 				    </md-table-row>
 				    <md-table-row>
 				    	<md-table-cell class="tdClass">
-				    		<span class="sub-title">DeadLine</span> 
+				    		<span class="sub-title">DeadLine</span>
 				    	</md-table-cell>
 				    	<md-table-cell class="tdClass">
 				    		<span class="deadline">{{project.chosenDate |  moment("DD/MM/YYYY hh:mm A") }}</span>
@@ -47,7 +47,7 @@
 				    </md-table-row>
 				    <md-table-row>
 				    	<md-table-cell class="tdClass">
-				    		<span class="sub-title">Status</span> 
+				    		<span class="sub-title">Status</span>
 				    	</md-table-cell>
 				    	<md-table-cell class="tdClass">
 				    		{{projectInternalState}}
@@ -66,7 +66,7 @@
 			  	<md-table-row>
 		  			<md-table-head>Submissions</md-table-head>
 		  			<md-table-head>Status</md-table-head>
-		  			<md-table-head v-if="currentUser._id === project.employer._id">Actions</md-table-head>		
+		  			<md-table-head v-if="currentUser._id === project.employer._id">Actions</md-table-head>
 			  	</md-table-row>
 			  </md-table-header>
 			  <md-table-body>
@@ -95,7 +95,7 @@
 						  	<file-uploader @handleFileUploaded="submitWork($event)"></file-uploader>
 						</div>
 				    </md-table-cell>
-			    	
+
 			    </md-table-row>
 			  </md-table-body>
 			</md-table>
@@ -104,77 +104,77 @@
 </template>
 
 <script>
-	import { API_SERVER } from '../../../api.js'
-	import { bus } from '../../../main.js'
-	import fileUploader from '../../common/FileUploader'
+import { API_SERVER } from '../../../api.js'
+import { bus } from '../../../main.js'
+import fileUploader from '../../common/FileUploader'
 
-	export default {
-		props: ['project'],
-		computed: {
-			projectInternalState(){
-				var InternalState = {
-					1: "Waiting for select freelancer / deadline",
-					2: "Waiting for submission",
-					3: "Submitted",
-					4: "Rating",
-					5: "Finished"
-				}
-				return InternalState[this.project.internalStatus];
-			},
-			fullName(){
-				if (!this.project.winBid){
-					return "---";
-				}
-				return this.project.winBid.bidder.firstName + ' ' + this.project.winBid.bidder.lastName;
-			},
-			fullNameOfEmployer(){
-				return this.project.employer.firstName + ' ' + this.project.employer.lastName;
-			},
-			currentUser(){
-				return this.$store.state.user.currentUser;
-			},
-			profileUrl(){
-				return "/profile/" + this.project.winBid.bidder.username;
-			}
-		},
-		methods: {
-			handleClose(){
-                this.$emit("handleClose");
-            },
-            submitWork(event){
-            	var formData = new FormData();
-            	formData.append('file', event);
-            	this.$http.post(API_SERVER + '/project/' + this.project._id + '/submission', formData).then(response=>{
-            		bus.$emit('updateProjectDetail');
-            		bus.$emit('showAlert', response.body);
-            	});
-            },
-            submissionFileUrl(id,filename){
-            	return API_SERVER + '/uploads/'+ this.project.employer.username +'/project/' + this.project._id + '/submissions/' + id + '/' + filename;
-            },
-            setSubmission(result, submissionId){
-            	this.$http.put(API_SERVER + '/project/' + this.project._id + '/submission/' + submissionId, {result: result}).then(response=> {
-            		bus.$emit('updateProjectDetail');
-            		bus.$emit('showAlert', response.body);
-            	});
-            },
-            statusClass(status){
-				var statusClass = {
-					'approved': 'status-approved',
-					'pending': 'status-pending',
-					'denied': 'status-denied'
-				}
-				return statusClass[status];
-			}
-		},
-		created(){
-			this.submissions = this.project.submissions;
-			document.title = "Job Infomation - WorkFlow";
-		},
-		components: {
-			fileUploader
-		}
-	}
+export default {
+  props: ['project'],
+  computed: {
+    projectInternalState () {
+      var InternalState = {
+        1: 'Waiting for select freelancer / deadline',
+        2: 'Waiting for submission',
+        3: 'Submitted',
+        4: 'Rating',
+        5: 'Finished'
+      }
+      return InternalState[this.project.internalStatus]
+    },
+    fullName () {
+      if (!this.project.winBid) {
+        return '---'
+      }
+      return this.project.winBid.bidder.firstName + ' ' + this.project.winBid.bidder.lastName
+    },
+    fullNameOfEmployer () {
+      return this.project.employer.firstName + ' ' + this.project.employer.lastName
+    },
+    currentUser () {
+      return this.$store.state.user.currentUser
+    },
+    profileUrl () {
+      return '/profile/' + this.project.winBid.bidder.username
+    }
+  },
+  methods: {
+    handleClose () {
+      this.$emit('handleClose')
+    },
+    submitWork (event) {
+            	var formData = new FormData()
+            	formData.append('file', event)
+            	this.$http.post(API_SERVER + '/project/' + this.project._id + '/submission', formData).then(response => {
+            		bus.$emit('updateProjectDetail')
+            		bus.$emit('showAlert', response.body)
+            	})
+    },
+    submissionFileUrl (id, filename) {
+            	return API_SERVER + '/uploads/' + this.project.employer.username + '/project/' + this.project._id + '/submissions/' + id + '/' + filename
+    },
+    setSubmission (result, submissionId) {
+            	this.$http.put(API_SERVER + '/project/' + this.project._id + '/submission/' + submissionId, { result: result }).then(response => {
+            		bus.$emit('updateProjectDetail')
+            		bus.$emit('showAlert', response.body)
+            	})
+    },
+    statusClass (status) {
+      var statusClass = {
+        'approved': 'status-approved',
+        'pending': 'status-pending',
+        'denied': 'status-denied'
+      }
+      return statusClass[status]
+    }
+  },
+  created () {
+    this.submissions = this.project.submissions
+    document.title = 'Job Infomation - WorkFlow'
+  },
+  components: {
+    fileUploader
+  }
+}
 </script>
 
 <style scoped>
@@ -219,7 +219,6 @@
 	color: #a94442;
 }
 
-
 .sub-title {
 	color: #586069;
 	font-weight: 600;
@@ -241,7 +240,7 @@
     padding: 9px 12px 10px;
     line-height: 20px;
     font-weight: 600;
-}	
+}
 
 .submission-wrapper{
 	border: 1px dashed #000;

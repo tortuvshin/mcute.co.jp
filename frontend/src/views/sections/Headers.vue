@@ -326,16 +326,16 @@
     </div>
 </template>
 <script>
-  import { FormGroupInput, Button } from '@/components';
-  import { Carousel, CarouselItem } from 'element-ui'
-  export default {
-    components:{
-      [Button.name]: Button,
-      [FormGroupInput.name]: FormGroupInput,
-      [Carousel.name]: Carousel,
-      [CarouselItem.name]: CarouselItem
-    }
+import { FormGroupInput, Button } from '@/components'
+import { Carousel, CarouselItem } from 'element-ui'
+export default {
+  components: {
+    [Button.name]: Button,
+    [FormGroupInput.name]: FormGroupInput,
+    [Carousel.name]: Carousel,
+    [CarouselItem.name]: CarouselItem
   }
+}
 </script>
 <style>
 </style>

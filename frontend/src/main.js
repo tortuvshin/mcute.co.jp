@@ -1,6 +1,8 @@
-import Vue from "vue";
-import App from "./App";
-import router from "./router/routes";
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router/routes'
+import './registerServiceWorker'
+
 //plugins
 import MCute from './plugins/mcute';
 
@@ -147,11 +149,7 @@ router.beforeEach((to, from, next) => {
 });
 
 new Vue({
-  el: '#app',
-  store,
   router,
-  components: {
-    App
-  },
-  template: '<App/>'
-})
+  store,
+  render: h => h(App)
+}).$mount('#app')

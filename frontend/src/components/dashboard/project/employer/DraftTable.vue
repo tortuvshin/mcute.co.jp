@@ -7,21 +7,21 @@
 	              <div class="md-table-head-container">
 	                <div class="md-table-head-text md-test">
 	                  Drafted Job
-	                </div> 
+	                </div>
 	              </div>
 	            </th>
 	            <th class="md-table-head md-sorted">
 	              <div class="md-table-head-container text-center">
 	                <div class="md-table-head-text md-test">
 	                  BID END DATE
-	                </div> 
+	                </div>
 	              </div>
 	            </th>
 	            <th class="md-table-head md-sorted">
 	              <div class="md-table-head-container text-center">
 	                <div class="md-table-head-text md-test">
 	                  ACTION
-	                </div> 
+	                </div>
 	              </div>
 	            </th>
 	          </md-table-row>
@@ -38,35 +38,36 @@
 	          <draft-row v-for="project in projects" :project="project"></draft-row>
 	        </md-table-body>
 	      </md-table>
-		  <page-pagination
+		  <!-- <page-pagination
 	        :md-size="rowNumber"
 	        :md-total="totalProjectCount"
 	        :md-page="pageNumber"
 	        md-label="Rows"
 	        md-separator="of"
 	        :md-page-options="[3, 6, 9, 12]"
-	        @pagination="onPagination" style="font-family:none;"></page-pagination>
+	        @pagination="onPagination" style="font-family:none;"></page-pagination> -->
 	</md-table-card>
 </template>
 
 <script>
-	import draftRow from './DraftRow'
-	import pagePagination from 'vue-material/src/components/mdTable/mdTablePagination'
+import draftRow from './DraftRow'
+// import pagePagination from 'vue-material/src/components/mdTable/mdTablePagination'
 
-	export default {
-		props: ['projects', 'pageNumber', 'rowNumber', 'totalProjectCount', 'loading'],
-		methods: {
-			onPagination(event){
-	          this.rowNumber = event.size;
-	          this.pageNumber = event.page;
-	          this.$emit('updateProject', {rowNumber: this.rowNumber, pageNumber: this.pageNumber});
+export default {
+  props: ['projects', 'pageNumber', 'rowNumber', 'totalProjectCount', 'loading'],
+  methods: {
+    onPagination (event) {
+	          this.rowNumber = event.size
+	          this.pageNumber = event.page
+	          this.$emit('updateProject', { rowNumber: this.rowNumber, pageNumber: this.pageNumber })
 	        }
-		},
-		components: {
-			draftRow,
-			pagePagination
-		}
-	}
+  },
+  components: {
+		draftRow
+		// ,
+    // pagePagination
+  }
+}
 </script>
 
 <style scoped>

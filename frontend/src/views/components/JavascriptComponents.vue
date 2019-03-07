@@ -301,38 +301,38 @@
     </div>
 </template>
 <script>
-  import { Card, Button, Modal, FormGroupInput, Collapse, CollapseItem } from '@/components';
-  import { Popover, Tooltip, DatePicker, TimeSelect } from 'element-ui';
+import { Card, Button, Modal, FormGroupInput, Collapse, CollapseItem } from '@/components'
+import { Popover, Tooltip, DatePicker, TimeSelect } from 'element-ui'
 
-  export default {
-    components: {
-      Card,
-      Modal,
-      CollapseItem,
-      Collapse,
-      [Button.name]: Button,
-      [Popover.name]: Popover,
-      [Tooltip.name]: Tooltip,
-      [DatePicker.name]: DatePicker,
-      [FormGroupInput.name]: FormGroupInput,
-      [TimeSelect.name]: TimeSelect
-    },
-    data() {
-      return {
-        modals: {
-          classic: false,
-          notice: false,
-          mini: false,
-          login: false
-        },
-        pickers: {
-          dateTimePicker: '',
-          datePicker: '',
-          timePicker: ''
-        }
+export default {
+  components: {
+    Card,
+    Modal,
+    CollapseItem,
+    Collapse,
+    [Button.name]: Button,
+    [Popover.name]: Popover,
+    [Tooltip.name]: Tooltip,
+    [DatePicker.name]: DatePicker,
+    [FormGroupInput.name]: FormGroupInput,
+    [TimeSelect.name]: TimeSelect
+  },
+  data () {
+    return {
+      modals: {
+        classic: false,
+        notice: false,
+        mini: false,
+        login: false
+      },
+      pickers: {
+        dateTimePicker: '',
+        datePicker: '',
+        timePicker: ''
       }
     }
   }
+}
 </script>
 <style lang="scss">
     #javascriptComponents {

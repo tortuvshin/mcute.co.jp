@@ -444,21 +444,21 @@
     </div>
 </template>
 <script>
-  import { Card, Button, Tabs, TabPane } from '@/components';
+import { Card, Button, Tabs, TabPane } from '@/components'
 
-  export default {
-    components: {
-      Card,
-      Tabs,
-      TabPane,
-      [Button.name]: Button
-    },
-    data() {
-      return {
-        pricing5Tab: 'Expensive'
-      }
+export default {
+  components: {
+    Card,
+    Tabs,
+    TabPane,
+    [Button.name]: Button
+  },
+  data () {
+    return {
+      pricing5Tab: 'Expensive'
     }
   }
+}
 </script>
 <style>
 </style>

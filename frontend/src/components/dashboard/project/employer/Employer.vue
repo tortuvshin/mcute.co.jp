@@ -26,111 +26,110 @@
 </template>
 
 <script>
-	import { API_SERVER } from '../../../../api.js'
-	import { bus } from '../../../../main.js'
-	import draftTable from './DraftTable'
-	import openTable from './OpenTable'
-	import workingTable from './WorkingTable'
-	import finishedTable from './FinishedTable'
-	import pendingTable from './PendingTable'
-	import selectFreelancerModal from './SelectFreelancerModal'
+import { API_SERVER } from '../../../../api.js'
+import { bus } from '../../../../main.js'
+import draftTable from './DraftTable'
+import openTable from './OpenTable'
+import workingTable from './WorkingTable'
+import finishedTable from './FinishedTable'
+import pendingTable from './PendingTable'
+import selectFreelancerModal from './SelectFreelancerModal'
 
-	export default {
-		data() {
-			return {
-				open: {
-					projects: [],
-					pageNumber: 1,
+export default {
+  data () {
+    return {
+      open: {
+        projects: [],
+        pageNumber: 1,
 			        rowNumber: 3,
 			        totalProjectCount: 0,
-					loading: false,
-					keyword: ''
-				},
-				pending: {
-					projects: [],
-					pageNumber: 1,
+        loading: false,
+        keyword: ''
+      },
+      pending: {
+        projects: [],
+        pageNumber: 1,
 			        rowNumber: 3,
 			        totalProjectCount: 0,
-					loading: false,
-					keyword: ''
-				},
-				working: {
-					projects: [],
-					pageNumber: 1,
+        loading: false,
+        keyword: ''
+      },
+      working: {
+        projects: [],
+        pageNumber: 1,
 			        rowNumber: 3,
 			        totalProjectCount: 0,
-					loading: false,
-					keyword: ''
-				},
-				finished: {
-					projects: [],
-					pageNumber: 1,
+        loading: false,
+        keyword: ''
+      },
+      finished: {
+        projects: [],
+        pageNumber: 1,
 			        rowNumber: 3,
 			        totalProjectCount: 0,
-					loading: false,
-					keyword: ''
-				},
-				drafted: {
-					projects: [],
-					pageNumber: 1,
+        loading: false,
+        keyword: ''
+      },
+      drafted: {
+        projects: [],
+        pageNumber: 1,
 			        rowNumber: 3,
 			        totalProjectCount: 0,
-					loading: false,
-					keyword: ''
-				}
-			}
-		},
-		methods: {
-			fetchData(projectStatus){
-				projectStatus.forEach((status)=>{
-					bus.$emit('setRefreshButtonStatus', true);
-					this[status].loading = true;
-					this.$http.get(API_SERVER + '/dashboard/project', 
-									{params: { 
-										status: status, 
-										pageNumber: this[status].pageNumber,
-										rowNumber: this[status].rowNumber,
-										keyword: this[status].keyword
-									}})
-					.then(response=> {
-						bus.$emit('setRefreshButtonStatus', false);
-						this[status].loading = false;
-						this[status].projects = response.body.projects;
-						this[status].totalProjectCount = response.body.totalProjectCount;
-					
-					});
-				})
-			},
-			updateProject(data, status){
-				this[status].pageNumber = data.pageNumber;
-				this[status].rowNumber = data.rowNumber;
-				this.fetchData([status]);
-			},
-			searchProject(keyword, status){
-				this[status].keyword = keyword;
-				this.fetchData([status]);
-			}
-		},
-		created(){
-			var projectStatus = ['open', 'pending', 'working', 'finished', 'drafted'];
-			this.fetchData(projectStatus);
-			bus.$on('updateProject', ()=>{
-				this.fetchData(projectStatus);
-			});
-			bus.$on('updateProjectLoading', (payload) => {
-				this[payload.status].loading = payload.loading;
-			});
-			document.title = "My Jobs - WorkFlow"
-		},
-		components: {
-			openTable,
-			workingTable,
-			finishedTable,
-			draftTable,
-			pendingTable,
-			selectFreelancerModal
-		}
-	}
+        loading: false,
+        keyword: ''
+      }
+    }
+  },
+  methods: {
+    fetchData (projectStatus) {
+      projectStatus.forEach((status) => {
+        bus.$emit('setRefreshButtonStatus', true)
+        this[status].loading = true
+        this.$http.get(API_SERVER + '/dashboard/project',
+          { params: {
+            status: status,
+            pageNumber: this[status].pageNumber,
+            rowNumber: this[status].rowNumber,
+            keyword: this[status].keyword
+          } })
+          .then(response => {
+            bus.$emit('setRefreshButtonStatus', false)
+            this[status].loading = false
+            this[status].projects = response.body.projects
+            this[status].totalProjectCount = response.body.totalProjectCount
+          })
+      })
+    },
+    updateProject (data, status) {
+      this[status].pageNumber = data.pageNumber
+      this[status].rowNumber = data.rowNumber
+      this.fetchData([status])
+    },
+    searchProject (keyword, status) {
+      this[status].keyword = keyword
+      this.fetchData([status])
+    }
+  },
+  created () {
+    var projectStatus = ['open', 'pending', 'working', 'finished', 'drafted']
+    this.fetchData(projectStatus)
+    bus.$on('updateProject', () => {
+      this.fetchData(projectStatus)
+    })
+    bus.$on('updateProjectLoading', (payload) => {
+      this[payload.status].loading = payload.loading
+    })
+    document.title = 'My Jobs - WorkFlow'
+  },
+  components: {
+    openTable,
+    workingTable,
+    finishedTable,
+    draftTable,
+    pendingTable,
+    selectFreelancerModal
+  }
+}
 </script>
 
 <style scoped>

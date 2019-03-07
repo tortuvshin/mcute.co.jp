@@ -60,19 +60,19 @@
                   </tr>
                   <tr v-for="(file,index) in project.currentFiles">
                       <td><i class="fa fa-file fa-2x" aria-hidden="true"></i></td>
-                      <td>{{file.filename}}</td> 
-                      <td>{{file.size | bytesToSize}}</td> 
+                      <td>{{file.filename}}</td>
+                      <td>{{file.size | bytesToSize}}</td>
                       <td><input type='button' class='file-delete-btn btn btn-danger' value='Delete' @click="project.currentFiles.splice(index, 1)"></td>
                   </tr>
                   <tr v-for="(file,index) in project.files">
                     <td><i class="fa fa-file fa-2x" aria-hidden="true"></i></td>
-                    <td>{{file.name}}</td> 
-                    <td>{{file.size | bytesToSize}}</td> 
+                    <td>{{file.name}}</td>
+                    <td>{{file.size | bytesToSize}}</td>
                     <td><input type='button' class='file-delete-btn btn btn-danger' value='Delete' @click="deleteFile(index)"></td>
                   </tr>
               </table>
               <div class="section file-upload">
-                <app-file-uploader @handleFileUploaded="handleFileUploaded"></app-file-uploader> 
+                <app-file-uploader @handleFileUploaded="handleFileUploaded"></app-file-uploader>
               </div>
           </div>
         </div>
@@ -117,7 +117,7 @@
                   <span class="input-group-addon">$</span>
                     <input type="number" class="form-control input-lg project-budget" name="budgetMin" v-model="project.budgetMin" placeholder="$0" required>
                 </div>
-                <template v-if="project.budgetType === 'range'"> 
+                <template v-if="project.budgetType === 'range'">
                  <span style="font-size: 1.4em;">-</span>
                  <div class="input-group">
                   <span class="input-group-addon">$</span>
@@ -135,16 +135,16 @@
 </template>
 
 <script>
-	import { API_SERVER } from '../../api.js'
-	import { bus } from '../../main.js'
-	import { VueEditor } from 'vue2-editor'
-	import AppFileUploader from '../../components/common/FileUploader'
+import { API_SERVER } from '../../api.js'
+import { bus } from '../../main.js'
+import { VueEditor } from 'vue2-editor'
+import AppFileUploader from '../../components/common/FileUploader'
 
-	export default {
-		data() {
+export default {
+  data () {
 	      return {
 	        project: {
-            id: null,
+        id: null,
 	        	description: '',
 	        	budgetMin: null,
 	        	budgetMax: null,
@@ -153,93 +153,88 @@
 	        	skills: null,
 	        	title: null,
 	        	category: -1,
-            status: null,
+        status: null,
 	        	files: [],
-            currentFiles: []
+        currentFiles: []
 	        },
-          loadingData: false
+      loadingData: false
 	      }
 	    },
 	    filters: {
-	    	bytesToSize(bytes){
-	    		if      (bytes>=1000000000) {bytes=(bytes/1000000000).toFixed(2)+' GB';}
-		        else if (bytes>=1000000)    {bytes=(bytes/1000000).toFixed(2)+' MB';}
-		        else if (bytes>=1000)       {bytes=(bytes/1000).toFixed(2)+' KB';}
-		        else if (bytes>1)           {bytes=bytes+' bytes';}
-		        else if (bytes==1)          {bytes=bytes+' byte';}
-		        else                        {bytes='0 byte';}
-		        return bytes;
+	    	bytesToSize (bytes) {
+	    		if (bytes >= 1000000000) { bytes = (bytes / 1000000000).toFixed(2) + ' GB' } else if (bytes >= 1000000) { bytes = (bytes / 1000000).toFixed(2) + ' MB' } else if (bytes >= 1000) { bytes = (bytes / 1000).toFixed(2) + ' KB' } else if (bytes > 1) { bytes = bytes + ' bytes' } else if (bytes == 1) { bytes = bytes + ' byte' } else { bytes = '0 byte' }
+		        return bytes
 	    	}
 	    },
-		components: {
-			VueEditor,
-			AppFileUploader
-		},
-		methods: {
+  components: {
+    VueEditor,
+    AppFileUploader
+  },
+  methods: {
 	      handleUpdatedContent: function (value) {
-	        this.project.description = value;
+	        this.project.description = value
 	      },
-	      handleFileUploaded(file){
-	      	this.project.files.push(file);
+	      handleFileUploaded (file) {
+	      	this.project.files.push(file)
 	      },
-	      deleteFile(index){
-	      	this.project.files.splice(index, 1);
+	      deleteFile (index) {
+	      	this.project.files.splice(index, 1)
 	      },
-	      onSubmit(){
-	      	var formData = new FormData();
-    			formData.append('description', this.project.description);
-          formData.append('currentFiles', JSON.stringify(this.project.currentFiles));
-    			formData.append('skills', this.project.skills);
-    			formData.append('category', this.project.category);
-    			formData.append('budgetType', this.project.budgetType);
-    			formData.append('budgetMax', this.project.budgetMax);
-    			formData.append('budgetMin', this.project.budgetMin);
-    			formData.append('endDate', this.project.endDate);
-    			formData.append('title', this.project.title);
+	      onSubmit () {
+	      	var formData = new FormData()
+    			formData.append('description', this.project.description)
+      formData.append('currentFiles', JSON.stringify(this.project.currentFiles))
+    			formData.append('skills', this.project.skills)
+    			formData.append('category', this.project.category)
+    			formData.append('budgetType', this.project.budgetType)
+    			formData.append('budgetMax', this.project.budgetMax)
+    			formData.append('budgetMin', this.project.budgetMin)
+    			formData.append('endDate', this.project.endDate)
+    			formData.append('title', this.project.title)
 
-    			this.project.files.forEach((file, index)=> {
-    				formData.append('file' + index, file);
-    			});
+    			this.project.files.forEach((file, index) => {
+    				formData.append('file' + index, file)
+    			})
 
-    			this.$http.put(API_SERVER + "/project/" + this.project.id, formData).then(response => {
-    				bus.$emit('setAlert', response.body);
-    				this.$router.push("/project/" + this.project.id);
+    			this.$http.put(API_SERVER + '/project/' + this.project.id, formData).then(response => {
+    				bus.$emit('setAlert', response.body)
+    				this.$router.push('/project/' + this.project.id)
     			}, response => {
-    				bus.$emit('setAlert', response.body);
-    			});
-        },
-        formatDate(date) {
-            var d = new Date(date),
-                month = '' + (d.getMonth() + 1),
-                day = '' + d.getDate(),
-                year = d.getFullYear();
+    				bus.$emit('setAlert', response.body)
+    			})
+    },
+    formatDate (date) {
+      var d = new Date(date)
+      var month = '' + (d.getMonth() + 1)
+      var day = '' + d.getDate()
+      var year = d.getFullYear()
 
-            if (month.length < 2) month = '0' + month;
-            if (day.length < 2) day = '0' + day;
+      if (month.length < 2) month = '0' + month
+      if (day.length < 2) day = '0' + day
 
-            return [year, month, day].join('-');
-        }
+      return [year, month, day].join('-')
+    }
 	    },
-	    created(){
-        this.loadingData = true;
-        this.$http.get(API_SERVER + '/project/' + this.$route.params.id).then(response=>{
-          response.body.project.endDate = this.formatDate(response.body.project.endDate);
-          this.loadingData = false;
-          this.project.id = response.body.project._id;
-          this.project.description = response.body.project.description;
-          this.project.budgetMin = response.body.project.budgetMin;
-          this.project.budgetMax = response.body.project.budgetMax;
-          this.project.budgetType = response.body.project.budgetType;
-          this.project.endDate = response.body.project.endDate;
-          this.project.skills = response.body.project.skills;
-          this.project.title = response.body.project.title;
-          this.project.category = response.body.project.category;
-          this.project.currentFiles = response.body.project.files;
-          this.project.status = response.body.project.status;
-        });
-	    	document.title = "Modify a Project - WorkFlow";
+	    created () {
+    this.loadingData = true
+    this.$http.get(API_SERVER + '/project/' + this.$route.params.id).then(response => {
+      response.body.project.endDate = this.formatDate(response.body.project.endDate)
+      this.loadingData = false
+      this.project.id = response.body.project._id
+      this.project.description = response.body.project.description
+      this.project.budgetMin = response.body.project.budgetMin
+      this.project.budgetMax = response.body.project.budgetMax
+      this.project.budgetType = response.body.project.budgetType
+      this.project.endDate = response.body.project.endDate
+      this.project.skills = response.body.project.skills
+      this.project.title = response.body.project.title
+      this.project.category = response.body.project.category
+      this.project.currentFiles = response.body.project.files
+      this.project.status = response.body.project.status
+    })
+	    	document.title = 'Modify a Project - WorkFlow'
 	    }
-	}
+}
 </script>
 
 <style scoped>

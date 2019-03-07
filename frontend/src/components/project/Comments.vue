@@ -12,39 +12,39 @@
 </template>
 
 <script>
-	import { mapGetters } from 'vuex'
-	import { API_SERVER } from '../../api.js'
-	import { bus } from '../../main.js'
-	import appComment from './Comment'
+import { mapGetters } from 'vuex'
+import { API_SERVER } from '../../api.js'
+import { bus } from '../../main.js'
+import appComment from './Comment'
 
-	export default {
-		props: ['project'],
-		data(){
-			return {
-				comment: '',
-				isProcessing: false
-			}
-		},
-		components: {
-			appComment
-		},
-		computed: {
-			currentUser(){
-				return this.$store.state.user.currentUser;
-			}
-		},
-		methods: {
-			addComment(){
-				this.isProcessing = true;
-				this.$http.post(API_SERVER + '/project/' + this.project._id + '/comment', { content: this.comment}).then(response=> {
-					this.isProcessing = false;
-					bus.$emit('updateProjectData');
-					bus.$emit('setAlert', response.body);
-					this.comment = '';
-				});
-			}
-		}
-	}
+export default {
+  props: ['project'],
+  data () {
+    return {
+      comment: '',
+      isProcessing: false
+    }
+  },
+  components: {
+    appComment
+  },
+  computed: {
+    currentUser () {
+      return this.$store.state.user.currentUser
+    }
+  },
+  methods: {
+    addComment () {
+      this.isProcessing = true
+      this.$http.post(API_SERVER + '/project/' + this.project._id + '/comment', { content: this.comment }).then(response => {
+        this.isProcessing = false
+        bus.$emit('updateProjectData')
+        bus.$emit('setAlert', response.body)
+        this.comment = ''
+      })
+    }
+  }
+}
 </script>
 
 <style scoped>

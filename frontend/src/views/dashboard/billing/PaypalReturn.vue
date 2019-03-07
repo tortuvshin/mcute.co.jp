@@ -8,24 +8,23 @@
 				<div>Verifying the payment <br>Please wait ...</div>
 			</md-whiteframe>
 		</div>
-		
-		
+
 	</div>
 </template>
 
 <script>
-	import { API_SERVER } from '../../../api.js'
-	export default {
-		created() {
-			this.$socket.emit('paymentVerification', {status: 'Verifying the payemnt'});
-			var token = this.$route.query.token;
-			var PayerID = this.$route.query.PayerID;
+import { API_SERVER } from '../../../api.js'
+export default {
+  created () {
+    this.$socket.emit('paymentVerification', { status: 'Verifying the payemnt' })
+    var token = this.$route.query.token
+    var PayerID = this.$route.query.PayerID
 
-			this.$http.get(API_SERVER + '/dashboard/billing/return', {params: { token: token, PayerID: PayerID}}).then(response => {
-				window.close();
-			});
-		}
-	}
+    this.$http.get(API_SERVER + '/dashboard/billing/return', { params: { token: token, PayerID: PayerID } }).then(response => {
+      window.close()
+    })
+  }
+}
 </script>
 
 <style scoped>

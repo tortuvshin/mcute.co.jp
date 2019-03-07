@@ -45,39 +45,39 @@
 </template>
 
 <script>
-  import ImagesSection from './components/ImagesSection'
-  import BasicElementsSection from "./components/BasicElementsSection";
-  import Navigation from './components/Navigation';
-  import TabsSection from './components/Tabs';
-  import PillsSection from './components/Pills';
-  import ProgressPaginationSection from './components/ProgressPagination';
-  import NotificationSection from './components/Notifications';
-  import PreFooterAreas from './components/PreFooters';
-  import FooterAreas from './components/Footers';
-  import TypographyTables from './components/TypographyTables';
-  import CardsSection from './components/Cards';
-  const JavascriptComponents = () =>  import('./components/JavascriptComponents');
-  import CarouselSection from './components/CarouselSection';
-  import NucleoIconsSection from './components/NucleoIconsSection';
+import ImagesSection from './components/ImagesSection'
+import BasicElementsSection from './components/BasicElementsSection'
+import Navigation from './components/Navigation'
+import TabsSection from './components/Tabs'
+import PillsSection from './components/Pills'
+import ProgressPaginationSection from './components/ProgressPagination'
+import NotificationSection from './components/Notifications'
+import PreFooterAreas from './components/PreFooters'
+import FooterAreas from './components/Footers'
+import TypographyTables from './components/TypographyTables'
+import CardsSection from './components/Cards'
+import CarouselSection from './components/CarouselSection'
+import NucleoIconsSection from './components/NucleoIconsSection'
+const JavascriptComponents = () => import('./components/JavascriptComponents')
 
-  export default {
-    name: "home",
-    bodyClass: 'index-page',
-    components: {
-      BasicElementsSection,
-      ImagesSection,
-      Navigation,
-      TabsSection,
-      PillsSection,
-      ProgressPaginationSection,
-      NotificationSection,
-      PreFooterAreas,
-      FooterAreas,
-      TypographyTables,
-      CardsSection,
-      JavascriptComponents,
-      CarouselSection,
-      NucleoIconsSection
-    }
-  };
+export default {
+  name: 'home',
+  bodyClass: 'index-page',
+  components: {
+    BasicElementsSection,
+    ImagesSection,
+    Navigation,
+    TabsSection,
+    PillsSection,
+    ProgressPaginationSection,
+    NotificationSection,
+    PreFooterAreas,
+    FooterAreas,
+    TypographyTables,
+    CardsSection,
+    JavascriptComponents,
+    CarouselSection,
+    NucleoIconsSection
+  }
+}
 </script>

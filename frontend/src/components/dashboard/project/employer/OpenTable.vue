@@ -28,28 +28,28 @@
               <div class="md-table-head-container text-center">
                 <div class="md-table-head-text md-test">
                   Project Type
-                </div> 
+                </div>
               </div>
             </th>
             <th class="md-table-head md-sorted">
               <div class="md-table-head-container text-center">
                 <div class="md-table-head-text md-test">
                   Totel Bids
-                </div> 
+                </div>
               </div>
             </th>
             <th class="md-table-head md-sorted">
               <div class="md-table-head-container text-center">
                 <div class="md-table-head-text md-test">
                   Time Remaining
-                </div> 
+                </div>
               </div>
             </th>
             <th class="md-table-head md-sorted">
               <div class="md-table-head-container text-center">
                 <div class="md-table-head-text md-test">
                   Action
-                </div> 
+                </div>
               </div>
             </th>
           </md-table-row>
@@ -67,52 +67,53 @@
         </md-table-body>
       </md-table>
 
-      <page-pagination
+      <!-- <page-pagination
         :md-size="rowNumber"
         :md-total="totalProjectCount"
         :md-page="pageNumber"
         md-label="Rows"
         md-separator="of"
         :md-page-options="[3, 6, 9, 12]"
-        @pagination="onPagination" style="font-family:none;"></page-pagination>
+        @pagination="onPagination" style="font-family:none;"></page-pagination> -->
     </md-table-card>
   </div>
 </template>
 
 <script>
-	import openRow from "./OpenRow.vue"
-	import pagePagination from 'vue-material/src/components/mdTable/mdTablePagination'
+import openRow from './OpenRow.vue'
+// import pagePagination from 'vue-material/src/components/mdTable/mdTablePagination'
 
-	export default {
-		props: ['projects', 'pageNumber', 'rowNumber', 'totalProjectCount', 'loading'],
-		data() {
+export default {
+  props: ['projects', 'pageNumber', 'rowNumber', 'totalProjectCount', 'loading'],
+  data () {
   			return {
   			  search: {
     				keyword: '',
     				category: ''
   			  },
-  	      isSearch: false,
+  	      isSearch: false
   			}
   		},
   		methods: {
-  			onPagination(event){
-	        var rowNumber = event.size;
-          var pageNumber = event.page;
-          this.$emit('updateProject', {rowNumber: rowNumber, pageNumber: pageNumber});
+  			onPagination (event) {
+	        var rowNumber = event.size
+      var pageNumber = event.page
+      this.$emit('updateProject', { rowNumber: rowNumber, pageNumber: pageNumber })
 	      },
-        searchProject(){
-          var keyword = this.search.keyword;
-          this.$emit('searchProject', keyword);
-        }
+    searchProject () {
+      var keyword = this.search.keyword
+      this.$emit('searchProject', keyword)
+    }
   		},
-  		created(){
+  		created () {
 
   		},
-		components: {
-			openRow,
-			pagePagination
-		}
-	}
+  components: {
+    openRow
+    // ,
+    // pagePagination
+  }
+}
 </script>
 
 <style scoped>

@@ -18,7 +18,7 @@
             </div>
             <div v-if="project.skills.length > 0">
                 <md-chip md-static valid-v-for="skill in project.skills" class="skill-tag">
-                  {{skill}} 
+                  {{skill}}
                 </md-chip>
             </div>
         </div>
@@ -31,7 +31,7 @@
       <td class="md-table-cell text-center md-has-action" :style="{'background-color': internalStatus.color}">
         <div class="md-table-cell-container">
             <span class="internalStatus" :style="{color: internalStatus.color}">{{internalStatus.status}}</span>
-            
+
             <md-button class="md-raised" @click.native="moveToDetailsPage">View Details</md-button>
         </div>
       </td>
@@ -39,39 +39,39 @@
 </template>
 
 <script>
-    import appCountDown from '../../../project/common/Countdown'
-    import { API_SERVER } from '../../../../api.js'
-    import { bus } from '../../../../main.js'
+import appCountDown from '../../../project/common/Countdown'
+import { API_SERVER } from '../../../../api.js'
+import { bus } from '../../../../main.js'
 
-    export default {
-        props: ['project'],
-        computed: {
-            projectUrl(){
-                return '/project/' + this.project._id;
-            },
-            internalStatus(){
-                switch (this.project.internalStatus){
-                    case 2:
-                        return {color: '#d9edf7', status: 'Working'}
-                        break;
-                    case 3:
-                        return {color: '#fcf8e3', status: 'Submitted'};
-                        break;
-                }
-            }
-        },
-        methods:{
-            selectFreelancerAndDeadline(){
-                bus.$emit('showSelectFreelancerModal', this.project);
-            },
-            moveToDetailsPage(){
-                this.$router.push('/dashboard/project/'+ this.project._id +'/details')
-            }
-        },
-        components: {
-            appCountDown
-        }
+export default {
+  props: ['project'],
+  computed: {
+    projectUrl () {
+      return '/project/' + this.project._id
+    },
+    internalStatus () {
+      switch (this.project.internalStatus) {
+        case 2:
+          return { color: '#d9edf7', status: 'Working' }
+          break
+        case 3:
+          return { color: '#fcf8e3', status: 'Submitted' }
+          break
+      }
     }
+  },
+  methods: {
+    selectFreelancerAndDeadline () {
+      bus.$emit('showSelectFreelancerModal', this.project)
+    },
+    moveToDetailsPage () {
+      this.$router.push('/dashboard/project/' + this.project._id + '/details')
+    }
+  },
+  components: {
+    appCountDown
+  }
+}
 </script>
 
 <style scoped>

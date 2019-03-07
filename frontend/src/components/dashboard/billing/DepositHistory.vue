@@ -61,7 +61,7 @@
 			</md-table>
 		  </md-table-card>
 		</div>
-	
+
 	</div>
 </template>
 
@@ -69,15 +69,15 @@
  	export default {
  		props: ['paypalDeposits', 'bankDeposits'],
  		computed: {
-		    paypalDepositss() {
+		    paypalDepositss () {
 		      // just an example of processing `images` props
-		      return this.paypalDeposits.filter((each, index) => index >= 0);
+		      return this.paypalDeposits.filter((each, index) => index >= 0)
 		    },
-		    bankDepositss() {
+		    bankDepositss () {
 		      // just an example of processing `images` props
-		      return this.bankDeposits.filter((each, index) => index >= 0);
+		      return this.bankDeposits.filter((each, index) => index >= 0)
 		    }
-		}
+  }
  	}
 </script>
 

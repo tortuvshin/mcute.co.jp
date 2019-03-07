@@ -9,15 +9,15 @@
 </template>
 
 <script>
-	import appProfile from '../../components/profile/Profile'
-	import reviews from '../../components/dashboard/common/Reviews'
-	export default {
-		props: ['username'],
-		components: {
-			appProfile,
-			reviews
-		}
-	}
+import appProfile from '../../components/profile/Profile'
+import reviews from '../../components/dashboard/common/Reviews'
+export default {
+  props: ['username'],
+  components: {
+    appProfile,
+    reviews
+  }
+}
 </script>
 
 <style scoped>

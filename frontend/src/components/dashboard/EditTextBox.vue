@@ -16,49 +16,49 @@
 </template>
 
 <script>
-	import appCountryPicker from '../common/CountryPicker'
-	import { API_SERVER } from '../../api.js'
-	import { bus } from '../../main.js'
+import appCountryPicker from '../common/CountryPicker'
+import { API_SERVER } from '../../api.js'
+import { bus } from '../../main.js'
 
-	export default {
-		data(){
-			return {
-				isEdit: false
-			}
-		},
-		props: ['target'],
-		computed: {
-			currentUser(){
-				return Object.assign({}, this.$store.state.user.currentUser);
-			}
-		},
-		components: {
-			appCountryPicker
-		},
-		methods: {
-			onUpdated(e){
-				var value = '';
-				if (this.target === 'country'){
-					value = e;
-				} else {
-					value = e.target.value;
-				}
-				this.isEdit = false;
-				
-				if (value === this.currentUser[this.target]){
-					return;
-				}
+export default {
+  data () {
+    return {
+      isEdit: false
+    }
+  },
+  props: ['target'],
+  computed: {
+    currentUser () {
+      return Object.assign({}, this.$store.state.user.currentUser)
+    }
+  },
+  components: {
+    appCountryPicker
+  },
+  methods: {
+    onUpdated (e) {
+      var value = ''
+      if (this.target === 'country') {
+        value = e
+      } else {
+        value = e.target.value
+      }
+      this.isEdit = false
 
-				var POST_DATA = {
-					[this.target]: value
-				};
-				Vue.http.put(API_SERVER + '/dashboard/profile', POST_DATA).then(response => {
-					 bus.$emit('showAlert', response.body);
-					 this.$store.commit('setCurrentUser', response.body.updatedUser);
-				});
-			}
-		}
-	}
+      if (value === this.currentUser[this.target]) {
+        return
+      }
+
+      var POST_DATA = {
+        [this.target]: value
+      }
+      Vue.http.put(API_SERVER + '/dashboard/profile', POST_DATA).then(response => {
+					 bus.$emit('showAlert', response.body)
+					 this.$store.commit('setCurrentUser', response.body.updatedUser)
+      })
+    }
+  }
+}
 </script>
 
 <style scoped>

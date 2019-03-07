@@ -27,18 +27,18 @@
 </template>
 
 <script>
-	import appTicketRow from './TicketRow'
-	export default {
-		data(){
-			return {
-				ticket: null
-			}
-		},
-		props: ['tickets'],
-		components: {
-			appTicketRow
-		}
-	}
+import appTicketRow from './TicketRow'
+export default {
+  data () {
+    return {
+      ticket: null
+    }
+  },
+  props: ['tickets'],
+  components: {
+    appTicketRow
+  }
+}
 </script>
 
 <style scoped>
@@ -55,4 +55,3 @@ tbody > tr > td {
 }
 
 </style>
-

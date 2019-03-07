@@ -380,12 +380,12 @@
     </div>
 </template>
 <script>
-  import { Card } from '@/components';
-  export default {
-    components: {
-      Card
-    }
+import { Card } from '@/components'
+export default {
+  components: {
+    Card
   }
+}
 </script>
 <style>
 </style>

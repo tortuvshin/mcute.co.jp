@@ -6,13 +6,13 @@
         <div class="col-xs-10">
             <div class="sender-details">
                 <span :class="{'sender-name': !isProjectOwner, 'sender-name-employer': isProjectOwner }">
-                	{{comment.sender.firstName}}  {{comment.sender.lastName}} -  
+                	{{comment.sender.firstName}}  {{comment.sender.lastName}} -
                 	<span v-if="!isProjectOwner">{{ comment.sender.type | capitalizeFirstLetter }}</span>
                 	<span v-else>Project Owner</span>
                 </span>
                 <span class="send-time">
-                	{{comment.submitDate | moment("DD-MMMM-YYYY, h:mm:a")}} 
-                </span>  
+                	{{comment.submitDate | moment("DD-MMMM-YYYY, h:mm:a")}}
+                </span>
             </div>
             <div class="comment-content">
                 {{ comment.content }}
@@ -29,57 +29,57 @@
                 	<app-reply :reply="reply" :employer="employer"></app-reply>
                 </li>
             </ul>
-            
+
         </div>
     </div>
 </template>
 
 <script>
-	import { API_SERVER } from '../../api.js'
-	import { bus } from '../../main.js'
-	import appReply from './Reply'
+import { API_SERVER } from '../../api.js'
+import { bus } from '../../main.js'
+import appReply from './Reply'
 
-	export default {
-		props: ['comment', 'employer'],
-		data(){
-			return {
-				isReply: false,
-				replyMessage: '',
-				isProcessing: false
-			}
-		},
-		computed: {
-			isProjectOwner(){
-				console.log("GU" ,this.comment.sender._id === this.employer._id);
-				return this.comment.sender._id === this.employer._id;
-			}
-		},
-		methods:{
-			inputHandler(e) {
-				if (e.keyCode === 13 && e.shiftKey) {
-			        ++e.target.rows;
-			    }else if (e.keyCode === 8 && e.shiftKey && e.target.rows > 1){
-			    	--e.target.rows;
-			    }else if (e.keyCode === 13){
-			    	e.preventDefault();
-			    	this.replyComment();
+export default {
+  props: ['comment', 'employer'],
+  data () {
+    return {
+      isReply: false,
+      replyMessage: '',
+      isProcessing: false
+    }
+  },
+  computed: {
+    isProjectOwner () {
+      console.log('GU', this.comment.sender._id === this.employer._id)
+      return this.comment.sender._id === this.employer._id
+    }
+  },
+  methods: {
+    inputHandler (e) {
+      if (e.keyCode === 13 && e.shiftKey) {
+			        ++e.target.rows
+			    } else if (e.keyCode === 8 && e.shiftKey && e.target.rows > 1) {
+			    	--e.target.rows
+			    } else if (e.keyCode === 13) {
+			    	e.preventDefault()
+			    	this.replyComment()
 			    }
-			},
-			replyComment(){
-				this.isProcessing = true;
-				this.$http.post(API_SERVER + '/project/' + this.comment._id + '/comment/reply', {content: this.replyMessage}).then(response => {
-					bus.$emit('updateProjectData');
-					bus.$emit('setAlert', response.body);
-					this.isProcessing = false;
-					this.isReply = false;
-					this.replyMessage = '';
-				});	
-			}
-		},
-		components: {
-			appReply
-		}
-	}
+    },
+    replyComment () {
+      this.isProcessing = true
+      this.$http.post(API_SERVER + '/project/' + this.comment._id + '/comment/reply', { content: this.replyMessage }).then(response => {
+        bus.$emit('updateProjectData')
+        bus.$emit('setAlert', response.body)
+        this.isProcessing = false
+        this.isReply = false
+        this.replyMessage = ''
+      })
+    }
+  },
+  components: {
+    appReply
+  }
+}
 </script>
 
 <style scoped>
@@ -103,7 +103,7 @@ hr{
 	display: flex;
 }
 
-.comment > div[class*='col-'] {  
+.comment > div[class*='col-'] {
   display: flex;
   flex-direction: column;
 }

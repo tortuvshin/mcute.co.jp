@@ -4,9 +4,9 @@
       <md-toolbar v-show="!isSearch">
         <h1 class="md-title">
         	<span class="title">Working Jobs </span>
-        	<div class="working"></div> 
+        	<div class="working"></div>
         	<span class="status-text">Working</span>
-        	<div class="submitted"></div> 
+        	<div class="submitted"></div>
         	<span class="status-text">Submitted</span>
         </h1>
 
@@ -34,28 +34,28 @@
               <div class="md-table-head-container text-center">
                 <div class="md-table-head-text md-test">
                   Project Type
-                </div> 
+                </div>
               </div>
             </th>
             <th class="md-table-head md-sorted">
               <div class="md-table-head-container text-center">
                 <div class="md-table-head-text md-test">
                   Selected Freelancer
-                </div> 
+                </div>
               </div>
             </th>
             <th class="md-table-head md-sorted">
               <div class="md-table-head-container text-center">
                 <div class="md-table-head-text md-test">
                   Win Bid
-                </div> 
+                </div>
               </div>
             </th>
              <th class="md-table-head md-sorted" style="width: 13%;">
               <div class="md-table-head-container text-center">
                 <div class="md-table-head-text md-test">
                   Deadline
-                </div> 
+                </div>
               </div>
             </th>
           </md-table-row>
@@ -73,52 +73,53 @@
         </md-table-body>
       </md-table>
 
-      <page-pagination
+      <!-- <page-pagination
         :md-size="rowNumber"
         :md-total="totalProjectCount"
         :md-page="pageNumber"
         md-label="Rows"
         md-separator="of"
         :md-page-options="[3, 6, 9, 12]"
-        @pagination="onPagination" style="font-family:none;"></page-pagination>
+        @pagination="onPagination" style="font-family:none;"></page-pagination> -->
     </md-table-card>
   </div>
 </template>
 
 <script>
-	import workingRow from "./WorkingRow.vue"
-	import pagePagination from 'vue-material/src/components/mdTable/mdTablePagination'
+import workingRow from './WorkingRow.vue'
+// import pagePagination from 'vue-material/src/components/mdTable/mdTablePagination'
 
-	export default {
-		props: ['projects', 'pageNumber', 'rowNumber', 'totalProjectCount', 'loading'],
-		data() {
+export default {
+  props: ['projects', 'pageNumber', 'rowNumber', 'totalProjectCount', 'loading'],
+  data () {
   			return {
   			  search: {
     				keyword: '',
     				category: ''
   			  },
-  	      isSearch: false,
+  	      isSearch: false
   			}
   		},
   		methods: {
-  			onPagination(event){
-	        var rowNumber = event.size;
-          var pageNumber = event.page;
-          this.$emit('updateProject', {rowNumber: rowNumber, pageNumber: pageNumber});
+  			onPagination (event) {
+	        var rowNumber = event.size
+      var pageNumber = event.page
+      this.$emit('updateProject', { rowNumber: rowNumber, pageNumber: pageNumber })
 	      },
-        searchProject(){
-          var keyword = this.search.keyword;
-          this.$emit('searchProject', keyword);
-        }
+    searchProject () {
+      var keyword = this.search.keyword
+      this.$emit('searchProject', keyword)
+    }
   		},
-  		created(){
+  		created () {
 
   		},
-		components: {
-			workingRow,
-			pagePagination
-		}
-	}
+  components: {
+    workingRow
+    // ,
+    // pagePagination
+  }
+}
 </script>
 
 <style scoped>

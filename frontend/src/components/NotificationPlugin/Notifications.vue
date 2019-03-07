@@ -13,46 +13,46 @@
   </div>
 </template>
 <script>
-  import Notification from './Notification'
+import Notification from './Notification'
 
-  export default {
-    components: {
-      Notification
+export default {
+  components: {
+    Notification
+  },
+  props: {
+    transitionName: {
+      type: String,
+      default: 'list'
     },
-    props: {
-      transitionName: {
-        type: String,
-        default: 'list'
-      },
-      transitionMode: {
-        type: String,
-        default: 'in-out'
-      },
-      overlap: {
-        type: Boolean,
-        default: false
-      }
+    transitionMode: {
+      type: String,
+      default: 'in-out'
     },
-    data() {
-      return {
-        notifications: this.$notifications.state
-      }
-    },
-    methods: {
-      removeNotification(timestamp) {
-        this.$notifications.removeNotification(timestamp)
-      }
-    },
-    created() {
-      this.$notifications.settings.overlap = this.overlap
-    },
-    watch: {
-      overlap: function (newVal) {
-        this.$notifications.settings.overlap = newVal
-      }
+    overlap: {
+      type: Boolean,
+      default: false
     }
-
+  },
+  data () {
+    return {
+      notifications: this.$notifications.state
+    }
+  },
+  methods: {
+    removeNotification (timestamp) {
+      this.$notifications.removeNotification(timestamp)
+    }
+  },
+  created () {
+    this.$notifications.settings.overlap = this.overlap
+  },
+  watch: {
+    overlap: function (newVal) {
+      this.$notifications.settings.overlap = newVal
+    }
   }
+
+}
 </script>
 <style lang="scss">
   .notifications {

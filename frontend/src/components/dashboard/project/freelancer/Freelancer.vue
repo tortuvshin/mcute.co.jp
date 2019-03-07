@@ -20,105 +20,104 @@
 </template>
 
 <script>
-	import { API_SERVER } from '../../../../api.js'
-	import { bus } from '../../../../main.js'
-	import biddingTable from './BidTable'
-	import workingTable from './WorkingTable'
-	import finishedTable from './FinishedTable'
-	import placeBidModal from '../../../project/PlaceBidModal'
+import { API_SERVER } from '../../../../api.js'
+import { bus } from '../../../../main.js'
+import biddingTable from './BidTable'
+import workingTable from './WorkingTable'
+import finishedTable from './FinishedTable'
+import placeBidModal from '../../../project/PlaceBidModal'
 
-	export default {
-		data() {
-			return {
-				bidding: {
-					bids: [],
-					pageNumber: 1,
+export default {
+  data () {
+    return {
+      bidding: {
+        bids: [],
+        pageNumber: 1,
 			        rowNumber: 3,
 			        totalProjectCount: 0,
-					loading: false,
-					keyword: ''
-				},
-				working: {
-					projects: [],
-					pageNumber: 1,
+        loading: false,
+        keyword: ''
+      },
+      working: {
+        projects: [],
+        pageNumber: 1,
 			        rowNumber: 3,
 			        totalProjectCount: 0,
-					loading: false,
-					keyword: ''
-				},
-				finished: {
-					projects: [],
-					pageNumber: 1,
+        loading: false,
+        keyword: ''
+      },
+      finished: {
+        projects: [],
+        pageNumber: 1,
 			        rowNumber: 3,
 			        totalProjectCount: 0,
-					loading: false,
-					keyword: ''
-				},
-				updateBid: {
-					isShow: false,
-					project: null,
-					bid: null
-				}
-			}
-		},
-		methods: {
-			fetchData(projectStatus){
-				projectStatus.forEach((status)=>{
-					bus.$emit('setRefreshButtonStatus', true);
-					this[status].loading = true;
-					this.$http.get(API_SERVER + '/dashboard/project', 
-									{params: { 
-										status: status, 
-										pageNumber: this[status].pageNumber,
-										rowNumber: this[status].rowNumber,
-										keyword: this[status].keyword
-									}})
-					.then(response=> {
-						bus.$emit('setRefreshButtonStatus', false);
-						this[status].loading = false;
-						if (status === 'bidding'){
-							this[status].bids = response.body.bids;
-						}else {
-							this[status].projects = response.body.projects;
-						}
-						this[status].totalProjectCount = response.body.totalProjectCount;
-					
-					});
-				})
-			},
-			updateProject(data, status){
-				this[status].pageNumber = data.pageNumber;
-				this[status].rowNumber = data.rowNumber;
-				this.fetchData([status]);
-			},
-			searchProject(keyword, status){
-				this[status].keyword = keyword;
-				this.fetchData([status]);
-			}
-		},
-		created(){
-			var projectStatus = ['bidding', 'working', 'finished'];
-			this.fetchData(projectStatus);
-			bus.$on('updateProject', ()=>{
-				this.fetchData(projectStatus);
-			});
-			bus.$on('updateProjectLoading', (payload) => {
-				this[payload.status].loading = payload.loading;
-			});
-			bus.$on('updateBid', (payload) => {
-				this.updateBid.project = payload.project;
-				this.updateBid.bid = payload.bid;
-				this.updateBid.isShow = true;
-			});
-			document.title = "My Jobs - WorkFlow"
-		},
-		components: {
-			biddingTable,
-			workingTable,
-			finishedTable,
-			placeBidModal
-		}
-	}
+        loading: false,
+        keyword: ''
+      },
+      updateBid: {
+        isShow: false,
+        project: null,
+        bid: null
+      }
+    }
+  },
+  methods: {
+    fetchData (projectStatus) {
+      projectStatus.forEach((status) => {
+        bus.$emit('setRefreshButtonStatus', true)
+        this[status].loading = true
+        this.$http.get(API_SERVER + '/dashboard/project',
+          { params: {
+            status: status,
+            pageNumber: this[status].pageNumber,
+            rowNumber: this[status].rowNumber,
+            keyword: this[status].keyword
+          } })
+          .then(response => {
+            bus.$emit('setRefreshButtonStatus', false)
+            this[status].loading = false
+            if (status === 'bidding') {
+              this[status].bids = response.body.bids
+            } else {
+              this[status].projects = response.body.projects
+            }
+            this[status].totalProjectCount = response.body.totalProjectCount
+          })
+      })
+    },
+    updateProject (data, status) {
+      this[status].pageNumber = data.pageNumber
+      this[status].rowNumber = data.rowNumber
+      this.fetchData([status])
+    },
+    searchProject (keyword, status) {
+      this[status].keyword = keyword
+      this.fetchData([status])
+    }
+  },
+  created () {
+    var projectStatus = ['bidding', 'working', 'finished']
+    this.fetchData(projectStatus)
+    bus.$on('updateProject', () => {
+      this.fetchData(projectStatus)
+    })
+    bus.$on('updateProjectLoading', (payload) => {
+      this[payload.status].loading = payload.loading
+    })
+    bus.$on('updateBid', (payload) => {
+      this.updateBid.project = payload.project
+      this.updateBid.bid = payload.bid
+      this.updateBid.isShow = true
+    })
+    document.title = 'My Jobs - WorkFlow'
+  },
+  components: {
+    biddingTable,
+    workingTable,
+    finishedTable,
+    placeBidModal
+  }
+}
 </script>
 
 <style scoped>

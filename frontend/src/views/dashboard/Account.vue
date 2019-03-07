@@ -71,29 +71,29 @@
 </template>
 
 <script>
-	import appCountryPicker from '../../components/common/CountryPicker'
-	import appHeader from '../../components/dashboard/Heading'
-	import appEditTextBox from '../../components/dashboard/EditTextBox'
-	import { bus } from '../../main.js'
+import appCountryPicker from '../../components/common/CountryPicker'
+import appHeader from '../../components/dashboard/Heading'
+import appEditTextBox from '../../components/dashboard/EditTextBox'
+import { bus } from '../../main.js'
 
-	import { API_SERVER } from '../../api.js'
+import { API_SERVER } from '../../api.js'
 
-	export default {
-		computed: {
-			currentUser(){
-				return this.$store.state.user.currentUser;
-			}
-		},
-		components: {
-			appCountryPicker,
-			appHeader,
-			appEditTextBox,
-			alert
-		},
-		created(){
-			document.title = "Account - WorkFlow";
-		}
-	}
+export default {
+  computed: {
+    currentUser () {
+      return this.$store.state.user.currentUser
+    }
+  },
+  components: {
+    appCountryPicker,
+    appHeader,
+    appEditTextBox,
+    alert
+  },
+  created () {
+    document.title = 'Account - WorkFlow'
+  }
+}
 </script>
 
 <style scoped>

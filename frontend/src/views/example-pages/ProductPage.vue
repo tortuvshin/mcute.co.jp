@@ -430,33 +430,33 @@
     </div>
 </template>
 <script>
-  import { Card, Button, Collapse, CollapseItem } from '@/components';
-  import { Carousel, CarouselItem, Select, Option, Tooltip } from 'element-ui'
+import { Card, Button, Collapse, CollapseItem } from '@/components'
+import { Carousel, CarouselItem, Select, Option, Tooltip } from 'element-ui'
 
-  export default {
-    name: 'product-page',
-    bodyClass: 'product-page',
-    components: {
-      Card,
-      Collapse,
-      CollapseItem,
-      [Button.name]: Button,
-      [Carousel.name]: Carousel,
-      [CarouselItem.name]: CarouselItem,
-      [Select.name]: Select,
-      [Option.name]: Option,
-      [Tooltip.name]: Tooltip,
-    },
-    data() {
-      return {
-        filters: {
-          color: '',
-          size: ''
-        },
-        year: new Date().getFullYear()
-      }
-    },
+export default {
+  name: 'product-page',
+  bodyClass: 'product-page',
+  components: {
+    Card,
+    Collapse,
+    CollapseItem,
+    [Button.name]: Button,
+    [Carousel.name]: Carousel,
+    [CarouselItem.name]: CarouselItem,
+    [Select.name]: Select,
+    [Option.name]: Option,
+    [Tooltip.name]: Tooltip
+  },
+  data () {
+    return {
+      filters: {
+        color: '',
+        size: ''
+      },
+      year: new Date().getFullYear()
+    }
   }
+}
 </script>
 <style>
 </style>

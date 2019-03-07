@@ -9,19 +9,19 @@
 
 <script>
 
-import MainNavBar from '@/layout/MainNavBar';
-import MainFooter from '@/layout/MainFooter';
+import MainNavBar from '@/layout/MainNavbar'
+import MainFooter from '@/layout/MainFooter'
 
-	export default {
-        name: "Error",
-        components: {
-            MainNavBar,
-            MainFooter
-        },
-		created(){
-			document.title = "404 NOT FOUND - WorkFlow";
-		}
-	}
+export default {
+  name: 'Error',
+  components: {
+    MainNavBar,
+    MainFooter
+  },
+  created () {
+    document.title = '404 NOT FOUND - WorkFlow'
+  }
+}
 </script>
 
 <style scoped>

@@ -8,32 +8,32 @@
 </template>
 
 <script>
-	import countries from '../../assets/json/countries.json'
-	export default {
-		data(){
-			return {
-				country: this.value,
-				countries: countries
-			}
-		},
-		props: {
-			value: {
-				type: String,
-				default: ""
-			}
-		},
-		watch: {
-			country(val){
-				this.countrySelected(val);
-			}
-		},
-		methods: {
-			countrySelected(value){
-				this.$emit('change');
-				this.$emit('input', value);
-			}
-		}
-	}
+import countries from '../../assets/json/countries.json'
+export default {
+  data () {
+    return {
+      country: this.value,
+      countries: countries
+    }
+  },
+  props: {
+    value: {
+      type: String,
+      default: ''
+    }
+  },
+  watch: {
+    country (val) {
+      this.countrySelected(val)
+    }
+  },
+  methods: {
+    countrySelected (value) {
+      this.$emit('change')
+      this.$emit('input', value)
+    }
+  }
+}
 </script>
 
 <style scoped>

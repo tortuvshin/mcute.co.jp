@@ -48,9 +48,9 @@
                   <option value="-1" v-if="services.projects.length <= 0 || currentUser.type !== 'employer'" disabled>
                     None
                   </option>
-                  
+
               </select>
-        
+
               <select class="form-control input-lg" v-if="ticket.serviceType === 'billing'" v-model="ticket.relatedService" @change="panel = 'step3'">
                   <option value="-1" disabled v-if="getLength('bankDeposit') <= 0 && getLength('paypalDeposit') <= 0 && getLength('withdraws') <= 0">
                     None
@@ -72,13 +72,13 @@
                   </option>
                   <option v-for="transaction in services.transaction.paypalDeposit" :value="transaction._id" :class="[statusColor(transaction.status)]">
                     [{{transaction.orderTime | moment("DD/MM/YY HH:MM")}}] {{transaction.id}}  ({{transaction.status}})
-                  </option>    
+                  </option>
                   <option value="-4" disabled v-if="getLength('withdraws') > 0">
                     Withdraws
                   </option>
                   <option v-for="transaction in services.transaction.withdraws" :value="transaction._id" :class="[statusColor(transaction.status)]">
                     [{{transaction.createTime | moment("DD/MM/YY HH:MM")}}] {{transaction._id}}  ({{transaction.status}})
-                  </option>   
+                  </option>
               </select>
             </div>
         </div>
@@ -149,130 +149,130 @@
 </template>
 
 <script>
-  import { accordion, panel }  from 'vue-strap'
-	import { API_SERVER } from '../../api.js'
-	import { mapGetters } from 'vuex'
-	import { bus } from '../../main.js'
-	import { VueEditor } from 'vue2-editor'
+import { accordion, panel } from 'vue-strap'
+import { API_SERVER } from '../../api.js'
+import { mapGetters } from 'vuex'
+import { bus } from '../../main.js'
+import { VueEditor } from 'vue2-editor'
 
-	export default {
-		data(){
-			return {
-				ticket: {
-					message: '',
-					relatedService: -1,
-					attachments: [],
-          issueType: '',
-          serviceType: ''
-				},
-				services: {
-					projects: [],
-					transaction: []
-				},
-				loadingData: true,
-				fileQuantity: 1,
-        panel: 'step1'
-			}
-		},
-    watch: {
-      'ticket.issueType'(val){
-        this.panel = 'step4';
+export default {
+  data () {
+    return {
+      ticket: {
+        message: '',
+        relatedService: -1,
+        attachments: [],
+        issueType: '',
+        serviceType: ''
+      },
+      services: {
+        projects: [],
+        transaction: []
+      },
+      loadingData: true,
+      fileQuantity: 1,
+      panel: 'step1'
+    }
+  },
+  watch: {
+    'ticket.issueType' (val) {
+      this.panel = 'step4'
+    }
+  },
+  computed: {
+    canSubmit () {
+      if (this.ticket.message === '' || this.ticket.relatedService === -1 || this.ticket.issueType === '' || this.ticket.serviceType === '') {
+        return false
+      }
+      return true
+    },
+    currentUser () {
+      return this.$store.state.user.currentUser
+    },
+    fullName () {
+      return this.currentUser.firstName + ' ' + this.currentUser.lastName
+    }
+  },
+  methods: {
+    nextStep (stepNo) {
+      switch (stepNo) {
+        case 1:
+          this.panel = 'step' + stepNo
+          break
+        case 2:
+          if (!this.ticket.serviceType) {
+            return
+          }
+          this.panel = 'step' + stepNo
+          break
+        case 3:
+          if (this.ticket.relatedService === -1) {
+            return
+          }
+          this.panel = 'step' + stepNo
+          break
+        case 4:
+          if (!this.ticket.issueType) {
+            return
+          }
+          this.panel = 'step' + stepNo
+          break
       }
     },
-		computed: {
-      canSubmit(){
-        if (this.ticket.message === '' || this.ticket.relatedService === -1 || this.ticket.issueType === '' || this.ticket.serviceType === ''){
-          return false;
-        }
-        return true;
-      },
-			currentUser(){
-        return this.$store.state.user.currentUser;
-      },
-			fullName(){
-				return this.currentUser.firstName + ' ' + this.currentUser.lastName;
-			}
-		},
-		methods: {
-      nextStep(stepNo){
-        switch(stepNo) {
-          case 1: 
-            this.panel = "step" + stepNo;
-            break;
-          case 2:
-            if (!this.ticket.serviceType) {
-              return;
-            }
-            this.panel = "step" + stepNo;
-            break;
-          case 3: 
-            if (this.ticket.relatedService === -1) {
-              return;
-            }
-            this.panel = "step" + stepNo;
-            break;
-          case 4:
-            if (!this.ticket.issueType) {
-              return;
-            }
-            this.panel = "step" + stepNo;
-            break;
-        }
-      },
-      setServiceType(type){
-        this.ticket.serviceType = type;
-        this.ticket.relatedService = -1;
-        this.ticket.issueType = '';
-        this.nextStep(2);
-      },
-			getLength(serviceType){
-				return this.services.transaction[serviceType].length;
-			},
-			addFile(e){ 
-				this.ticket.attachments[e.target.attributes.index.value] = null;
-				this.ticket.attachments[e.target.attributes.index.value] = e.target.files[0];
-			},
-      statusColor(status){
-        if (status === 'Waiting for approval' || status === 'Waiting for paid'){
-          return 'status-pending';
-        } else if (status === 'Approved' || status === 'Success') {
-          return 'status-success';
-        } else if (status === 'Canceled'){
-          return 'status-failed';
-        }
-      },
-			createTicket(){
-				var formData = new FormData();
-    			formData.append('ticket', JSON.stringify(this.ticket));
+    setServiceType (type) {
+      this.ticket.serviceType = type
+      this.ticket.relatedService = -1
+      this.ticket.issueType = ''
+      this.nextStep(2)
+    },
+    getLength (serviceType) {
+      return this.services.transaction[serviceType].length
+    },
+    addFile (e) {
+      this.ticket.attachments[e.target.attributes.index.value] = null
+      this.ticket.attachments[e.target.attributes.index.value] = e.target.files[0]
+    },
+    statusColor (status) {
+      if (status === 'Waiting for approval' || status === 'Waiting for paid') {
+        return 'status-pending'
+      } else if (status === 'Approved' || status === 'Success') {
+        return 'status-success'
+      } else if (status === 'Canceled') {
+        return 'status-failed'
+      }
+    },
+    createTicket () {
+      var formData = new FormData()
+    			formData.append('ticket', JSON.stringify(this.ticket))
 
-    			this.ticket.attachments.forEach((attachments, index)=> {
-    				formData.append('attachments' + index, attachments);
-    			});
-          
-				this.$http.post(API_SERVER + '/support/create', formData).then(response=> {
-					bus.$emit('showAlert', response.body);
-					this.$router.replace({ name: 'ViewTicket', params: { id: response.body.ticketId }});
-				});
-			},
-			relatedServiceChanged(e) {
-				this.ticket.relatedService = e.target.value;
-			}
-		},
-		components: {
-			VueEditor,
-      accordion,
-      panel 
-		},
-		created(){
-      document.title = 'Create a ticket - WorkFlow';
-      bus.$emit('updateToolbar', 'Report Service Issue');
-			this.$http.get(API_SERVER + '/support/create').then(response=>{
-				this.services.projects = response.body.projects;
-				this.services.transaction = response.body.transaction;
-				this.loadingData = false;
-			});
-		}
-	}
+    			this.ticket.attachments.forEach((attachments, index) => {
+    				formData.append('attachments' + index, attachments)
+    			})
+
+      this.$http.post(API_SERVER + '/support/create', formData).then(response => {
+        bus.$emit('showAlert', response.body)
+        this.$router.replace({ name: 'ViewTicket', params: { id: response.body.ticketId } })
+      })
+    },
+    relatedServiceChanged (e) {
+      this.ticket.relatedService = e.target.value
+    }
+  },
+  components: {
+    VueEditor,
+    accordion,
+    panel
+  },
+  created () {
+    document.title = 'Create a ticket - WorkFlow'
+    bus.$emit('updateToolbar', 'Report Service Issue')
+    this.$http.get(API_SERVER + '/support/create').then(response => {
+      this.services.projects = response.body.projects
+      this.services.transaction = response.body.transaction
+      this.loadingData = false
+    })
+  }
+}
 </script>
 
 <style scoped>
@@ -452,7 +452,6 @@ input[type='file'].form-control {
 .activePanel {
   border-left: 5px solid #5cb85c;
 }
-
 
 .btn-submit:hover{
   background-color: #4b8fc9;

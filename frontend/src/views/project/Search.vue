@@ -32,21 +32,21 @@
                         <div class="md-table-head-container text-center">
                           <div class="md-table-head-text md-test">
                             Project Type
-                          </div> 
+                          </div>
                         </div>
                       </th>
                       <th class="md-table-head md-sorted">
                         <div class="md-table-head-container text-center">
                           <div class="md-table-head-text md-test">
                             Totel Bids
-                          </div> 
+                          </div>
                         </div>
                       </th>
                       <th class="md-table-head md-sorted">
                         <div class="md-table-head-container text-center">
                           <div class="md-table-head-text md-test">
                             Time Remaining
-                          </div> 
+                          </div>
                         </div>
                       </th>
                     </md-table-row>
@@ -64,64 +64,65 @@
                   </md-table-body>
                 </md-table>
 
-            <page-pagination
+            <!-- <page-pagination
                   :md-size="rowNumber"
                   :md-total="totalProjectCount"
                   :md-page="pageNumber"
                   md-label="Rows"
                   md-separator="of"
                   :md-page-options="[5, 10, 25, 50]"
-                  @pagination="onPagination" style="font-family:Lato;"></page-pagination>
-              </md-table-card>
+                  @pagination="onPagination" style="font-family:Lato;"></page-pagination>-->
+              </md-table-card> 
         </div>
      </div>
 </template>
 
 <script>
-    import svgBackground from '../../components/common/svgBackground'
-    import appProjectRow from '../../components/project/search/ProjectRow'
+import svgBackground from '../../components/common/svgBackground'
+import appProjectRow from '../../components/project/search/ProjectRow'
   	import { API_SERVER } from '../../api.js'
-    import { bus } from '../../main.js'
-    import pagePagination from 'vue-material/src/components/mdTable/mdTablePagination'
+import { bus } from '../../main.js'
+// import pagePagination from 'vue-material/src/components/mdTable/mdTablePagination'
   	export default {
-  		data() {
+  		data () {
   			return {
-          pageNumber: 1,
-          rowNumber: 5,
-          totalProjectCount: 0,
+      pageNumber: 1,
+      rowNumber: 5,
+      totalProjectCount: 0,
   				projects: [],
   				loadProgress: false,
   				search: {
   					keyword: '',
   					category: ''
   				},
-          isSearch: false
+      isSearch: false
   			}
   		},
   		methods: {
-  			fetchData() {
-          this.loadProgress = true;
-  				this.$http.get(API_SERVER + '/project/search', {params: { keyword: this.search.keyword, category: this.search.category, pageNumber: this.pageNumber, rowNumber: this.rowNumber}}).then(response => {
-            this.loadProgress = false;
-  					this.projects = response.body.projects;
-            this.totalProjectCount = response.body.totalProjectCount;
-  				});
+  			fetchData () {
+      this.loadProgress = true
+  				this.$http.get(API_SERVER + '/project/search', { params: { keyword: this.search.keyword, category: this.search.category, pageNumber: this.pageNumber, rowNumber: this.rowNumber } }).then(response => {
+        this.loadProgress = false
+  					this.projects = response.body.projects
+        this.totalProjectCount = response.body.totalProjectCount
+  				})
   			},
-        onPagination(event){
-          bus.$emit('scolltoTop');
-          this.rowNumber = event.size;
-          this.pageNumber = event.page;
-          this.fetchData();
-        }
+    onPagination (event) {
+      bus.$emit('scolltoTop')
+      this.rowNumber = event.size
+      this.pageNumber = event.page
+      this.fetchData()
+    }
   		},
-  		created(){
-       		this.fetchData();
-          document.title = 'Freelance Jobs - WorkFlow'
+  		created () {
+       		this.fetchData()
+    document.title = 'Freelance Jobs - WorkFlow'
   		},
   		components: {
-          appProjectRow,
-          svgBackground,
-          pagePagination
+    appProjectRow,
+    svgBackground
+    // ,
+    // pagePagination
   		}
   	}
 </script>

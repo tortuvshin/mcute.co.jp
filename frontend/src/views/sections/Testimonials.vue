@@ -155,17 +155,17 @@
 
 </template>
 <script>
-  import { Card, Button } from '@/components';
-  import { Carousel, CarouselItem } from 'element-ui'
+import { Card, Button } from '@/components'
+import { Carousel, CarouselItem } from 'element-ui'
 
-  export default {
-    components: {
-      Card,
-      [Button.name]: Button,
-      [Carousel.name]: Carousel,
-      [CarouselItem.name]: CarouselItem,
-    }
+export default {
+  components: {
+    Card,
+    [Button.name]: Button,
+    [Carousel.name]: Carousel,
+    [CarouselItem.name]: CarouselItem
   }
+}
 </script>
 <style scoped>
     .carousel-centered {

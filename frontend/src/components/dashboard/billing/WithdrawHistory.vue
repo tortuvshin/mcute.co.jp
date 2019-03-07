@@ -31,7 +31,7 @@
 			</md-table>
 		  </md-table-card>
 		</div>
-	
+
 	</div>
 </template>
 
@@ -39,11 +39,11 @@
  	export default {
  		props: ['withdraws'],
  		computed: {
-		    withdrawss() {
+		    withdrawss () {
 		      // just an example of processing `images` props
-		      return this.withdraws.filter((each, index) => index >= 0);
+		      return this.withdraws.filter((each, index) => index >= 0)
 		    }
-		}
+  }
  	}
 </script>
 

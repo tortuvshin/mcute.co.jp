@@ -20,7 +20,7 @@
                                     <div class="row">
                                         <div class="col-md-7 text-left">
                                             <h1 class="title">MCute Matching System.</h1>
-                                            <h4 class="description ">We have millions of prints, in a wide variety of styles. 
+                                            <h4 class="description ">We have millions of prints, in a wide variety of styles.
                                                  more importantly, we’ll help you find just the right one.
                                                  We have millions of prints, in a wide variety of styles.
                                                 But more importantly, we’ll help you find just the right one.</h4>
@@ -43,7 +43,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>  
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@
                                 <div class="row">
                                     <div class="col-md-8 ml-auto mr-auto text-center">
                                         <h1 class="title"> You should be here!</h1>
-                                        <h5 class="description">We have millions of prints, in a wide variety of styles. 
+                                        <h5 class="description">We have millions of prints, in a wide variety of styles.
                                                  more importantly, we’ll help you find just the right one.
                                                  We have millions of prints, in a wide variety of styles.
                                                 But more importantly, we’ll help you find just the right one.</h5>
@@ -115,7 +115,7 @@
                                     <div class="row">
                                         <div class="col-md-8 ml-auto mr-auto text-center">
                                             <h1 class="title">MCute Matching Systems.</h1>
-                                            <h4 class="description ">We have millions of prints, in a wide variety of styles. 
+                                            <h4 class="description ">We have millions of prints, in a wide variety of styles.
                                                  more importantly, we’ll help you find just the right one.
                                                  We have millions of prints, in a wide variety of styles.
                                                 But more importantly, we’ll help you find just the right one.</h4>
@@ -146,7 +146,7 @@
                         </div>
                     </div>
                 </el-carousel-item>
-                
+
             </el-carousel>
         </div>
         <div class="cards">
@@ -163,7 +163,7 @@
                             <a href="pablo">
                                 <h4 class="card-title">Abstract</h4>
                             </a>
-                            
+
                         </card>
                     </div>
                     <div class="col-md-4 col-lg-2">
@@ -172,7 +172,7 @@
                             <a href="pablo">
                                 <h4 class="card-title">Animals</h4>
                             </a>
-                            
+
                         </card>
                     </div>
                     <div class="col-md-4 col-lg-2">
@@ -181,7 +181,7 @@
                             <a href="pablo">
                                 <h4 class="card-title">Art for Kids</h4>
                             </a>
-                            
+
                         </card>
                     </div>
                     <div class="col-md-4 col-lg-2">
@@ -368,7 +368,7 @@
                     </h3>
                 </div>
                 <div class="row">
-                    
+
                     <div class="col-md-4 col-lg-2">
                         <card type="profile" plain>
                             <img slot="avatar" class="img rounded" src="https://cache1.artprintimages.com/images/gallery/artists/Banksy-artist-headshot-large.png">
@@ -376,7 +376,7 @@
                                 <h6 class="card-title">Basky</h6>
                             </a>
                             <n-button type="primary" round>Follow</n-button>
-                            
+
                         </card>
                     </div>
                     <div class="col-md-4 col-lg-2">
@@ -422,7 +422,7 @@
                                 <h6 class="card-title">William</h6>
                             </a>
                             <n-button type="primary" round>Follow</n-button>
-                            
+
                         </card>
                     </div>
                 </div>
@@ -526,31 +526,31 @@
     </div>
 </template>
 <script>
-  
-  import { Card, Button, FormGroupInput, Tabs, TabPane } from '@/components';
-  import { Carousel, CarouselItem } from 'element-ui'
-  export default {
-    name: 'landing-page',
-    bodyClass: 'landing-page',
-    components: {
-      Card,
-      Tabs,
-      TabPane,
-      [Button.name]: Button,
-      [FormGroupInput.name]: FormGroupInput,
-      [Carousel.name]: Carousel,
-      [CarouselItem.name]: CarouselItem
-    },
-    data() {
-      return {
-        form: {
-          firstName: '',
-          email: '',
-          message: ''
-        }
+
+import { Card, Button, FormGroupInput, Tabs, TabPane } from '@/components'
+import { Carousel, CarouselItem } from 'element-ui'
+export default {
+  name: 'landing-page',
+  bodyClass: 'landing-page',
+  components: {
+    Card,
+    Tabs,
+    TabPane,
+    [Button.name]: Button,
+    [FormGroupInput.name]: FormGroupInput,
+    [Carousel.name]: Carousel,
+    [CarouselItem.name]: CarouselItem
+  },
+  data () {
+    return {
+      form: {
+        firstName: '',
+        email: '',
+        message: ''
       }
     }
   }
+}
 </script>
 <style>
 </style>

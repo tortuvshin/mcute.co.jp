@@ -20,20 +20,20 @@
 </template>
 
 <script>
-	import { bus } from '../../../main.js'
+import { bus } from '../../../main.js'
 
-	export default {
-		props: ['project'],
-		methods: {
-			showSelectFreelancerModal(){
-				console.log("HI", this.project);;
-				bus.$emit('showSelectFreelancerModal', this.project);
-			}
-		},
-		created() {
-			document.title = 'Setting - WorkFlow'
-		}
-	}
+export default {
+  props: ['project'],
+  methods: {
+    showSelectFreelancerModal () {
+      console.log('HI', this.project)
+      bus.$emit('showSelectFreelancerModal', this.project)
+    }
+  },
+  created () {
+    document.title = 'Setting - WorkFlow'
+  }
+}
 </script>
 
 <style scoped>

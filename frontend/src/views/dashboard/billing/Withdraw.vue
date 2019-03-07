@@ -72,49 +72,49 @@
 </template>
 
 <script>
-	import appHeader from '../../../components/dashboard/Heading'
-	import { bus } from '../../../main.js'
-	import { API_SERVER } from '../../../api.js'
+import appHeader from '../../../components/dashboard/Heading'
+import { bus } from '../../../main.js'
+import { API_SERVER } from '../../../api.js'
 
-	export default {
-		data(){
-			return {
-				type: '',
-				amount: '',
-				paymentAccount: ''
-			}
-		},
-		components: {
-			appHeader
-		},
-		computed: {
-			currentUser(){
-				return this.$store.state.user.currentUser;
-			}
-		},
-		methods: {
-			selectWithdrawMethod(type){
-				this.type = type;
-			},
-			onSubmit(){
-				if (this.type === ''){
-					return alert("Withdraw method is required to select");
-				}
-				if (this.amount > this.currentUser.balance){
-					return alert('Your request amount is exceed your account balance.')
-				}
-				this.$http.post(API_SERVER +'/dashboard/billing/withdraw', {type: this.type, amount: this.amount, paymentAccount: this.paymentAccount}).then(response => {
-					this.type = '',
-					this.amount = '',
-					this.paymentAccount = '';
-					bus.$emit('showAlert', response.body);
-				});
-			}
-		},
-		created(){
-			document.title = "Withdraw - mcute.jp"
-		}
-	}
+export default {
+  data () {
+    return {
+      type: '',
+      amount: '',
+      paymentAccount: ''
+    }
+  },
+  components: {
+    appHeader
+  },
+  computed: {
+    currentUser () {
+      return this.$store.state.user.currentUser
+    }
+  },
+  methods: {
+    selectWithdrawMethod (type) {
+      this.type = type
+    },
+    onSubmit () {
+      if (this.type === '') {
+        return alert('Withdraw method is required to select')
+      }
+      if (this.amount > this.currentUser.balance) {
+        return alert('Your request amount is exceed your account balance.')
+      }
+      this.$http.post(API_SERVER + '/dashboard/billing/withdraw', { type: this.type, amount: this.amount, paymentAccount: this.paymentAccount }).then(response => {
+        this.type = '',
+        this.amount = '',
+        this.paymentAccount = ''
+        bus.$emit('showAlert', response.body)
+      })
+    }
+  },
+  created () {
+    document.title = 'Withdraw - mcute.jp'
+  }
+}
 </script>
 
 <style scoped>

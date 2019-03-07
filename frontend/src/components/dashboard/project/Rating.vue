@@ -9,7 +9,7 @@
 				  <md-table-body>
 				    <tr v-if="project.employerRate" style="border-top: 1px solid #eee;">
 				      <td style="width: 35%; border-right: 1px solid #ddd;">
-				      	<profile-card :user="project.employerRate.rater" :showTitle="showTitle" style="box-shadow: 0 0 0; margin-top:0;"></profile-card> 
+				      	<profile-card :user="project.employerRate.rater" :showTitle="showTitle" style="box-shadow: 0 0 0; margin-top:0;"></profile-card>
 				      </td>
 				      <td valign="top" style="padding: 15px;">
 			      		<p class="rate-content">{{ project.employerRate.rateContent }}</p>
@@ -20,19 +20,19 @@
 				      </td>
 				    </tr>
 				    <md-table-row v-else>
-				      <md-table-cell v-if="currentUser._id === project.employer._id"> 
+				      <md-table-cell v-if="currentUser._id === project.employer._id">
 				      	<div class="rate-wrapper">
 							<div class="starbar">
 								<label class="header">Rating Star: </label>
 								<div class="quality-starbar">
-									<star-rating :increment="0.5"  
+									<star-rating :increment="0.5"
 									             :star-size="30"
 									             :show-rating="false"
 									             @rating-selected="rateStar = $event">
 									</star-rating>
 								</div>
 							</div>
-							
+
 							<div class="comment">
 								<label class="header">Comment:</label>
 								<textarea v-model="rateContent" class="form-control" rows="10"></textarea>
@@ -71,19 +71,19 @@
 		  			</td>
 			  	</md-table-row>
 			  	<md-table-row v-else>
-				      <md-table-cell v-if="currentUser._id === project.winBid.bidder._id"> 
+				      <md-table-cell v-if="currentUser._id === project.winBid.bidder._id">
 				      	<div class="rate-wrapper">
 							<div class="starbar">
 								<label class="header">Rating Star: </label>
 								<div class="quality-starbar">
-									<star-rating :increment="0.5"  
+									<star-rating :increment="0.5"
 									             :star-size="30"
 									             :show-rating="false"
 									             @rating-selected="rateStar = $event">
 									</star-rating>
 								</div>
 							</div>
-							
+
 							<div class="comment">
 								<label class="header">Comment:</label>
 								<textarea v-model="rateContent" class="form-control" rows="10"></textarea>
@@ -105,41 +105,41 @@
 </template>
 
 <script>
-	import StarRating from 'vue-star-rating'
-	import profileCard from '../../common/ProfileCard'
-	import { bus } from '../../../main.js'
-	import { API_SERVER } from '../../../api.js'
+import StarRating from 'vue-star-rating'
+import profileCard from '../../common/ProfileCard.vue'
+import { bus } from '../../../main.js'
+import { API_SERVER } from '../../../api.js'
 
-	export default {
-		props: ['project'],
-		data() {
-			return {
-				showTitle: false,
-				rateStar: 0,
-				rateContent: ''
-			}
-		},
-		computed: {
-			currentUser(){
-				return this.$store.state.user.currentUser;
-			}
-		},
-		methods: {
-			rate() {
-				this.$http.post(API_SERVER + '/project/' + this.project._id + '/rating', {rateStar: this.rateStar, rateContent: this.rateContent}).then(response=>{
-					bus.$emit('showAlert', response.body);
-					bus.$emit('updateProjectDetail');
-				});
-			}
-		},
-		created(){
-			document.title = "Rating - WorkFlow"
-		},
-		components: {
-			profileCard,
-			StarRating
-		}
-	}
+export default {
+  props: ['project'],
+  data () {
+    return {
+      showTitle: false,
+      rateStar: 0,
+      rateContent: ''
+    }
+  },
+  computed: {
+    currentUser () {
+      return this.$store.state.user.currentUser
+    }
+  },
+  methods: {
+    rate () {
+      this.$http.post(API_SERVER + '/project/' + this.project._id + '/rating', { rateStar: this.rateStar, rateContent: this.rateContent }).then(response => {
+        bus.$emit('showAlert', response.body)
+        bus.$emit('updateProjectDetail')
+      })
+    }
+  },
+  created () {
+    document.title = 'Rating - WorkFlow'
+  },
+  components: {
+    profileCard,
+    StarRating
+  }
+}
 </script>
 
 <style scoped>

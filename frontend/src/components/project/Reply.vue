@@ -8,7 +8,7 @@
                 <em>
                 	<span :class="{'comment-reply-sender-name': !isProjectOwner, 'comment-reply-sender-name-employer': isProjectOwner }">
 	                	<strong>
-	                		{{reply.sender.firstName}}  {{reply.sender.lastName}} -  
+	                		{{reply.sender.firstName}}  {{reply.sender.lastName}} -
 	                		<span v-if="!isProjectOwner">{{ reply.sender.type | capitalizeFirstLetter }}</span>
 	                		<span v-else>Project Owner</span>
 	                	</strong>
@@ -18,7 +18,7 @@
 	                </span>
                 </em>
             </div>
-            
+
             <p class="comment-reply-content">
             	{{reply.content}}
             </p>
@@ -27,21 +27,21 @@
 </template>
 
 <script>
-	import { API_SERVER } from '../../api.js'
-	export default {
-		props: ['reply', 'employer'],
-		computed: {
-			replierAvatar() {
-				if (this.reply.sender.avatar !== undefined){
-					return API_SERVER + "/uploads/" + this.reply.sender.username + "/avatar/" + this.reply.sender.avatar.filename;
-				}
-				return API_SERVER + '/uploads/default_avatar_male.jpg';
-			},
-			isProjectOwner(){
-				return this.reply.sender._id === this.employer._id;
-			}
-		}
-	}
+import { API_SERVER } from '../../api.js'
+export default {
+  props: ['reply', 'employer'],
+  computed: {
+    replierAvatar () {
+      if (this.reply.sender.avatar !== undefined) {
+        return API_SERVER + '/uploads/' + this.reply.sender.username + '/avatar/' + this.reply.sender.avatar.filename
+      }
+      return API_SERVER + '/uploads/default_avatar_male.jpg'
+    },
+    isProjectOwner () {
+      return this.reply.sender._id === this.employer._id
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -49,7 +49,7 @@
 	display: flex;
 }
 
-.comment-reply > div[class*='col-'] {  
+.comment-reply > div[class*='col-'] {
   display: flex;
   flex-direction: column;
 }

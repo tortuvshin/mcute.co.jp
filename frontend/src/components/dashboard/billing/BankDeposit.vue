@@ -49,7 +49,7 @@
                     <div class="col-sm-8">
                         <input type="time" class="form-control input-lg" v-model="deposit.time" placeholder="Enter Deposit Time" required>
                     </div>
-                </div>    
+                </div>
             </div>
             <hr>
             <!-- Deposit Amount -->
@@ -65,7 +65,7 @@
                             <input type="Number" class="form-control input-lg" v-model="deposit.amount" placeholder="Enter Deposit Amount" min="1" required>
                         </div>
                     </div>
-                </div>           
+                </div>
             </div>
             <hr>
             <!-- Email -->
@@ -94,61 +94,61 @@
 </template>
 
 <script>
-	import { API_SERVER } from '../../../api.js'
-    import { bus } from '../../../main.js'
+import { API_SERVER } from '../../../api.js'
+import { bus } from '../../../main.js'
 
-	import appImageUploader from '../../common/ImageUploader'
+import appImageUploader from '../../common/ImageUploader'
 
-	export default { 
-		data() {
-			return {
-				deposit:{
-					bankType: '',
-					date: '',
-					time: '',
-					amount: '',
-					receipt: ''
-				},
-                error: {
-                    bankType: false
-                }
-			}
-		},
-        watch:{
-            'deposit.bankType'(val){
-                this.error.bankType = false; 
-            }
-        },
-		methods: {
-			onSubmit(){
-                if (this.deposit.bankType === ''){
-                    return this.error.bankType = true;
-                }
-				var formData = new FormData();
-				formData.append('bankType', this.deposit.bankType);
-				formData.append('date', this.deposit.date);
-				formData.append('time', this.deposit.time);
-				formData.append('amount', this.deposit.amount);
-				formData.append('receipt', this.deposit.receipt);
-				formData.append('method', 'bank');
+export default {
+  data () {
+    return {
+      deposit: {
+        bankType: '',
+        date: '',
+        time: '',
+        amount: '',
+        receipt: ''
+      },
+      error: {
+        bankType: false
+      }
+    }
+  },
+  watch: {
+    'deposit.bankType' (val) {
+      this.error.bankType = false
+    }
+  },
+  methods: {
+    onSubmit () {
+      if (this.deposit.bankType === '') {
+        return this.error.bankType = true
+      }
+      var formData = new FormData()
+      formData.append('bankType', this.deposit.bankType)
+      formData.append('date', this.deposit.date)
+      formData.append('time', this.deposit.time)
+      formData.append('amount', this.deposit.amount)
+      formData.append('receipt', this.deposit.receipt)
+      formData.append('method', 'bank')
 
-				this.$http.post(API_SERVER + '/dashboard/billing/deposit', formData).then(response => {
-					bus.$emit('showAlert', response.body);
-                    this.onReset();
-				});
-			},
-            onReset() {
-                this.deposit.bankType = '';
-                this.deposit.date = '';
-                this.deposit.time = '';
-                this.deposit.amount = '';
-                this.deposit.receipt = '';
-            }
-		},
-		components: {
-			appImageUploader
-		}
-	}
+      this.$http.post(API_SERVER + '/dashboard/billing/deposit', formData).then(response => {
+        bus.$emit('showAlert', response.body)
+        this.onReset()
+      })
+    },
+    onReset () {
+      this.deposit.bankType = ''
+      this.deposit.date = ''
+      this.deposit.time = ''
+      this.deposit.amount = ''
+      this.deposit.receipt = ''
+    }
+  },
+  components: {
+    appImageUploader
+  }
+}
 </script>
 
 <style>

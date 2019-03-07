@@ -23,7 +23,7 @@
 	  	</div>
 	  	<div v-if="step === 3">
 			 <p class="message">
-			 	Are you sure select <strong>{{project.bids[selectedBid].bidder.firstName + " " + project.bids[selectedBid].bidder.lastName}} </strong>as the project freelancer and set deadline on <strong>{{ deadline | moment("DD/MM/YYYY hh:mm A")}}</strong>? 
+			 	Are you sure select <strong>{{project.bids[selectedBid].bidder.firstName + " " + project.bids[selectedBid].bidder.lastName}} </strong>as the project freelancer and set deadline on <strong>{{ deadline | moment("DD/MM/YYYY hh:mm A")}}</strong>?
 
 			 	<br><br><strong>If yes</strong>, please press 'Confirm' button, the system will then return <strong>${{project.budgetMax - project.bids[selectedBid].bidPrice}}</strong> to your wallet instantly.
 			 	<br><br><strong>If no</strong>, please press 'Back' button to re-select or leave.
@@ -45,114 +45,114 @@
 </template>
 
 <script>
-	import bidRow from '../../../project/BidRow'
-	import { bus } from '../../.../../../../main'
-	import { API_SERVER } from '../../.../../../../api'
+import bidRow from '../../../project/BidRow'
+import { bus } from '../../.../../../../main'
+import { API_SERVER } from '../../.../../../../api'
 
-	export default {
-		props: ['isUpdate'],
-		data(){
-			return {
-				project: null,
-				selectedBid: '',
-				deadline: '',
-				step: 1,
-				error: {
-					isError: false,
-					message: ''
-				}
-			}
-		},
-		computed: {
-			httpMethod(){
-				if (this.isUpdate === true){
-					return 'put';
-				}else {
-					return 'post'
-				}
-			},
-		},
-		methods: {
-			openDialog() {
-				this.$nextTick(() => {
-					this.$refs["selectFreelancerDialog"].open();
-				});
+export default {
+  props: ['isUpdate'],
+  data () {
+    return {
+      project: null,
+      selectedBid: '',
+      deadline: '',
+      step: 1,
+      error: {
+        isError: false,
+        message: ''
+      }
+    }
+  },
+  computed: {
+    httpMethod () {
+      if (this.isUpdate === true) {
+        return 'put'
+      } else {
+        return 'post'
+      }
+    }
+  },
+  methods: {
+    openDialog () {
+      this.$nextTick(() => {
+        this.$refs['selectFreelancerDialog'].open()
+      })
 		    },
-			closeDialog(){
-                this.$nextTick(() => {
-					this.$refs["selectFreelancerDialog"].close();
-				});
-            },
-            resetError(){
-            	this.error.isError = false;
-            	this.error.message = '';
-            },
-            goStep(stepNo){
-            	if (stepNo === 3){
-            		if (!this.deadline){
-	        			this.error.isError = true;
-	            		this.error.message = "Deadline is required to choose"
-	            	} else if(new Date(this.deadline) <= new Date(this.todayDateTime())) {
-	            		this.error.isError = true;
-	            		this.error.message = "Deadline can't lower than current datetime";
+    closeDialog () {
+      this.$nextTick(() => {
+        this.$refs['selectFreelancerDialog'].close()
+      })
+    },
+    resetError () {
+            	this.error.isError = false
+            	this.error.message = ''
+    },
+    goStep (stepNo) {
+            	if (stepNo === 3) {
+            		if (!this.deadline) {
+	        			this.error.isError = true
+	            		this.error.message = 'Deadline is required to choose'
+	            	} else if (new Date(this.deadline) <= new Date(this.todayDateTime())) {
+	            		this.error.isError = true
+	            		this.error.message = "Deadline can't lower than current datetime"
 	            	} else {
-	            		this.resetError();
-	            		this.step = 3;
+	            		this.resetError()
+	            		this.step = 3
 	            	}
             	}
-         		if (stepNo === 2){
-	            	if (this.selectedBid === ''){
-	            		this.error.isError = true;
-	            		this.error.message = "Freelancer is required to select"
+         		if (stepNo === 2) {
+	            	if (this.selectedBid === '') {
+	            		this.error.isError = true
+	            		this.error.message = 'Freelancer is required to select'
 	            	} else {
-	            		this.resetError();
-	            		this.step = 2;
+	            		this.resetError()
+	            		this.step = 2
 	            	}
-           		} 
-           		if (stepNo === 1){
-           			this.step = 1;
            		}
-            },
-            reset(){
-		 		this.deadline = '';
-		 		this.selectedBid = '';
-		 		this.step = 1;
-		 		this.resetError();
-            },
-            confirm(e){
-        		this.resetError();
-        		e.target.disabled = true;
-        		var updateFreelancer = new Promise((resolve, reject)=> {
-        			this.$http[this.httpMethod](API_SERVER + '/project/' + this.project._id + '/freelancer', {bidId: this.project.bids[this.selectedBid]._id}).then(response=> {
-	            		resolve({message: response.body.message, updatedUser: response.body.updatedUser});
-	            	});
-        		});
-            	
-        		var updateDeadline = new Promise((resolve, reject)=> {
-        			this.$http.put(API_SERVER + '/project/' + this.project._id + '/deadline', {deadline: this.deadline}).then(response=> {
-	            		resolve(response.body.message);
-	            	});
-        		});
+           		if (stepNo === 1) {
+           			this.step = 1
+           		}
+    },
+    reset () {
+		 		this.deadline = ''
+		 		this.selectedBid = ''
+		 		this.step = 1
+		 		this.resetError()
+    },
+    confirm (e) {
+        		this.resetError()
+        		e.target.disabled = true
+        		var updateFreelancer = new Promise((resolve, reject) => {
+        			this.$http[this.httpMethod](API_SERVER + '/project/' + this.project._id + '/freelancer', { bidId: this.project.bids[this.selectedBid]._id }).then(response => {
+	            		resolve({ message: response.body.message, updatedUser: response.body.updatedUser })
+	            	})
+        		})
 
-        		Promise.all([updateFreelancer, updateDeadline]).then(values => { 
-			 		this.$store.commit('setCurrentUser', values[0].updatedUser);
-			 		this.closeDialog();
-            		bus.$emit('showAlert', {message: values[0].message + "<br />" + values[1]});
-            		bus.$emit('updateProject');
-				});
-            }
-		},
-		created(){
-			console.log("isUpdate", this.isUpdate);
-			bus.$on("showSelectFreelancerModal", (project) => {
-				this.openDialog();
-				this.project = project;
-			});
-		},
-		components: {
-			bidRow
-		}
-	}
+        		var updateDeadline = new Promise((resolve, reject) => {
+        			this.$http.put(API_SERVER + '/project/' + this.project._id + '/deadline', { deadline: this.deadline }).then(response => {
+	            		resolve(response.body.message)
+	            	})
+        		})
+
+        		Promise.all([updateFreelancer, updateDeadline]).then(values => {
+			 		this.$store.commit('setCurrentUser', values[0].updatedUser)
+			 		this.closeDialog()
+            		bus.$emit('showAlert', { message: values[0].message + '<br />' + values[1] })
+            		bus.$emit('updateProject')
+      })
+    }
+  },
+  created () {
+    console.log('isUpdate', this.isUpdate)
+    bus.$on('showSelectFreelancerModal', (project) => {
+      this.openDialog()
+      this.project = project
+    })
+  },
+  components: {
+    bidRow
+  }
+}
 </script>
 
 <style scoped>

@@ -7,14 +7,14 @@
             <div class="container">
                 <div class="col-md-5 ml-auto mr-auto">
                     <form v-on:submit.prevent="onLogin">
-	    
+
                         <card type="login" plain>
-                            
+
                             <div slot="header" class="logo-container">
                                 <img v-lazy="'static/img/o.png'" alt="">
                             </div>
 
-                            <fg-input 
+                            <fg-input
                                 class="no-border input-lg"
                                 addon-left-icon="now-ui-icons users_circle-08"
                                 v-model="username"
@@ -22,7 +22,7 @@
                                 placeholder="Username...">
                             </fg-input>
 
-                            <fg-input 
+                            <fg-input
                                 class="no-border input-lg"
                                 addon-left-icon="now-ui-icons text_caps-small"
                                 placeholder="Password..."
@@ -59,89 +59,89 @@
     </div>
 </template>
 <script>
-import { Card, Button, FormGroupInput } from '@/components';
-import MainFooter from '@/layout/MainFooter';
+import { Card, Button, FormGroupInput } from '@/components'
+import MainFooter from '@/layout/MainFooter'
 import Vue from 'vuex'
 import { bus } from '../main.js'
 import { API_SERVER } from '../api.js'
 import { mapActions } from 'vuex'
 
 export default {
-    name: 'Login',
-    bodyClass: 'login-page',
-    components: {
-      Card,
-      MainFooter,
-      [Button.name]: Button,
-      [FormGroupInput.name]: FormGroupInput
-    },
-    data() {
-        return {
-            username: '',
-            password: '',
-            invalidInput: [],
-            errorMessage: '',
-            loginProgress: 0
-        }
-    },
-    methods: {
-        ...mapActions([
-            'login'
-        ]),
-        isInvalidExist(fieldName){
-            return this.invalidInput.indexOf(fieldName) !== -1;
-        },
-        checkInvalidInput(fieldNames){
-            var result = false;
-            fieldNames.forEach((fieldName) => {
-                if (this[fieldName] === ''){
-                    this.invalidInput.push(fieldName);
-                    result = true;
-                }
-            });
-            return result;
-        },
-        onLogin(e){
-            console.log("Login clicked");
-            this.invalidInput = [];
-            if (this.checkInvalidInput(['username', 'password'])){
-                return;
-            }
-            const payload = {
-                ref: this,
-                user: {
-                    username: this.username, 
-                    password: this.password
-                }
-            }
-            console.log(this.username +" "+this.password);
-            var loginProgress = setInterval(()=> {
-                if (this.loginProgress < 100){
-                    this.loginProgress += 15;
-                }else {
-                    clearInterval(loginProgress);
-                    this.login(payload);
-                }
-            }, 100);
-        },
-        loginSuccess(message){
-                bus.$emit('showAlert', message);
-                this.$router.go(-1);
-        },
-        loginFail(message){
-                this.loginProgress = 0;
-                bus.$emit('showAlert', message);
-        }
-    },
-    created(){
-        // From main.js auth
-        const errorMessage = this.$route.params.errorMessage;
-        if (errorMessage){
-            this.errorMessage = errorMessage;
-        }
-        window.document.title = "Login - MCute";
-        console.log(this.errorMessage);
+  name: 'Login',
+  bodyClass: 'login-page',
+  components: {
+    Card,
+    MainFooter,
+    [Button.name]: Button,
+    [FormGroupInput.name]: FormGroupInput
+  },
+  data () {
+    return {
+      username: '',
+      password: '',
+      invalidInput: [],
+      errorMessage: '',
+      loginProgress: 0
     }
+  },
+  methods: {
+    ...mapActions([
+      'login'
+    ]),
+    isInvalidExist (fieldName) {
+      return this.invalidInput.indexOf(fieldName) !== -1
+    },
+    checkInvalidInput (fieldNames) {
+      var result = false
+      fieldNames.forEach((fieldName) => {
+        if (this[fieldName] === '') {
+          this.invalidInput.push(fieldName)
+          result = true
+        }
+      })
+      return result
+    },
+    onLogin (e) {
+      console.log('Login clicked')
+      this.invalidInput = []
+      if (this.checkInvalidInput(['username', 'password'])) {
+        return
+      }
+      const payload = {
+        ref: this,
+        user: {
+          username: this.username,
+          password: this.password
+        }
+      }
+      console.log(this.username + ' ' + this.password)
+      var loginProgress = setInterval(() => {
+        if (this.loginProgress < 100) {
+          this.loginProgress += 15
+        } else {
+          clearInterval(loginProgress)
+          this.login(payload)
+        }
+      }, 100)
+    },
+    loginSuccess (message) {
+      bus.$emit('showAlert', message)
+      this.$router.go(-1)
+    },
+    loginFail (message) {
+      this.loginProgress = 0
+      bus.$emit('showAlert', message)
+    }
+  },
+  created () {
+    // From main.js auth
+    const errorMessage = this.$route.params.errorMessage
+    if (errorMessage) {
+      this.errorMessage = errorMessage
+    }
+    window.document.title = 'Login - MCute'
+    console.log(this.errorMessage)
+  }
 }
 </script>
 <style>

@@ -10,35 +10,35 @@
 </template>
 
 <script>
-	export default {
-		props: ['ticket'],
-        computed: {
-            statusClass(){
-              if (this.ticket.status === 'under for review'){
-                return 'ufr';
-              }else if (this.ticket.status === 'Request Freelancer Reply'){
-                return 'rfr'
-              }else if (this.ticket.status === 'Request Employer Reply'){
-                return 'rer'
-              }else if (this.ticket.status === 'Request Reply'){
-                return 'rr'
-              }else if (this.ticket.status === 'Replied'){
-                return 'r'
-              }else if (this.ticket.status === 'Freelancer Replied'){
-                return 'fr'
-              }else if (this.ticket.status === 'Employer Replied'){
-                return 'er'
-              }else if (this.ticket.status === 'Solved'){
-                return 'solved'
-              }
-            }
-        },
-        methods: {
-            viewTicket() {
-                this.$router.push({ name: 'ViewTicket', params: { id: this.ticket._id }});
-            }
-        }
-	}
+export default {
+  props: ['ticket'],
+  computed: {
+    statusClass () {
+      if (this.ticket.status === 'under for review') {
+        return 'ufr'
+      } else if (this.ticket.status === 'Request Freelancer Reply') {
+        return 'rfr'
+      } else if (this.ticket.status === 'Request Employer Reply') {
+        return 'rer'
+      } else if (this.ticket.status === 'Request Reply') {
+        return 'rr'
+      } else if (this.ticket.status === 'Replied') {
+        return 'r'
+      } else if (this.ticket.status === 'Freelancer Replied') {
+        return 'fr'
+      } else if (this.ticket.status === 'Employer Replied') {
+        return 'er'
+      } else if (this.ticket.status === 'Solved') {
+        return 'solved'
+      }
+    }
+  },
+  methods: {
+    viewTicket () {
+      this.$router.push({ name: 'ViewTicket', params: { id: this.ticket._id } })
+    }
+  }
+}
 </script>
 
 <style scoped>

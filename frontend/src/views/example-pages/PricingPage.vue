@@ -153,7 +153,6 @@
                             <card type="contact" raised header-classes="text-center">
                                 <h4 slot="header" class="card-title">Contact Us</h4>
 
-
                                 <div class="row">
                                     <div class="col-md-6 pr-2">
                                         <label>First Name</label>
@@ -198,19 +197,19 @@
     </div>
 </template>
 <script>
-  import { Card, Button, InfoSection, FormGroupInput, Checkbox } from '@/components';
+import { Card, Button, InfoSection, FormGroupInput, Checkbox } from '@/components'
 
-  export default {
-    name: 'pricing-page',
-    bodyClass: 'pricing',
-    components: {
-      Card,
-      InfoSection,
-      [Button.name]: Button,
-      [Checkbox.name]: Checkbox,
-      [FormGroupInput.name]: FormGroupInput
-    }
+export default {
+  name: 'pricing-page',
+  bodyClass: 'pricing',
+  components: {
+    Card,
+    InfoSection,
+    [Button.name]: Button,
+    [Checkbox.name]: Checkbox,
+    [FormGroupInput.name]: FormGroupInput
   }
+}
 </script>
 <style>
 </style>

@@ -1,10 +1,10 @@
 <template>
 	<div class="div-border white padding">
-         <div class="bottom-border budget-type"> 
+         <div class="bottom-border budget-type">
 			<span v-if="budgetType == 'fixed'"><i class="fa fa-gg" aria-hidden="true"></i> Fixed Price</span>
 			<span v-else><i class="fa fa-gg" aria-hidden="true"></i> Price Range</span>
          </div>
-         <div class="budget-price"> 
+         <div class="budget-price">
             <span v-if="budgetType == 'fixed'">${{ budgetMin }} </span>
 			<span v-else>${{ budgetMin }} - ${{ budgetMax }} </span>
             <span class="details-text-fixed">Budget</span>
@@ -13,9 +13,9 @@
 </template>
 
 <script>
-	export default{
-		props: ['budgetType', 'budgetMin', 'budgetMax']
-	}
+export default {
+  props: ['budgetType', 'budgetMin', 'budgetMax']
+}
 </script>
 
 <style scoped>

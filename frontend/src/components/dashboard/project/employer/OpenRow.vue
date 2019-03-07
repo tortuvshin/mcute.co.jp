@@ -18,7 +18,7 @@
             </div>
             <div v-if="project.skills.length > 0">
                 <md-chip md-static v-for="skill in project.skills" class="skill-tag">
-                  {{skill}} 
+                  {{skill}}
                 </md-chip>
             </div>
         </div>
@@ -44,45 +44,45 @@
 </template>
 
 <script>
-    import appCountDown from '../../../project/common/Countdown'
-    import { API_SERVER } from '../../../../api.js'
-    import { bus } from '../../../../main.js'
+import appCountDown from '../../../project/common/Countdown'
+import { API_SERVER } from '../../../../api.js'
+import { bus } from '../../../../main.js'
 
-    export default {
-        props: ['project'],
-        computed: {
-            projectUrl(){
-                return '/project/' + this.project._id;
-            },
-            projectEndDate(){
-                return new Date(this.project.endDate);
-            }
-        },
-        methods: {
-            unPublish(){
-                bus.$emit('updateProjectLoading', {status: 'open', loading: true});
-                if (confirm('To unpublish this project, we will return $' + this.project.budgetMax + ' to your wallet! Are you sure?')) {
-                    this.$http.put(API_SERVER + '/project/' + this.project._id + '/publish', {publish: false}).then(response=> {
-                        bus.$emit('showAlert', response.body);
-                        bus.$emit('updateProject');
-                        bus.$emit('updateProjectLoading', {status: 'open', loading: false});
-                        this.$store.commit('setCurrentUser', response.body.updatedUser);
-                    }, response=>{
-                        bus.$emit('showAlert', response.body);
-                    }); 
-                }   
-            },
-            edit(){
-                this.$router.push({path: '/project/' + this.project._id + '/edit'});
-            },
-            selectFreelancer(){
-                bus.$emit('showSelectFreelancerModal', this.project);
-            }
-        },
-        components: {
-            appCountDown
-        }
+export default {
+  props: ['project'],
+  computed: {
+    projectUrl () {
+      return '/project/' + this.project._id
+    },
+    projectEndDate () {
+      return new Date(this.project.endDate)
     }
+  },
+  methods: {
+    unPublish () {
+      bus.$emit('updateProjectLoading', { status: 'open', loading: true })
+      if (confirm('To unpublish this project, we will return $' + this.project.budgetMax + ' to your wallet! Are you sure?')) {
+        this.$http.put(API_SERVER + '/project/' + this.project._id + '/publish', { publish: false }).then(response => {
+          bus.$emit('showAlert', response.body)
+          bus.$emit('updateProject')
+          bus.$emit('updateProjectLoading', { status: 'open', loading: false })
+          this.$store.commit('setCurrentUser', response.body.updatedUser)
+        }, response => {
+          bus.$emit('showAlert', response.body)
+        })
+      }
+    },
+    edit () {
+      this.$router.push({ path: '/project/' + this.project._id + '/edit' })
+    },
+    selectFreelancer () {
+      bus.$emit('showSelectFreelancerModal', this.project)
+    }
+  },
+  components: {
+    appCountDown
+  }
+}
 </script>
 
 <style scoped>
