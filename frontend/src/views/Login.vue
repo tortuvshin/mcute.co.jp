@@ -102,7 +102,6 @@ export default {
       return result
     },
     onLogin (e) {
-      console.log('Login clicked')
       this.invalidInput = []
       if (this.checkInvalidInput(['username', 'password'])) {
         return
@@ -114,7 +113,6 @@ export default {
           password: this.password
         }
       }
-      console.log(this.username + ' ' + this.password)
       var loginProgress = setInterval(() => {
         if (this.loginProgress < 100) {
           this.loginProgress += 15
