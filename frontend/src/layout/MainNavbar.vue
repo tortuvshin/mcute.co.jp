@@ -5,52 +5,43 @@
 	        :color-on-scroll="colorOnScroll"
 	        menu-classes="ml-auto">
 		<template slot-scope="{toggle, isToggled}">
-
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
-
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="" v-on:click="$router.push('/');">
-						Home
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="" v-on:click="$router.push('/project/search');">
-						Spaces
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="" v-on:click="$router.push('/artists');">
-						Artists
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="" v-on:click="$router.push('/project/post');">
-						Post a Space
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="" v-on:click="$router.push('/project/post');">
-						Post a Art works
-					</a>
-				</li>
-			</ul>
+			<router-link v-popover:popover1 class="navbar-brand" to="/">
+				MCute Matching System
+			</router-link>
 		</template>
 		<template slot="navbar-menu">
-			<li class="nav-item active">
-
-			</li>
-			<li class="nav-item" v-if="!currentUser">
-				<a class="nav-link" href="" v-on:click="$router.push('/login');">
-					Login
-				</a>
-			</li>
-			<li class="nav-item" v-if="!currentUser">
-				<a class="nav-link" href="" v-on:click="$router.push('/register');">
-					Register
-				</a>
-			</li>
+			
+				<router-link class="nav-item" tag="li" to="/project/search">
+					<a class="nav-link">
+						Spaces
+					</a>
+				</router-link>
+				<router-link class="nav-item" tag="li" to="/artist">
+					<a class="nav-link">
+						Artist
+					</a>
+				</router-link>
+				<router-link class="nav-item" tag="li" to="/project/post">
+					<a class="nav-link">
+						Post a Space
+					</a>
+				</router-link>
+				<router-link class="nav-item" tag="li" to="/project/post">
+					<a class="nav-link">
+						Post a Artworks
+					</a>
+				</router-link>
+				<router-link class="nav-item" tag="li" to="/login" v-if="!currentUser">
+					<a class="nav-link">
+						Login
+					</a>
+				</router-link>
+				<router-link class="nav-item" tag="li" to="/register" v-if="!currentUser">
+					<a class="nav-link">
+						Register
+					</a>
+				</router-link>
+				
 
 			<drop-down tag="li" :title="fullName" icon="now-ui-icons users_single-02" class="nav-item"  v-if="currentUser">
 				<nav-link to="/dashboard">

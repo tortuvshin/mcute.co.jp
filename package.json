@@ -12,8 +12,9 @@
     "url": "git+https://github.com/intelligo-systems/workflow.git"
   },
   "scripts": {
-    "front": "cd frontend && npm run-script dev",
+    "serve": "cd frontend && npm run-script serve",
     "build": "cd frontend && npm run-script build",
+    "lint": "cd frontend && npm run-script lint",
     "start": "node app.js"
   },
   "dependencies": {
