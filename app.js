@@ -30,6 +30,7 @@ const SECRET = (process.env.SECRET) ?
   (process.env.SECRET) :
   config.get('SECRET');
 
+app.set('port', process.env.PORT || 5000);
 // Remove the warning with Promise
 mongoose.Promise = global.Promise;
 
