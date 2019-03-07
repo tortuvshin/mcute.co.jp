@@ -1,3 +1,7 @@
-export const API_SERVER = process.env.BASE_URL;
+const API_SERVER = process.env.BASE_URL ? (process.env.BASE_URL) : 'http://localhost:5000/';
 
-console.log(API_SERVER)
+if (process.env.NODE_ENV === 'production'){
+    API_SERVER = 'https://mcute.herokuapp.com'
+}
+
+module.exports = API_SERVER
