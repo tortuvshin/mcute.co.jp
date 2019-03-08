@@ -11,7 +11,7 @@
                     <card type="pricing">
                         <h6 class="category">Alpha Pack</h6>
                         <div class="icon icon-primary">
-                            <i class="now-ui-icons objects_diamond"></i>
+                            <i class="intelligo-icons objects_diamond"></i>
                         </div>
                         <h3 class="card-title">$67</h3>
                         <p class="card-description">
@@ -23,10 +23,10 @@
                     <card type="pricing" color="orange">
                         <h1 class="card-title">$40</h1>
                         <ul>
-                            <li><i class="now-ui-icons ui-1_check text-primary"></i> Unlimited MB</li>
-                            <li><i class="now-ui-icons ui-1_check text-primary"></i> Unlimited emails</li>
-                            <li><i class="now-ui-icons ui-1_check text-primary"></i> Unlimited Databases</li>
-                            <li><i class="now-ui-icons ui-1_check text-primary"></i> Full Support</li>
+                            <li><i class="intelligo-icons ui-1_check text-primary"></i> Unlimited MB</li>
+                            <li><i class="intelligo-icons ui-1_check text-primary"></i> Unlimited emails</li>
+                            <li><i class="intelligo-icons ui-1_check text-primary"></i> Unlimited Databases</li>
+                            <li><i class="intelligo-icons ui-1_check text-primary"></i> Full Support</li>
                         </ul>
                         <n-button type="neutral" disabled round>
                             Current Plan
@@ -35,10 +35,10 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <card type="pricing" class="card-background"
-                          style="background-image: url('static/img/project12.jpg')">
+                          style="background-image: url('img/project12.jpg')">
                         <h6 class="category">Professional</h6>
                         <div class="icon icon-primary">
-                            <i class="now-ui-icons objects_spaceship"></i>
+                            <i class="intelligo-icons objects_spaceship"></i>
                         </div>
                         <h2 class="card-title">$67</h2>
                         <p class="card-description">
@@ -56,10 +56,10 @@
                             10
                         </h1>
                         <ul>
-                            <li><i class="now-ui-icons ui-1_check text-success"></i> 1000 MB</li>
-                            <li><i class="now-ui-icons ui-1_simple-remove text-danger"></i> 3 email</li>
-                            <li><i class="now-ui-icons ui-1_simple-remove text-danger"></i> 5 Databases</li>
-                            <li><i class="now-ui-icons ui-1_simple-remove text-danger"></i> No Support</li>
+                            <li><i class="intelligo-icons ui-1_check text-success"></i> 1000 MB</li>
+                            <li><i class="intelligo-icons ui-1_simple-remove text-danger"></i> 3 email</li>
+                            <li><i class="intelligo-icons ui-1_simple-remove text-danger"></i> 5 Databases</li>
+                            <li><i class="intelligo-icons ui-1_simple-remove text-danger"></i> No Support</li>
                         </ul>
                         <n-button type="primary" round>
                             Register

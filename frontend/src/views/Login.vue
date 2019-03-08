@@ -1,53 +1,54 @@
 <template>
     <div class="page-header header-filter" filter-color="orange">
-        <div class="page-header-image"
-             style="background-image: url('static/img/login.jpg')">
-        </div>
+        <!-- <div class="page-header-image"
+             style="background-image: url('img/login.jpg')">
+        </div> -->
         <div class="content">
             <div class="container">
                 <div class="col-md-5 ml-auto mr-auto">
+                            
                     <form v-on:submit.prevent="onLogin">
 
                         <card type="login" plain>
-
                             <div slot="header" class="logo-container">
-                                <img v-lazy="'static/img/o.png'" alt="">
+                                <img v-lazy="'img/o.png'" alt="">
                             </div>
 
                             <fg-input
-                                class="no-border input-lg"
-                                addon-left-icon="now-ui-icons users_circle-08"
+                                addon-left-icon="intelligo-icons users_circle-08"
                                 v-model="username"
                                 required @change="invalidInput = []"
+                                :class="{'has-danger': isInvalidExist('username')}"
                                 placeholder="Username...">
                             </fg-input>
 
                             <fg-input
                                 class="no-border input-lg"
-                                addon-left-icon="now-ui-icons text_caps-small"
+                                addon-left-icon="intelligo-icons text_caps-small"
                                 placeholder="Password..."
                                 v-model="password"
                                 required @change="invalidInput = []"
+                                :class="{'has-danger': isInvalidExist('password')}"
                                 type="password">
                             </fg-input>
+                          
                             <h6>
-                                {{ loading }}
-                                {{ errorMessage }}
-                                {{ message }}
+                              
+                            {{ errorMessage }}
+                            {{ message }}
                             </h6>
-
                             <div class="card-footer text-center">
                                 <n-button type="primary" round size="lg" @click.native="onLogin" >Get Started</n-button>
                             </div>
 
                             <div class="pull-left">
                                 <h6>
-                                    <a href="/register" class="link footer-link">Create Account</a>
+                                    <router-link to="/register" class="link footer-link">Create Account</router-link>
                                 </h6>
                             </div>
                             <div class="pull-right">
                                 <h6>
-                                    <a href="/" class="link footer-link">Need Help?</a>
+                                    <router-link to="/" class="link footer-link">Need Help?</router-link>
                                 </h6>
                             </div>
                         </card>
@@ -59,7 +60,7 @@
     </div>
 </template>
 <script>
-import { Card, Button, FormGroupInput } from '@/components'
+import { Alert, Badge, Card, Button, FormGroupInput } from '@/components'
 import MainFooter from '@/layout/MainFooter'
 import Vue from 'vuex'
 import { bus } from '../main.js'
@@ -70,8 +71,10 @@ export default {
   name: 'Login',
   bodyClass: 'login-page',
   components: {
+    Badge,
     Card,
     MainFooter,
+    [Alert.name]: Alert,
     [Button.name]: Button,
     [FormGroupInput.name]: FormGroupInput
   },
@@ -79,6 +82,7 @@ export default {
     return {
       username: '',
       password: '',
+      message: '',
       invalidInput: [],
       errorMessage: '',
       loginProgress: 0
@@ -122,13 +126,13 @@ export default {
         }
       }, 100)
     },
-    loginSuccess (message) {
-      bus.$emit('showAlert', message)
+    loginSuccess (res) {
+      this.message = res.message
       this.$router.go(-1)
     },
-    loginFail (message) {
+    loginFail (res) {
       this.loginProgress = 0
-      bus.$emit('showAlert', message)
+      this.message = res.message
     }
   },
   created () {

@@ -1,9 +1,8 @@
 # MCute
 
 
-| [Requirements][] | [Development][] | [Deploy][] | [Built with][] |
-|---|---|---|---|
-
+| [Requirements][] | [Installing][] | [Running][] | [Deploy][] | [Technologies used][] | [Copyright] |
+|---|---|---|---|---|---|
 
 ## Requirements
 
@@ -12,7 +11,7 @@
 - [Vue](http://vuejs.org)
 - [Git](https://git-scm.com/download/win)
 
-## Development
+## Installing
 
 ### Install for Windows
 
@@ -186,17 +185,46 @@ Build and Start:
 
 **Note:** As an alternative to mLab, there is also [Compose](https://www.compose.io/).
 
-## Built with
+## Technologies used
 
-* [Node.js](https://nodejs.org/en/download/)
-* [Express.js](https://expressjs.com/)
-* [MongoDB](https://www.mongodb.com/download-center)
-* [Vue.js](https://vuejs.org/)
+This project is used for building a[**M**ongo](https://www.mongodb.com/) [**E**xpress](https://expressjs.com/) [**V**ueJS](https://vuejs.org/) [**N**ode](https://nodejs.org/en/) stack. 
+
+#### ECMAScript 7 (“ES7” / JavaScript)
+ECMAScript™ is the standard behind JavaScript. It has had a number of very useful additions over the past several years, modernizing the syntax and providing new capabilities.
+
+*[Learn More](https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_Next_support_in_Mozilla)*
+
+#### Babel
+Not all browsers are able to run ES7. We use Babel to generate earlier versions of JavaScript from ES7, so that it will run on browsers that haven’t yet implemented the newer standard.
+
+*[Learn More](https://babeljs.io/)*
+
+#### Node.js
+Node enables us to use c outside of a browser and directly on our machines to perform the logic necessary to determine what messages to send to the end user and when.
+
+*[Learn More](https://nodejs.org/en/docs/)*
+
+#### Express.js
+Express is a helpful framework built around Node.js for performing actions as a web server. e.g, Taking web page requests, responding and serving images to users.
+
+*[Learn More](http://expressjs.com/)*
+
+#### Vue.js
+Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.
+
+*[Learn More](https://vuejs.org)*
+
+#### MongoDB
+MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemata. 
+
+*[Learn More](https://www.mongodb.com/)*
 
 [Requirements]:#requirements
-[Development]:#development
+[Installing]:#installing
+[Running]:#running
 [Deploy]:#deploy
-[Built with]:#built-with
+[Technologies used]:#technologies-used
+[Copyright]:#copyright
 
 ## Copyright
 

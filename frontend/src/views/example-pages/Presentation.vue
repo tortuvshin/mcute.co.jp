@@ -3,12 +3,12 @@
         <div class="page-header clear-filter">
             <div class="rellax-header rellax-header-sky">
                 <parallax class="page-header-image"
-                         style="background-image: url('static/img/presentation-page/nuk-pro-back-sky.jpg')">
+                         style="background-image: url('img/presentation-page/nuk-pro-back-sky.jpg')">
                 </parallax>
             </div>
             <div class="rellax-header rellax-header-buildings" data-rellax-speed="0">
                 <parallax class="page-header-image page-header-city"
-                     style="background-image: url('static/img/presentation-page/nuk-pro-buildings.png')">
+                     style="background-image: url('img/presentation-page/nuk-pro-buildings.png')">
                 </parallax>
             </div>
             <div class="rellax-text-container rellax-text">
@@ -20,10 +20,10 @@
                 <parallax>
                     Designed by
                     <a href="https:///invisionapp.com/" target="_blank">
-                        <img v-lazy="'static/img/invision-white-slim.png'" class="invision-logo" alt=""/>
+                        <img v-lazy="'img/invision-white-slim.png'" class="invision-logo" alt=""/>
                     </a>. Coded by
                     <a href="https://www.creative-tim.com" target="_blank">
-                        <img v-lazy="'static/img/creative-tim-white-slim2.png'" class="creative-tim-logo" alt=""/>
+                        <img v-lazy="'img/creative-tim-white-slim2.png'" class="creative-tim-logo" alt=""/>
                     </a>.
                 </parallax>
             </h6>
@@ -48,7 +48,7 @@
                             <div class="card-component">
                                 <a href="index.html#basic-elements" target="_blank">
                                     <div class="front">
-                                        <img v-lazy="'static/img/presentation-page/basic_thumb.jpg'" alt="basic_thumb">
+                                        <img v-lazy="'img/presentation-page/basic_thumb.jpg'" alt="basic_thumb">
                                     </div>
                                 </a>
                             </div>
@@ -59,7 +59,7 @@
                             <div class="card-component">
                                 <a href="index.html#cards" target="_blank">
                                     <div class="front">
-                                        <img v-lazy="'static/img/presentation-page/cards_thumb.jpg'" alt="cards_thumb">
+                                        <img v-lazy="'img/presentation-page/cards_thumb.jpg'" alt="cards_thumb">
                                     </div>
                                 </a>
                             </div>
@@ -70,7 +70,7 @@
                             <div class="card-component">
                                 <a href="sections.html" target="_blank">
                                     <div class="front">
-                                        <img v-lazy="'static/img/presentation-page/sections_thumb.jpg'" alt="sections_thumb">
+                                        <img v-lazy="'img/presentation-page/sections_thumb.jpg'" alt="sections_thumb">
                                     </div>
                                 </a>
                             </div>
@@ -81,7 +81,7 @@
                             <div class="card-component">
                                 <a href="examples/product-page.html" target="_blank">
                                     <div class="front">
-                                        <img v-lazy="'static/img/presentation-page/pages2_thumb.jpg'" alt="pages2-thumb">
+                                        <img v-lazy="'img/presentation-page/pages2_thumb.jpg'" alt="pages2-thumb">
                                     </div>
                                 </a>
                             </div>
@@ -103,15 +103,15 @@
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <div class="image-container">
-                            <img class="components-macbook" src="static/img/ipad.png" alt="ipad_img">
-                            <img class="table-img" src="static/img/presentation-page/table.jpg" alt="table">
-                            <img class="share-btn-img" src="static/img/presentation-page/share-btn.jpg" alt="share button">
-                            <img class="coloured-card-btn-img" src="static/img/presentation-page/coloured-card-with-btn.jpg"
+                            <img class="components-macbook" src="img/ipad.png" alt="ipad_img">
+                            <img class="table-img" src="img/presentation-page/table.jpg" alt="table">
+                            <img class="share-btn-img" src="img/presentation-page/share-btn.jpg" alt="share button">
+                            <img class="coloured-card-btn-img" src="img/presentation-page/coloured-card-with-btn.jpg"
                                  alt="coloured card with button">
-                            <img class="coloured-card-img" src="static/img/presentation-page/coloured-card.jpg"
+                            <img class="coloured-card-img" src="img/presentation-page/coloured-card.jpg"
                                  alt="coloured card">
-                            <img class="social-img" src="static/img/presentation-page/social-row.jpg" alt="social row">
-                            <img class="linkedin-btn-img" src="static/img/presentation-page/linkedin-btn.jpg"
+                            <img class="social-img" src="img/presentation-page/social-row.jpg" alt="social row">
+                            <img class="linkedin-btn-img" src="img/presentation-page/linkedin-btn.jpg"
                                  alt="linked in button">
                         </div>
                     </div>
@@ -136,19 +136,19 @@
                     <div class="col-md-12">
                         <div class="images-container">
                             <div class="image-container1">
-                                <img v-lazy="'static/img/presentation-page/card3.jpg'" alt="card 3">
+                                <img v-lazy="'img/presentation-page/card3.jpg'" alt="card 3">
                             </div>
                             <div class="image-container2">
-                                <img v-lazy="'static/img/presentation-page/card6.jpg'" alt="card 6">
+                                <img v-lazy="'img/presentation-page/card6.jpg'" alt="card 6">
                             </div>
                             <div class="image-container3">
-                                <img v-lazy="'static/img/presentation-page/card7.jpg'" alt="card 7">
+                                <img v-lazy="'img/presentation-page/card7.jpg'" alt="card 7">
                             </div>
                             <div class="image-container4">
-                                <img v-lazy="'static/img/presentation-page/card5.jpg'" alt="card 5">
+                                <img v-lazy="'img/presentation-page/card5.jpg'" alt="card 5">
                             </div>
                             <div class="image-container5">
-                                <img v-lazy="'static/img/presentation-page/card4.jpg'" alt="card 4">
+                                <img v-lazy="'img/presentation-page/card4.jpg'" alt="card 4">
                             </div>
                         </div>
                     </div>
@@ -161,9 +161,9 @@
                     <div class="col-md-5">
                         <div class="image-container">
                             <img class="img img-raised rounded img-comments rellax" data-rellax-speed="1"
-                                 src="static/img/presentation-page/content1.jpg" alt="content 1">
+                                 src="img/presentation-page/content1.jpg" alt="content 1">
                             <img class="img img-raised rounded img-blog rellax" data-rellax-speed="4"
-                                 src="static/img/presentation-page/content4.jpg" alt="content 4">
+                                 src="img/presentation-page/content4.jpg" alt="content 4">
                         </div>
                     </div>
                     <div class="col-md-4 ml-auto mr-auto">
@@ -196,132 +196,132 @@
                 <div class="section-cols">
                     <div class="row">
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/header1.jpg'" alt="header1">
+                            <img v-lazy="'img/presentation-page/header1.jpg'" alt="header1">
                         </div>
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/header2.jpg'" alt="header2">
+                            <img v-lazy="'img/presentation-page/header2.jpg'" alt="header2">
                         </div>
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/header3.jpg'" alt="header3">
-                            <img class="rellax" data-rellax-speed="4" src="static/img/presentation-page/pricing5.jpg"
+                            <img v-lazy="'img/presentation-page/header3.jpg'" alt="header3">
+                            <img class="rellax" data-rellax-speed="4" src="img/presentation-page/pricing5.jpg"
                                  alt="pricing5">
                         </div>
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/header4.jpg'" alt="header4">
+                            <img v-lazy="'img/presentation-page/header4.jpg'" alt="header4">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/features1.jpg'" alt="features1">
+                            <img v-lazy="'img/presentation-page/features1.jpg'" alt="features1">
                         </div>
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/features2.jpg'" alt="features2">
+                            <img v-lazy="'img/presentation-page/features2.jpg'" alt="features2">
                         </div>
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/features3.jpg'" alt="features3">
+                            <img v-lazy="'img/presentation-page/features3.jpg'" alt="features3">
                         </div>
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/features4.jpg'" alt="features4">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/features5.jpg'" alt="">
-                            <img class="rellax" data-rellax-speed="5" src="static/img/presentation-page/features2.jpg" alt="">
-                        </div>
-                        <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/features6.jpg'" alt="">
-                        </div>
-                        <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/features7.jpg'" alt="">
-                        </div>
-                        <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/features8.jpg'" alt="">
+                            <img v-lazy="'img/presentation-page/features4.jpg'" alt="features4">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/blogpost1.jpg'" alt="">
+                            <img v-lazy="'img/presentation-page/features5.jpg'" alt="">
+                            <img class="rellax" data-rellax-speed="5" src="img/presentation-page/features2.jpg" alt="">
                         </div>
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/blogpost2.jpg'" alt="">
+                            <img v-lazy="'img/presentation-page/features6.jpg'" alt="">
                         </div>
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/blogpost3.jpg'" alt="">
+                            <img v-lazy="'img/presentation-page/features7.jpg'" alt="">
                         </div>
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/blogpost4.jpg'" alt="">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/blogpost5.jpg'" alt="">
-                        </div>
-                        <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/team1.jpg'" alt="">
-                        </div>
-                        <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/team2.jpg'" alt="">
-                        </div>
-                        <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/team3.jpg'" alt="">
-                            <img class="rellax" data-rellax-speed="5" src="static/img/presentation-page/contact1.jpg" alt="">
+                            <img v-lazy="'img/presentation-page/features8.jpg'" alt="">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/team4.jpg'" alt="">
+                            <img v-lazy="'img/presentation-page/blogpost1.jpg'" alt="">
                         </div>
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/team5.jpg'" alt="">
+                            <img v-lazy="'img/presentation-page/blogpost2.jpg'" alt="">
                         </div>
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/projects1.jpg'" alt="">
+                            <img v-lazy="'img/presentation-page/blogpost3.jpg'" alt="">
                         </div>
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/projects2.jpg'" alt="">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/projects4.jpg'" alt="">
-                        </div>
-                        <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/projects5.jpg'" alt="">
-                        </div>
-                        <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/pricing1.jpg'" alt="">
-                        </div>
-                        <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/pricing2.jpg'" alt="">
+                            <img v-lazy="'img/presentation-page/blogpost4.jpg'" alt="">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/pricing3.jpg'" alt="">
+                            <img v-lazy="'img/presentation-page/blogpost5.jpg'" alt="">
                         </div>
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/pricing4.jpg'" alt="">
+                            <img v-lazy="'img/presentation-page/team1.jpg'" alt="">
                         </div>
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/pricing5.jpg'" alt="">
+                            <img v-lazy="'img/presentation-page/team2.jpg'" alt="">
                         </div>
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/testimonials1.jpg'" alt="">
+                            <img v-lazy="'img/presentation-page/team3.jpg'" alt="">
+                            <img class="rellax" data-rellax-speed="5" src="img/presentation-page/contact1.jpg" alt="">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/testimonials2.jpg'" alt="">
+                            <img v-lazy="'img/presentation-page/team4.jpg'" alt="">
                         </div>
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/testimonials3.jpg'" alt="">
+                            <img v-lazy="'img/presentation-page/team5.jpg'" alt="">
                         </div>
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/contact1.jpg'" alt="">
+                            <img v-lazy="'img/presentation-page/projects1.jpg'" alt="">
                         </div>
                         <div class="col-md-3">
-                            <img v-lazy="'static/img/presentation-page/contact2.jpg'" alt="">
+                            <img v-lazy="'img/presentation-page/projects2.jpg'" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img v-lazy="'img/presentation-page/projects4.jpg'" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img v-lazy="'img/presentation-page/projects5.jpg'" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img v-lazy="'img/presentation-page/pricing1.jpg'" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img v-lazy="'img/presentation-page/pricing2.jpg'" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img v-lazy="'img/presentation-page/pricing3.jpg'" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img v-lazy="'img/presentation-page/pricing4.jpg'" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img v-lazy="'img/presentation-page/pricing5.jpg'" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img v-lazy="'img/presentation-page/testimonials1.jpg'" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img v-lazy="'img/presentation-page/testimonials2.jpg'" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img v-lazy="'img/presentation-page/testimonials3.jpg'" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img v-lazy="'img/presentation-page/contact1.jpg'" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img v-lazy="'img/presentation-page/contact2.jpg'" alt="">
                         </div>
                     </div>
                 </div>
@@ -342,25 +342,25 @@
                         <h5 class="title">About Us</h5>
                         <div class="card">
                             <router-link to="/about" target="_blank">
-                                <img v-lazy="'static/img/presentation-page/pages/about-us.jpg'" alt="">
+                                <img v-lazy="'img/presentation-page/pages/about-us.jpg'" alt="">
                             </router-link>
                         </div>
                         <h5 class="title">Landing Page</h5>
                         <div class="card">
                             <router-link to="/landing" target="_blank">
-                                <img v-lazy="'static/img/presentation-page/pages/landing.jpg'" alt="">
+                                <img v-lazy="'img/presentation-page/pages/landing.jpg'" alt="">
                             </router-link>
                         </div>
                         <h5 class="title">Login Page</h5>
                         <div class="card">
                             <router-link to="/login" target="_blank">
-                                <img v-lazy="'static/img/presentation-page/pages/login.jpg'" alt="">
+                                <img v-lazy="'img/presentation-page/pages/login.jpg'" alt="">
                             </router-link>
                         </div>
                         <h5 class="title">Signup Page</h5>
                         <div class="card">
                             <router-link to="/signup" target="_blank">
-                                <img v-lazy="'static/img/presentation-page/pages/signup.jpg'" alt="">
+                                <img v-lazy="'img/presentation-page/pages/signup.jpg'" alt="">
                             </router-link>
                         </div>
                     </div>
@@ -368,19 +368,19 @@
                         <h5 class="title">Blog Post</h5>
                         <div class="card">
                             <router-link to="/blog-post" target="_blank">
-                                <img v-lazy="'static/img/presentation-page/pages/blog-post.jpg'" alt="">
+                                <img v-lazy="'img/presentation-page/pages/blog-post.jpg'" alt="">
                             </router-link>
                         </div>
                         <h5 class="title">Product Page</h5>
                         <div class="card">
                             <router-link to="/product" target="_blank">
-                                <img v-lazy="'static/img/presentation-page/pages/product.jpg'" alt="">
+                                <img v-lazy="'img/presentation-page/pages/product.jpg'" alt="">
                             </router-link>
                         </div>
                         <h5 class="title">Profile Page</h5>
                         <div class="card">
                             <router-link to="/profile" target="_blank">
-                                <img v-lazy="'static/img/presentation-page/pages/profile.jpg'" alt="">
+                                <img v-lazy="'img/presentation-page/pages/profile.jpg'" alt="">
                             </router-link>
                         </div>
                     </div>
@@ -388,25 +388,25 @@
                         <h5 class="title">Pricing Page</h5>
                         <div class="card">
                             <router-link to="/pricing" target="_blank">
-                                <img v-lazy="'static/img/presentation-page/pages/pricing.jpg'" alt="">
+                                <img v-lazy="'img/presentation-page/pages/pricing.jpg'" alt="">
                             </router-link>
                         </div>
                         <h5 class="title">Ecommerce</h5>
                         <div class="card">
                             <router-link to="/ecommerce" target="_blank">
-                                <img v-lazy="'static/img/presentation-page/pages/ecommerce.jpg'" alt="">
+                                <img v-lazy="'img/presentation-page/pages/ecommerce.jpg'" alt="">
                             </router-link>
                         </div>
                         <h5 class="title">Blog Posts</h5>
                         <div class="card">
                             <router-link to="/blog-posts" target="_blank">
-                                <img v-lazy="'static/img/presentation-page/pages/blog-posts.jpg'" alt="">
+                                <img v-lazy="'img/presentation-page/pages/blog-posts.jpg'" alt="">
                             </router-link>
                         </div>
                         <h5 class="title">Contact Us</h5>
                         <div class="card">
                             <router-link to="/contact" target="_blank">
-                                <img v-lazy="'static/img/presentation-page/pages/contact.jpg'" alt="">
+                                <img v-lazy="'img/presentation-page/pages/contact.jpg'" alt="">
                             </router-link>
                         </div>
                     </div>
@@ -418,16 +418,16 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="icons-nucleo">
-                            <i class="first-left-icon now-ui-icons ui-1_send"></i>
-                            <i class="second-left-icon now-ui-icons ui-2_like"></i>
-                            <i class="third-left-icon now-ui-icons transportation_air-baloon"></i>
-                            <i class="fourth-left-icon now-ui-icons text_bold"></i>
-                            <i class="fifth-left-icon now-ui-icons tech_headphones"></i>
-                            <i class="sixth-left-icon now-ui-icons emoticons_satisfied"></i>
-                            <i class="seventh-left-icon now-ui-icons shopping_cart-simple"></i>
-                            <i class="eighth-left-icon now-ui-icons objects_spaceship"></i>
-                            <i class="ninth-left-icon now-ui-icons media-2_note-03"></i>
-                            <i class="tenth-left-icon now-ui-icons ui-2_favourite-28"></i>
+                            <i class="first-left-icon intelligo-icons ui-1_send"></i>
+                            <i class="second-left-icon intelligo-icons ui-2_like"></i>
+                            <i class="third-left-icon intelligo-icons transportation_air-baloon"></i>
+                            <i class="fourth-left-icon intelligo-icons text_bold"></i>
+                            <i class="fifth-left-icon intelligo-icons tech_headphones"></i>
+                            <i class="sixth-left-icon intelligo-icons emoticons_satisfied"></i>
+                            <i class="seventh-left-icon intelligo-icons shopping_cart-simple"></i>
+                            <i class="eighth-left-icon intelligo-icons objects_spaceship"></i>
+                            <i class="ninth-left-icon intelligo-icons media-2_note-03"></i>
+                            <i class="tenth-left-icon intelligo-icons ui-2_favourite-28"></i>
                         </div>
                     </div>
                     <div class="col-md-6 text-center">
@@ -447,42 +447,42 @@
                     </div>
                     <div class="col-md-3">
                         <div class="icons-nucleo icons-nucleo-right">
-                            <i class="first-right-icon now-ui-icons design_palette"></i>
-                            <i class="second-right-icon now-ui-icons clothes_tie-bow"></i>
-                            <i class="third-right-icon now-ui-icons location_pin"></i>
-                            <i class="fourth-right-icon now-ui-icons objects_key-25"></i>
-                            <i class="fifth-right-icon now-ui-icons travel_istanbul"></i>
-                            <i class="sixth-right-icon now-ui-icons business_briefcase-24"></i>
-                            <i class="seventh-right-icon now-ui-icons design_image"></i>
-                            <i class="eighth-right-icon now-ui-icons location_world"></i>
-                            <i class="ninth-right-icon now-ui-icons objects_planet"></i>
-                            <i class="tenth-right-icon now-ui-icons education_atom"></i>
+                            <i class="first-right-icon intelligo-icons design_palette"></i>
+                            <i class="second-right-icon intelligo-icons clothes_tie-bow"></i>
+                            <i class="third-right-icon intelligo-icons location_pin"></i>
+                            <i class="fourth-right-icon intelligo-icons objects_key-25"></i>
+                            <i class="fifth-right-icon intelligo-icons travel_istanbul"></i>
+                            <i class="sixth-right-icon intelligo-icons business_briefcase-24"></i>
+                            <i class="seventh-right-icon intelligo-icons design_image"></i>
+                            <i class="eighth-right-icon intelligo-icons location_world"></i>
+                            <i class="ninth-right-icon intelligo-icons objects_planet"></i>
+                            <i class="tenth-right-icon intelligo-icons education_atom"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="section features-7 section-image" style="background-image: url('static/img/bg51.jpg')">
+        <div class="section features-7 section-image" style="background-image: url('img/bg51.jpg')">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6 px-0">
                         <div class="col-sm-12">
                             <info-section title="Save Time & Money"
-                                          icon="now-ui-icons business_money-coins"
+                                          icon="intelligo-icons business_money-coins"
                                           description="Creating your design from scratch with dedicated designers
                                         can be very expensive.Using Now UI Kit PRO you don't have to worry about
                                         customising the basic Bootstrap 4 design or its components."
                             />
 
                             <info-section title="Bootstrap 4 & Flexbox"
-                                          icon="now-ui-icons text_bold"
+                                          icon="intelligo-icons text_bold"
                                           description="It is built over Bootstrap 4, it's fully responsive and has
                                         all the benefits of the flexbox for the layout, grid system and components. This
                                         is a huge advantage when you work with columns."
                             />
 
                             <info-section title="Fast Prototype"
-                                          icon="now-ui-icons education_paper"
+                                          icon="intelligo-icons education_paper"
                                           description="Using Now UI Kit PRO you can create hundreds of components
                                         combinations within seconds and present them to your client. You just need to
                                         change some classes and colors."
@@ -491,7 +491,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="image-container">
-                            <img v-lazy="'static/img/ipad3.png'" alt="">
+                            <img v-lazy="'img/ipad3.png'" alt="">
                         </div>
                     </div>
                 </div>
@@ -608,16 +608,16 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-2 ml-auto">
-                                <img v-lazy="'static/img/presentation-page/vodafone.jpg'" alt=""/>
+                                <img v-lazy="'img/presentation-page/vodafone.jpg'" alt=""/>
                             </div>
                             <div class="col-md-2">
-                                <img v-lazy="'static/img/presentation-page/microsoft.jpg'" alt=""/>
+                                <img v-lazy="'img/presentation-page/microsoft.jpg'" alt=""/>
                             </div>
                             <div class="col-md-2">
-                                <img v-lazy="'static/img/presentation-page/harvard.jpg'" alt=""/>
+                                <img v-lazy="'img/presentation-page/harvard.jpg'" alt=""/>
                             </div>
                             <div class="col-md-2 mr-auto">
-                                <img v-lazy="'static/img/presentation-page/stanford.jpg'" alt=""/>
+                                <img v-lazy="'img/presentation-page/stanford.jpg'" alt=""/>
                             </div>
                         </div>
                     </div>
@@ -639,7 +639,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <card type="background" raised class="card-pricing card-margin"
-                                      style="background-image: url('static/img/bg27.jpg')">
+                                      style="background-image: url('img/bg27.jpg')">
                                     <h6 class="category">Personal License</h6>
                                     <h1 class="card-title">
                                         <small>$</small>
@@ -667,7 +667,7 @@
                             </div>
                             <div class="col-md-6">
                                 <card type="background" raised class="card-pricing"
-                                      style="background-image: url('static/img/bg37.jpg')">
+                                      style="background-image: url('img/bg37.jpg')">
                                     <h6 class="category">Developer License</h6>
                                     <h1 class="card-title">
                                         <small>$</small>

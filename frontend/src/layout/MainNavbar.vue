@@ -43,15 +43,12 @@
 				</router-link>
 				
 
-			<drop-down tag="li" :title="fullName" icon="now-ui-icons users_single-02" class="nav-item"  v-if="currentUser">
-				<nav-link to="/dashboard">
-					<i class="now-ui-icons users_circle-08"></i> Profile
-				</nav-link>
-				<nav-link to="/dashboard">
-					<i class="now-ui-icons business_bulb-63"></i> User
+			<drop-down tag="li" :title="fullName" icon="intelligo-icons users_single-02" class="nav-item"  v-if="currentUser">
+				<nav-link to="/profile">
+					<i class="intelligo-icons users_circle-08"></i> Profile
 				</nav-link>
 				<a href="" v-on:click="logout" class="dropdown-item">
-					<i class="now-ui-icons sport_user-run"></i> Logout
+					<i class="intelligo-icons sport_user-run"></i> Logout
 				</a>
 			</drop-down>
 		</template>

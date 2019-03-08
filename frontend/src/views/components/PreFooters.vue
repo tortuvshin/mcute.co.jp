@@ -132,7 +132,7 @@
                                             <div class="col-sm-8">
                                                 <fg-input
                                                         placeholder="Your Email..."
-                                                        addon-left-icon="now-ui-icons ui-1_email-85">
+                                                        addon-left-icon="intelligo-icons ui-1_email-85">
                                                 </fg-input>
                                             </div>
                                             <div class="col-sm-4">
@@ -152,7 +152,7 @@
             <br>
             <br>
             <!--     *********    IMAGE SUBSCRIBE LINE     *********      -->
-            <div class="subscribe-line subscribe-line-image" style="background-image: url('static/img/bg7.jpg')">
+            <div class="subscribe-line subscribe-line-image" style="background-image: url('img/bg7.jpg')">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 ml-auto mr-auto">
@@ -170,7 +170,7 @@
                                             <div class="col-sm-8">
                                                 <fg-input
                                                         placeholder="Your Email..."
-                                                        addon-left-icon="now-ui-icons ui-1_email-85">
+                                                        addon-left-icon="intelligo-icons ui-1_email-85">
                                                 </fg-input>
                                             </div>
                                             <div class="col-sm-4">

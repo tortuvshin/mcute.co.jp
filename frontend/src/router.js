@@ -53,17 +53,13 @@ export default new Router({
     {
       path: '/login',
       name: 'Login',
-      components: { default: Login, header: AppHeader },
+      components: { header: AppHeader, default: Login },
       props: { header: { colorOnScroll: 65 } }
     },
     {
       path: '/signup',
       name: 'Register',
-      components: {
-        header: AppHeader,
-        default: RegisterOld,
-        footer: AppFooter
-      }
+      components: { header: AppHeader, default: RegisterOld, footer: AppFooter }
     },
     {
       path: '/list',
@@ -74,11 +70,24 @@ export default new Router({
       },
       name: 'ItemList'
     },
-    { path: '/register', component: Register, name: 'Register' },
-    { path: '/dashboard',
-      component: Profile,
+    { path: '/register', 
+      name: 'Register',
+      components: { header: AppHeader, default: Register },
+      props: { header: { colorOnScroll: 65 } } 
+    },
+    { path: '/profile',
+      components: { header: AppHeader, default: Profile, footer: AppFooter },
+      props: { header: { colorOnScroll: 65 } },
       children: [
-        { path: '', component: Profile, name: 'MyProfile', meta: { auth: true } },
+        { path: '', 
+          components: 
+          {
+            header: AppHeader,
+            default: Profile,
+            footer: AppFooter
+          }
+          , name: 'MyProfile', meta: { auth: true } 
+        },
         { path: 'account', component: Account, name: 'Account', meta: { auth: true } },
         { path: 'billing/deposit', component: Deposit, name: 'Deposit', meta: { auth: true } },
         { path: 'billing/withdraw', component: Withdraw, name: 'Withdraw', meta: { auth: true } },

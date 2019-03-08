@@ -186,14 +186,14 @@
                             <div class="col-md-4">
                                 <h5>Instagram Feed</h5>
                                 <div class="gallery-feed">
-                                    <img v-lazy="'static/img/olivia.jpg'" class="img img-raised rounded" alt=""/>
-                                    <img v-lazy="'static/img/james.jpg'" class="img img-raised rounded" alt=""/>
-                                    <img v-lazy="'static/img/michael.jpg'" class="img img-raised rounded" alt=""/>
-                                    <img v-lazy="'static/img/emily.jpg'" class="img img-raised rounded" alt=""/>
-                                    <img v-lazy="'static/img/marie.jpg'" class="img img-raised rounded" alt=""/>
-                                    <img v-lazy="'static/img/usher.jpg'" class="img img-raised rounded" alt=""/>
-                                    <img v-lazy="'static/img/mike.jpg'" class="img img-raised rounded" alt=""/>
-                                    <img v-lazy="'static/img/julie.jpg'" class="img img-raised rounded" alt=""/>
+                                    <img v-lazy="'img/olivia.jpg'" class="img img-raised rounded" alt=""/>
+                                    <img v-lazy="'img/james.jpg'" class="img img-raised rounded" alt=""/>
+                                    <img v-lazy="'img/michael.jpg'" class="img img-raised rounded" alt=""/>
+                                    <img v-lazy="'img/emily.jpg'" class="img img-raised rounded" alt=""/>
+                                    <img v-lazy="'img/marie.jpg'" class="img img-raised rounded" alt=""/>
+                                    <img v-lazy="'img/usher.jpg'" class="img img-raised rounded" alt=""/>
+                                    <img v-lazy="'img/mike.jpg'" class="img img-raised rounded" alt=""/>
+                                    <img v-lazy="'img/julie.jpg'" class="img img-raised rounded" alt=""/>
                                 </div>
                             </div>
                         </div>
@@ -467,7 +467,7 @@
                                     <fg-input placeholder="Your Email...">
                                     </fg-input>
                                     <n-button round icon type="primary">
-                                        <i class="now-ui-icons ui-1_email-85"></i>
+                                        <i class="intelligo-icons ui-1_email-85"></i>
                                     </n-button>
                                 </form>
                             </div>

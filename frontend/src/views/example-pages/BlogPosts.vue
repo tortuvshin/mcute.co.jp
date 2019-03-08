@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper blog-posts">
         <div class="page-header page-header-small">
-            <parallax class="page-header-image" style="background-image: url('static/img/bg44.jpg') ;">
+            <parallax class="page-header-image" style="background-image: url('img/bg44.jpg') ;">
             </parallax>
             <div class="content-center">
                 <div class="row">
@@ -22,7 +22,7 @@
                 <div class="row">
                     <div class="col-md-6 px-0">
                         <card type="background" class="card-fashion"
-                              style="background-image: url('static/img/project10.jpg')">
+                              style="background-image: url('img/project10.jpg')">
                             <div class="card-title text-left">
                                 <h2>
                                     <a href="#pablo">
@@ -33,10 +33,10 @@
                             <div class="card-footer text-left">
                                 <div class="stats">
                                         <span>
-                                            <i class="now-ui-icons users_circle-08"></i>Nicholas Deleon
+                                            <i class="intelligo-icons users_circle-08"></i>Nicholas Deleon
                                         </span>
                                     <span>
-                                            <i class="now-ui-icons tech_watch-time"></i> June 2, 2017
+                                            <i class="intelligo-icons tech_watch-time"></i> June 2, 2017
                                         </span>
                                 </div>
                                 <div class="stats-link pull-right">
@@ -58,10 +58,10 @@
                             <div class="card-footer">
                                 <div class="stats">
                                         <span>
-                                            <i class="now-ui-icons users_circle-08"></i>Jon Russell
+                                            <i class="intelligo-icons users_circle-08"></i>Jon Russell
                                         </span>
                                     <span>
-                                            <i class="now-ui-icons tech_watch-time"></i> June 2, 2017
+                                            <i class="intelligo-icons tech_watch-time"></i> June 2, 2017
                                         </span>
                                 </div>
                                 <div class="stats-link pull-right">
@@ -73,14 +73,14 @@
                     </div>
                     <div class="col-md-3 px-0">
                         <card type="background" class="card-fashion"
-                              style="background-image: url('static/img/project11.jpg')">
+                              style="background-image: url('img/project11.jpg')">
                         </card>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-3 px-0">
                         <card type="background" class="card-fashion"
-                              style="background-image: url('static/img/project12.jpg')">
+                              style="background-image: url('img/project12.jpg')">
                         </card>
                     </div>
                     <div class="col-md-3 px-0">
@@ -96,10 +96,10 @@
                                 <div class="card-footer">
                                     <div class="stats">
                                         <span>
-                                            <i class="now-ui-icons users_circle-08"></i>John Bruno
+                                            <i class="intelligo-icons users_circle-08"></i>John Bruno
                                         </span>
                                         <span>
-                                            <i class="now-ui-icons tech_watch-time"></i> June 2, 2017
+                                            <i class="intelligo-icons tech_watch-time"></i> June 2, 2017
                                         </span>
                                     </div>
                                     <div class="stats-link pull-right">
@@ -112,7 +112,7 @@
                     </div>
                     <div class="col-md-6 px-0">
                         <card type="background" class="card-fashion"
-                              style="background-image: url('static/img/project13.jpg')">
+                              style="background-image: url('img/project13.jpg')">
                             <div class="card-title text-left">
                                 <h2>
                                     <a href="#pablo">China Wants Fish, So Africa Goes Hungry</a>
@@ -121,10 +121,10 @@
                             <div class="card-footer text-left">
                                 <div class="stats">
                                         <span>
-                                            <i class="now-ui-icons users_circle-08"></i>Joanna Klein
+                                            <i class="intelligo-icons users_circle-08"></i>Joanna Klein
                                         </span>
                                     <span>
-                                            <i class="now-ui-icons tech_watch-time"></i> June 2, 2017
+                                            <i class="intelligo-icons tech_watch-time"></i> June 2, 2017
                                         </span>
                                 </div>
                                 <div class="stats-link pull-right">
@@ -144,7 +144,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <card type="blog" plain>
-                                <img slot="image" class="img rounded img-raised" src="static/img/bg5.jpg"/>
+                                <img slot="image" class="img rounded img-raised" src="img/bg5.jpg"/>
                                 <h6 class="category text-info">Enterprise</h6>
                                 <h4 class="card-title">
                                     <a href="#pablo">Autodesk looks to future of 3D printing with Project Escher</a>
@@ -155,14 +155,14 @@
                                     <a href="#pablo"> Read More </a>
                                 </p>
                                 <div class="author">
-                                    <img v-lazy="'static/img/olivia.jpg'" alt="..." class="avatar img-raised">
+                                    <img v-lazy="'img/olivia.jpg'" alt="..." class="avatar img-raised">
                                     <span>Anna Spark</span>
                                 </div>
                             </card>
                         </div>
                         <div class="col-md-4">
                             <card type="blog" plain>
-                                <img slot="image" class="img rounded img-raised" src="static/img/bg27.jpg"/>
+                                <img slot="image" class="img rounded img-raised" src="img/bg27.jpg"/>
                                 <h6 class="category text-success">
                                     Startups
                                 </h6>
@@ -175,7 +175,7 @@
                                     <a href="#pablo"> Read More </a>
                                 </p>
                                 <div class="author">
-                                    <img v-lazy="'static/img/michael.jpg'" alt="..." class="avatar img-raised">
+                                    <img v-lazy="'img/michael.jpg'" alt="..." class="avatar img-raised">
                                     <span>John Black</span>
                                 </div>
                             </card>
@@ -184,12 +184,12 @@
                             <div class="card card-plain card-blog">
                                 <div class="card-image">
                                     <a href="#pablo">
-                                        <img class="img rounded img-raised" src="static/img/bg21.jpg"/>
+                                        <img class="img rounded img-raised" src="img/bg21.jpg"/>
                                     </a>
                                 </div>
                                 <div class="card-body">
                                     <h6 class="category text-danger">
-                                        <i class="now-ui-icons media-2_sound-wave"></i> Enterprise
+                                        <i class="intelligo-icons media-2_sound-wave"></i> Enterprise
                                     </h6>
                                     <h4 class="card-title">
                                         <a href="#pablo">6 insights into the French Fashion landscape</a>
@@ -199,7 +199,7 @@
                                         was until recently a traditional boxed software company selling licenses.
                                         <a href="#pablo"> Read More </a>
                                     <div class="author">
-                                        <img v-lazy="'static/img/james.jpg'" alt="..." class="avatar img-raised">
+                                        <img v-lazy="'img/james.jpg'" alt="..." class="avatar img-raised">
                                         <span>James Newman</span>
                                     </div>
                                     </p>
@@ -210,7 +210,7 @@
                 </div>
             </div>
             <div class="section pt-0 pb-0">
-                <div class="team-3 section-image" style="background-image: url('static/img/bg26.jpg')">
+                <div class="team-3 section-image" style="background-image: url('img/bg26.jpg')">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 ml-auto mr-auto text-center">
@@ -226,7 +226,7 @@
                                         <div class="col-md-5">
                                             <div class="card-image">
                                                 <a href="#pablo">
-                                                    <img class="img" src="static/img/olivia.jpg">
+                                                    <img class="img" src="img/olivia.jpg">
                                                 </a>
                                             </div>
                                         </div>
@@ -249,7 +249,7 @@
                                         <div class="col-md-5">
                                             <div class="card-image">
                                                 <a href="#pablo">
-                                                    <img class="img" src="static/img/james.jpg">
+                                                    <img class="img" src="img/james.jpg">
                                                 </a>
                                             </div>
                                         </div>
@@ -284,7 +284,7 @@
                             <card plain class="card-form-horizontal">
                                 <div class="row">
                                     <div class="col-sm-8">
-                                        <fg-input addon-left-icon="now-ui-icons ui-1_email-85"
+                                        <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
                                                   placeholder="Email Name...">
                                         </fg-input>
                                     </div>

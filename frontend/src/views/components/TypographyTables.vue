@@ -109,19 +109,19 @@
                 <div class="row">
                     <div class="col-sm-2">
                         <p class="category">Image</p>
-                        <img v-lazy="'static/img/julie.jpg'" alt="Rounded Image" class="rounded">
+                        <img v-lazy="'img/julie.jpg'" alt="Rounded Image" class="rounded">
                     </div>
                     <div class="col-sm-2">
                         <p class="category">Circle Image</p>
-                        <img v-lazy="'static/img/julie.jpg'" alt="Circle Image" class="rounded-circle">
+                        <img v-lazy="'img/julie.jpg'" alt="Circle Image" class="rounded-circle">
                     </div>
                     <div class="col-sm-2">
                         <p class="category">Raised</p>
-                        <img v-lazy="'static/img/julie.jpg'" alt="Raised Image" class="rounded img-raised">
+                        <img v-lazy="'img/julie.jpg'" alt="Raised Image" class="rounded img-raised">
                     </div>
                     <div class="col-sm-2">
                         <p class="category">Circle Raised</p>
-                        <img v-lazy="'static/img/julie.jpg'" alt="Thumbnail Image" class="rounded-circle img-raised">
+                        <img v-lazy="'img/julie.jpg'" alt="Thumbnail Image" class="rounded-circle img-raised">
                     </div>
                 </div>
             </div>
@@ -170,7 +170,7 @@
                                                                 :open-delay="300"
                                                                 placement="top">
                                                         <n-button type="info" size="sm" icon>
-                                                            <i class="now-ui-icons users_single-02"></i>
+                                                            <i class="intelligo-icons users_single-02"></i>
                                                         </n-button>
                                                     </el-tooltip>
 
@@ -178,7 +178,7 @@
                                                                 :open-delay="300"
                                                                 placement="top">
                                                         <n-button type="success" size="sm" icon>
-                                                            <i class="now-ui-icons ui-2_settings-90"></i>
+                                                            <i class="intelligo-icons ui-2_settings-90"></i>
                                                         </n-button>
                                                     </el-tooltip>
 
@@ -186,7 +186,7 @@
                                                                 :open-delay="300"
                                                                 placement="top">
                                                         <n-button type="danger" size="sm" icon>
-                                                            <i class="now-ui-icons ui-1_simple-remove"></i>
+                                                            <i class="intelligo-icons ui-1_simple-remove"></i>
                                                         </n-button>
                                                     </el-tooltip>
 
@@ -270,12 +270,12 @@
                                     <template slot="actions">
                                         <el-tooltip content="Reply To Comment" placement="top">
                                             <a href="#pablo" class="btn btn-primary btn-neutral pull-right">
-                                                <i class="now-ui-icons ui-1_send"></i> Reply
+                                                <i class="intelligo-icons ui-1_send"></i> Reply
                                             </a>
                                         </el-tooltip>
                                         <a href="#pablo" :class="{'btn-default': !comment.liked}"
                                            class="btn btn-neutral pull-right">
-                                            <i class="now-ui-icons ui-2_favourite-28"></i>
+                                            <i class="intelligo-icons ui-2_favourite-28"></i>
                                             {{comment.likes}}
                                         </a>
                                     </template>
@@ -293,7 +293,7 @@
                             <div class="media media-post">
                                 <a class="pull-left author" href="#pablo">
                                     <div class="avatar">
-                                        <img class="media-object img-raised" alt="64x64" src="static/img/james.jpg">
+                                        <img class="media-object img-raised" alt="64x64" src="img/james.jpg">
                                     </div>
                                 </a>
                                 <div class="media-body">
@@ -315,7 +315,7 @@
                                 <a class="pull-left author" href="#pablo">
                                     <div class="avatar">
                                         <img class="media-object img-raised" alt="64x64"
-                                             src="static/img/placeholder.jpg"/>
+                                             src="img/placeholder.jpg"/>
                                     </div>
                                 </a>
                                 <div class="media-body">
@@ -411,7 +411,7 @@ export default {
       commentsPage: 1,
       comments: [
         {
-          avatar: 'static/img/marie.jpg',
+          avatar: 'img/marie.jpg',
           author: 'Tina Andrew',
           date: '7 minutes ago',
           comment: `<p>Chance too good. God level bars. I\'m so proud of @LifeOfDesiigner #1 song in the country. Panda! Don\'t be scared of the truth because we need to restart the human foundation in truth I stand with the most humility. We are so blessed!</p>
@@ -421,7 +421,7 @@ export default {
           replies: []
         },
         {
-          avatar: 'static/img/olivia.jpg',
+          avatar: 'img/olivia.jpg',
           author: 'Olivia',
           date: 'Yesterday',
           comment: `<p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>
@@ -430,7 +430,7 @@ export default {
           liked: false,
           replies: [
             {
-              avatar: 'static/img/emily.jpg',
+              avatar: 'img/emily.jpg',
               author: 'Emily',
               date: '2 Days Ago',
               comment: `<p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>
@@ -442,7 +442,7 @@ export default {
           ]
         },
         {
-          avatar: 'static/img/james.jpg',
+          avatar: 'img/james.jpg',
           author: 'Andrew',
           date: '2 Days Ago',
           comment: `<p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>

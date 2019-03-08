@@ -20,19 +20,19 @@
                             </p>
                             <div class="card-footer">
                                 <div class="author">
-                                    <img v-lazy="'static/img/julie.jpg'" alt="..." class="avatar img-raised">
+                                    <img v-lazy="'img/julie.jpg'" alt="..." class="avatar img-raised">
                                     <span>Susan B. Anthony</span>
                                 </div>
                                 <div class="stats stats-right">
-                                    <i class="now-ui-icons ui-2_favourite-28"></i> 10.4K ·
-                                    <i class="now-ui-icons files_single-copy-04"></i> 425
+                                    <i class="intelligo-icons ui-2_favourite-28"></i> 10.4K ·
+                                    <i class="intelligo-icons files_single-copy-04"></i> 425
                                 </div>
                             </div>
                         </card>
                         <card type="blog">
-                            <img slot="image" class="img rounded" src="static/img/project13.jpg">
+                            <img slot="image" class="img rounded" src="img/project13.jpg">
                             <h6 class="category text-warning">
-                                <i class="now-ui-icons business_bulb-63"></i> Focus
+                                <i class="intelligo-icons business_bulb-63"></i> Focus
                             </h6>
                             <h5 class="card-title">
                                 <a href="#nuk">Stay Focused: Train Your Brain</a>
@@ -44,7 +44,7 @@
                         </card>
                         <card>
                             <h6 class="category text-danger">
-                                <i class="now-ui-icons media-2_sound-wave"></i> Trending
+                                <i class="intelligo-icons media-2_sound-wave"></i> Trending
                             </h6>
                             <h5 class="card-title">
                                 <a href="#pablo">Here Be Dragons</a>
@@ -55,12 +55,12 @@
                             </p>
                             <div class="card-footer">
                                 <div class="author">
-                                    <img v-lazy="'static/img/olivia.jpg'" alt="..." class="avatar img-raised">
+                                    <img v-lazy="'img/olivia.jpg'" alt="..." class="avatar img-raised">
                                     <span>Lord Alex</span>
                                 </div>
                                 <div class="stats stats-right">
-                                    <i class="now-ui-icons ui-2_favourite-28"></i> 342 ·
-                                    <i class="now-ui-icons files_single-copy-04"></i> 45
+                                    <i class="intelligo-icons ui-2_favourite-28"></i> 342 ·
+                                    <i class="intelligo-icons files_single-copy-04"></i> 45
                                 </div>
                             </div>
                         </card>
@@ -84,7 +84,7 @@
                             </div>
                         </card>
                         <card type="blog">
-                            <img slot="image" class="img rounded" src="static/img/card-blog2.jpg">
+                            <img slot="image" class="img rounded" src="img/card-blog2.jpg">
                             <h6 class="category text-primary">Features</h6>
                             <h5 class="card-title">
                                 That’s One Way To Ditch Your Passenger
@@ -95,11 +95,11 @@
                             </p>
                             <div class="card-footer">
                                 <div class="author">
-                                    <img v-lazy="'static/img/julie.jpg'" alt="..." class="avatar img-raised">
+                                    <img v-lazy="'img/julie.jpg'" alt="..." class="avatar img-raised">
                                     <span>Mike John</span>
                                 </div>
                                 <div class="stats stats-right">
-                                    <i class="now-ui-icons tech_watch-time"></i> 5 min read
+                                    <i class="intelligo-icons tech_watch-time"></i> 5 min read
                                 </div>
                             </div>
                         </card>
@@ -112,21 +112,21 @@
                             </p>
                             <div class="card-footer">
                                 <div class="author">
-                                    <img v-lazy="'static/img/james.jpg'" alt="..." class="avatar img-raised">
+                                    <img v-lazy="'img/james.jpg'" alt="..." class="avatar img-raised">
                                     <span>Tania Andrew</span>
                                 </div>
                                 <div class="stats stats-right">
-                                    <i class="now-ui-icons ui-2_favourite-28"></i> 2.4K ·
-                                    <i class="now-ui-icons files_single-copy-04"></i> 45
+                                    <i class="intelligo-icons ui-2_favourite-28"></i> 2.4K ·
+                                    <i class="intelligo-icons files_single-copy-04"></i> 45
                                 </div>
                             </div>
                         </card>
                     </div>
                     <div class="col-md-8 offset-md-2 col-lg-4 offset-lg-0">
                         <card type="blog" card-body-classes="text-center">
-                            <img slot="image" class="img rounded" src="static/img/examples/card-blog6.jpg">
+                            <img slot="image" class="img rounded" src="img/examples/card-blog6.jpg">
                             <h6 class="category text-danger">
-                                <i class="now-ui-icons media-2_sound-wave"></i> Business
+                                <i class="intelligo-icons media-2_sound-wave"></i> Business
                             </h6>
                             <h5 class="card-title">
                                 Axel Springer Spends $343M To Buy Business Insider
@@ -140,20 +140,20 @@
                             </div>
                         </card>
                         <card type="blog">
-                            <img slot="image" class="img rounded" src="static/img/card-blog3.jpg">
+                            <img slot="image" class="img rounded" src="img/card-blog3.jpg">
                             <h6 class="category text-warning">
-                                <i class="now-ui-icons media-1_camera-compact"></i> Photo
+                                <i class="intelligo-icons media-1_camera-compact"></i> Photo
                             </h6>
                             <h5 class="card-title">
                                 <a href="#pablo">Indispensible to nature photography: the hide</a>
                             </h5>
                             <div class="card-footer">
                                 <div class="stats stats-right">
-                                    <i class="now-ui-icons ui-2_favourite-28"></i> 342 ·
-                                    <i class="now-ui-icons files_single-copy-04"></i> 45
+                                    <i class="intelligo-icons ui-2_favourite-28"></i> 342 ·
+                                    <i class="intelligo-icons files_single-copy-04"></i> 45
                                 </div>
                                 <div class="author">
-                                    <img v-lazy="'static/img/james.jpg'" alt="..." class="avatar img-raised">
+                                    <img v-lazy="'img/james.jpg'" alt="..." class="avatar img-raised">
                                     <span>Devin Coldewey</span>
                                 </div>
                             </div>
@@ -165,7 +165,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6 px-0">
-                    <div class="card card-fashion card-background" style="background-image: url('static/img/bg26.jpg')">
+                    <div class="card card-fashion card-background" style="background-image: url('img/bg26.jpg')">
                         <div class="card-body">
                             <div class="card-title text-left">
                                 <h2>
@@ -177,10 +177,10 @@
                             <div class="card-footer text-left">
                                 <div class="stats">
                                             <span>
-                                                <i class="now-ui-icons users_circle-08"></i>Author
+                                                <i class="intelligo-icons users_circle-08"></i>Author
                                             </span>
                                     <span>
-                                                <i class="now-ui-icons tech_watch-time"></i> June 2, 2017
+                                                <i class="intelligo-icons tech_watch-time"></i> June 2, 2017
                                             </span>
                                 </div>
                                 <div class="stats-link pull-right">
@@ -202,10 +202,10 @@
                                 <div class="card-footer">
                                     <div class="stats">
                                                 <span>
-                                                    <i class="now-ui-icons users_circle-08"></i>Author
+                                                    <i class="intelligo-icons users_circle-08"></i>Author
                                                 </span>
                                         <span>
-                                                    <i class="now-ui-icons tech_watch-time"></i> June 2, 2017
+                                                    <i class="intelligo-icons tech_watch-time"></i> June 2, 2017
                                                 </span>
                                     </div>
                                     <div class="stats-link pull-right">

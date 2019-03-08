@@ -40,12 +40,12 @@
                         <template slot="actions">
                             <el-tooltip content="Reply To Comment" placement="top">
                                 <a href="#pablo" class="btn btn-primary btn-neutral pull-right">
-                                    <i class="now-ui-icons ui-1_send"></i> Reply
+                                    <i class="intelligo-icons ui-1_send"></i> Reply
                                 </a>
                             </el-tooltip>
                             <a href="#pablo" :class="{'btn-default': !comment.liked}"
                                class="btn btn-neutral pull-right">
-                                <i class="now-ui-icons ui-2_favourite-28"></i>
+                                <i class="intelligo-icons ui-2_favourite-28"></i>
                                 {{comment.likes}}
                             </a>
                         </template>

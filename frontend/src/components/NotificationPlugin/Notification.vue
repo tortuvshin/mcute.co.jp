@@ -13,7 +13,7 @@
       class="close col-xs-1"
       data-notify="dismiss"
       @click="close">
-      <i class="now-ui-icons ui-1_simple-remove"></i>
+      <i class="intelligo-icons ui-1_simple-remove"></i>
     </button>
 
     <span v-if="icon" data-notify="icon" :class="['alert-icon', icon]"></span>

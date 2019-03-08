@@ -1,7 +1,7 @@
 <template>
     <div class="cd-section" id="testimonials">
         <!--     *********    TESTIMONIALS 1     *********      -->
-        <div class="testimonials-1 section-image" style="background-image: url('static/img/bg19.jpg')">
+        <div class="testimonials-1 section-image" style="background-image: url('img/bg19.jpg')">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 ml-auto mr-auto text-center">
@@ -13,7 +13,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <card type="testimonial" no-footer-line>
-                            <img slot="avatar" class="img img-raised" src="static/img/michael.jpg"/>
+                            <img slot="avatar" class="img img-raised" src="img/michael.jpg"/>
                             <p class="card-description">
                                 The networking at Web Summit is like no other European tech conference.
                             </p>
@@ -28,7 +28,7 @@
                     </div>
                     <div class="col-md-4">
                         <card type="testimonial" no-footer-line>
-                            <img slot="avatar" class="img img-raised" src="static/img/olivia.jpg"/>
+                            <img slot="avatar" class="img img-raised" src="img/olivia.jpg"/>
                             <p class="card-description">
                                 The connections you make at Web Summit are unparalleled, we met users all over the
                                 world.
@@ -44,7 +44,7 @@
                     </div>
                     <div class="col-md-4">
                         <card type="testimonial" no-footer-line>
-                            <img slot="avatar" class="img img-raised" src="static/img/james.jpg"/>
+                            <img slot="avatar" class="img img-raised" src="img/james.jpg"/>
                             <p class="card-description">
                                 Web Summit will increase your appetite, your inspiration, and your network.
                             </p>
@@ -69,7 +69,7 @@
                         <el-carousel height="500px" class="carousel-centered">
                             <el-carousel-item>
                                 <card type="testimonial" plain>
-                                    <img slot="avatar" class="img img-raised rounded" src="static/img/james.jpg"/>
+                                    <img slot="avatar" class="img img-raised rounded" src="img/james.jpg"/>
                                     <h5 class="card-description">"Take up one idea. Make that one idea your life
                                         - think of it, dream of it, live on that idea. Let the brain, muscles,
                                         nerves, every part of your body, be full of that idea, and just leave
@@ -84,7 +84,7 @@
                             </el-carousel-item>
                             <el-carousel-item>
                                 <card type="testimonial" plain>
-                                    <img slot="avatar" class="img img-raised rounded" src="static/img/olivia.jpg"/>
+                                    <img slot="avatar" class="img img-raised rounded" src="img/olivia.jpg"/>
 
                                     <h5 class="card-description">"When we are no longer able to change a
                                         situation - we are challenged to change ourselves. Spread love
@@ -116,7 +116,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <card type="testimonial" plain>
-                            <img slot="avatar" class="img img-raised rounded" src="static/img/michael.jpg"/>
+                            <img slot="avatar" class="img img-raised rounded" src="img/michael.jpg"/>
 
                             <h3 class="card-title">Andrew John</h3>
                             <h6 class="category text-primary">Loan Counselor</h6>
@@ -127,7 +127,7 @@
                     </div>
                     <div class="col-md-4">
                         <card type="testimonial" plain>
-                            <img slot="avatar" class="img img-raised rounded" src="static/img/olivia.jpg"/>
+                            <img slot="avatar" class="img img-raised rounded" src="img/olivia.jpg"/>
 
                             <h4 class="card-title">Zoe Gabriella</h4>
                             <h6 class="category text-primary">Interpreter OR Translator</h6>
@@ -138,7 +138,7 @@
                     </div>
                     <div class="col-md-4">
                         <card type="testimonial" plain>
-                            <img slot="avatar" class="img img-raised rounded" src="static/img/james.jpg"/>
+                            <img slot="avatar" class="img img-raised rounded" src="img/james.jpg"/>
 
                             <h4 class="card-title">Joshiah Luke</h4>
                             <h6 class="category text-primary">HR Specialist</h6>

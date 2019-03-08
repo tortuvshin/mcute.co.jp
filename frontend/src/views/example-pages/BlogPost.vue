@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper blog-post">
         <div class="page-header page-header-small">
-            <parallax class="page-header-image" style="background-image: url('static/img/bg24.jpg')"></parallax>
+            <parallax class="page-header-image" style="background-image: url('img/bg24.jpg')"></parallax>
             <div class="content-center">
                 <div class="row">
                     <div class="col-md-8 ml-auto mr-auto text-center">
@@ -17,7 +17,7 @@
                     <div class="col-md-12">
                         <div class="button-container">
                             <a href="#pablo" class="btn btn-primary btn-round btn-lg">
-                                <i class="now-ui-icons text_align-left"></i> Read Article
+                                <i class="intelligo-icons text_align-left"></i> Read Article
                             </a>
                             <a href="#pablo" class="btn btn-icon btn-lg btn-twitter btn-round">
                                 <i class="fab fa-twitter"></i>
@@ -62,7 +62,7 @@
                     <div class="section-story-overview">
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="image-container image-left" style="background-image: url('static/img/bg35.jpg')">
+                                <div class="image-container image-left" style="background-image: url('img/bg35.jpg')">
                                     <!-- First image on the left side -->
                                     <p class="blockquote blockquote-primary">"Over the span of the satellite record,
                                         Arctic sea ice has been declining significantly, while sea ice in the
@@ -74,13 +74,13 @@
                                 </div>
                                 <!-- Second image on the left side of the article -->
                                 <div class="image-container image-left-bottom"
-                                     style="background-image: url('static/img/bg29.jpg')">
+                                     style="background-image: url('img/bg29.jpg')">
                                 </div>
                             </div>
                             <div class="col-md-5">
                                 <!-- First image on the right side, above the article -->
                                 <div class="image-container image-right"
-                                     style="background-image: url('static/img/project16.jpg')">
+                                     style="background-image: url('img/project16.jpg')">
                                 </div>
                                 <h3>So what does the new record for the lowest level of winter ice actually mean</h3>
                                 <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every
@@ -165,7 +165,7 @@
                                         <div class="col-md-2">
                                             <div class="card-avatar">
                                                 <a href="#pablo">
-                                                    <img class="img img-raised" src="static/img/mike.jpg">
+                                                    <img class="img img-raised" src="img/mike.jpg">
                                                 </a>
                                                 <div class="ripple-container"></div>
                                             </div>
@@ -206,7 +206,7 @@
                             <div class="media media-post">
                                 <a class="pull-left author" href="#pablo">
                                     <div class="avatar">
-                                        <img class="media-object img-raised" alt="64x64" src="static/img/olivia.jpg">
+                                        <img class="media-object img-raised" alt="64x64" src="img/olivia.jpg">
                                     </div>
                                 </a>
                                 <div class="media-body">
@@ -214,7 +214,7 @@
                                               placeholder="Write a nice reply or go home..." rows="4"></textarea>
                                     <div class="media-footer">
                                         <a href="#pablo" class="btn btn-primary pull-right">
-                                            <i class="now-ui-icons ui-1_send"></i> Reply
+                                            <i class="intelligo-icons ui-1_send"></i> Reply
                                         </a>
                                     </div>
                                 </div>
@@ -238,7 +238,7 @@
                                                 <div class="col-md-5">
                                                     <div class="card-image">
                                                         <img class="img img-raised rounded"
-                                                             src="static/img/examples/card-blog4.jpg" alt="">
+                                                             src="img/examples/card-blog4.jpg" alt="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-7">
@@ -266,7 +266,7 @@
                                         <div class="row">
                                             <div class="col-md-7">
                                                 <h6 class="category text-danger">
-                                                    <i class="now-ui-icons now-ui-icons media-2_sound-wave"></i> Startup
+                                                    <i class="intelligo-icons intelligo-icons media-2_sound-wave"></i> Startup
                                                 </h6>
                                                 <h3 class="card-title">
                                                     <a href="#pablo">Insticator raises $5.2M to help publishers</a>
@@ -286,7 +286,7 @@
                                             <div class="col-md-5">
                                                 <div class="card-image">
                                                     <img class="img img-raised rounded"
-                                                         src="static/img/examples/card-blog6.jpg">
+                                                         src="img/examples/card-blog6.jpg">
                                                 </div>
                                             </div>
                                         </div>
@@ -320,19 +320,19 @@ export default {
         comment: ''
       },
       comments: [{
-        avatar: 'static/img/james.jpg',
+        avatar: 'img/james.jpg',
         author: 'Tina Andrew',
         date: '7 minutes ago',
         comment: `<p>Chance too good. God level bars. I'm so proud of @LifeOfDesiigner #1 song in the country. Panda! Don't be scared of the truth because we need to restart the human foundation in truth I stand with the most humility. We are so blessed!</p>
                             <p>All praises and blessings to the families of people who never gave up on dreams. Don't forget, You're Awesome!</p>`
       }, {
-        avatar: 'static/img/michael.jpg',
+        avatar: 'img/michael.jpg',
         author: 'John Camber',
         date: 'Yesterday',
         comment: `<p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>
                             <p> Don't forget, You're Awesome!</p>`,
         replies: [{
-          avatar: 'static/img/julie.jpg',
+          avatar: 'img/julie.jpg',
           author: 'Tina Andrew',
           date: '2 Days Ago',
           comment: `<p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>

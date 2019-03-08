@@ -3,12 +3,12 @@
         <div class="page-header clear-filter header-filter" filter-color="orange">
             <div class="rellax-header rellax-header-sky" data-rellax-speed="-8">
                 <div class="page-header-image"
-                     style="background-image: url('static/img/presentation-page/nuk-pro-back-sky.jpg')">
+                     style="background-image: url('img/presentation-page/nuk-pro-back-sky.jpg')">
                 </div>
             </div>
             <div class="rellax-header rellax-header-buildings" data-rellax-speed="0">
                 <div class="page-header-image page-header-city"
-                     style="background-image: url('static/img/presentation-page/nuk-pro-buildings.png')">
+                     style="background-image: url('img/presentation-page/nuk-pro-buildings.png')">
                 </div>
             </div>
             <div class="rellax-text-container">
@@ -18,10 +18,10 @@
                 Kit.</h3>
             <h6 class="category category-absolute rellax-text" data-rellax-speed="-2">Designed by
                 <a href="https:///invisionapp.com/" target="_blank">
-                    <img v-lazy="'static/img/invision-white-slim.png'" class="invision-logo"/>
+                    <img v-lazy="'img/invision-white-slim.png'" class="invision-logo"/>
                 </a>. Coded by
                 <a href="https://www.creative-tim.com" target="_blank">
-                    <img v-lazy="'static/img/creative-tim-white-slim2.png'" class="creative-tim-logo" alt=""/>
+                    <img v-lazy="'img/creative-tim-white-slim2.png'" class="creative-tim-logo" alt=""/>
                 </a>.</h6>
         </div>
         <div class="main">

@@ -42,10 +42,8 @@ Vue.component('svg-background', SvgBackground);
 Vue.component('spinner', Spinner);
 
 // New 
-
 Vue.config.productionTip = false;
 Vue.use(MCute);
-
 
 Vue.mixin({
   methods: {

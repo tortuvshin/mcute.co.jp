@@ -9,7 +9,7 @@
                     <div class="col-md-4 ml-auto mr-auto">
                         <div class="info info-horizontal">
                             <div class="icon icon-primary">
-                                <i class="now-ui-icons media-2_sound-wave"></i>
+                                <i class="intelligo-icons media-2_sound-wave"></i>
                             </div>
                             <div class="description">
                                 <h5 class="info-title">Artist</h5>
@@ -21,7 +21,7 @@
                         </div>
                         <div class="info info-horizontal">
                             <div class="icon icon-primary">
-                                <i class="now-ui-icons media-1_button-pause"></i>
+                                <i class="intelligo-icons media-1_button-pause"></i>
                             </div>
                             <div class="description">
                                 <h5 class="info-title">Space</h5>
@@ -32,7 +32,7 @@
                         </div>
                         <div class="info info-horizontal">
                             <div class="icon icon-info">
-                                <i class="now-ui-icons users_single-02"></i>
+                                <i class="intelligo-icons users_single-02"></i>
                             </div>
                             <div class="description">
                                 <h5 class="info-title">Matching System</h5>
@@ -47,33 +47,33 @@
                             <div class="card-body">
                                 <h4 class="card-title text-center">Register</h4>
 
-                                <fg-input addon-left-icon="now-ui-icons users_circle-08"
+                                <fg-input addon-left-icon="intelligo-icons users_circle-08"
                                           v-model="user.firstName"
                                           placeholder="Enter First Name...">
                                 </fg-input>
 
-                                <fg-input addon-left-icon="now-ui-icons text_caps-small"
+                                <fg-input addon-left-icon="intelligo-icons text_caps-small"
                                           v-model="user.lastName"
                                           placeholder="Enter Last Name...">
                                 </fg-input>
 
-                                <fg-input addon-left-icon="now-ui-icons ui-1_email-85"
+                                <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
                                           v-model="user.email"
                                           placeholder="Enter Email...">
                                 </fg-input>
 
-                                <fg-input addon-left-icon="now-ui-icons ui-1_email-85"
+                                <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
                                           v-model="user.username"
                                           placeholder="Enter username...">
                                 </fg-input>
 
-                                <fg-input addon-left-icon="now-ui-icons ui-1_email-85"
+                                <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
                                     type="password"
                                     v-model="user.password"
                                     placeholder="Enter password...">
                                 </fg-input>
 
-                                <fg-input addon-left-icon="now-ui-icons ui-1_email-85"
+                                <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
                                     type="password"
                                     v-model="user.confirmPassword"
                                     placeholder="Retype password...">

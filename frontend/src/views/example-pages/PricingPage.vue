@@ -27,7 +27,7 @@
                             <card type="pricing" plain>
                                 <h6 class="category">Starter</h6>
                                 <div class="icon icon-info">
-                                    <i class="now-ui-icons business_briefcase-24"></i>
+                                    <i class="intelligo-icons business_briefcase-24"></i>
                                 </div>
                                 <h3 class="card-title">
                                     <small>$</small>
@@ -45,7 +45,7 @@
                             <card type="pricing" color="black">
                                 <h6 class="category">Professional</h6>
                                 <div class="icon icon-success">
-                                    <i class="now-ui-icons tech_headphones"></i>
+                                    <i class="intelligo-icons tech_headphones"></i>
                                 </div>
                                 <h3 class="card-title">
                                     <small>$</small>
@@ -65,7 +65,7 @@
                             <card type="pricing" plain>
                                 <h6 class="category">Basic</h6>
                                 <div class="icon icon-danger">
-                                    <i class="now-ui-icons design_palette"></i>
+                                    <i class="intelligo-icons design_palette"></i>
                                 </div>
                                 <h3 class="card-title">
                                     <small>$</small>
@@ -92,14 +92,14 @@
                     <div class="row">
                         <div class="col-md-4 ml-auto">
                             <info-section type="info"
-                                          icon="now-ui-icons shopping_credit-card"
+                                          icon="intelligo-icons shopping_credit-card"
                                           title="Can I cancel my subscription?"
                                           description="Yes, you can cancel and perform other actions on your subscriptions via the My Account page. "
                             />
                         </div>
                         <div class="col-md-4 mr-auto">
                             <info-section type="success"
-                                          icon="now-ui-icons shopping_box"
+                                          icon="intelligo-icons shopping_box"
                                           title="Is there any discount for an annual subscription?"
                                           description="Yes, we offer a 40% discount if you choose annual subscription for any plan."
                             />
@@ -108,14 +108,14 @@
                     <div class="row">
                         <div class="col-md-4 ml-auto">
                             <info-section type="success"
-                                          icon="now-ui-icons business_money-coins"
+                                          icon="intelligo-icons business_money-coins"
                                           title="Which payment methods do you take?"
                                           description="WooCommerce comes bundled with PayPal (for accepting credit card and PayPal account). "
                             />
                         </div>
                         <div class="col-md-4 mr-auto">
                             <info-section type="primary"
-                                          icon="now-ui-icons business_bulb-63"
+                                          icon="intelligo-icons business_bulb-63"
                                           title="Any other questions we can answer?"
                                           description="We are happy to help you. Contact us."
                             />
@@ -132,7 +132,7 @@
                                 our
                                 product. They are very happy with their purchase.</h4>
                             <info-section type="primary"
-                                          icon="now-ui-icons location_pin">
+                                          icon="intelligo-icons location_pin">
                                 <h4 class="info-title">Find us at the office</h4>
                                 <p class="description"> Bld Mihail Kogalniceanu, nr. 8,
                                     <br> 7652 Bucharest,
@@ -141,7 +141,7 @@
                             </info-section>
 
                             <info-section type="primary"
-                                          icon="now-ui-icons tech_mobile">
+                                          icon="intelligo-icons tech_mobile">
                                 <h4 class="info-title">Give us a ring</h4>
                                 <p class="description"> Michael Jordan
                                     <br> +40 762 321 762
@@ -157,20 +157,20 @@
                                     <div class="col-md-6 pr-2">
                                         <label>First Name</label>
                                         <fg-input placeholder="First Name..."
-                                                  addon-left-icon="now-ui-icons users_circle-08">
+                                                  addon-left-icon="intelligo-icons users_circle-08">
                                         </fg-input>
                                     </div>
                                     <div class="col-md-6 pl-2">
                                         <label>Last Name</label>
                                         <fg-input placeholder="Last Name..."
-                                                  addon-left-icon="now-ui-icons text_caps-small">
+                                                  addon-left-icon="intelligo-icons text_caps-small">
                                         </fg-input>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Email address</label>
                                     <fg-input placeholder="Email Here..."
-                                              addon-left-icon="now-ui-icons ui-1_email-85">
+                                              addon-left-icon="intelligo-icons ui-1_email-85">
                                     </fg-input>
                                 </div>
                                 <div class="form-group">

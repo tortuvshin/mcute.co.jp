@@ -6,16 +6,16 @@
                 <div class="col-md-6 modal-buttons">
                     <h4>Modal</h4>
                     <n-button type="primary" @click.native="modals.classic = true">
-                        <i class="now-ui-icons files_single-copy-04"></i> Classic
+                        <i class="intelligo-icons files_single-copy-04"></i> Classic
                     </n-button>
                     <n-button type="primary" @click.native="modals.mini = true">
-                        <i class="now-ui-icons media-1_button-power"></i> Launch Modal Mini
+                        <i class="intelligo-icons media-1_button-power"></i> Launch Modal Mini
                     </n-button>
                     <n-button type="primary" @click.native="modals.notice = true">
-                        <i class="now-ui-icons travel_info"></i> Notice
+                        <i class="intelligo-icons travel_info"></i> Notice
                     </n-button>
                     <n-button type="primary" @click.native="modals.login = true">
-                        <i class="now-ui-icons users_single-02"></i> Login Modal
+                        <i class="intelligo-icons users_single-02"></i> Login Modal
                     </n-button>
                 </div>
                 <div class="col-md-6 popover-buttons">
@@ -219,7 +219,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="picture">
-                                <img v-lazy="'static/img/pricing1.jpg'" alt="Thumbnail Image" class="rounded img-raised">
+                                <img v-lazy="'img/pricing1.jpg'" alt="Thumbnail Image" class="rounded img-raised">
                             </div>
                         </div>
                     </div>
@@ -235,7 +235,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="picture">
-                                <img v-lazy="'static/img/project9.jpg'" alt="Thumbnail Image" class="rounded img-raised">
+                                <img v-lazy="'img/project9.jpg'" alt="Thumbnail Image" class="rounded img-raised">
                             </div>
                         </div>
                     </div>
@@ -255,7 +255,7 @@
                headerClasses="justify-content-center"
                type="mini">
             <div slot="header" class="modal-profile">
-                <i class="now-ui-icons users_circle-08"></i>
+                <i class="intelligo-icons users_circle-08"></i>
             </div>
             <p>Always have an access to your profile</p>
             <template slot="footer">
@@ -269,11 +269,11 @@
             <div class="card card-plain card-login" data-background-color="" slot="base-content">
                 <div class="modal-header justify-content-center">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                        <i class="now-ui-icons ui-1_simple-remove"></i>
+                        <i class="intelligo-icons ui-1_simple-remove"></i>
                     </button>
                     <div class="header header-primary text-center">
                         <div class="logo-container">
-                            <img v-lazy="'static/img/now-logo.png'" alt="">
+                            <img v-lazy="'img/now-logo.png'" alt="">
                         </div>
                     </div>
                 </div>
@@ -281,13 +281,13 @@
                     <form class="form" method="" action="">
                         <div class="card-body">
                             <fg-input class="no-border input-lg"
-                                      addon-left-icon="now-ui-icons users_circle-08"
+                                      addon-left-icon="intelligo-icons users_circle-08"
                                       placeholder="First Name...">
                             </fg-input>
 
                             <fg-input class="no-border input-lg"
                                       type="password"
-                                      addon-left-icon="now-ui-icons ui-1_lock-circle-open"
+                                      addon-left-icon="intelligo-icons ui-1_lock-circle-open"
                                       placeholder="Password...">
                             </fg-input>
                         </div>
