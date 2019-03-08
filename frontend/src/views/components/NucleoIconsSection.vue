@@ -15,21 +15,21 @@
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="icons-container">
-                        <i class="now-ui-icons ui-1_send"></i>
-                        <i class="now-ui-icons ui-2_like"></i>
-                        <i class="now-ui-icons transportation_air-baloon"></i>
-                        <i class="now-ui-icons text_bold"></i>
-                        <i class="now-ui-icons tech_headphones"></i>
-                        <i class="now-ui-icons emoticons_satisfied"></i>
-                        <i class="now-ui-icons shopping_cart-simple"></i>
-                        <i class="now-ui-icons objects_spaceship"></i>
-                        <i class="now-ui-icons media-2_note-03"></i>
-                        <i class="now-ui-icons ui-2_favourite-28"></i>
-                        <i class="now-ui-icons design_palette"></i>
-                        <i class="now-ui-icons clothes_tie-bow"></i>
-                        <i class="now-ui-icons location_pin"></i>
-                        <i class="now-ui-icons objects_key-25"></i>
-                        <i class="now-ui-icons travel_istanbul"></i>
+                        <i class="intelligo-icons ui-1_send"></i>
+                        <i class="intelligo-icons ui-2_like"></i>
+                        <i class="intelligo-icons transportation_air-baloon"></i>
+                        <i class="intelligo-icons text_bold"></i>
+                        <i class="intelligo-icons tech_headphones"></i>
+                        <i class="intelligo-icons emoticons_satisfied"></i>
+                        <i class="intelligo-icons shopping_cart-simple"></i>
+                        <i class="intelligo-icons objects_spaceship"></i>
+                        <i class="intelligo-icons media-2_note-03"></i>
+                        <i class="intelligo-icons ui-2_favourite-28"></i>
+                        <i class="intelligo-icons design_palette"></i>
+                        <i class="intelligo-icons clothes_tie-bow"></i>
+                        <i class="intelligo-icons location_pin"></i>
+                        <i class="intelligo-icons objects_key-25"></i>
+                        <i class="intelligo-icons travel_istanbul"></i>
                     </div>
                 </div>
             </div>

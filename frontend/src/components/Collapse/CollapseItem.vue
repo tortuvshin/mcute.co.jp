@@ -11,7 +11,7 @@
           {{title}}
         </slot>
         <slot name="icon">
-          <i v-if="!noIcon" class="now-ui-icons arrows-1_minimal-down"></i>
+          <i v-if="!noIcon" class="intelligo-icons arrows-1_minimal-down"></i>
         </slot>
       </a>
     </div>

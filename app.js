@@ -62,7 +62,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(function (req, res, next) {
-    const allowedOrigins = ['http://localhost:5000', 'http://localhost:8000','http://localhost:8081', 'http://localhost:8001','http://127.0.0.1:8020', 'http://localhost:8080', 'https://mcute.herokuapp.com'];
+    const allowedOrigins = ['http://localhost:5000', 'http://localhost:8000','http://localhost:8081', 'http://localhost:8001','http://127.0.0.1:8020', 'http://localhost:8080', 'https://mcuteapp.herokuapp.com'];
     const origin = req.headers.origin;
     if(allowedOrigins.indexOf(origin) > -1){
          res.setHeader('Access-Control-Allow-Origin', origin);

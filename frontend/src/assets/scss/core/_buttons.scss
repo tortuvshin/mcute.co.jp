@@ -46,7 +46,7 @@
             width: $btn-icon-size-small;
 
             i.fab,
-            i.now-ui-icons{
+            i.intelligo-icons{
                 font-size: $btn-icon-font-size-small;
             }
         }
@@ -56,13 +56,13 @@
             min-width: $btn-icon-size-lg;
             width: $btn-icon-size-lg;
 
-            i.now-ui-icons,
+            i.intelligo-icons,
             i.fab{
                 font-size: $btn-icon-font-size-lg;
             }
         }
 
-        &:not(.btn-footer) i.now-ui-icons,
+        &:not(.btn-footer) i.intelligo-icons,
         &:not(.btn-footer) i.fab{
             position: absolute;
             top: 50%;
@@ -74,7 +74,7 @@
 
     }
 
-    &:not(.btn-icon) .now-ui-icons{
+    &:not(.btn-icon) .intelligo-icons{
         position: relative;
         top: 1px;
     }

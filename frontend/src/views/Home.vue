@@ -27,10 +27,10 @@
                                             <br/>
                                             <div class="buttons">
                                                 <a href="/project/search" class="btn btn-neutral btn-primary btn-lg mr-1">
-                                                    <i class="now-ui-icons files_single-copy-04"></i> Bid now
+                                                    <i class="intelligo-icons files_single-copy-04"></i> Bid now
                                                 </a>
                                                 <a href="/project/post" class="btn btn-primary btn-lg">
-                                                    <i class="now-ui-icons arrows-1_share-66"></i> Post a Art work
+                                                    <i class="intelligo-icons arrows-1_share-66"></i> Post a Art work
                                                 </a>
                                             </div>
                                         </div>
@@ -228,10 +228,10 @@
                             <div class="card-footer text-left">
                                 <div class="stats">
                                     <span>
-                                        <i class="now-ui-icons media-2_sound-wave"></i>mcute.jp
+                                        <i class="intelligo-icons media-2_sound-wave"></i>mcute.jp
                                     </span>
                                     <span>
-                                        <i class="now-ui-icons tech_watch-time"></i> 20min ago
+                                        <i class="intelligo-icons tech_watch-time"></i> 20min ago
                                     </span>
                                 </div>
                                 <div class="stats-link pull-right">
@@ -251,10 +251,10 @@
                                 </div>
                                 <div class="stats stats-right">
                                     <span>
-                                        <i class="now-ui-icons media-2_sound-wave"></i>SPACE.com
+                                        <i class="intelligo-icons media-2_sound-wave"></i>SPACE.com
                                     </span>
                                     <span>
-                                        <i class="now-ui-icons tech_watch-time"></i> 20min ago
+                                        <i class="intelligo-icons tech_watch-time"></i> 20min ago
                                     </span>
                                 </div>
                             </div>
@@ -273,10 +273,10 @@
                                 </div>
                                 <div class="stats stats-right">
                                     <span>
-                                        <i class="now-ui-icons media-2_sound-wave"></i>SPACE.com
+                                        <i class="intelligo-icons media-2_sound-wave"></i>SPACE.com
                                     </span>
                                     <span>
-                                        <i class="now-ui-icons tech_watch-time"></i> 20min ago
+                                        <i class="intelligo-icons tech_watch-time"></i> 20min ago
                                     </span>
                                 </div>
                             </div>
@@ -308,7 +308,7 @@
                                 Capturing New York...
                             </p>
                             <n-button type="danger" round>
-                                <i class="now-ui-icons ui-1_send"></i> View More
+                                <i class="intelligo-icons ui-1_send"></i> View More
                             </n-button>
                         </card>
                     </div>
@@ -322,7 +322,7 @@
                                 institution...
                             </p>
                             <n-button type="danger" round>
-                                <i class="now-ui-icons ui-1_send"></i> View more
+                                <i class="intelligo-icons ui-1_send"></i> View more
                             </n-button>
                         </card>
                     </div>
@@ -337,7 +337,7 @@
                                 made up...
                             </p>
                             <n-button type="danger" round>
-                                <i class="now-ui-icons ui-1_send"></i> View More
+                                <i class="intelligo-icons ui-1_send"></i> View More
                             </n-button>
                         </card>
                     </div>
@@ -352,7 +352,7 @@
                                 strong enough to kill men with...
                             </p>
                             <n-button type="danger" round>
-                                <i class="now-ui-icons ui-1_send"></i> View More
+                                <i class="intelligo-icons ui-1_send"></i> View More
                             </n-button>
                         </card>
                     </div>
@@ -445,10 +445,10 @@
                             <div class="card-footer text-left">
                                 <div class="stats">
                                         <span>
-                                            <i class="now-ui-icons users_circle-08"></i>Nicholas Deleon
+                                            <i class="intelligo-icons users_circle-08"></i>Nicholas Deleon
                                         </span>
                                     <span>
-                                            <i class="now-ui-icons tech_watch-time"></i> June 2, 2017
+                                            <i class="intelligo-icons tech_watch-time"></i> June 2, 2017
                                         </span>
                                 </div>
                                 <div class="stats-link pull-right">
@@ -470,10 +470,10 @@
                             <div class="card-footer">
                                 <div class="stats">
                                         <span>
-                                            <i class="now-ui-icons users_circle-08"></i>Jon Russell
+                                            <i class="intelligo-icons users_circle-08"></i>Jon Russell
                                         </span>
                                     <span>
-                                            <i class="now-ui-icons tech_watch-time"></i> June 2, 2017
+                                            <i class="intelligo-icons tech_watch-time"></i> June 2, 2017
                                         </span>
                                 </div>
                                 <div class="stats-link pull-right">
@@ -501,13 +501,13 @@
                                 class="input-lg"
                                 placeholder="First Name..."
                                 v-model="form.firstName"
-                                addon-left-icon="now-ui-icons users_circle-08">
+                                addon-left-icon="intelligo-icons users_circle-08">
                         </fg-input>
                         <fg-input
                                 class="input-lg"
                                 placeholder="Email Here..."
                                 v-model="form.email"
-                                addon-left-icon="now-ui-icons ui-1_email-85">
+                                addon-left-icon="intelligo-icons ui-1_email-85">
                         </fg-input>
                         <div class="textarea-container">
                             <textarea class="form-control"

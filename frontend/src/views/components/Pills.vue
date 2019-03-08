@@ -63,7 +63,7 @@
                         <tabs pills type="primary" icons>
                             <tab-pane label="Profile">
                                 <template slot="label">
-                                    <i class="now-ui-icons objects_umbrella-13"></i> Home
+                                    <i class="intelligo-icons objects_umbrella-13"></i> Home
                                 </template>
                                 Collaboratively administrate empowered markets via plug-and-play networks. Dynamically
                                 procrastinate B2C users after installed base benefits.
@@ -72,7 +72,7 @@
                             </tab-pane>
                             <tab-pane label="Settings">
                                 <template slot="label">
-                                    <i class="now-ui-icons shopping_shop"></i> Messages
+                                    <i class="intelligo-icons shopping_shop"></i> Messages
                                 </template>
                                 Efficiently unleash cross-media information without cross-media value. Quickly maximize
                                 timely deliverables for real-time schemas.
@@ -81,7 +81,7 @@
                             </tab-pane>
                             <tab-pane label="Options">
                                 <template slot="label">
-                                    <i class="now-ui-icons ui-2_settings-90"></i> Settings
+                                    <i class="intelligo-icons ui-2_settings-90"></i> Settings
                                 </template>
                                 Completely synergize resource taxing relationships via premier niche markets.
                                 Professionally cultivate one-to-one customer service with robust ideas.
@@ -101,7 +101,7 @@
                               vertical>
                             <tab-pane label="Profile">
                                 <template slot="label">
-                                    <i class="now-ui-icons objects_umbrella-13"></i> Home
+                                    <i class="intelligo-icons objects_umbrella-13"></i> Home
                                 </template>
                                 Collaboratively administrate empowered markets via plug-and-play networks.
                                 Dynamically procrastinate B2C users after installed base benefits.
@@ -111,7 +111,7 @@
                             </tab-pane>
                             <tab-pane label="Settings">
                                 <template slot="label">
-                                    <i class="now-ui-icons ui-2_settings-90"></i> Settings
+                                    <i class="intelligo-icons ui-2_settings-90"></i> Settings
                                 </template>
                                 Efficiently unleash cross-media information without cross-media value. Quickly
                                 maximize timely deliverables for real-time schemas.
@@ -134,13 +134,13 @@
                               tab-nav-wrapper-classes="col-md-3"
                               tab-nav-classes="nav-pills-just-icons">
                             <tab-pane>
-                                <i slot="label" class="now-ui-icons objects_umbrella-13"></i>
+                                <i slot="label" class="intelligo-icons objects_umbrella-13"></i>
                                 Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
                                 <br>
                                 <br> Dramatically visualize customer directed convergence without revolutionary ROI.
                             </tab-pane>
                             <tab-pane>
-                                <i slot="label" class="now-ui-icons ui-2_settings-90"></i>
+                                <i slot="label" class="intelligo-icons ui-2_settings-90"></i>
                                 Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
                                 <br>
                                 <br>Dramatically maintain clicks-and-mortar solutions without functional solutions.
@@ -152,19 +152,19 @@
                               type="info"
                               tab-nav-classes="nav-pills-just-icons">
                             <tab-pane label="Profile">
-                                <i slot="label" class="now-ui-icons objects_umbrella-13"></i>
+                                <i slot="label" class="intelligo-icons objects_umbrella-13"></i>
                                 Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
                                 <br>
                                 <br> Dramatically visualize customer directed convergence without revolutionary ROI.
                             </tab-pane>
                             <tab-pane label="Settings">
-                                <i slot="label" class="now-ui-icons shopping_shop"></i>
+                                <i slot="label" class="intelligo-icons shopping_shop"></i>
                                 Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
                                 <br>
                                 <br>Dramatically maintain clicks-and-mortar solutions without functional solutions.
                             </tab-pane>
                             <tab-pane label="Settings">
-                                <i slot="label" class="now-ui-icons ui-2_settings-90"></i>
+                                <i slot="label" class="intelligo-icons ui-2_settings-90"></i>
                                 Completely synergize resource taxing relationships via premier niche markets.
                                 Professionally cultivate one-to-one customer service with robust ideas.
                                 <br>

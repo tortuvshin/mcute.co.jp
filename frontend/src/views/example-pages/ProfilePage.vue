@@ -2,11 +2,11 @@
     <div class="wrapper">
         <div class="page-header page-header-small header-filter" filter-color="orange">
             <parallax class="page-header-image"
-                 style="background-image: url('static/img/bg5.jpg')">
+                 style="background-image: url('img/bg5.jpg')">
             </parallax>
             <div class="container">
                 <div class="photo-container">
-                    <img v-lazy="'static/img/ryan.jpg'" alt="">
+                    <img v-lazy="'img/ryan.jpg'" alt="">
                 </div>
                 <h3 class="title">Ryan Scheinder</h3>
                 <p class="category">Photographer</p>
@@ -52,13 +52,13 @@
                               centered
                               tab-nav-classes="nav-pills-just-icons">
                             <tab-pane>
-                                <i slot="label" class="now-ui-icons design_image"></i>
+                                <i slot="label" class="intelligo-icons design_image"></i>
 
                                 <div class="row">
                                     <div class="col-md-5 ml-auto mr-auto">
                                         <card type="background"
                                               raised
-                                              style="background-image: url('static/img/bg23.jpg')"
+                                              style="background-image: url('img/bg23.jpg')"
                                               class="card-background-product">
                                             <h2 class="card-title">Chair remake.</h2>
                                             <p class="card-description text-white">
@@ -72,14 +72,14 @@
                                     <div class="col-md-5">
                                         <info-section
                                                 type="warning"
-                                                icon="now-ui-icons users_single-02"
+                                                icon="intelligo-icons users_single-02"
                                                 title="Work With Any Team"
                                                 description="Whether it’s for work or even the next family vacation, Trello helps your team."
                                         />
 
                                         <info-section
                                                 type="warning"
-                                                icon="now-ui-icons business_chart-bar-32"
+                                                icon="intelligo-icons business_chart-bar-32"
                                                 title="A Productivity Platform"
                                                 description="Integrate the apps your team already uses directly into your workflow."
                                         />
@@ -88,13 +88,13 @@
                             </tab-pane>
 
                             <tab-pane>
-                                <i slot="label" class="now-ui-icons location_world"></i>
+                                <i slot="label" class="intelligo-icons location_world"></i>
 
                                 <div class="row">
                                     <div class="col-md-5 ml-auto mr-auto">
                                         <card type="background"
                                               raised
-                                              style="background-image: url('static/img/project8.jpg')"
+                                              style="background-image: url('img/project8.jpg')"
                                               class="card-background-product">
                                             <h2 class="card-title">Social Analytics</h2>
                                             <p class="card-description text-white">
@@ -108,14 +108,14 @@
                                     <div class="col-md-5">
                                         <info-section
                                                 type="danger"
-                                                icon="now-ui-icons ui-2_chat-round"
+                                                icon="intelligo-icons ui-2_chat-round"
                                                 title="Listen to Social Conversations"
                                                 description="Gain access to the demographics, psychographics, and location of unique people who talk about your brand."
                                         />
 
                                         <info-section
                                                 type="danger"
-                                                icon="now-ui-icons design-2_ruler-pencil"
+                                                icon="intelligo-icons design-2_ruler-pencil"
                                                 title="Social Conversions"
                                                 description="Track actions taken on your website that originated from social, and understand the impact on your bottom line."
                                         />
@@ -124,13 +124,13 @@
                             </tab-pane>
 
                             <tab-pane>
-                                <i slot="label" class="now-ui-icons design-2_ruler-pencil"></i>
+                                <i slot="label" class="intelligo-icons design-2_ruler-pencil"></i>
 
                                 <div class="row">
                                     <div class="col-md-5 ml-auto mr-auto">
                                         <card type="background"
                                               raised
-                                              style="background-image: url('static/img/bg25.jpg')"
+                                              style="background-image: url('img/bg25.jpg')"
                                               class="card-background-product">
                                             <h2 class="card-title">Interior Redesign</h2>
                                             <p class="card-description text-white">
@@ -144,14 +144,14 @@
                                     <div class="col-md-5">
                                         <info-section
                                                 type="info"
-                                                icon="now-ui-icons design_palette"
+                                                icon="intelligo-icons design_palette"
                                                 title="Colors adjustments"
                                                 description="Gain access to the demographics, psychographics, and location of unique people who talk about your brand."
                                         />
 
                                         <info-section
                                                 type="info"
-                                                icon="now-ui-icons design_scissors"
+                                                icon="intelligo-icons design_scissors"
                                                 title="Performance Clothing"
                                                 description="Unify data from Facebook, Instagram, Twitter, LinkedIn, and Youtube to gain rich insights from easy-to-use reports."
                                         />
@@ -182,7 +182,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <info-section type="primary"
-                                          icon="now-ui-icons tech_mobile">
+                                          icon="intelligo-icons tech_mobile">
                                 <h5 class="info-title">Give us a ring</h5>
                                 <p> Michael Jordan
                                     <br> +40 762 321 762
@@ -192,7 +192,7 @@
                         </div>
                         <div class="col-md-6">
                             <info-section type="primary"
-                                          icon="now-ui-icons location_pin">
+                                          icon="intelligo-icons location_pin">
                                 <h5 class="info-title">Find us at the office</h5>
                                 <p> Bld Mihail Kogalniceanu, nr. 8,
                                     <br> 7652 Bucharest,
@@ -207,7 +207,7 @@
                             <fg-input
                                     placeholder="First Name..."
                                     v-model="form.firstName"
-                                    addon-left-icon="now-ui-icons users_circle-08">
+                                    addon-left-icon="intelligo-icons users_circle-08">
                             </fg-input>
                         </div>
                         <div class="col-md-6 pl-2">
@@ -215,7 +215,7 @@
                             <fg-input
                                     placeholder="Email Here..."
                                     v-model="form.email"
-                                    addon-left-icon="now-ui-icons users_circle-08">
+                                    addon-left-icon="intelligo-icons users_circle-08">
                             </fg-input>
                         </div>
                     </div>

@@ -2,7 +2,7 @@
     <div class="wrapper">
         <div class="page-header page-header-small">
             <parallax class="page-header-image"
-                 style="background-image: url('static/img/bg32.jpg')">
+                 style="background-image: url('img/bg32.jpg')">
             </parallax>
             <div class="content-center">
                 <div class="row">
@@ -29,7 +29,7 @@
                             <div class="col-md-4">
                                 <div class="info info-hover">
                                     <div class="icon icon-success icon-circle">
-                                        <i class="now-ui-icons objects_globe"></i>
+                                        <i class="intelligo-icons objects_globe"></i>
                                     </div>
                                     <h4 class="info-title">Asset Management</h4>
                                     <p class="description">Cross-account dashboards provide sophisticated reporting
@@ -39,7 +39,7 @@
                             <div class="col-md-4">
                                 <div class="info info-hover">
                                     <div class="icon icon-info icon-circle">
-                                        <i class="now-ui-icons education_atom"></i>
+                                        <i class="intelligo-icons education_atom"></i>
                                     </div>
                                     <h4 class="info-title">Resource Utilization</h4>
                                     <p class="description">CloudCheckr provides summary and detailed usage
@@ -49,7 +49,7 @@
                             <div class="col-md-4">
                                 <div class="info info-hover">
                                     <div class="icon icon-primary icon-circle">
-                                        <i class="now-ui-icons tech_watch-time"></i>
+                                        <i class="intelligo-icons tech_watch-time"></i>
                                     </div>
                                     <h4 class="info-title">Self-Healing</h4>
                                     <p class="description">CloudCheckr enables users to save money, time, and
@@ -74,7 +74,7 @@
                     <div class="row">
                         <div class="col-md-5 ml-auto">
                             <card type="background" raised class="card-background-product"
-                                  style="background-image: url('static/img/project8.jpg')">
+                                  style="background-image: url('img/project8.jpg')">
                                 <h2 class="card-title">Social Analytics</h2>
                                 <p class="card-description">
                                     Insight to help you create, connect, and convert. Understand Your Audience's
@@ -86,19 +86,19 @@
                         </div>
                         <div class="col-md-5 mr-auto">
                             <info-section type="danger"
-                                          icon="now-ui-icons ui-2_chat-round"
+                                          icon="intelligo-icons ui-2_chat-round"
                                           title="Listen to Social Conversations"
                                           description="Gain access to the demographics, psychographics, and location of unique people who talk about your brand."
                             />
 
                             <info-section type="danger"
-                                          icon="now-ui-icons business_chart-pie-36"
+                                          icon="intelligo-icons business_chart-pie-36"
                                           title="Performance Analyze"
                                           description="Unify data from Facebook, Instagram, Twitter, LinkedIn, and Youtube to gain rich insights from easy-to-use reports."
                             />
 
                             <info-section type="danger"
-                                          icon="now-ui-icons design-2_ruler-pencil"
+                                          icon="intelligo-icons design-2_ruler-pencil"
                                           title="Social Conversions"
                                           description="Track actions taken on your website that originated from social, and understand the impact on your bottom line."
                             />
@@ -108,19 +108,19 @@
                     <div class="row">
                         <div class="col-md-5 ml-auto mt-5">
                             <info-section type="warning"
-                                          icon="now-ui-icons users_single-02"
+                                          icon="intelligo-icons users_single-02"
                                           title="Work With Any Team"
                                           description="Whether it’s for work or even the next family vacation, Trello helps your team."
                             />
 
                             <info-section type="warning"
-                                          icon="now-ui-icons business_chart-bar-32"
+                                          icon="intelligo-icons business_chart-bar-32"
                                           title="A Productivity Platform"
                                           description="Integrate the apps your team already uses directly into your workflow."
                             />
 
                             <info-section type="warning"
-                                          icon="now-ui-icons arrows-1_refresh-69"
+                                          icon="intelligo-icons arrows-1_refresh-69"
                                           title="Always In Sync"
                                           description="No matter where you are, Trello stays in sync across all of your devices."
                             />
@@ -128,7 +128,7 @@
                         </div>
                         <div class="col-md-5 mr-auto">
                             <card type="background" raised class="card-background-product"
-                                  style="background-image: url('static/img/project9.jpg')">
+                                  style="background-image: url('img/project9.jpg')">
                                 <h2 class="card-title">Trello lets you work.</h2>
                                 <p class="card-description text-white">
                                     Trello’s boards, lists, and cards enable you to organize and prioritize your
@@ -156,7 +156,7 @@
                                     <div class="col-md-5">
                                         <div class="card-image">
                                             <a href="#pablo">
-                                                <img class="img img-raised rounded" src="static/img/olivia.jpg"/>
+                                                <img class="img img-raised rounded" src="img/olivia.jpg"/>
                                             </a>
                                         </div>
                                     </div>
@@ -187,7 +187,7 @@
                                     <div class="col-md-5">
                                         <div class="card-image">
                                             <a href="#pablo">
-                                                <img class="img img-raised rounded" src="static/img/emily.jpg"/>
+                                                <img class="img img-raised rounded" src="img/emily.jpg"/>
                                             </a>
                                         </div>
                                     </div>
@@ -220,7 +220,7 @@
                                     <div class="col-md-5">
                                         <div class="card-image">
                                             <a href="#pablo">
-                                                <img class="img img-raised rounded" src="static/img/james.jpg"/>
+                                                <img class="img img-raised rounded" src="img/james.jpg"/>
                                             </a>
                                         </div>
                                     </div>
@@ -252,7 +252,7 @@
                                         <div class="card-image">
                                             <a href="#pablo">
                                                 <img class="img img-raised rounded"
-                                                     src="static/img/michael.jpg"/>
+                                                     src="img/michael.jpg"/>
                                             </a>
                                         </div>
                                     </div>
@@ -292,19 +292,19 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <img class="rounded img-raised" alt="Raised Image" src="static/img/bg27.jpg">
+                            <img class="rounded img-raised" alt="Raised Image" src="img/bg27.jpg">
                         </div>
                         <div class="col-md-4">
-                            <img class="rounded img-raised" alt="Raised Image" src="static/img/bg24.jpg">
+                            <img class="rounded img-raised" alt="Raised Image" src="img/bg24.jpg">
                         </div>
                         <div class="col-md-4">
-                            <img class="rounded img-raised" alt="Raised Image" src="static/img/bg28.jpg">
+                            <img class="rounded img-raised" alt="Raised Image" src="img/bg28.jpg">
                         </div>
                         <div class="col-md-6">
-                            <img class="rounded img-raised" alt="Raised Image" src="static/img/project6.jpg">
+                            <img class="rounded img-raised" alt="Raised Image" src="img/project6.jpg">
                         </div>
                         <div class="col-md-6">
-                            <img class="rounded img-raised" alt="Raised Image" src="static/img/project14.jpg">
+                            <img class="rounded img-raised" alt="Raised Image" src="img/project14.jpg">
                         </div>
                     </div>
                 </div>
@@ -321,14 +321,14 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <label>First name</label>
-                                        <fg-input addon-left-icon="now-ui-icons users_circle-08"
+                                        <fg-input addon-left-icon="intelligo-icons users_circle-08"
                                                   v-model="form.firstName"
                                                   placeholder="First Name...">
                                         </fg-input>
                                     </div>
                                     <div class="col-md-4">
                                         <label>Your email</label>
-                                        <fg-input addon-left-icon="now-ui-icons ui-1_email-85"
+                                        <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
                                                   v-model="form.email"
                                                   placeholder="Email Here...">
                                         </fg-input>

@@ -4,7 +4,7 @@
             <el-carousel-item>
                 <div class="page-header header-filter">
                     <div class="page-header-image"
-                         style="background-image: url('static/img/bg40.jpg')">
+                         style="background-image: url('img/bg40.jpg')">
                     </div>
                     <div class="content-center text-center">
                         <div class="row">
@@ -20,7 +20,7 @@
             <el-carousel-item>
                 <div class="page-header header-filter">
                     <div class="page-header-image"
-                         style="background-image: url('static/img/bg41.jpg')">
+                         style="background-image: url('img/bg41.jpg')">
                     </div>
                     <div class="content-center">
                         <div class="row">
@@ -36,7 +36,7 @@
             <el-carousel-item>
                 <div class="page-header header-filter">
                     <div class="page-header-image"
-                         style="background-image: url('static/img/bg29.jpg')">
+                         style="background-image: url('img/bg29.jpg')">
                     </div>
                     <div class="content-center text-center">
                         <div class="row">
@@ -63,14 +63,14 @@
                                             Refine
                                             <button class="btn btn-default btn-icon btn-neutral pull-right"
                                                     rel="tooltip" title="Reset Filter">
-                                                <i class="arrows-1_refresh-69 now-ui-icons"></i>
+                                                <i class="arrows-1_refresh-69 intelligo-icons"></i>
                                             </button>
                                         </h4>
                                         <collapse>
                                             <collapse-item no-icon class="card-header">
                                                 <h6 class="mb-0 text-primary" slot="title">
                                                     Price Range
-                                                    <i class="now-ui-icons arrows-1_minimal-down"></i>
+                                                    <i class="intelligo-icons arrows-1_minimal-down"></i>
                                                 </h6>
                                                 <span class="price-left pull-left">€{{filters.priceRange[0]}}</span>
                                                 <span class="price-right pull-right">€{{filters.priceRange[1]}}</span>
@@ -85,7 +85,7 @@
                                             <collapse-item no-icon class="card-header">
                                                 <h6 class="mb-0 text-primary" slot="title">
                                                     Clothing
-                                                    <i class="now-ui-icons arrows-1_minimal-down"></i>
+                                                    <i class="intelligo-icons arrows-1_minimal-down"></i>
                                                 </h6>
                                                 <n-checkbox v-for="clothing in filters.clothingTypes"
                                                             v-model="clothing.value"
@@ -96,7 +96,7 @@
                                             <collapse-item no-icon class="card-header">
                                                 <h6 class="mb-0 text-primary" slot="title">
                                                     Designer
-                                                    <i class="now-ui-icons arrows-1_minimal-down"></i>
+                                                    <i class="intelligo-icons arrows-1_minimal-down"></i>
                                                 </h6>
                                                 <n-checkbox v-for="desginer in filters.designerTypes"
                                                             v-model="desginer.value"
@@ -107,7 +107,7 @@
                                             <collapse-item no-icon class="card-header">
                                                 <h6 class="mb-0 text-primary" slot="title">
                                                     Colour
-                                                    <i class="now-ui-icons arrows-1_minimal-down"></i>
+                                                    <i class="intelligo-icons arrows-1_minimal-down"></i>
                                                 </h6>
                                                 <n-checkbox v-for="color in filters.colourTypes"
                                                             v-model="color.value"
@@ -140,7 +140,7 @@
                                             </div>
                                             <el-tooltip effect="light" content="Remove from wishlist" placement="top">
                                                 <n-button type="danger" icon round class="pull-right btn-neutral">
-                                                    <i class="now-ui-icons ui-2_favourite-28"></i>
+                                                    <i class="intelligo-icons ui-2_favourite-28"></i>
                                                 </n-button>
                                             </el-tooltip>
                                         </div>
@@ -162,7 +162,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6 px-0">
-                            <card type="background" class="card-fashion" style="background-image: url('static/img/bg35.jpg')">
+                            <card type="background" class="card-fashion" style="background-image: url('img/bg35.jpg')">
                                 <div class="card-title text-left">
                                     <h2>
                                         <a href="#pablo">
@@ -174,10 +174,10 @@
                                 <div class="card-footer text-left">
                                     <div class="stats">
                                             <span>
-                                                <i class="now-ui-icons users_circle-08"></i>Emy Grace
+                                                <i class="intelligo-icons users_circle-08"></i>Emy Grace
                                             </span>
                                         <span>
-                                                <i class="now-ui-icons tech_watch-time"></i> June 6, 2017
+                                                <i class="intelligo-icons tech_watch-time"></i> June 6, 2017
                                             </span>
                                     </div>
                                     <div class="stats-link pull-right">
@@ -204,16 +204,16 @@
                                         <div class="card-footer text-left">
                                             <div class="stats">
                                                 <span>
-                                                    <i class="now-ui-icons users_circle-08"></i>Jerry McGregor
+                                                    <i class="intelligo-icons users_circle-08"></i>Jerry McGregor
                                                 </span>
                                                 <span>
-                                                    <i class="now-ui-icons tech_watch-time"></i> June 10, 2017
+                                                    <i class="intelligo-icons tech_watch-time"></i> June 10, 2017
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <card type="background" class="card-fashion" style="background-image: url('static/img/bg40.jpg')">
+                                <card type="background" class="card-fashion" style="background-image: url('img/bg40.jpg')">
                                 </card>
                             </div>
                         </div>
@@ -226,7 +226,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <card type="product" plain>
-                                <img slot="image" src="static/img/saint-laurent1.jpg" alt="">
+                                <img slot="image" src="img/saint-laurent1.jpg" alt="">
                                 <h4 class="card-title">
                                     <a href="#pablo">Saint Laurent</a>
                                 </h4>
@@ -240,7 +240,7 @@
                                     <div class="stats stats-right">
                                         <el-tooltip content="Saved to Wishlist" effect="light" placement="top">
                                             <n-button type="neutral" icon>
-                                                <i class="now-ui-icons ui-2_favourite-28"></i>
+                                                <i class="intelligo-icons ui-2_favourite-28"></i>
                                             </n-button>
                                         </el-tooltip>
                                     </div>
@@ -249,7 +249,7 @@
                         </div>
                         <div class="col-md-4">
                             <card type="product" plain>
-                                <img slot="image" src="static/img/saint-laurent1.jpg" alt="">
+                                <img slot="image" src="img/saint-laurent1.jpg" alt="">
                                 <h4 class="card-title">
                                     <a href="#pablo">Saint Laurent</a>
                                 </h4>
@@ -263,7 +263,7 @@
                                     <div class="stats stats-right">
                                         <el-tooltip content="Saved to Wishlist" effect="light" placement="top">
                                             <n-button type="neutral" icon>
-                                                <i class="now-ui-icons ui-2_favourite-28"></i>
+                                                <i class="intelligo-icons ui-2_favourite-28"></i>
                                             </n-button>
                                         </el-tooltip>
                                     </div>
@@ -272,7 +272,7 @@
                         </div>
                         <div class="col-md-4">
                             <card type="product" plain>
-                                <img slot="image" src="static/img/gucci.jpg" alt="">
+                                <img slot="image" src="img/gucci.jpg" alt="">
                                 <h4 class="card-title">
                                     <a href="#pablo">Gucci</a>
                                 </h4>
@@ -287,7 +287,7 @@
                                     <div class="stats stats-right">
                                         <el-tooltip content="Saved to Wishlist" effect="light" placement="top">
                                             <n-button type="neutral" icon>
-                                                <i class="now-ui-icons ui-2_favourite-28"></i>
+                                                <i class="intelligo-icons ui-2_favourite-28"></i>
                                             </n-button>
                                         </el-tooltip>
                                     </div>
@@ -298,7 +298,7 @@
                 </div>
             </div>
             <!-- section -->
-            <div class="subscribe-line subscribe-line-image" style="background-image: url('static/img/bg43.jpg')">
+            <div class="subscribe-line subscribe-line-image" style="background-image: url('img/bg43.jpg')">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 ml-auto mr-auto">
@@ -314,7 +314,7 @@
                                     <div class="col-sm-8">
                                         <fg-input
                                                 placeholder="Your Email..."
-                                                addon-left-icon="now-ui-icons ui-1_email-85">
+                                                addon-left-icon="intelligo-icons ui-1_email-85">
                                         </fg-input>
                                     </div>
                                     <div class="col-sm-4">
@@ -484,37 +484,37 @@ export default {
       },
       products: [
         {
-          image: 'static/img/polo.jpg',
+          image: 'img/polo.jpg',
           title: 'Polo Ralph Lauren',
           description: 'Impeccably tailored in Italy from lightweight navy wool.',
           price: 300
         },
         {
-          image: 'static/img/tom-ford.jpg',
+          image: 'img/tom-ford.jpg',
           title: 'Tom Ford',
           description: 'Immaculate tailoring is TOM FORD\'s forte.',
           price: 879
         },
         {
-          image: 'static/img/wooyoungmi.jpg',
+          image: 'img/wooyoungmi.jpg',
           title: 'Wooyoungmi',
           description: 'Dark-grey slub wool, pintucked notch lapels.',
           price: 555
         },
         {
-          image: 'static/img/sweeney.jpg',
+          image: 'img/sweeney.jpg',
           title: 'Thom Sweeney',
           description: 'It\'s made from lightweight grey wool woven.',
           price: 680
         },
         {
-          image: 'static/img/kingsman.jpg',
+          image: 'img/kingsman.jpg',
           title: 'Kingsman',
           description: 'Crafted from khaki cotton and fully canvassed.',
           price: 725
         },
         {
-          image: 'static/img/boglioli.jpg',
+          image: 'img/boglioli.jpg',
           title: 'Boglioli',
           description: 'Masterfully crafted in Northern Italy.',
           price: 699

@@ -13,7 +13,7 @@
                     <div class="col-md-4">
                         <div class="info info-hover">
                             <div class="icon icon-primary">
-                                <i class="now-ui-icons ui-2_chat-round"></i>
+                                <i class="intelligo-icons ui-2_chat-round"></i>
                             </div>
                             <h4 class="info-title">Social Conversations</h4>
                             <p class="description">Gain access to the demographics, psychographics, and location of unique people.</p>
@@ -22,7 +22,7 @@
                     <div class="col-md-4">
                         <div class="info info-hover">
                             <div class="icon icon-success">
-                                <i class="now-ui-icons business_chart-pie-36"></i>
+                                <i class="intelligo-icons business_chart-pie-36"></i>
                             </div>
                             <h4 class="info-title">Analyze Performance</h4>
                             <p class="description">Unify data from Facebook, Instagram, Twitter, LinkedIn, and Youtube to gain rich insights.</p>
@@ -31,7 +31,7 @@
                     <div class="col-md-4">
                         <div class="info info-hover">
                             <div class="icon icon-warning">
-                                <i class="now-ui-icons design-2_ruler-pencil"></i>
+                                <i class="intelligo-icons design-2_ruler-pencil"></i>
                             </div>
                             <h4 class="info-title">Measure Conversions</h4>
                             <p class="description">Track actions taken on your website, understand the impact on your bottom line.</p>
@@ -42,7 +42,7 @@
         </div>
         <!--     *********    END FEATURES 1      *********      -->
         <!--     *********     FEATURES 2      *********      -->
-        <div class="features-2 section-image" style="background-image: url('static/img/bg22.jpg')">
+        <div class="features-2 section-image" style="background-image: url('img/bg22.jpg')">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-8 mr-auto ml-auto">
@@ -54,7 +54,7 @@
                     <div class="col-md-4">
                         <div class="info">
                             <div class="icon icon-primary icon-circle">
-                                <i class="now-ui-icons users_single-02"></i>
+                                <i class="intelligo-icons users_single-02"></i>
                             </div>
                             <h4 class="info-title">Work With Any Team</h4>
                             <p class="description">Whether it’s for work or even the next family vacation, Trello helps your team.</p>
@@ -63,7 +63,7 @@
                     <div class="col-md-4">
                         <div class="info">
                             <div class="icon icon-danger icon-circle">
-                                <i class="now-ui-icons business_chart-bar-32"></i>
+                                <i class="intelligo-icons business_chart-bar-32"></i>
                             </div>
                             <h4 class="info-title">A Productivity Platform</h4>
                             <p class="description">Integrate the apps your team already uses directly into your workflow.</p>
@@ -72,7 +72,7 @@
                     <div class="col-md-4">
                         <div class="info">
                             <div class="icon icon-warning icon-circle">
-                                <i class="now-ui-icons arrows-1_refresh-69"></i>
+                                <i class="intelligo-icons arrows-1_refresh-69"></i>
                             </div>
                             <h4 class="info-title">Always In Sync</h4>
                             <p class="description">No matter where you are, Trello stays in sync across all of your devices.</p>
@@ -95,7 +95,7 @@
                     <div class="col-md-4">
                         <div class="info info-hover">
                             <div class="icon icon-success icon-circle">
-                                <i class="now-ui-icons objects_globe"></i>
+                                <i class="intelligo-icons objects_globe"></i>
                             </div>
                             <h4 class="info-title">Asset Management</h4>
                             <p class="description">Cross-account dashboards provide sophisticated reporting for enterprise.</p>
@@ -104,7 +104,7 @@
                     <div class="col-md-4">
                         <div class="info info-hover">
                             <div class="icon icon-info icon-circle">
-                                <i class="now-ui-icons education_atom"></i>
+                                <i class="intelligo-icons education_atom"></i>
                             </div>
                             <h4 class="info-title">Resource Utilization</h4>
                             <p class="description">CloudCheckr provides summary and detailed usage statistics for resources.</p>
@@ -113,7 +113,7 @@
                     <div class="col-md-4">
                         <div class="info info-hover">
                             <div class="icon icon-primary icon-circle">
-                                <i class="now-ui-icons tech_watch-time"></i>
+                                <i class="intelligo-icons tech_watch-time"></i>
                             </div>
                             <h4 class="info-title">Self-Healing</h4>
                             <p class="description">CloudCheckr enables users to save money, time, and effort.</p>
@@ -134,10 +134,10 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <card type="background" raised color="transparent" style="background-image: url('static/img/bg24.jpg')">
+                        <card type="background" raised color="transparent" style="background-image: url('img/bg24.jpg')">
                             <template slot="info">
                                 <div class="icon icon-white">
-                                    <i class="now-ui-icons business_bulb-63"></i>
+                                    <i class="intelligo-icons business_bulb-63"></i>
                                 </div>
                                 <div class="description">
                                     <h4 class="info-title">Collaborate on ideas</h4>
@@ -148,10 +148,10 @@
                         </card>
                     </div>
                     <div class="col-md-4">
-                        <card type="background" raised color="transparent" style="background-image: url('static/img/bg23.jpg')">
+                        <card type="background" raised color="transparent" style="background-image: url('img/bg23.jpg')">
                             <template slot="info">
                                 <div class="icon icon-white">
-                                    <i class="now-ui-icons business_badge"></i>
+                                    <i class="intelligo-icons business_badge"></i>
                                 </div>
                                 <div class="description">
                                     <h4 class="info-title">Pick your designer</h4>
@@ -162,10 +162,10 @@
                         </card>
                     </div>
                     <div class="col-md-4">
-                        <card type="background" raised color="transparenr" style="background-image: url('static/img/bg25.jpg')">
+                        <card type="background" raised color="transparenr" style="background-image: url('img/bg25.jpg')">
                             <template slot="info">
                                 <div class="icon icon-white">
-                                    <i class="now-ui-icons location_map-big"></i>
+                                    <i class="intelligo-icons location_map-big"></i>
                                 </div>
                                 <div class="description">
                                     <h4 class="info-title">Visualize your room</h4>
@@ -187,7 +187,7 @@
                         <h2 class="title">Working is a pleasure</h2>
                         <div class="info info-horizontal">
                             <div class="icon icon-primary icon-circle">
-                                <i class="now-ui-icons location_world"></i>
+                                <i class="intelligo-icons location_world"></i>
                             </div>
                             <div class="description">
                                 <h4 class="info-title">Hundreds of Components</h4>
@@ -196,7 +196,7 @@
                         </div>
                         <div class="info info-horizontal">
                             <div class="icon icon-primary icon-circle">
-                                <i class="now-ui-icons sport_user-run"></i>
+                                <i class="intelligo-icons sport_user-run"></i>
                             </div>
                             <div class="description">
                                 <h4 class="info-title">Easy to Use</h4>
@@ -205,7 +205,7 @@
                         </div>
                         <div class="info info-horizontal">
                             <div class="icon icon-primary icon-circle">
-                                <i class="now-ui-icons ui-2_time-alarm"></i>
+                                <i class="intelligo-icons ui-2_time-alarm"></i>
                             </div>
                             <div class="description">
                                 <h4 class="info-title">Fast Prototyping</h4>
@@ -215,7 +215,7 @@
                     </div>
                     <div class="col-md-7">
                         <div class="tablet-container">
-                            <img v-lazy="'static/img/ipad2-inverted.png'" />
+                            <img v-lazy="'img/ipad2-inverted.png'" />
                         </div>
                     </div>
                 </div>
@@ -235,7 +235,7 @@
                     <div class="col-md-4">
                         <div class="info info-horizontal">
                             <div class="icon icon-info">
-                                <i class="now-ui-icons design-2_html5"></i>
+                                <i class="intelligo-icons design-2_html5"></i>
                             </div>
                             <div class="description">
                                 <h5 class="info-title">For Developers</h5>
@@ -244,7 +244,7 @@
                         </div>
                         <div class="info info-horizontal">
                             <div class="icon icon-danger">
-                                <i class="now-ui-icons design_palette"></i>
+                                <i class="intelligo-icons design_palette"></i>
                             </div>
                             <div class="description">
                                 <h4 class="info-title">For Designers</h4>
@@ -254,13 +254,13 @@
                     </div>
                     <div class="col-md-4">
                         <div class="phone-container">
-                            <img v-lazy="'static/img/iphone2.png'" />
+                            <img v-lazy="'img/iphone2.png'" />
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="info info-horizontal">
                             <div class="icon icon-primary">
-                                <i class="now-ui-icons design-2_ruler-pencil"></i>
+                                <i class="intelligo-icons design-2_ruler-pencil"></i>
                             </div>
                             <div class="description">
                                 <h5 class="info-title">Bootstrap Grid</h5>
@@ -269,7 +269,7 @@
                         </div>
                         <div class="info info-horizontal">
                             <div class="icon icon-success">
-                                <i class="now-ui-icons files_single-copy-04"></i>
+                                <i class="intelligo-icons files_single-copy-04"></i>
                             </div>
                             <div class="description">
                                 <h4 class="info-title">Example Pages Included</h4>
@@ -282,7 +282,7 @@
         </div>
         <!--     *********    END FEATURES 6      *********      -->
         <!--     *********     FEATURES 7      *********      -->
-        <div class="features-7 section-image" style="background-image: url('static/img/bg11.jpg')">
+        <div class="features-7 section-image" style="background-image: url('img/bg11.jpg')">
             <div class="col-md-8 mr-auto ml-auto text-center">
                 <h2 class="title">Working is a pleasure</h2>
                 <h4 class="description">This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information.</h4>
@@ -293,7 +293,7 @@
                         <div class="col-sm-12">
                             <div class="info info-horizontal">
                                 <div class="icon">
-                                    <i class="now-ui-icons design-2_html5"></i>
+                                    <i class="intelligo-icons design-2_html5"></i>
                                 </div>
                                 <div class="description">
                                     <h5 class="info-title">For Developers</h5>
@@ -302,7 +302,7 @@
                             </div>
                             <div class="info info-horizontal">
                                 <div class="icon">
-                                    <i class="now-ui-icons design_palette"></i>
+                                    <i class="intelligo-icons design_palette"></i>
                                 </div>
                                 <div class="description">
                                     <h5 class="info-title">For Designers</h5>
@@ -311,7 +311,7 @@
                             </div>
                             <div class="info info-horizontal">
                                 <div class="icon">
-                                    <i class="now-ui-icons design-2_ruler-pencil"></i>
+                                    <i class="intelligo-icons design-2_ruler-pencil"></i>
                                 </div>
                                 <div class="description">
                                     <h5 class="info-title">For Artists</h5>
@@ -322,7 +322,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="image-container">
-                            <img v-lazy="'static/img/ipad3.png'" alt="">
+                            <img v-lazy="'img/ipad3.png'" alt="">
                         </div>
                     </div>
                 </div>
@@ -330,7 +330,7 @@
         </div>
         <!--     *********    END FEATURES 7      *********      -->
         <!--     *********     FEATURES 8      *********      -->
-        <div class="features-8 section-image" style="background-image: url('static/img/bg30.jpg')">
+        <div class="features-8 section-image" style="background-image: url('img/bg30.jpg')">
             <div class="col-md-8 ml-auto mr-auto text-center">
                 <h2 class="title">Working is a pleasure</h2>
                 <h4 class="description">Woodpecker.co is a follow-up automation SaaS founded in 2015. We’re an international team of 17, speaking 4 languages. Our mission is to enable all B2B companies to connect with their Ideal Customers.</h4>
@@ -339,10 +339,10 @@
                 <div class="row">
                     <div class="col-md-3">
                         <card>
-                            <img slot="image" src="static/img/bg28.jpg" class="rounded" alt="">
+                            <img slot="image" src="img/bg28.jpg" class="rounded" alt="">
                             <div class="info text-center">
                                 <div class="icon">
-                                    <i class="now-ui-icons ui-1_email-85"></i>
+                                    <i class="intelligo-icons ui-1_email-85"></i>
                                 </div>
                                 <h4 class="info-title">Reply detection</h4>
                                 <p class="description">If you get a reply, further follow-ups are automatically stopped.</p>
@@ -351,10 +351,10 @@
                     </div>
                     <div class="col-md-3">
                         <card>
-                            <img slot="image" src="static/img/bg26.jpg" class="rounded" alt="">
+                            <img slot="image" src="img/bg26.jpg" class="rounded" alt="">
                             <div class="info text-center">
                                 <div class="icon">
-                                    <i class="now-ui-icons ui-1_calendar-60"></i>
+                                    <i class="intelligo-icons ui-1_calendar-60"></i>
                                 </div>
                                 <h4 class="info-title">Follow-up</h4>
                                 <p class="description">Just set a number of days that you want send a follow-up. </p>
@@ -363,10 +363,10 @@
                     </div>
                     <div class="col-md-3">
                         <card>
-                            <img slot="image" src="static/img/bg27.jpg" class="rounded" alt="">
+                            <img slot="image" src="img/bg27.jpg" class="rounded" alt="">
                             <div class="info text-center">
                                 <div class="icon">
-                                    <i class="now-ui-icons ui-1_send"></i>
+                                    <i class="intelligo-icons ui-1_send"></i>
                                 </div>
                                 <h4 class="info-title">Cold email</h4>
                                 <p class="description">Unlimited number of prospects daily with personalized emails.</p>
@@ -375,10 +375,10 @@
                     </div>
                     <div class="col-md-3">
                         <card>
-                            <img slot="image" src="static/img/bg29.jpg" class="rounded" alt="">
+                            <img slot="image" src="img/bg29.jpg" class="rounded" alt="">
                             <div class="info text-center">
                                 <div class="icon">
-                                    <i class="now-ui-icons ui-2_like"></i>
+                                    <i class="intelligo-icons ui-2_like"></i>
                                 </div>
                                 <h4 class="info-title">Teamwork</h4>
                                 <p class="description">You and your teammates won’t address the same person twice. </p>

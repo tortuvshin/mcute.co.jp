@@ -1,23 +1,23 @@
 <template>
     <div class="page-header header-filter" filter-color="orange">
         <div class="page-header-image"
-             style="background-image: url('static/img/login.jpg')">
+             style="background-image: url('img/login.jpg')">
         </div>
         <div class="content">
             <div class="container">
                 <div class="col-md-5 ml-auto mr-auto">
                     <card type="login" plain>
                         <div slot="header" class="logo-container">
-                            <img v-lazy="'static/img/now-logo.png'" alt="">
+                            <img v-lazy="'img/now-logo.png'" alt="">
                         </div>
 
                         <fg-input class="no-border input-lg"
-                                  addon-left-icon="now-ui-icons users_circle-08"
+                                  addon-left-icon="intelligo-icons users_circle-08"
                                   placeholder="First Name...">
                         </fg-input>
 
                         <fg-input class="no-border input-lg"
-                                  addon-left-icon="now-ui-icons text_caps-small"
+                                  addon-left-icon="intelligo-icons text_caps-small"
                                   placeholder="Last Name...">
                         </fg-input>
 

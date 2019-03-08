@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-md-6 px-0">
                         <card type="background" class="card-background-product card-no-shadow"
-                              style="background-image: url('static/img/project1.jpg')">
+                              style="background-image: url('img/project1.jpg')">
 
                             <h6 class="category">History</h6>
                             <h3 class="card-title">
@@ -28,13 +28,13 @@
                                 Capturing New York...
                             </p>
                             <n-button type="danger" round>
-                                <i class="now-ui-icons ui-1_send"></i> View Book
+                                <i class="intelligo-icons ui-1_send"></i> View Book
                             </n-button>
                         </card>
                     </div>
                     <div class="col-md-6 px-0">
                         <card type="background" raised class="card-background-product card-no-shadow"
-                              style="background-image: url('static/img/project18.jpg')">
+                              style="background-image: url('img/project18.jpg')">
                             <h6 class="category">Satire</h6>
                             <h3 class="card-title">A Confederacy of Dunces</h3>
                             <p class="card-description">
@@ -42,14 +42,14 @@
                                 institution...
                             </p>
                             <n-button type="neutral" round>
-                                <i class="now-ui-icons ui-1_send"></i> View more
+                                <i class="intelligo-icons ui-1_send"></i> View more
                             </n-button>
                         </card>
                     </div>
                     <div class="col-md-6 px-0">
                         <card type="background"
                               class="card-background-product card-no-shadow"
-                              style="background-image: url('static/img/project20.jpg')">
+                              style="background-image: url('img/project20.jpg')">
                             <h6 class="category">Fiction</h6>
                             <h3 class="card-title">The Sun Also Rises</h3>
                             <p class="card-description">
@@ -57,14 +57,14 @@
                                 made up...
                             </p>
                             <n-button type="neutral" round>
-                                <i class="now-ui-icons ui-1_send"></i> Read Now
+                                <i class="intelligo-icons ui-1_send"></i> Read Now
                             </n-button>
                         </card>
                     </div>
                     <div class="col-md-6 px-0">
                         <card type="background"
                               class="card-background-product card-no-shadow"
-                              style="background-image: url('static/img/project19.jpg')">
+                              style="background-image: url('img/project19.jpg')">
                             <h6 class="category">Basic Civitas</h6>
                             <h3 class="card-title">The Right Mistake</h3>
                             <p class="card-description">
@@ -72,7 +72,7 @@
                                 strong enough to kill men with...
                             </p>
                             <n-button type="danger" round>
-                                <i class="now-ui-icons ui-1_send"></i> Read Now
+                                <i class="intelligo-icons ui-1_send"></i> Read Now
                             </n-button>
                         </card>
                     </div>
@@ -170,7 +170,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="image-container image-left"
-                                 style="background-image: url('static/img/project4.jpg')">
+                                 style="background-image: url('img/project4.jpg')">
                                 <!-- First image on the left side -->
                                 <p class="blockquote blockquote-primary">"Amber Interiors is available to assist in all
                                     aspects of a project from start to finish including consulting with Architects and
@@ -181,7 +181,7 @@
                         <div class="col-md-5">
                             <!-- First image on the right side, above the article -->
                             <div class="image-container image-right"
-                                 style="background-image: url('static/img/project21.jpg')">
+                                 style="background-image: url('img/project21.jpg')">
                             </div>
                             <h6 class="category text-primary">Design</h6>
                             <h4 class="card-title">Coco Kelley</h4>
@@ -198,7 +198,7 @@
                         <div class="col-md-6">
                             <!-- First image on the left side -->
                             <div class="image-container image-left"
-                                 style="background-image: url('static/img/project24.jpg')">
+                                 style="background-image: url('img/project24.jpg')">
                                 <p class="blockquote blockquote-primary">"We provide a simple, approachable way to
                                     decorate your desired space with ease. Each e-décor is completely individualized"
                                 </p>
@@ -207,7 +207,7 @@
                         <div class="col-md-5">
                             <!-- First image on the right side, above the article -->
                             <div class="image-container image-right"
-                                 style="background-image: url('static/img/project23.jpg')">
+                                 style="background-image: url('img/project23.jpg')">
                             </div>
                             <h6 class="category text-primary">E-Decor</h6>
                             <h4 class="card-title">Red Trad</h4>
@@ -233,7 +233,7 @@
                 <div class="row">
                     <div class="col-md-6 px-0">
                         <card type="background" class="card-fashion"
-                              style="background-image: url('static/img/project14.jpg')">
+                              style="background-image: url('img/project14.jpg')">
                             <div class="card-body">
                                 <div class="card-title text-left">
                                     <h2>
@@ -245,7 +245,7 @@
                                 <div class="card-footer text-left">
                                     <div class="stats">
                                             <span>
-                                                <i class="now-ui-icons objects_globe"></i>The “Crazy idea” project
+                                                <i class="intelligo-icons objects_globe"></i>The “Crazy idea” project
                                             </span>
                                     </div>
                                 </div>
@@ -269,14 +269,14 @@
                                     <div class="card-footer">
                                         <div class="stats">
                                                 <span>
-                                                    <i class="now-ui-icons education_paper"></i> The “I’m on vacation” project
+                                                    <i class="intelligo-icons education_paper"></i> The “I’m on vacation” project
                                                 </span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <card type="background" class="card-fashion"
-                                  style="background-image: url('static/img/project15.jpg')">
+                                  style="background-image: url('img/project15.jpg')">
                             </card>
                         </div>
                     </div>
@@ -285,7 +285,7 @@
                     <div class="col-md-6 px-0">
                         <div class="card-container">
                             <card type="background" class="card-fashion"
-                                  style="background-image: url('static/img/project17.jpg')">
+                                  style="background-image: url('img/project17.jpg')">
                             </card>
                             <div class="card card-fashion arrow-left">
                                 <div class="card-title">
@@ -299,7 +299,7 @@
                                     <div class="card-footer">
                                         <div class="stats">
                                                 <span>
-                                                    <i class="now-ui-icons design_app"></i>The "Agile Project" project
+                                                    <i class="intelligo-icons design_app"></i>The "Agile Project" project
                                                 </span>
                                         </div>
                                     </div>
@@ -309,7 +309,7 @@
                     </div>
                     <div class="col-md-6 px-0">
                         <card type="background" class="card-fashion"
-                              style="background-image: url('static/img/project16.jpg')">
+                              style="background-image: url('img/project16.jpg')">
                             <div class="card-title text-left">
                                 <h2>
                                     <a href="#pablo">Performing a Project Premortem</a>
@@ -318,7 +318,7 @@
                             <div class="card-footer text-left">
                                 <div class="stats">
                                     <span>
-                                        <i class="now-ui-icons media-2_sound-wave"></i>The "Premortem" project
+                                        <i class="intelligo-icons media-2_sound-wave"></i>The "Premortem" project
                                     </span>
                                 </div>
                             </div>
@@ -342,7 +342,7 @@
                 <div class="row">
                     <div class="col-md-5 ml-auto">
                         <card type="background" raised class="card-background-product"
-                              style="background-image: url('static/img/project8.jpg')">
+                              style="background-image: url('img/project8.jpg')">
                             <h2 class="card-title">Social Analytics</h2>
                             <p class="card-description">
                                 Insight to help you create, connect, and convert. Understand Your Audience's
@@ -354,19 +354,19 @@
                     </div>
                     <div class="col-md-5 mr-auto">
                         <info-section type="danger"
-                                      icon="now-ui-icons ui-2_chat-round"
+                                      icon="intelligo-icons ui-2_chat-round"
                                       title="Listen to Social Conversations"
                                       description="Gain access to the demographics, psychographics, and location of unique people who talk about your brand."
                         />
 
                         <info-section type="danger"
-                                      icon="now-ui-icons business_chart-pie-36"
+                                      icon="intelligo-icons business_chart-pie-36"
                                       title="Performance Analyze"
                                       description="Unify data from Facebook, Instagram, Twitter, LinkedIn, and Youtube to gain rich insights from easy-to-use reports."
                         />
 
                         <info-section type="danger"
-                                      icon="now-ui-icons design-2_ruler-pencil"
+                                      icon="intelligo-icons design-2_ruler-pencil"
                                       title="Social Conversions"
                                       description="Track actions taken on your website that originated from social, and understand the impact on your bottom line."
                         />
@@ -377,26 +377,26 @@
                 <div class="row">
                     <div class="col-md-5 ml-auto mt-5">
                         <info-section type="warning"
-                                      icon="now-ui-icons users_single-02"
+                                      icon="intelligo-icons users_single-02"
                                       title="Work With Any Team"
                                       description="Whether it’s for work or even the next family vacation, Trello helps your team."
                         />
 
                         <info-section type="warning"
-                                      icon="now-ui-icons business_chart-bar-32"
+                                      icon="intelligo-icons business_chart-bar-32"
                                       title="A Productivity Platform"
                                       description="Integrate the apps your team already uses directly into your workflow."
                         />
 
                         <info-section type="warning"
-                                      icon="now-ui-icons arrows-1_refresh-69"
+                                      icon="intelligo-icons arrows-1_refresh-69"
                                       title="Always In Sync"
                                       description="No matter where you are, Trello stays in sync across all of your devices."
                         />
                     </div>
                     <div class="col-md-5 mr-auto">
                         <card type="background" raised class="card-background-product"
-                              style="background-image: url('static/img/project9.jpg')">
+                              style="background-image: url('img/project9.jpg')">
                             <h2 class="card-title">Trello lets you work.</h2>
                             <p class="card-description ">
                                 Trello’s boards, lists, and cards enable you to organize and prioritize your

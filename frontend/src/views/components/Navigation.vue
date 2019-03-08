@@ -47,14 +47,14 @@
                         </button>
                         <template slot="navbar-menu">
                             <li class="nav-item">
-                                <a class="nav-link" href="#pablo"><i class="now-ui-icons ui-1_send"
+                                <a class="nav-link" href="#pablo"><i class="intelligo-icons ui-1_send"
                                                                      aria-hidden="true"></i></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#pablo"><i class="now-ui-icons users_single-02"
+                                <a class="nav-link" href="#pablo"><i class="intelligo-icons users_single-02"
                                                                      aria-hidden="true"></i></a>
                             </li>
-                            <drop-down class="nav-item dropdown" icon="now-ui-icons ui-1_settings-gear-63">
+                            <drop-down class="nav-item dropdown" icon="intelligo-icons ui-1_settings-gear-63">
                                 <a class="dropdown-header">Dropdown header</a>
                                 <a class="dropdown-item" href="#">Action</a>
                                 <a class="dropdown-item" href="#">Another action</a>
@@ -71,7 +71,7 @@
             <h4>Navigation</h4>
         </div>
         <div id="navbar">
-            <div class="navigation-example" style="background-image:url('static/img/bg7.jpg')">
+            <div class="navigation-example" style="background-image:url('img/bg7.jpg')">
                 <!-- Navbar Primary  -->
                 <navbar type="primary" menu-classes="ml-auto">
                     <div class="navbar-translate">
@@ -88,19 +88,19 @@
                     <template slot="navbar-menu">
                         <li class="nav-item active">
                             <a class="nav-link" href="#pablo">
-                                <i class="now-ui-icons objects_globe"></i>
+                                <i class="intelligo-icons objects_globe"></i>
                                 <p>Discover</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#pablo">
-                                <i class="now-ui-icons users_circle-08"></i>
+                                <i class="intelligo-icons users_circle-08"></i>
                                 <p>Profile</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#pablo">
-                                <i class="now-ui-icons ui-1_settings-gear-63"></i>
+                                <i class="intelligo-icons ui-1_settings-gear-63"></i>
                                 <p>Settings</p>
                             </a>
                         </li>
@@ -156,17 +156,17 @@
 
                         <li class="nav-item active">
                             <a class="nav-link" href="#pablo">
-                                <i class="now-ui-icons objects_globe"></i>
+                                <i class="intelligo-icons objects_globe"></i>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#pablo">
-                                <i class="now-ui-icons users_circle-08"></i>
+                                <i class="intelligo-icons users_circle-08"></i>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#pablo">
-                                <i class="now-ui-icons ui-1_settings-gear-63"></i>
+                                <i class="intelligo-icons ui-1_settings-gear-63"></i>
                             </a>
                         </li>
 

@@ -2,7 +2,7 @@
     <div class="cd-section" id="pricing">
         <!--     *********    PRICING 1     *********      -->
         <div class="pricing-1 section-image" id="pricing-1"
-             style="background-image: url('static/img/pricing1.jpg')">
+             style="background-image: url('img/pricing1.jpg')">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 ml-auto mr-auto text-center">
@@ -18,7 +18,7 @@
 
                             <h6 class="category ">Bravo Pack</h6>
                             <div class="icon icon-warning">
-                                <i class="now-ui-icons media-1_button-power"></i>
+                                <i class="intelligo-icons media-1_button-power"></i>
                             </div>
                             <h3 class="card-title">$10</h3>
                             <ul>
@@ -33,7 +33,7 @@
                         <card type="pricing">
                             <h6 class="category">Alpha Pack</h6>
                             <div class="icon icon-primary">
-                                <i class="now-ui-icons objects_diamond"></i>
+                                <i class="intelligo-icons objects_diamond"></i>
                             </div>
                             <h3 class="card-title">$67</h3>
                             <ul>
@@ -48,7 +48,7 @@
 
                             <h6 class="category ">Charlie Pack</h6>
                             <div class="icon icon-success">
-                                <i class="now-ui-icons media-2_sound-wave"></i>
+                                <i class="intelligo-icons media-2_sound-wave"></i>
                             </div>
                             <h3 class="card-title">$69</h3>
                             <ul>
@@ -64,7 +64,7 @@
 
                             <h6 class="category ">Extra Pack</h6>
                             <div class="icon icon-danger">
-                                <i class="now-ui-icons education_atom"></i>
+                                <i class="intelligo-icons education_atom"></i>
                             </div>
                             <h3 class="card-title">$159</h3>
                             <ul>
@@ -121,7 +121,7 @@
                         <card type="pricing"
                               raised
                               class="card-background"
-                              style="background-image: url('static/img/pricing2.jpg')">
+                              style="background-image: url('img/pricing2.jpg')">
 
                             <h6 class="category text-info">Professional</h6>
                             <h1 class="card-title">
@@ -181,7 +181,7 @@
         </div>
         <!--     *********    END PRICING 2      *********      -->
         <!--     *********    PRICING 3     *********      -->
-        <div class="pricing-3 section-image" style="background-image: url('static/img/pricing3.jpg')" id="pricing-3">
+        <div class="pricing-3 section-image" style="background-image: url('img/pricing3.jpg')" id="pricing-3">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 ml-auto mr-auto text-center">
@@ -245,7 +245,7 @@
                         <card type="pricing" plain>
                             <h6 class="category">Starter</h6>
                             <div class="icon icon-danger">
-                                <i class="now-ui-icons tech_headphones"></i>
+                                <i class="intelligo-icons tech_headphones"></i>
                             </div>
                             <h3 class="card-title">
                                 <small>$</small>
@@ -263,7 +263,7 @@
                         <card type="pricing" color="orange">
                             <h6 class="category">Professional</h6>
                             <div class="icon icon-primary">
-                                <i class="now-ui-icons tech_headphones"></i>
+                                <i class="intelligo-icons tech_headphones"></i>
                             </div>
                             <h3 class="card-title">
                                 <small>$</small>
@@ -284,7 +284,7 @@
 
                             <h6 class="category">Basic</h6>
                             <div class="icon icon-warning">
-                                <i class="now-ui-icons tech_headphones"></i>
+                                <i class="intelligo-icons tech_headphones"></i>
                             </div>
                             <h3 class="card-title">
                                 <small>$</small>
@@ -307,7 +307,7 @@
         <!--     *********    END PRICING 4      *********      -->
         <!--     *********    PRICING 5     *********      -->
         <div class="pricing-5 section-pricing-5 section-image" id="pricing-5"
-             style="background-image: url('static/img/bg31.jpg')">
+             style="background-image: url('img/bg31.jpg')">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">

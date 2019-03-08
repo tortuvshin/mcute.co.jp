@@ -9,7 +9,7 @@
                     <div class="col-md-4 ml-auto mr-auto">
                         <div class="info info-horizontal">
                             <div class="icon icon-primary">
-                                <i class="now-ui-icons media-2_sound-wave"></i>
+                                <i class="intelligo-icons media-2_sound-wave"></i>
                             </div>
                             <div class="description">
                                 <h5 class="info-title">Marketing</h5>
@@ -21,7 +21,7 @@
                         </div>
                         <div class="info info-horizontal">
                             <div class="icon icon-primary">
-                                <i class="now-ui-icons media-1_button-pause"></i>
+                                <i class="intelligo-icons media-1_button-pause"></i>
                             </div>
                             <div class="description">
                                 <h5 class="info-title">Fully Coded in HTML5</h5>
@@ -33,7 +33,7 @@
                         </div>
                         <div class="info info-horizontal">
                             <div class="icon icon-info">
-                                <i class="now-ui-icons users_single-02"></i>
+                                <i class="intelligo-icons users_single-02"></i>
                             </div>
                             <div class="description">
                                 <h5 class="info-title">Built Audience</h5>
@@ -59,17 +59,17 @@
                                     </n-button>
                                     <h5 class="card-description"> or be classical </h5>
                                 </div>
-                                <fg-input addon-left-icon="now-ui-icons users_circle-08"
+                                <fg-input addon-left-icon="intelligo-icons users_circle-08"
                                           v-model="form.firstName"
                                           placeholder="First Name...">
                                 </fg-input>
 
-                                <fg-input addon-left-icon="now-ui-icons text_caps-small"
+                                <fg-input addon-left-icon="intelligo-icons text_caps-small"
                                           v-model="form.lastName"
                                           placeholder="Last Name...">
                                 </fg-input>
 
-                                <fg-input addon-left-icon="now-ui-icons ui-1_email-85"
+                                <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
                                           v-model="form.email"
                                           placeholder="Your Email...">
                                 </fg-input>

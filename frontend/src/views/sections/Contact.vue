@@ -1,7 +1,7 @@
 <template>
     <div class="cd-section" id="contactus">
         <!--     *********    CONTACT US 1     *********      -->
-        <div class="contactus-1 section-image" style="background-image: url('static/img/contact1.jpg')">
+        <div class="contactus-1 section-image" style="background-image: url('img/contact1.jpg')">
             <div class="container">
                 <div class="row">
                     <div class="col-md-5">
@@ -9,7 +9,7 @@
                         <h4 class="description">You need more information? Check what other persons are saying about our
                             product. They are very happy with their purchase.</h4>
                         <info-section type="primary"
-                                      icon="now-ui-icons location_pin">
+                                      icon="intelligo-icons location_pin">
                             <h4 class="info-title">Find us at the office</h4>
                             <p class="description"> Bld Mihail Kogalniceanu, nr. 8,
                                 <br> 7652 Bucharest,
@@ -18,7 +18,7 @@
                         </info-section>
 
                         <info-section type="primary"
-                                      icon="now-ui-icons tech_mobile">
+                                      icon="intelligo-icons tech_mobile">
                             <h4 class="info-title">Give us a ring</h4>
                             <p class="description"> Michael Jordan
                                 <br> +40 762 321 762
@@ -34,20 +34,20 @@
                                 <div class="col-md-6 pr-2">
                                     <label>First Name</label>
                                     <fg-input placeholder="First Name..."
-                                              addon-left-icon="now-ui-icons users_circle-08">
+                                              addon-left-icon="intelligo-icons users_circle-08">
                                     </fg-input>
                                 </div>
                                 <div class="col-md-6 pl-2">
                                     <label>Last Name</label>
                                     <fg-input placeholder="Last Name..."
-                                              addon-left-icon="now-ui-icons text_caps-small">
+                                              addon-left-icon="intelligo-icons text_caps-small">
                                     </fg-input>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label>Email address</label>
                                 <fg-input placeholder="Email Here..."
-                                          addon-left-icon="now-ui-icons ui-1_email-85">
+                                          addon-left-icon="intelligo-icons ui-1_email-85">
                                 </fg-input>
                             </div>
                             <div class="form-group">
@@ -90,7 +90,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <info-section type="primary"
-                                         icon="now-ui-icons tech_mobile">
+                                         icon="intelligo-icons tech_mobile">
                                 <h5 class="info-title">Give us a ring</h5>
                                 <p> Michael Jordan
                                     <br> +40 762 321 762
@@ -100,7 +100,7 @@
                         </div>
                         <div class="col-md-6">
                             <info-section type="primary"
-                                          icon="now-ui-icons location_pin">
+                                          icon="intelligo-icons location_pin">
                                 <h5 class="info-title">Find us at the office</h5>
                                 <p> Bld Mihail Kogalniceanu, nr. 8,
                                     <br> 7652 Bucharest,
@@ -114,14 +114,14 @@
                             <label>Full name</label>
                             <fg-input
                                     placeholder="First Name..."
-                                    addon-left-icon="now-ui-icons users_circle-08">
+                                    addon-left-icon="intelligo-icons users_circle-08">
                             </fg-input>
                         </div>
                         <div class="col-md-6 pl-2">
                             <label>Email address</label>
                             <fg-input
                                     placeholder="Email Here..."
-                                    addon-left-icon="now-ui-icons users_circle-08">
+                                    addon-left-icon="intelligo-icons users_circle-08">
                             </fg-input>
                         </div>
                     </div>

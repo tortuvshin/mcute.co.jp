@@ -9,10 +9,10 @@
                     <n-button type="primary">Default</n-button>
                     <n-button type="primary" round>Round</n-button>
                     <n-button type="primary" round>
-                        <i class="now-ui-icons ui-2_favourite-28"></i> With Icon
+                        <i class="intelligo-icons ui-2_favourite-28"></i> With Icon
                     </n-button>
                     <n-button type="primary" round icon>
-                        <i class="now-ui-icons ui-2_favourite-28"></i>
+                        <i class="intelligo-icons ui-2_favourite-28"></i>
                     </n-button>
                     <n-button type="primary" round simple>Simple</n-button>
                 </div>
@@ -371,13 +371,13 @@
                         <fg-input value="Error Input" class="has-danger"></fg-input>
                     </div>
                     <div class="col-sm-6 col-lg-3">
-                        <fg-input addon-left-icon="now-ui-icons users_single-02"
+                        <fg-input addon-left-icon="intelligo-icons users_single-02"
                                   placeholder="Left Nucleo Icon">
 
                         </fg-input>
                     </div>
                     <div class="col-sm-6 col-lg-3">
-                        <fg-input addon-right-icon="now-ui-icons users_single-02"
+                        <fg-input addon-right-icon="intelligo-icons users_single-02"
                                   placeholder="Right Nucleo Icon">
                         </fg-input>
                     </div>

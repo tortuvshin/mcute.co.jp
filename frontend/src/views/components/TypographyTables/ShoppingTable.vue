@@ -27,10 +27,10 @@
           {{row.quantity}}
           <div class="btn-group">
             <n-button type="info" size="sm" @click.native="decreaseQuantity(row)">
-              <i class="now-ui-icons ui-1_simple-delete"></i>
+              <i class="intelligo-icons ui-1_simple-delete"></i>
             </n-button>
             <n-button type="info" size="sm" @click.native="increaseQuantity(row)">
-              <i class="now-ui-icons ui-1_simple-add"></i>
+              <i class="intelligo-icons ui-1_simple-add"></i>
             </n-button>
           </div>
         </div>
@@ -44,7 +44,7 @@
       <el-table-column min-width="100" label="">
         <div slot-scope="{row}" class="td-actions">
           <n-button type="neutral">
-            <i class="now-ui-icons ui-1_simple-remove"></i>
+            <i class="intelligo-icons ui-1_simple-remove"></i>
           </n-button>
         </div>
       </el-table-column>
@@ -61,7 +61,7 @@
         <button type="button" rel="tooltip" class="btn btn-info btn-round " data-original-title=""
                 title="">
           Complete Purchase
-          <i class="now-ui-icons arrows-1_minimal-right"></i>
+          <i class="intelligo-icons arrows-1_minimal-right"></i>
         </button>
       </div>
     </div>
@@ -81,7 +81,7 @@ export default {
     return {
       productsTable: [
         {
-          image: 'static/img/saint-laurent.jpg',
+          image: 'img/saint-laurent.jpg',
           title: 'Suede Biker Jacket ',
           description: 'by Saint Laurent',
           color: 'Black',
@@ -91,7 +91,7 @@ export default {
           amount: 3390
         },
         {
-          image: 'static/img/balmain.jpg',
+          image: 'img/balmain.jpg',
           title: 'Jersey T-Shirt',
           description: 'by Balmain',
           color: 'Black',
@@ -101,7 +101,7 @@ export default {
           amount: 998
         },
         {
-          image: 'static/img/prada.jpg',
+          image: 'img/prada.jpg',
           title: '\tSlim-Fit Swim Short ',
           description: 'by Prada',
           color: 'Red',
