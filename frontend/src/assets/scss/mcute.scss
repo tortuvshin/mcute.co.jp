@@ -153,3 +153,16 @@ and (max-device-width : 1024px) {
         }
     }
 }
+
+.profile-page {
+    .nav-tabs {
+        margin-top: -40px;
+        .nav-link {
+            background-color: #f96332 !important;
+
+            i, a {
+                color: white !important;
+            }
+        }
+    }
+}
