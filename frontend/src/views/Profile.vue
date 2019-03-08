@@ -271,8 +271,6 @@
 </template>
 <script>
 
-import AppHeader from '@/layout/MainNavbar.vue'
-import AppFooter from '@/layout/MainFooter.vue'
 import { Badge, Button, InfoSection, FormGroupInput, Card, Tabs, TabPane, Checkbox } from '@/components'
 import { API_KEY } from '@/constants'
 import Vue from 'vue'
@@ -292,8 +290,6 @@ export default {
     }
   },
   components: {
-    AppHeader,
-    AppFooter,
     InfoSection,
     Card,
     Tabs,

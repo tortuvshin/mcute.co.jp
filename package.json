@@ -15,7 +15,8 @@
     "serve": "cd frontend && npm run-script serve",
     "build": "cd frontend && npm run-script build",
     "lint": "cd frontend && npm run-script lint",
-    "start": "node app.js"
+    "dev": "NODE_ENV=development node server.js",
+    "start": "node server.js"
   },
   "dependencies": {
     "async": "^2.6.2",

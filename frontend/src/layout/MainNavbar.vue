@@ -44,11 +44,8 @@
 				
 
 			<drop-down tag="li" :title="fullName" icon="intelligo-icons users_single-02" class="nav-item"  v-if="currentUser">
-				<nav-link to="/dashboard">
+				<nav-link to="/profile">
 					<i class="intelligo-icons users_circle-08"></i> Profile
-				</nav-link>
-				<nav-link to="/dashboard">
-					<i class="intelligo-icons business_bulb-63"></i> User
 				</nav-link>
 				<a href="" v-on:click="logout" class="dropdown-item">
 					<i class="intelligo-icons sport_user-run"></i> Logout
