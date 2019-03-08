@@ -186,6 +186,9 @@ Build and Start:
 **Note:** As an alternative to mLab, there is also [Compose](https://www.compose.io/).
 
 ## Technologies used
+
+This project is used for building a[**M**ongo](https://www.mongodb.com/) [**E**xpress](https://expressjs.com/) [**V**ueJS](https://vuejs.org/) [**N**ode](https://nodejs.org/en/) stack. 
+
 #### ECMAScript 7 (“ES7” / JavaScript)
 ECMAScript™ is the standard behind JavaScript. It has had a number of very useful additions over the past several years, modernizing the syntax and providing new capabilities.
 
