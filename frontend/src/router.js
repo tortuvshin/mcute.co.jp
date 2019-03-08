@@ -53,7 +53,7 @@ export default new Router({
     {
       path: '/login',
       name: 'Login',
-      components: { default: Login, header: AppHeader },
+      components: { header: AppHeader, default: Login },
       props: { header: { colorOnScroll: 65 } }
     },
     {
@@ -70,7 +70,11 @@ export default new Router({
       },
       name: 'ItemList'
     },
-    { path: '/register', component: Register, name: 'Register' },
+    { path: '/register', 
+      name: 'Register',
+      components: { header: AppHeader, default: Register },
+      props: { header: { colorOnScroll: 65 } } 
+    },
     { path: '/profile',
       components: { header: AppHeader, default: Profile, footer: AppFooter },
       props: { header: { colorOnScroll: 65 } },

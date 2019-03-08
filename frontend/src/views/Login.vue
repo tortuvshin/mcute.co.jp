@@ -33,7 +33,7 @@
                             </fg-input>
                           
                             <h6>
-                          
+                              
                             {{ errorMessage }}
                             {{ message }}
                             </h6>
@@ -43,12 +43,12 @@
 
                             <div class="pull-left">
                                 <h6>
-                                    <a href="/register" class="link footer-link">Create Account</a>
+                                    <router-link to="/register" class="link footer-link">Create Account</router-link>
                                 </h6>
                             </div>
                             <div class="pull-right">
                                 <h6>
-                                    <a href="/" class="link footer-link">Need Help?</a>
+                                    <router-link to="/" class="link footer-link">Need Help?</router-link>
                                 </h6>
                             </div>
                         </card>
