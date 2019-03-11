@@ -19,3 +19,4 @@ export const store = new Vuex.Store({
     user
   }
 })
+export const strict = false
