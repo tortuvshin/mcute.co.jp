@@ -16,7 +16,7 @@
     "build": "cd frontend && npm run-script build",
     "lint": "cd frontend && npm run-script lint",
     "dev": "NODE_ENV=development node server.js",
-    "start": "node server.js"
+    "start": "node --harmony server.js"
   },
   "dependencies": {
     "async": "^2.6.2",
