@@ -76,7 +76,7 @@
     "node_modules"
   ], 
   "engines": {
-    "node": ">=7.0",
+    "node": ">=8.0",
     "npm": ">=4.0"
   },
   "devDependencies": {
