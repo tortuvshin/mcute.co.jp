@@ -74,7 +74,11 @@
   },
   "cacheDirectories": [
     "node_modules"
-  ],
+  ], 
+  "engines": {
+    "node": ">=8.0",
+    "npm": ">=4.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0"
