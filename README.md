@@ -228,6 +228,8 @@ MongoDB is a cross-platform document-oriented database program. Classified as a 
 
 ## Copyright
 
+Used images: https://www.pexels.com
+
 Copyright &copy;2019 Dicult Co., Ltd. All Rights Reserved.
 
 **[⬆ back to top](#mcute)**
