@@ -11,6 +11,9 @@
 - [Vue](http://vuejs.org)
 - [Git](https://git-scm.com/download/win)
 
+
+<img src=".github/support_browsers.png">
+
 ## Installing
 
 ### Install for Windows
