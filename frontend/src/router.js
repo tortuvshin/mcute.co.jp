@@ -70,6 +70,15 @@ export default new Router({
       },
       name: 'ItemList'
     },
+    {
+      path: '/artworks',
+      components: {
+			  header: AppHeader,
+			  default: ItemList,
+			  footer: AppFooter
+      },
+      name: 'ArtWorks'
+    },
     { path: '/register', 
       name: 'Register',
       components: { header: AppHeader, default: Register },
