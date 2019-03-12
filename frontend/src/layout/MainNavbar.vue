@@ -10,17 +10,17 @@
 			</router-link>
 		</template>
 		<template slot="navbar-menu">
-			
+				<router-link class="nav-item" tag="li" to="/artworks">
+					<a class="nav-link">
+						Artworks
+					</a>
+				</router-link>
 				<router-link class="nav-item" tag="li" to="/project/search">
 					<a class="nav-link">
 						Spaces
 					</a>
 				</router-link>
-				<router-link class="nav-item" tag="li" to="/artist">
-					<a class="nav-link">
-						Artist
-					</a>
-				</router-link>
+				
 				<router-link class="nav-item" tag="li" to="/project/post">
 					<a class="nav-link">
 						Post a Space
