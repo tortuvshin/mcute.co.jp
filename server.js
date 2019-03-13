@@ -54,6 +54,7 @@ app.use(morgan('combined'));
 app.use(cors())
 app.use(history());
 app.use(express.static(path.join(__dirname, "frontend/dist")));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.set('view engine', 'html');
 

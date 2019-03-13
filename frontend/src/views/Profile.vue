@@ -133,8 +133,8 @@ export default {
       open: {
         projects: [],
         pageNumber: 1,
-			        rowNumber: 3,
-			        totalProjectCount: 0,
+        rowNumber: 3,
+        totalProjectCount: 0,
         loading: false,
         keyword: ''
       },
@@ -147,8 +147,6 @@ export default {
         this.$http.get(API_SERVER + '/dashboard/project',
           { params: {
             status: status,
-            pageNumber: this[status].pageNumber,
-            rowNumber: this[status].rowNumber,
             keyword: this[status].keyword
           } })
           .then(response => {

@@ -133,8 +133,9 @@ export default {
   data () {
     return {
       countries: countries,
-      userType: [{value: 'user', label: 'Artist'},
-                    {value: 'organization', label: 'Gallery'}],
+      userType: [
+        {value: 'freelancer', label: 'Artist'},
+        {value: 'employer', label: 'Gallery'}],
       user: {
         type: '',
         firstName: '',

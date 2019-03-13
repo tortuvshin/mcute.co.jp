@@ -15,9 +15,11 @@
           <div class="panel-content">
              <select id="project-category" v-model="project.category" class="form-control input-lg" name="category" required>
                 <option value="" disabled>Select your option</option>
-                <option value="Graphic Design">Graphic Design</option>
-                <option value="Illustration">Illustration</option>
-                <option value="Logo Design & Branding">Logo Design & Branding</option>
+                <option value="Abstract Art">Abstract Art</option>
+                <option value="Collectible Sculptures">Collectible Sculptures</option>
+                <option value="Contemporary">Contemporary</option>
+                <option value="Modern">Modern</option>
+                <option value="Pop Art">Pop Art</option>
              </select>
           </div>
         </div>
@@ -137,8 +139,8 @@ export default {
 	      return {
 	        project: {
 	        	description: null,
-	        	budgetMin: null,
-	        	budgetMax: null,
+	        	budgetMin: 0,
+	        	budgetMax: 0,
 	        	budgetType: 'range',
 	        	endDate: null,
 	        	skills: [],
@@ -184,11 +186,11 @@ export default {
       			})
 
       			this.$http.post(API_SERVER + '/project/', formData).then(response => {
-      				bus.$emit('showAlert', response.body)
-        this.$store.commit('setCurrentUser', response.body.updatedUser)
-        this.$router.push('/project/' + response.body.projectId)
+      				console.log(response.body)
+              this.$store.commit('setCurrentUser', response.body.updatedUser)
+              this.$router.push('/project/' + response.body.projectId)
       			}, response => {
-      				bus.$emit('showAlert', response.body)
+      				console.log(response.body)
       			})
 	      }
 	    },
