@@ -6,7 +6,7 @@ const	rmdir = require('rmdir')
 exports.default = function(folder){
   const storage = multer.diskStorage({
       destination: function (req, file, cb) {
-      	const dir = './public/uploads/'  + req.user.username + '/' + folder;
+      	const dir = './frontend/public/uploads/'  + req.user.username + '/' + folder;
       	
         mkdirp(dir, function (err) {
             if (err) console.error(err)
@@ -26,7 +26,7 @@ exports.default = function(folder){
 exports.temp = function(){
   const storage = multer.diskStorage({
       destination: function (req, file, cb) {
-      	const dir = './public/temp';
+      	const dir = './frontend/public/temp';
       	
         mkdirp(dir, function (err) {
             if (err) console.error(err)
@@ -46,7 +46,7 @@ exports.temp = function(){
 exports.project = function(){
     const storage = multer.diskStorage({
       destination: function (req, file, cb) {
-      	const dir = './public/uploads/project/' + req.params.id + "/submission";
+      	const dir = './frontend/public/uploads/project/' + req.params.id + "/submission";
       	rmdir(dir, function (err, dirs, files) {
           mkdirp(dir, function (err) {
               if (err) console.error(err)

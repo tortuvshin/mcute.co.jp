@@ -80,7 +80,7 @@ export default new Router({
 			  header: AppHeader,
 			  default: ContentList,
 			  footer: AppFooter
-      },
+      },  
       name: 'ArtWorks'
     },
     { path: '/register', 

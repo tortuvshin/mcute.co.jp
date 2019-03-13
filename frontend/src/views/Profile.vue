@@ -35,19 +35,6 @@
             <tabs type="primary"
                   centered
                   tabContentClasses="tab-subcategories">
-                <tab-pane>
-                  <span slot="label">
-                    <i class="intelligo-icons objects_umbrella-13"></i><a>About</a>
-                  </span>
-                  <div class="container">
-                      <div class="col-md-8 ml-auto mr-auto">
-                          <div class="section-description text-center">
-                              <h3 class="title">About me</h3>
-                              <h5 class="description text-center" v-html="currentUser.profile"></h5>
-                          </div>
-                      </div>
-                  </div>
-                </tab-pane>
 
                 <tab-pane>
                     <span slot="label">
@@ -62,19 +49,37 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3">
-                            <img v-lazy="'https://cache1.artprintimages.com/images/featuredCollections/sub/mid-century-modern-opt.jpg'" alt="header1">
-                        </div>
-                        <div class="col-md-3">
-                            <img v-lazy="'https://cache1.artprintimages.com/images/featuredCollections/sub/mid-century-modern-opt.jpg'" alt="header2">
-                        </div>
-                        <div class="col-md-3">
-                            <img v-lazy="'https://cache1.artprintimages.com/images/featuredCollections/sub/mid-century-modern-opt.jpg'" alt="header3">
-                        </div>
-                        <div class="col-md-3">
-                            <img v-lazy="'https://cache1.artprintimages.com/images/featuredCollections/sub/mid-century-modern-opt.jpg'" alt="header4">
+                        
+                        <div class="col-md-4" v-for="project in open.projects">
+                            <card type="blog">
+                                <img slot="image" v-for="file in project.files" class="img rounded" v-bind:src="api + '/temp/' + file.filename">
+    
+                                <h6 class="category text-warning">
+                                  <i class="intelligo-icons business_bulb-63"></i> Focus
+                                </h6>
+                                <h5 class="card-title">
+                                  <router-link :to="/project/ + project._id" :tag=a>{{project.title}}</router-link>
+                                </h5>
+                                <p class="card-description">
+                                  {{ project.description.substring(0,300)}}
+                                </p>
+                            </card>
                         </div>
                     </div>
+                </tab-pane>
+
+                <tab-pane>
+                  <span slot="label">
+                    <i class="intelligo-icons objects_umbrella-13"></i><a>About</a>
+                  </span>
+                  <div class="container">
+                      <div class="col-md-8 ml-auto mr-auto">
+                          <div class="section-description text-center">
+                              <h3 class="title">About me</h3>
+                              <h5 class="description text-center" v-html="currentUser.profile"></h5>
+                          </div>
+                      </div>
+                  </div>
                 </tab-pane>
 
                 <tab-pane>
@@ -95,6 +100,7 @@
 
 import { Badge, Button, InfoSection, FormGroupInput, Card, Tabs, TabPane, Checkbox } from '@/components'
 import { API_KEY } from '@/constants'
+import { API_SERVER } from '../api.js'
 import Vue from 'vue'
 import * as VueGoogleMaps from 'vue2-google-maps'
 
@@ -123,136 +129,49 @@ export default {
   },
   data () {
     return {
-      form: {
-        firstName: '',
-        email: '',
-        notRobot: false
+      api: '',
+      open: {
+        projects: [],
+        pageNumber: 1,
+			        rowNumber: 3,
+			        totalProjectCount: 0,
+        loading: false,
+        keyword: ''
       },
-      center: {
-        lat: 40.748817,
-        lng: -73.985428
-      },
-      options: {
-        styles: [{
-          'featureType': 'water',
-          'elementType': 'geometry',
-          'stylers': [{
-            'color': '#e9e9e9'
-          }, {
-            'lightness': 17
-          }]
-        }, {
-          'featureType': 'landscape',
-          'elementType': 'geometry',
-          'stylers': [{
-            'color': '#f5f5f5'
-          }, {
-            'lightness': 20
-          }]
-        }, {
-          'featureType': 'road.highway',
-          'elementType': 'geometry.fill',
-          'stylers': [{
-            'color': '#ffffff'
-          }, {
-            'lightness': 17
-          }]
-        }, {
-          'featureType': 'road.highway',
-          'elementType': 'geometry.stroke',
-          'stylers': [{
-            'color': '#ffffff'
-          }, {
-            'lightness': 29
-          }, {
-            'weight': 0.2
-          }]
-        }, {
-          'featureType': 'road.arterial',
-          'elementType': 'geometry',
-          'stylers': [{
-            'color': '#ffffff'
-          }, {
-            'lightness': 18
-          }]
-        }, {
-          'featureType': 'road.local',
-          'elementType': 'geometry',
-          'stylers': [{
-            'color': '#ffffff'
-          }, {
-            'lightness': 16
-          }]
-        }, {
-          'featureType': 'poi',
-          'elementType': 'geometry',
-          'stylers': [{
-            'color': '#f5f5f5'
-          }, {
-            'lightness': 21
-          }]
-        }, {
-          'featureType': 'poi.park',
-          'elementType': 'geometry',
-          'stylers': [{
-            'color': '#dedede'
-          }, {
-            'lightness': 21
-          }]
-        }, {
-          'elementType': 'labels.text.stroke',
-          'stylers': [{
-            'visibility': 'on'
-          }, {
-            'color': '#ffffff'
-          }, {
-            'lightness': 16
-          }]
-        }, {
-          'elementType': 'labels.text.fill',
-          'stylers': [{
-            'saturation': 36
-          }, {
-            'color': '#333333'
-          }, {
-            'lightness': 40
-          }]
-        }, {
-          'elementType': 'labels.icon',
-          'stylers': [{
-            'visibility': 'off'
-          }]
-        }, {
-          'featureType': 'transit',
-          'elementType': 'geometry',
-          'stylers': [{
-            'color': '#f2f2f2'
-          }, {
-            'lightness': 19
-          }]
-        }, {
-          'featureType': 'administrative',
-          'elementType': 'geometry.fill',
-          'stylers': [{
-            'color': '#fefefe'
-          }, {
-            'lightness': 20
-          }]
-        }, {
-          'featureType': 'administrative',
-          'elementType': 'geometry.stroke',
-          'stylers': [{
-            'color': '#fefefe'
-          }, {
-            'lightness': 17
-          }, {
-            'weight': 1.2
-          }]
-        }]
-
-      }
     }
-  }
+  },
+  methods: {
+    
+    fetchData (status) {
+        this[status].loading = true
+        this.$http.get(API_SERVER + '/dashboard/project',
+          { params: {
+            status: status,
+            pageNumber: this[status].pageNumber,
+            rowNumber: this[status].rowNumber,
+            keyword: this[status].keyword
+          } })
+          .then(response => {
+            this[status].loading = false
+            this[status].projects = response.body.projects
+            this[status].totalProjectCount = response.body.totalProjectCount
+          })
+      
+    },
+    updateProject (data, status) {
+      this[status].pageNumber = data.pageNumber
+      this[status].rowNumber = data.rowNumber
+      this.fetchData([status])
+    },
+    searchProject (keyword, status) {
+      this[status].keyword = keyword
+      this.fetchData([status])
+    }
+  },
+  created () {
+    this.api = API_SERVER
+    this.fetchData('open')
+  },
 }
 </script>
 <style>

@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper ecommerce-page">
        
-        <div class="main">
+        <div class="content">
             <div class="section">
                 <div class="container">
                     <h2 class="section-title">Collect art and design online</h2>
@@ -113,7 +113,7 @@ import { Card, Button, InfoSection, FormGroupInput, Checkbox, Collapse, Collapse
 import { Carousel, CarouselItem, Tooltip } from 'element-ui'
 
 export default {
-  name: 'ecommerce-page',
+  name: 'ContentList',
   bodyClass: 'ecommerce-page',
   components: {
     Card,

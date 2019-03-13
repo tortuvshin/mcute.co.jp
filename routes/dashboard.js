@@ -336,7 +336,7 @@ router.get("/project", middleware.jwt, function(req, res){
 			});
 	    });
 
-	}else if (req.user.type === "freelancer"){
+	} else if (req.user.type === "freelancer"){
 		let output = [];
 		if (status === 'bidding'){
 			Bid.find({bidder: req.user}).populate({
