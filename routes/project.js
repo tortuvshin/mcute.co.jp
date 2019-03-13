@@ -126,15 +126,15 @@ router.post("/", [middleware.jwt, middleware.isEmployer, upload.temp().any()], f
 		if (err){
 			return res.status(400).json({success: false, message: 'An error occured when getting data from database. Please contact us.'})
 		} else {
-			const dir = './public/uploads/' + req.user.username + '/project/' + project.id;
+			let dir = './public/uploads/' + req.user.username + '/project/' + project.id;
 			mkdirp(dir, function (err) {
 	            if (err) {
 	            	console.log(err)
 	            }else {
 	            	const changeFilesPath = new Promise((resolve, reject) => {
 	            		project.files.forEach(function(file){
-		            		const oldPath = file.path;
-		            		const newPath = dir + '/' + file.filename;
+		            		let oldPath = file.path;
+		            		let newPath = dir + '/' + file.filename;
 		            		file.path = newPath;
 		            		fs.rename(oldPath, newPath);
 		            	});

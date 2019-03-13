@@ -364,10 +364,10 @@ router.get("/project", middleware.jwt, function(req, res){
 				sort['project.finishDate'] = 1;
 			}
 			User.findById(req.user._id).populate({path:"projects", match: { title: new RegExp(keyword, 'i'), status: status }, populate: {path: 'employer', model: 'User'}}).sort(sort).exec(function(err, user){
-				const projects = user.projects.filter((project) => {
+				let projects = user.projects.filter((project) => {
 					return project.status === status && project.title !== null;
 				})
-				const totalProjectCount = projects.length;
+				let totalProjectCount = projects.length;
 				projects = projects.slice(skipRows, req.query.pageNumber * limitRows );
 				projects.forEach(function(project){
 					project.description = striptags(project.description);	
