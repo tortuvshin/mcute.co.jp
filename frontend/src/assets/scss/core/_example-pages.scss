@@ -370,53 +370,16 @@
 
 }
 
-.signup-page{
-    .section{
-        padding-top: 180px;
-        padding-bottom: 0;
+.auth-page{
+    .register-content {
+        margin-top: 5% !important;
     }
-
-    .input-group, .form-group{
-        margin-bottom: 20px;
-    }
-
-    .card-signup{
-        max-width: 100%;
-        margin-bottom: 130px;
-        padding: 15px 0px;
-
-        &:not([data-background-color]) .card-title{
-            color: initial;
-        }
-
-        .checkbox label{
-            margin-left: 14px;
-            padding-left: 39px;
-            color: initial;
-        }
-    }
-
-    .info-horizontal{
-        padding: 0px 0px 20px;
-    }
-    .social{
-        .btn{
-            margin: 5px;
-        }
-        h4{
-            margin-top: 20px;
-        }
-    }
-}
-
-.login-page{
-
     .page-header{
       display: block;
       align-items: unset;
     }
 
-    .card-login{
+    .card-auth{
         border-radius: $border-radius-large;
         padding-bottom: $padding-base-horizontal;
         max-width: 320px;

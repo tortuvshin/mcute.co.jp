@@ -9,9 +9,9 @@
                             
                     <form v-on:submit.prevent="onLogin">
 
-                        <card type="login" plain>
+                        <card type="auth" plain>
                             <div slot="header" class="logo-container">
-                                <img v-lazy="'img/o.png'" alt="">
+                                <img v-lazy="'img/logo/dic_logo_200px.jpg'" alt="">
                             </div>
 
                             <fg-input
@@ -38,7 +38,7 @@
                             {{ message }}
                             </h6>
                             <div class="card-footer text-center">
-                                <n-button type="primary" round size="lg" @click.native="onLogin" >Get Started</n-button>
+                                <n-button type="primary" round size="lg" @click.native="onLogin" >ログイン</n-button>
                             </div>
 
                             <div class="pull-left">
@@ -69,7 +69,7 @@ import { mapActions } from 'vuex'
 
 export default {
   name: 'Login',
-  bodyClass: 'login-page',
+  bodyClass: 'auth-page',
   components: {
     Badge,
     Card,

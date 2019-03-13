@@ -33,9 +33,9 @@
 	            </div>
                 <app-tab :project="project"></app-tab>
 	         </div>
-	         <!-- <app-right-side :currentUser="currentUser" :project="project" :bid="bid"></app-right-side> -->
+	         <app-right-side :currentUser="currentUser" :project="project" :bid="bid"></app-right-side>
     	</div>
-        <!-- <md-speed-dial md-mode="scale" class="md-fab-bottom-right">
+        <md-speed-dial md-mode="scale" class="md-fab-bottom-right">
           <md-button class="md-fab" md-fab-trigger>
             <md-icon md-icon-morph>close</md-icon>
             <md-icon>share</md-icon>
@@ -50,7 +50,7 @@
             <i class="fa fa-twitter" aria-hidden="true"></i>
             <md-tooltip md-direction="left">Share on Twitter</md-tooltip>
           </md-button>
-        </md-speed-dial> -->
+        </md-speed-dial>
  	</div>
 </template>
 

@@ -1,5 +1,5 @@
 {
     "SECRET": "my-super-secret",
     "SERVER_URL": "",
-    "MONGO_URL": "mongodb://turtuvshin:turtuvshin9@ds217125.mlab.com:17125/work-flow"
+    "MONGO_URL": "mongodb://mcute:admin9501@ds055885.mlab.com:55885/mcute"
 }

@@ -1,107 +1,107 @@
 <template>
-    <div class="page-header signup-page section-image">
-        <div class="page-header-image"
-             style="background-image: url('img/bg18.jpg')">
-        </div>
-        <div class="content">
+    <div class="page-header header-filter" filter-color="orange">
+        
+        <div class="content register-content">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 ml-auto mr-auto">
-                        <div class="info info-horizontal">
-                            <div class="icon icon-primary">
-                                <i class="intelligo-icons media-2_sound-wave"></i>
-                            </div>
-                            <div class="description">
-                                <h5 class="info-title">Artist</h5>
-                                <p class="description">
-                                    We've created the marketing campaign of the website. It was a very interesting
-                                    collaboration.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="info info-horizontal">
-                            <div class="icon icon-primary">
-                                <i class="intelligo-icons media-1_button-pause"></i>
-                            </div>
-                            <div class="description">
-                                <h5 class="info-title">Space</h5>
-                                <p class="description">
-                                    Galleries, Museum, Studios
-                                </p>
-                            </div>
-                        </div>
-                        <div class="info info-horizontal">
-                            <div class="icon icon-info">
-                                <i class="intelligo-icons users_single-02"></i>
-                            </div>
-                            <div class="description">
-                                <h5 class="info-title">Matching System</h5>
-                                <p class="description">
-                                    There is also a Fully Customizable System Admin Dashboard for this product.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mr-auto">
-                        <div class="card card-signup">
-                            <div class="card-body">
+                    
+                    <div class="col-md-8 ml-auto mr-auto">
+                        <form v-on:submit.prevent="onRegister">
+
+                            <card type="auth" plain>
+                            
                                 <h4 class="card-title text-center">Register</h4>
+                                    <el-select class="select-default"
+                                                placeholder="User type"
+                                                v-model="user.type">
+                                        <el-option v-for="type in userType"
+                                                class="select-default"
+                                                :value="type.value"
+                                                :label="type.label"
+                                                :key="type.label">
+                                        </el-option>
+                                    </el-select>
+                                    <fg-input addon-left-icon="intelligo-icons users_circle-08"
+                                            v-model="user.firstName"
+                                            :class="{'has-danger': isInvalidExist('firstName')}"
+                                            @change="removeInvalidInput('firstName')" 
+                                            required
+                                            placeholder="Enter First Name...">
+                                    </fg-input>
+                                    <fg-input addon-left-icon="intelligo-icons text_caps-small"
+                                            v-model="user.lastName"
+                                            :class="{'has-danger': isInvalidExist('lastName')}"
+                                            @change="removeInvalidInput('lastName')" 
+                                            required
+                                            placeholder="Enter Last Name...">
+                                    </fg-input>
+                                    <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
+                                            v-model="user.email"
+                                            :class="{'has-danger': isInvalidExist('email')}"
+                                            @change="removeInvalidInput('email')" 
+                                            required
+                                            placeholder="Enter Email...">
+                                    </fg-input>
+                                    
+                                    <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
+                                            v-model="user.username"
+                                            :class="{'has-danger': isInvalidExist('username')}"
+                                            @change="removeInvalidInput('username')" 
+                                            required
+                                            placeholder="Enter username...">
+                                    </fg-input>
+                                
+                                    <el-select class="select-default"
+                                                placeholder="Country Select"
+                                                v-model="user.country">
+                                        <el-option v-for="country in Object.keys(countries)"
+                                                class="select-default"
+                                                :value="countries[country]"
+                                                :label="countries[country]"
+                                                :key="countries[country]">
+                                        </el-option>
+                                    </el-select>
+                                    
+                                    <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
+                                        type="password"
+                                        v-model="user.password"
+                                        :class="{'has-danger': isInvalidExist('password') || !passwordStrength}"
+                                        @change="removeInvalidInput('password')" 
+                                        required
+                                        placeholder="Enter password...">
+                                    </fg-input>
 
-                                <fg-input addon-left-icon="intelligo-icons users_circle-08"
-                                          v-model="user.firstName"
-                                          placeholder="Enter First Name...">
-                                </fg-input>
-
-                                <fg-input addon-left-icon="intelligo-icons text_caps-small"
-                                          v-model="user.lastName"
-                                          placeholder="Enter Last Name...">
-                                </fg-input>
-
-                                <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
-                                          v-model="user.email"
-                                          placeholder="Enter Email...">
-                                </fg-input>
-
-                                <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
-                                          v-model="user.username"
-                                          placeholder="Enter username...">
-                                </fg-input>
-
-                                <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
-                                    type="password"
-                                    v-model="user.password"
-                                    placeholder="Enter password...">
-                                </fg-input>
-
-                                <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
-                                    type="password"
-                                    v-model="user.confirmPassword"
-                                    placeholder="Retype password...">
-                                </fg-input>
-
-                                <n-checkbox v-model="user.agree">
-                                    I agree to the terms and
-                                    <a href="#something">conditions</a>.
-                                </n-checkbox>
-
-                                <div class="card-footer text-center">
-                                    <n-button type="primary" round size="lg">Sign Up</n-button>
-                                </div>
-                                <div class="social text-center">
-
-                                    <h5 class="card-description"> or be classical </h5>
-                                    <n-button round icon class="btn-twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </n-button>
-                                    <n-button round icon class="btn-google">
-                                        <i class="fab fa-google"></i>
-                                    </n-button>
-                                    <n-button round icon class="btn-facebook">
-                                        <i class="fab fa-facebook"> </i>
-                                    </n-button>
-                                </div>
-                            </div>
-                        </div>
+                                    <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
+                                        type="password"
+                                        v-model="user.confirmPassword"
+                                        :class="{'has-danger': isInvalidExist('confirmPassword')||　!passwordIsSame}"
+                                        @change="removeInvalidInput('confirmPassword')" 
+                                        required
+                                        placeholder="Retype password...">
+                                    </fg-input>
+                                    <n-checkbox v-model="user.agree">
+                                        I agree to the terms and
+                                        <a href="#something">conditions</a>.
+                                    </n-checkbox>
+                                    <h6 v-if="!passwordIsSame">Password don't match.</h6>
+                                    <h6>{{ errorMessage }}</h6>
+                                    <div class="card-footer text-center">
+                                        <n-button type="primary" round size="lg" @click.native="onRegister">Sign Up</n-button>
+                                    </div>
+                                    <!-- <div class="social text-center"> -->
+                                    <div class="pull-left">
+                                        <h6>
+                                            <router-link to="/login" class="link footer-link">Already have a account!</router-link>
+                                        </h6>
+                                    </div>
+                                    <!-- <h5 class="card-description"> or be classical </h5>
+                                    
+                                    <n-button round size="lg" class="btn-facebook">
+                                        <i class="fab fa-facebook"></i> Facebook
+                                    </n-button> -->
+                                <!-- </div> -->
+                            </card>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -110,24 +110,32 @@
     </div>
 </template>
 <script>
-import { Card, Button, FormGroupInput, Checkbox } from '@/components'
+import { Radio, Card, Button, FormGroupInput, Checkbox } from '@/components'
 import MainFooter from '@/layout/MainFooter'
 import { mapActions } from 'vuex'
-import countryPicker from '../components/common/CountryPicker'
+import countries from '../assets/json/countries.json'
+import { Select, Option } from 'element-ui'
 import { bus } from '../main.js'
 
 export default {
   name: 'Register',
-  bodyClass: 'signup-page',
+  bodyClass: 'auth-page',
   components: {
     Card,
     MainFooter,
+    [Radio.name]: Radio,
     [Button.name]: Button,
+    [Select.name]: Select,
+    [Option.name]: Option,
     [Checkbox.name]: Checkbox,
     [FormGroupInput.name]: FormGroupInput
   },
   data () {
     return {
+      countries: countries,
+      userType: [
+        {value: 'freelancer', label: 'Artist'},
+        {value: 'employer', label: 'Gallery'}],
       user: {
         type: '',
         firstName: '',
@@ -135,15 +143,81 @@ export default {
         username: '',
         password: '',
         confirmPassword: '',
-        country: '',
+        country: this.value,
         email: '',
         agree: false
       },
-      invalidInputs: [],
+      invalidInput: [],
       registerProcess: 0,
       passwordIsSame: true,
-      passwordStrength: true
+      passwordStrength: true,
+      errorMessage: '',
     }
+  },
+    props: {
+    value: {
+      type: String,
+      default: ''
+    }
+  },
+  watch: {
+    'user.password' (val) {
+      val.length < 8 ? this.passwordStrength = false : this.passwordStrength = true
+      val === this.user.confirmPassword ? this.passwordIsSame = true : this.passwordIsSame = false
+    },
+    'user.confirmPassword' (val) {
+      val === this.user.password ? this.passwordIsSame = true : this.passwordIsSame = false
+    }
+  },
+  methods: {
+    ...mapActions([
+      'register'
+    ]),
+    isInvalidExist (fieldName) {
+      return this.invalidInput.indexOf(fieldName) !== -1
+    },
+    checkInvalidInput () {
+      Object.keys(this.user).forEach((fieldName) => {
+        if (this.user[fieldName] === '') {
+          this.invalidInput.push(fieldName)
+        }
+      })
+    },
+    removeInvalidInput (key) {
+      var index = this.invalidInput.indexOf(key)
+      if (index > -1) {
+        this.invalidInput.splice(index, 1)
+      }
+    },
+    onRegister () {
+      this.checkInvalidInput()
+      if (this.invalidInput.length === 0 && this.passwordIsSame && this.passwordStrength) {
+        var registerProgress = setInterval(() => {
+          if (this.registerProgress < 100) {
+            this.registerProgress += 15
+          } else {
+            clearInterval(registerProgress)
+            var payload = {
+              ref: this,
+              user: this.user
+            }
+            this.register(payload)
+          }
+        }, 100)
+      }
+    },
+    registerSuccess (message) {
+      bus.$emit('showAlert', message)
+      this.$router.go(-1)
+    }
+  },
+  created () {
+    // From main.js auth
+    const errorMessage = this.$route.params.message
+    if (errorMessage) {
+      this.errorMessage = errorMessage
+    }
+    window.document.title = 'Register - MCute'
   }
 }
 </script>

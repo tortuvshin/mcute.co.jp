@@ -1,6 +1,6 @@
 <template>
 	<div class="Image-input">
-        <div class="Image-input__image-wrapper"s>
+        <div class="Image-input__image-wrapper">
             <i v-show="!imageSrc1" class="icon fa fa-picture-o"></i>
             <img v-show="imageSrc1" class="Image-input__image" :src="imageSrc1">
         </div>

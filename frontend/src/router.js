@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Index from '@/views/dashboard/Index.vue'
-import RegisterOld from '@/views/RegisterOld.vue'
 import Account from '@/views/dashboard/Account.vue'
 import Deposit from '@/views/dashboard/billing/Deposit.vue'
 import Withdraw from '@/views/dashboard/billing/Withdraw.vue'
@@ -35,7 +34,8 @@ import Home from '@/views/Home.vue'
 import Login from '@/views/Login.vue'
 import Register from '@/views/Register.vue'
 import Profile from '@/views/Profile.vue'
-import ItemList from '@/views/ItemList.vue'
+import ContentList from '@/views/content/ContentList.vue'
+import ContentCreate from '@/views/content/ContentCreate.vue'
 import Error from '@/views/Error.vue'
 
 Vue.use(Router)
@@ -57,26 +57,30 @@ export default new Router({
       props: { header: { colorOnScroll: 65 } }
     },
     {
-      path: '/signup',
-      name: 'Register',
-      components: { header: AppHeader, default: RegisterOld, footer: AppFooter }
-    },
-    {
       path: '/list',
       components: {
 			  header: AppHeader,
-			  default: ItemList,
+			  default: ContentList,
 			  footer: AppFooter
       },
       name: 'ItemList'
     },
     {
+      path: '/create',
+      components: {
+			  header: AppHeader,
+			  default: ContentCreate,
+			  footer: AppFooter
+      },
+      name: 'ContentCreate'
+    },
+    {
       path: '/artworks',
       components: {
 			  header: AppHeader,
-			  default: ItemList,
+			  default: ContentList,
 			  footer: AppFooter
-      },
+      },  
       name: 'ArtWorks'
     },
     { path: '/register', 
@@ -118,7 +122,13 @@ export default new Router({
     { path: '/support/create', component: CreateTicket, name: 'CreateTicket', meta: { auth: true } },
     { path: '/support/:id', component: ViewTicket, name: 'ViewTicket', meta: { auth: true } },
     { path: '/profile/:username', component: ViewProfile, props: true, name: 'ViewProfile', meta: { title: 'View Profile' } },
-    { path: '*', component: Error },
+    { path: '*', 
+      components: {
+        header: AppHeader,
+        default: Error,
+        footer: AppFooter
+      } 
+    },
     {
       path: '/error',
       name: 'Error',

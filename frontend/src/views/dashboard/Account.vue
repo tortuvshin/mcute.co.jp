@@ -71,7 +71,6 @@
 </template>
 
 <script>
-import appCountryPicker from '../../components/common/CountryPicker'
 import appHeader from '../../components/dashboard/Heading'
 import appEditTextBox from '../../components/dashboard/EditTextBox'
 import { bus } from '../../main.js'
@@ -85,7 +84,6 @@ export default {
     }
   },
   components: {
-    appCountryPicker,
     appHeader,
     appEditTextBox,
     alert

@@ -7,7 +7,7 @@
 	        </div>
 	        <div class="col-xs-8">
 	            <input type="text" class="form-control input-lg" :value="currentUser[target]" v-if="isEdit && target!='country'" @blur="onUpdated" @keyup.enter.prevent="onUpdated" v-focus>
-	            <app-country-picker v-else-if="isEdit && target=='country'" :value="currentUser.country" @input="onUpdated"></app-country-picker>
+	            <!-- <app-country-picker v-else-if="isEdit && target=='country'" :value="currentUser.country" @input="onUpdated"></app-country-picker> -->
 	            <label class="field-label" v-else>{{currentUser[target]}}</label>
 	            <i class="fa fa-pencil btn-edit" aria-hidden="true" @click="isEdit=true" v-if="!isEdit"></i>
 	        </div>
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import appCountryPicker from '../common/CountryPicker'
+// import appCountryPicker from '../common/CountryPicker'
 import { API_SERVER } from '../../api.js'
 import { bus } from '../../main.js'
 
@@ -33,7 +33,7 @@ export default {
     }
   },
   components: {
-    appCountryPicker
+    // appCountryPicker
   },
   methods: {
     onUpdated (e) {
