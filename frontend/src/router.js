@@ -122,7 +122,13 @@ export default new Router({
     { path: '/support/create', component: CreateTicket, name: 'CreateTicket', meta: { auth: true } },
     { path: '/support/:id', component: ViewTicket, name: 'ViewTicket', meta: { auth: true } },
     { path: '/profile/:username', component: ViewProfile, props: true, name: 'ViewProfile', meta: { title: 'View Profile' } },
-    { path: '*', component: Error },
+    { path: '*', 
+      components: {
+        header: AppHeader,
+        default: Error,
+        footer: AppFooter
+      } 
+    },
     {
       path: '/error',
       name: 'Error',
