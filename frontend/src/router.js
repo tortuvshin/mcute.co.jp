@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Index from '@/views/dashboard/Index.vue'
-import RegisterOld from '@/views/RegisterOld.vue'
 import Account from '@/views/dashboard/Account.vue'
 import Deposit from '@/views/dashboard/billing/Deposit.vue'
 import Withdraw from '@/views/dashboard/billing/Withdraw.vue'
@@ -56,11 +55,6 @@ export default new Router({
       name: 'Login',
       components: { header: AppHeader, default: Login },
       props: { header: { colorOnScroll: 65 } }
-    },
-    {
-      path: '/signup',
-      name: 'Register',
-      components: { header: AppHeader, default: RegisterOld, footer: AppFooter }
     },
     {
       path: '/list',

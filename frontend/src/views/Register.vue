@@ -23,19 +23,31 @@
                                     </el-select>
                                     <fg-input addon-left-icon="intelligo-icons users_circle-08"
                                             v-model="user.firstName"
+                                            :class="{'has-danger': isInvalidExist('firstName')}"
+                                            @change="removeInvalidInput('firstName')" 
+                                            required
                                             placeholder="Enter First Name...">
                                     </fg-input>
                                     <fg-input addon-left-icon="intelligo-icons text_caps-small"
                                             v-model="user.lastName"
+                                            :class="{'has-danger': isInvalidExist('lastName')}"
+                                            @change="removeInvalidInput('lastName')" 
+                                            required
                                             placeholder="Enter Last Name...">
                                     </fg-input>
                                     <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
                                             v-model="user.email"
+                                            :class="{'has-danger': isInvalidExist('email')}"
+                                            @change="removeInvalidInput('email')" 
+                                            required
                                             placeholder="Enter Email...">
                                     </fg-input>
                                     
                                     <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
                                             v-model="user.username"
+                                            :class="{'has-danger': isInvalidExist('username')}"
+                                            @change="removeInvalidInput('username')" 
+                                            required
                                             placeholder="Enter username...">
                                     </fg-input>
                                 
@@ -53,30 +65,41 @@
                                     <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
                                         type="password"
                                         v-model="user.password"
+                                        :class="{'has-danger': isInvalidExist('password') || !passwordStrength}"
+                                        @change="removeInvalidInput('password')" 
+                                        required
                                         placeholder="Enter password...">
                                     </fg-input>
 
                                     <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
                                         type="password"
                                         v-model="user.confirmPassword"
+                                        :class="{'has-danger': isInvalidExist('confirmPassword')||　!passwordIsSame}"
+                                        @change="removeInvalidInput('confirmPassword')" 
+                                        required
                                         placeholder="Retype password...">
                                     </fg-input>
                                     <n-checkbox v-model="user.agree">
                                         I agree to the terms and
                                         <a href="#something">conditions</a>.
                                     </n-checkbox>
-
+                                    <h6 v-if="!passwordIsSame">Password don't match.</h6>
+                                    <h6>{{ errorMessage }}</h6>
                                     <div class="card-footer text-center">
                                         <n-button type="primary" round size="lg" @click.native="onRegister">Sign Up</n-button>
                                     </div>
-                                    <div class="social text-center">
-
-                                    <h5 class="card-description"> or be classical </h5>
+                                    <!-- <div class="social text-center"> -->
+                                    <div class="pull-left">
+                                        <h6>
+                                            <router-link to="/login" class="link footer-link">Already have a account!</router-link>
+                                        </h6>
+                                    </div>
+                                    <!-- <h5 class="card-description"> or be classical </h5>
                                     
                                     <n-button round size="lg" class="btn-facebook">
                                         <i class="fab fa-facebook"></i> Facebook
-                                    </n-button>
-                                </div>
+                                    </n-button> -->
+                                <!-- </div> -->
                             </card>
                         </form>
                     </div>
@@ -126,7 +149,8 @@ export default {
       invalidInput: [],
       registerProcess: 0,
       passwordIsSame: true,
-      passwordStrength: true
+      passwordStrength: true,
+      errorMessage: '',
     }
   },
     props: {
@@ -185,6 +209,14 @@ export default {
       bus.$emit('showAlert', message)
       this.$router.go(-1)
     }
+  },
+  created () {
+    // From main.js auth
+    const errorMessage = this.$route.params.message
+    if (errorMessage) {
+      this.errorMessage = errorMessage
+    }
+    window.document.title = 'Register - MCute'
   }
 }
 </script>
