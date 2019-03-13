@@ -35,7 +35,8 @@ import Home from '@/views/Home.vue'
 import Login from '@/views/Login.vue'
 import Register from '@/views/Register.vue'
 import Profile from '@/views/Profile.vue'
-import ItemList from '@/views/ItemList.vue'
+import ContentList from '@/views/content/ContentList.vue'
+import ContentCreate from '@/views/content/ContentCreate.vue'
 import Error from '@/views/Error.vue'
 
 Vue.use(Router)
@@ -65,16 +66,25 @@ export default new Router({
       path: '/list',
       components: {
 			  header: AppHeader,
-			  default: ItemList,
+			  default: ContentList,
 			  footer: AppFooter
       },
       name: 'ItemList'
     },
     {
+      path: '/create',
+      components: {
+			  header: AppHeader,
+			  default: ContentCreate,
+			  footer: AppFooter
+      },
+      name: 'ContentCreate'
+    },
+    {
       path: '/artworks',
       components: {
 			  header: AppHeader,
-			  default: ItemList,
+			  default: ContentList,
 			  footer: AppFooter
       },
       name: 'ArtWorks'

@@ -1,8 +1,6 @@
 <template>
     <div class="page-header signup-page section-image">
-        <div class="page-header-image"
-             style="background-image: url('img/bg18.jpg')">
-        </div>
+        
         <div class="content">
             <div class="container">
                 <div class="row">
@@ -42,43 +40,86 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mr-auto">
+                          
+                    <div class="col-md-6 mr-auto">
                         <div class="card card-signup">
                             <div class="card-body">
                                 <h4 class="card-title text-center">Register</h4>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <el-select class="select-default"
+                                                    placeholder="User type"
+                                                    v-model="user.country">
+                                            <el-option v-for="country in Object.keys(countries)"
+                                                    class="select-default"
+                                                    :value="countries[country]"
+                                                    :label="countries[country]"
+                                                    :key="countries[country]">
+                                            </el-option>
+                                        </el-select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <fg-input addon-left-icon="intelligo-icons users_circle-08"
+                                                v-model="user.firstName"
+                                                placeholder="Enter First Name...">
+                                        </fg-input>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <fg-input addon-left-icon="intelligo-icons text_caps-small"
+                                                v-model="user.lastName"
+                                                placeholder="Enter Last Name...">
+                                        </fg-input>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
+                                            v-model="user.email"
+                                            placeholder="Enter Email...">
+                                    </fg-input>
+                                    </div>
+                                    <div class="col-md-12">
 
-                                <fg-input addon-left-icon="intelligo-icons users_circle-08"
-                                          v-model="user.firstName"
-                                          placeholder="Enter First Name...">
-                                </fg-input>
+                                    <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
+                                            v-model="user.username"
+                                            placeholder="Enter username...">
+                                    </fg-input>
+                                    </div>
+                                    <div class="col-12">
+                                        <el-select class="select-default"
+                                                    placeholder="Country Select"
+                                                    v-model="user.country">
+                                            <el-option v-for="country in Object.keys(countries)"
+                                                    class="select-default"
+                                                    :value="countries[country]"
+                                                    :label="countries[country]"
+                                                    :key="countries[country]">
+                                            </el-option>
+                                        </el-select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                    <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
+                                        type="password"
+                                        v-model="user.password"
+                                        placeholder="Enter password...">
+                                    </fg-input>
+                                    </div>
+                                    <div class="col-md-6">
 
-                                <fg-input addon-left-icon="intelligo-icons text_caps-small"
-                                          v-model="user.lastName"
-                                          placeholder="Enter Last Name...">
-                                </fg-input>
-
-                                <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
-                                          v-model="user.email"
-                                          placeholder="Enter Email...">
-                                </fg-input>
-
-                                <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
-                                          v-model="user.username"
-                                          placeholder="Enter username...">
-                                </fg-input>
-
-                                <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
-                                    type="password"
-                                    v-model="user.password"
-                                    placeholder="Enter password...">
-                                </fg-input>
-
-                                <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
-                                    type="password"
-                                    v-model="user.confirmPassword"
-                                    placeholder="Retype password...">
-                                </fg-input>
-
+                                    <fg-input addon-left-icon="intelligo-icons ui-1_email-85"
+                                        type="password"
+                                        v-model="user.confirmPassword"
+                                        placeholder="Retype password...">
+                                    </fg-input>
+                                    </div>
+                                </div>
                                 <n-checkbox v-model="user.agree">
                                     I agree to the terms and
                                     <a href="#something">conditions</a>.
@@ -110,10 +151,11 @@
     </div>
 </template>
 <script>
-import { Card, Button, FormGroupInput, Checkbox } from '@/components'
+import { Radio, Card, Button, FormGroupInput, Checkbox } from '@/components'
 import MainFooter from '@/layout/MainFooter'
 import { mapActions } from 'vuex'
-import countryPicker from '../components/common/CountryPicker'
+import countries from '../assets/json/countries.json'
+import { Select, Option } from 'element-ui'
 import { bus } from '../main.js'
 
 export default {
@@ -122,12 +164,16 @@ export default {
   components: {
     Card,
     MainFooter,
+    [Radio.name]: Radio,
     [Button.name]: Button,
+    [Select.name]: Select,
+    [Option.name]: Option,
     [Checkbox.name]: Checkbox,
     [FormGroupInput.name]: FormGroupInput
   },
   data () {
     return {
+      countries: countries,
       user: {
         type: '',
         firstName: '',
@@ -135,7 +181,7 @@ export default {
         username: '',
         password: '',
         confirmPassword: '',
-        country: '',
+        country: this.value,
         email: '',
         agree: false
       },
@@ -143,6 +189,63 @@ export default {
       registerProcess: 0,
       passwordIsSame: true,
       passwordStrength: true
+    }
+  },
+    props: {
+    value: {
+      type: String,
+      default: ''
+    }
+  },
+  watch: {
+    'user.password' (val) {
+      val.length < 8 ? this.passwordStrength = false : this.passwordStrength = true
+      val === this.user.confirmPassword ? this.passwordIsSame = true : this.passwordIsSame = false
+    },
+    'user.confirmPassword' (val) {
+      val === this.user.password ? this.passwordIsSame = true : this.passwordIsSame = false
+    }
+  },
+  methods: {
+    ...mapActions([
+      'register'
+    ]),
+    isInvalidExist (fieldName) {
+      return this.invalidInput.indexOf(fieldName) !== -1
+    },
+    checkInvalidInput () {
+      Object.keys(this.user).forEach((fieldName) => {
+        if (this.user[fieldName] === '') {
+          this.invalidInput.push(fieldName)
+        }
+      })
+    },
+    removeInvalidInput (key) {
+      var index = this.invalidInput.indexOf(key)
+      if (index > -1) {
+        this.invalidInput.splice(index, 1)
+      }
+    },
+    onRegister () {
+      this.checkInvalidInput()
+      if (this.invalidInput.length === 0 && this.passwordIsSame && this.passwordStrength) {
+        var registerProgress = setInterval(() => {
+          if (this.registerProgress < 100) {
+            this.registerProgress += 15
+          } else {
+            clearInterval(registerProgress)
+            var payload = {
+              ref: this,
+              user: this.user
+            }
+            this.register(payload)
+          }
+        }, 100)
+      }
+    },
+    registerSuccess (message) {
+      bus.$emit('showAlert', message)
+      this.$router.go(-1)
     }
   }
 }

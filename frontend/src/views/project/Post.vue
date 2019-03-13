@@ -3,7 +3,7 @@
       <div class="heading">
         <ol class="breadcrumb">
            <li><router-link to="/">Home</router-link></li>
-           <li class="active">Post A Job</li>
+           <li class="active">Post A Art work</li>
         </ol>
       </div>
       <form class="form-horizontal" @submit.prevent="onSubmit">
@@ -25,7 +25,7 @@
          <!-- Project Title Section-->
           <div class="panel-header">
             <div class="step-no">2</div>
-            <div class="step-title">Name your job posting <span class="required">*</span></div>
+            <div class="step-title">Name your art work posting <span class="required">*</span></div>
           </div>
           <div class="panel-content">
                <input type="text" class="form-control input-lg" v-model="project.title" name="title" placeholder="Enter Job Title" required>
