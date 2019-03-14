@@ -1,0 +1,16 @@
+{
+    "navigation": {
+        "title": "MCute Matching System",
+        "home": "Home",
+        "artworks": "Artworks",
+        "spaces": "Spaces",
+        "post-space": "Post a space",
+        "post-artwork": "Post a artwork",
+        "login": "Login",
+        "register": "Register"
+    },
+    "locales": {
+      "en-US": "EN",
+      "ja-JP": "JP"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "navigation": {
+        "title": "MCuteマッチングシステム",
+        "home": "ホームページ",
+        "artworks": "アートワーク",
+        "spaces": "スペース",
+        "post-space": "スペースを投稿",
+        "post-artwork": "アートワークを投稿",
+        "login": "ログイン",
+        "register": "登録"
+    },
+    "locales": {
+        "en-US": "EN",
+        "ja-JP": "JP"
+    }
+}

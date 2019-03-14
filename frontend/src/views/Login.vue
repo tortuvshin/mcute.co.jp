@@ -38,7 +38,7 @@
                             {{ message }}
                             </h6>
                             <div class="card-footer text-center">
-                                <n-button type="primary" round size="lg" @click.native="onLogin" >ログイン</n-button>
+                                <n-button type="primary" round size="lg" @click.native="onLogin" >Get Started</n-button>
                             </div>
 
                             <div class="pull-left">
