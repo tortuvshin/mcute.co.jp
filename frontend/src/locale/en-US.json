@@ -12,5 +12,12 @@
     "locales": {
       "en-US": "EN",
       "ja-JP": "JP"
+    },
+    "login": {
+        "username":"Username",
+        "password":"Password",
+        "login":"Login",
+        "register":"Create account",
+        "forgot-password":"Forgot password"
     }
 }
