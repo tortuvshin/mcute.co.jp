@@ -3,9 +3,9 @@
         "title": "MCuteマッチングシステム",
         "home": "ホームページ",
         "artworks": "アートワーク",
-        "spaces": "スペース",
-        "post-space": "スペースを投稿",
-        "post-artwork": "アートワークを投稿",
+        "spaces": "アートスペース",
+        "post-space": "アートスペースを登録",
+        "post-artwork": "アートワークを登録",
         "login": "ログイン",
         "register": "登録"
     },
@@ -14,10 +14,10 @@
         "ja-JP": "JP"
     },
     "login": {
-        "username":"Username",
-        "password":"Password",
-        "login":"Login",
-        "register":"Create account",
-        "forgot-password":"Forgot password"
+        "username":"ユーザー名",
+        "password":"パスワード",
+        "login":"ログイン",
+        "register":"アカウント作成",
+        "forgot-password":"パスワードを忘れた場合"
     }
 }
