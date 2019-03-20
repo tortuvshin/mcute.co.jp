@@ -18,6 +18,9 @@ import VueHtml5Editor from 'vue-html5-editor'
 import Bootstrap from 'bootstrap'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.css'
+import VueI18n from 'vue-i18n'
+
+import { createI18n } from './locale'
 
 import MainContent from './components/MainContent'
 import SvgBackground from './components/common/svgBackground'
@@ -29,11 +32,14 @@ import { store } from './store/index'
 
 export const bus = new Vue();
 
+const i18n = createI18n()
+
 Vue.use(VueRouter);
 Vue.use(VueResouce);
 Vue.use(VeeValidate);
 Vue.use(VueMoment);
 Vue.use(VueMaterial);
+Vue.use(VueI18n)
 
 Vue.http.options.credentials = true;
 
@@ -149,5 +155,6 @@ router.beforeEach((to, from, next) => {
 new Vue({
   router,
   store,
+  i18n,
   render: h => h(App)
 }).$mount('#app')

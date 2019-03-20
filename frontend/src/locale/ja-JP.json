@@ -1,0 +1,23 @@
+{
+    "navigation": {
+        "title": "MCuteマッチングシステム",
+        "home": "ホームページ",
+        "artworks": "アートワーク",
+        "spaces": "アートスペース",
+        "post-space": "アートスペースを登録",
+        "post-artwork": "アートワークを登録",
+        "login": "ログイン",
+        "register": "登録"
+    },
+    "locales": {
+        "en-US": "EN",
+        "ja-JP": "JP"
+    },
+    "login": {
+        "username":"ユーザー名",
+        "password":"パスワード",
+        "login":"ログイン",
+        "register":"アカウント作成",
+        "forgot-password":"パスワードを忘れた場合"
+    }
+}

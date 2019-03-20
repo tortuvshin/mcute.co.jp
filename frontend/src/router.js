@@ -34,8 +34,8 @@ import Home from '@/views/Home.vue'
 import Login from '@/views/Login.vue'
 import Register from '@/views/Register.vue'
 import Profile from '@/views/Profile.vue'
-import ContentList from '@/views/content/ContentList.vue'
-import ContentCreate from '@/views/content/ContentCreate.vue'
+import ContentList from '@/views/content/List.vue'
+import ContentCreate from '@/views/content/Create.vue'
 import Error from '@/views/Error.vue'
 
 Vue.use(Router)

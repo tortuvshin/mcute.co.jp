@@ -19,13 +19,13 @@
                                 v-model="username"
                                 required @change="invalidInput = []"
                                 :class="{'has-danger': isInvalidExist('username')}"
-                                placeholder="Username...">
+                                v-bind:placeholder="$t('login.username')">
                             </fg-input>
 
                             <fg-input
                                 class="no-border input-lg"
                                 addon-left-icon="intelligo-icons text_caps-small"
-                                placeholder="Password..."
+                                v-bind:placeholder="$t('login.password')"
                                 v-model="password"
                                 required @change="invalidInput = []"
                                 :class="{'has-danger': isInvalidExist('password')}"
@@ -38,17 +38,17 @@
                             {{ message }}
                             </h6>
                             <div class="card-footer text-center">
-                                <n-button type="primary" round size="lg" @click.native="onLogin" >ログイン</n-button>
+                                <n-button type="primary" round size="lg" @click.native="onLogin" >{{ $t('login.login') }}</n-button>
                             </div>
 
                             <div class="pull-left">
                                 <h6>
-                                    <router-link to="/register" class="link footer-link">Create Account</router-link>
+                                    <router-link to="/register" class="link footer-link">{{ $t('login.register') }}</router-link>
                                 </h6>
                             </div>
                             <div class="pull-right">
                                 <h6>
-                                    <router-link to="/" class="link footer-link">Need Help?</router-link>
+                                    <router-link to="/" class="link footer-link">{{ $t('login.forgot-password') }}</router-link>
                                 </h6>
                             </div>
                         </card>

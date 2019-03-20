@@ -56,7 +56,7 @@ router.post("/create", [middleware.jwt, upload.temp().any()], function(req, res)
             data.freelancer = project.winBid.bidder;
             createTicket(data, res);
         });
-    }else if (data.serviceType == "billing"){
+    } else if (data.serviceType == "billing"){
         BankDeposit.findById(data.relatedService, function(err, bankdeposit){
           if (err){
               console.log(err);
