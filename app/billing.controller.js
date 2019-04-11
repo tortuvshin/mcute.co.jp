@@ -2,7 +2,9 @@ const User = require('../models/user'),
 	randtoken = require('rand-token'),
 	PaypalDeposit = require('../models/paypalDeposit'),
 	BankDeposit = require('../models/bankDeposit'),
-	Withdraw = require('../models/withdraw'),
+    Withdraw = require('../models/withdraw'),
+    Paypal = require('paypal-express-checkout'),
+    paypal_url = require("../config/paypal"),
 	io = require("../sockets/").io();
     
 const paypal = Paypal.init('#', '#', '#', paypal_url.paypalSuccess, paypal_url.paypalCancel, true);
