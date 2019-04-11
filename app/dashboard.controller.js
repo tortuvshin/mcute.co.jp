@@ -1,25 +1,8 @@
-const express = require('express'),
-	app = express(),
-	User = require('../models/user'),
-	router = express.Router(),
-	middleware = require("../middleware/"),
-	Paypal = require('paypal-express-checkout'),
-	randtoken = require('rand-token'),
-	Transaction = require('../models/transaction'),
-	PaypalDeposit = require('../models/paypalDeposit'),
-	BankDeposit = require('../models/bankDeposit'),
-	Withdraw = require('../models/withdraw'),
+const User = require('../models/user'),
 	Bid = require('../models/bid'),
 	Project = require('../models/project'),
-	io = require("../sockets/").io(),
 	currentUsers = require("../sockets/").getCurrentUsers(),
-	striptags = require('striptags'),
-	upload = require("../middleware/upload"),
-	paypal_url = require("../config/paypal");
-	
-
-let files = [];
-
+	striptags = require('striptags');
 
 module.exports = {
 
