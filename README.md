@@ -4,6 +4,10 @@
 | [Requirements][] | [Installing][] | [Running][] | [Deploy][] | [Technologies used][] | [Copyright] |
 |---|---|---|---|---|---|
 
+ <a href="http://hits.dwyl.io/intelligo-system/intelligo">
+    <img alt="Hits" src="http://hits.dwyl.io/intelligo-system/intelligo.svg">
+ </a>
+     
 ## Requirements
 
 - [MongoDB](https://www.mongodb.com/download-center)
