@@ -70,7 +70,7 @@
     "socket.io": "^2.2.0",
     "striptags": "^3.1.1",
     "tether": "^1.4.5",
-    "tinymce": "^5.1.4"
+    "tinymce": "^5.2.2"
   },
   "cacheDirectories": [
     "node_modules"
