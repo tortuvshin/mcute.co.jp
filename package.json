@@ -35,7 +35,7 @@
     "debug": "^4.1.1",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "express-fileupload": "1.1.6",
+    "express-fileupload": "1.1.9",
     "express-sanitizer": "^1.0.5",
     "express-session": "^1.15.6",
     "flag-icon-css": "^3.3.0",
