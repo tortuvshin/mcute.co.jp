@@ -76,7 +76,7 @@
     "node_modules"
   ],
   "engines": {
-    "node": "10.19.0",
+    "node": "10.24.1",
     "npm": "6.x",
     "yarn": "1.x"
   },
